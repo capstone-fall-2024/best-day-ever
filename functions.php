@@ -122,8 +122,80 @@ add_action( 'after_setup_theme', 'bdev_by_jen_content_width', 0 );
 function bdev_by_jen_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'bdev_by_jen' ),
-			'id'            => 'sidebar-1',
+			'name'          => esc_html__( 'Blog Sidebar', 'bdev_by_jen' ),
+			'id'            => 'blog-sidebar',
+			'description'   => esc_html__( 'Add widgets here.', 'bdev_by_jen' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Banner Sidebar', 'bdev_by_jen' ),
+			'id'            => 'banner-sidebar',
+			'description'   => esc_html__( 'Add widgets here.', 'bdev_by_jen' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Marketing Banner Main', 'bdev_by_jen' ),
+			'id'            => 'marketing-banner-main',
+			'description'   => esc_html__( 'Add widgets here.', 'bdev_by_jen' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Subsciption Main', 'bdev_by_jen' ),
+			'id'            => 'subscription-main',
+			'description'   => esc_html__( 'Add widgets here.', 'bdev_by_jen' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Accordion FAQs', 'bdev_by_jen' ),
+			'id'            => 'accordion-faqs',
+			'description'   => esc_html__( 'Add widgets here.', 'bdev_by_jen' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Instagram', 'bdev_by_jen' ),
+			'id'            => 'instagram',
+			'description'   => esc_html__( 'Add widgets here.', 'bdev_by_jen' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer', 'bdev_by_jen' ),
+			'id'            => 'footer',
 			'description'   => esc_html__( 'Add widgets here.', 'bdev_by_jen' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
@@ -201,3 +273,4 @@ function theme_testing_parts_setup() {
 	add_theme_support('block-template-parts');
 }
 add_action('after_setup_theme', 'theme_testing_parts_setup');
+
