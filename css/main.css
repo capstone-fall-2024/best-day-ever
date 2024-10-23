@@ -11844,4 +11844,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+/********* BODY **********/
+.site {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
 /********* HEADER **********/
