@@ -221,19 +221,19 @@ $light-grey: #D4D4D4;
     list-style: none;
   }
   
-  .menu-main-menu-container ul li {
+  .menu-header-menu-container ul li {
     // display: inline-block;
     padding: 0px 20px;
     border-bottom: none;
   }
   
-  .menu-main-menu-container ul li a {
+  .menu-header-menu-container ul li a {
     color: $dark-green;
     transition: all 0.3s ease 0s;
     text-transform: uppercase;
   }
   
-  .menu-main-menu-container ul li a:hover {
+  .menu-header-menu-container ul li a:hover {
     transition: all 0.3s ease 0s;
     color: $light-orange;
   }
