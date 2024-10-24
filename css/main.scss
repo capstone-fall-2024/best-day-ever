@@ -1,5 +1,10 @@
 // Include custom variables default overrides here
-
+$light-orange : #fb8f46;
+$cream: #F9EFE6;
+$dark-green: #30453b;
+$dark-red: #320507;
+$off-black: #0A0A0A;
+$light-grey: #D4D4D4;
 
 //Map
 
@@ -10,10 +15,350 @@
 
 
 // Then add additional custom code here
-/********* BODY **********/
-.site {
-    max-width: 1040px;
-    margin: 0 auto;
+
+/**** base on mobile ****/
+.top-header{
+  display: none;
 }
 
-/********* HEADER **********/
+
+.site-header{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000;
+}
+
+.search-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+}
+
+.search-container i{
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  cursor: pointer;
+}
+
+.search-container input{
+  width: 100%; /* Set input to 70% width */
+  padding-left: 5px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.mobile-menu-container{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 98;
+  background-color: #fff;
+  transition: 0.4s;
+  padding-top: 130px;
+}
+
+.nav-mobile{
+  width: 100%;
+  // background-color: lightcoral;
+}
+
+.nav-mobile ul{
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 40px;
+}
+
+.nav-mobile ul li{
+  border-bottom: solid 1px $off-black;
+  list-style: none;
+  padding: 15px;
+  // background-color: yellow;
+}
+
+.nav-mobile ul li:last-child{
+  border-bottom: none;
+}
+.nav-mobile ul li a{
+  text-decoration: none;
+  color: $dark-red;
+  font-weight:500;
+}
+
+.nav-mobile ul li a:hover{
+  color: $light-orange;
+}
+
+.cta-mobile{
+  width: 100%;
+  background-color: $light-orange;
+  color: $dark-red;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  padding: 15px 0;
+}
+
+.hamburger.is-active{
+  opacity: 0;
+}
+
+.mobile-menu-container.is-active{
+  left: 0;
+}
+
+.social-font-mobile i{
+  font-size: 25px;
+  padding: 10px;
+}
+
+
+
+.bi-list{
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.custom-logo{
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+}
+
+@media (max-width: 678px) {
+  .site-header__util{
+    display: none;
+  }
+}
+
+@media (min-width: 678px){
+  .mobile-menu-container{
+    display: none;
+  }
+
+  .hamburger{
+    display: none;
+  }
+}
+
+
+@media (min-width: 1024px) {
+/**** Top-header ****/
+.top-header{
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: none;
+  padding: 0 10%;
+  box-shadow: 0px 4px 10px rgba(100, 100, 111, 0.2);
+}
+
+.top-header p{
+  margin-bottom: 0;
+}
+
+.top-header-social-font{
+  display: flex;
+  gap: 20px;
+}
+
+.bi-facebook,
+.bi-instagram{
+  font-size: 25px;
+}
+// header
+  .site-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 10%;
+    background-color: transparent;
+  }
+  
+  .site-brading {
+    background-color: pink;
+    cursor: pointer;
+  }
+  
+  .custom-logo{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+  }
+  
+  #primary-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+  }
+  
+  .menu-main-menu-container ul li {
+    // display: inline-block;
+    padding: 0px 20px;
+    border-bottom: none;
+  }
+  
+  .menu-main-menu-container ul li a {
+    color: $dark-green;
+    transition: all 0.3s ease 0s;
+    text-transform: uppercase;
+  }
+  
+  .menu-main-menu-container ul li a:hover {
+    transition: all 0.3s ease 0s;
+    color: $light-orange;
+  }
+  
+  .sub-menu{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: solid 0.3px $light-orange;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: white;
+  }
+
+  
+  .sub-menu li a{
+    padding: 10px 0;
+    color: $dark-red;
+    text-transform: capitalize;
+  }
+  
+  .site-header__util{
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .cta{
+    display: block;
+  }
+  .cta {
+    background-color: $light-orange;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    text-transform: uppercase;
+  }
+  
+  .cta:hover {
+    background-color: $dark-green;
+    color: $cream;
+  }
+  
+  .bi-search {
+    display: block;
+    font-size: 25px;
+  }
+  
+}
+
+
+//Footer
+$border-bottom: solid 1px $off-black;
+
+.site-footer__col-one,
+.site-footer__col-two,
+.site-footer__col-three,
+.site-footer__col-four
+{
+  border-bottom: $border-bottom;
+}
+
+.site-footer__col-two,
+.site-footer__col-three
+{
+  padding: 0 35px;
+}
+.site-footer{
+  text-align: center;
+ 
+}
+.group{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+ul#menu-footer-1.menu,
+ul#menu-footer-2.menu
+{
+  margin: 0;
+  padding: 0;
+}
+.menu-footer-1-container ul li,
+.menu-footer-2-container ul li
+{
+  padding: 10px 0;
+  list-style: none;
+}
+.menu-footer-1-container ul li a,
+.menu-footer-2-container ul li a,
+.site-footer__col-four a
+{
+  color: $dark-red;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.menu-footer-1-container ul li a:hover,
+.menu-footer-2-container ul li a:hover,
+.site-footer__col-four a:hover
+{
+  color: $light-orange;
+}
+
+.site-footer__col-five{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_copy_right{
+  background-color: $cream;
+  padding: 40px 0;
+}
+
+@media (min-width: 768px) {
+  .group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+  .site-footer__col-one,
+.site-footer__col-two,
+.site-footer__col-three,
+.site-footer__col-four
+{
+  border-bottom: none;
+}
+
+}
+
+
+
