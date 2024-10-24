@@ -11851,9 +11851,14 @@ textarea.form-control-lg {
   margin: 0 auto;
 }
 
-.wp-block-cover {
+.wp-block-cover:nth-of-type(1) {
   width: 100vw;
   margin-left: calc(50% - 50vw);
+}
+
+.actual-content .wp-block-cover {
+  width: 100%;
+  margin-left: 0;
 }
 
 /**** base on mobile ****/
