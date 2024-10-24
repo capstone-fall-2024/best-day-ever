@@ -11,24 +11,67 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'bdev_by_jen' ) ); ?>">
+<footer id="colophon" class="site-footer">
+
+	<div class="site-info">
+
+		<div class="group">
+
+			<div class="site-footer__col-one">
+
+				<?php if (is_active_sidebar('footer-widget1')) {
+					dynamic_sidebar('footer-widget1');
+				}
+				; ?>
+			</div>
+
+			<div class="site-footer__col-two">
 				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'bdev_by_jen' ), 'WordPress' );
+				wp_nav_menu(array(
+					"theme_location" => "footer-1",
+				));
 				?>
-			</a>
-			<span class="sep"> | </span>
+			</div>
+
+			<div class="site-footer__col-three">
 				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'bdev_by_jen' ), 'bdev_by_jen', '<a href="http://underscores.me/">Eweb Team</a>' );
+				wp_nav_menu(array(
+					"theme_location" => "footer-2",
+				));
 				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+			</div>
+
+
+			<div class="site-footer__col-four">
+				<?php
+				if (is_active_sidebar("footer-widget2")) {
+					dynamic_sidebar("footer-widget2");
+				}
+				?>
+				<!--		<p>Additional Info</p>
+				<a href="#">Disney Vacations</a>
+				<a href="#">Norwegian Cruises</a> -->
+			</div>
+
+			<div class="site-footer__col-five">
+				<?php
+				if (is_active_sidebar("footer-widget3")) {
+					dynamic_sidebar("footer-widget3");
+				}
+				?>
+
+			</div>
+		</div>
+
+		<div class="footer_copy_right">@ 2024 Best Day Ever Vacations by Jen</div>
+	</div>
+</footer><!-- #colophon -->
 </div><!-- #page -->
+
+
 
 <?php wp_footer(); ?>
 
 </body>
+
 </html>
