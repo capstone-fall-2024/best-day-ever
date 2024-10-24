@@ -12,8 +12,14 @@
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
+
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<title><?php bloginfo('name');
+	wp_title(); ?></title>
+	<meta name="description" content="<?php bloginfo('description'); ?>">
+	<!-- addtitle10-22 -->
+
+	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
@@ -21,39 +27,103 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'bdev_by_jen' ); ?></a>
+	<?php wp_body_open(); ?>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$bdev_by_jen_description = get_bloginfo( 'description', 'display' );
-			if ( $bdev_by_jen_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $bdev_by_jen_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+	<div id="page" class="site">
+		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'bdev_by_jen'); ?></a>
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'bdev_by_jen' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+		<div class="top-header">
+			<div>
+				<p>Travel Agent of Best Day Ever Vacations</p>
+			</div>
+			<div class="top-header-social-font">
+				<i class="bi bi-facebook"></i>
+				<i class="bi bi-instagram"></i>
+			</div>
+		</div>
+
+		<header id="masthead" class="site-header">
+
+			<div class="site-branding">
+				<?php
+				if (has_custom_logo()) {
+					the_custom_logo(); // Display the custom logo if it exists
+				} else {
+					// Display the site title if no logo is uploaded
+					?>
+					<h1 class="site-title">
+						<a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
+					</h1>
+					<?php
+				}
+				?>
+			</div>
+
+			<nav id="site-navigation" class="main-navigation">
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'menu-1',
+						'menu_id' => 'primary-menu',
+					)
+				);
+				?>
+			</nav><!-- #site-navigation -->
+
+			<!-- mobile-nav -->
+
+			<!-- Hamburger Menu Icon for Mobile -->
+			<div class="hamburger">
+				<i class="bi bi-list"></i> <!-- This is the hamburger icon -->
+			</div>
+
+
+
+			<div class="site-header__util">
+				<button class="cta">get a quote</button>
+				<i class="bi bi-search"></i>
+			</div>
+
+		</header><!-- #masthead -->
+
+		<div class="mobile-menu-container">
+
+			<div class="search-container">
+				<input type="text" placeholder="Search">
+				<i class="bi bi-search"></i>
+			</div>
+			<!-- Navigation Menu -->
+			<nav class="nav-mobile">
+				<ul>
+					<li>
+						<a href="#">Home</a>
+					</li>
+					<li>
+						<a href="#">Vacations</a>
+					</li>
+					<li>
+						<a href="#">About Jen</a>
+					</li>
+					<li>
+						<a href="#">Blog</a>
+					</li>
+					<li>
+						<a href="#">Special Deals</a>
+					</li>
+					<li>
+						<a href="#">Contact Jen</a>
+					</li>
+				</ul>
+			</nav>
+
+			<button class="cta-mobile">get a quote</button> <!-- turn off on desktop -->
+
+			<div>
+				<p>Travel Agent of Best Day Ever Vacations</p>
+			</div>
+			<div class="social-font-mobile">
+				<i class="bi bi-facebook"></i>
+				<i class="bi bi-instagram"></i>
+			</div>
+
+		</div>
