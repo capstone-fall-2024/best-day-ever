@@ -15,6 +15,17 @@ $light-grey: #D4D4D4;
 
 
 // Then add additional custom code here
+/******************* LAYOUT ********************/
+.entry-content {
+  width: 80%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.wp-block-cover {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
 
 /**** base on mobile ****/
 .top-header{
@@ -126,8 +137,6 @@ $light-grey: #D4D4D4;
   padding: 10px;
 }
 
-
-
 .bi-list{
   cursor: pointer;
   font-size: 25px;
@@ -154,7 +163,6 @@ $light-grey: #D4D4D4;
     display: none;
   }
 }
-
 
 @media (min-width: 1024px) {
 /**** Top-header ****/
@@ -274,7 +282,6 @@ $light-grey: #D4D4D4;
   
 }
 
-
 //Footer
 $border-bottom: solid 1px $off-black;
 
@@ -293,8 +300,8 @@ $border-bottom: solid 1px $off-black;
 }
 .site-footer{
   text-align: center;
- 
 }
+
 .group{
   display: flex;
   flex-direction: column;
@@ -351,12 +358,12 @@ ul#menu-footer-2.menu
     align-items: baseline;
   }
   .site-footer__col-one,
-.site-footer__col-two,
-.site-footer__col-three,
-.site-footer__col-four
-{
+  .site-footer__col-two,
+  .site-footer__col-three,
+  .site-footer__col-four
+  {
   border-bottom: none;
-}
+  }
 
 }
 
