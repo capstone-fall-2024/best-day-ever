@@ -13,45 +13,22 @@ get_header();
 	<main id="primary" class="site-main">
 
 		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'bdev_by_jen' ); ?></h1>
-			</header><!-- .page-header -->
-
-			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'bdev_by_jen' ); ?></p>
-
-					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'bdev_by_jen' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
-							);
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$bdev_by_jen_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'bdev_by_jen' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$bdev_by_jen_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-			</div><!-- .page-content -->
+			<div class="">
+				<div><img src="" alt="Two lost people peaking around a corner."></div>
+				<div>
+					<h1 class="page-title"><?php esc_html_e( 'Error 404', 'bdev_by_jen' ); ?></h1>
+					<div class="page-content">
+						<p><?php esc_html_e( 'Hm, it looks like there isn\'t anything in here.', 'bdev_by_jen' ); ?></p>
+						<p><?php esc_html_e( 'You should probably head back until it gets fixed.', 'bdev_by_jen' ); ?></p>
+						<!-- wp:buttons -->
+						<div class="wp-block-buttons">
+						<!-- wp:button -->
+						<button value="Back Home" class="wp-block-button" style="font-style:normal;font-weight:500"><a class="wp-block-button__link wp-element-button" href=""></a></button>
+						<!-- /wp:button --></div>
+						<!-- /wp:buttons --></div>
+					</div><!-- .page-content -->
+				</div>
+			</div>
 		</section><!-- .error-404 -->
 
 	</main><!-- #main -->
