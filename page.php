@@ -16,12 +16,19 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
 		<section>
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			
 			<?php the_content(); ?>
-		<section>
+
+			<section class="subscription">
+                <?php if (is_active_sidebar('subscription-main')) {
+                        dynamic_sidebar('subscription-main');
+                    }; 
+                ?>
+            </section>
+			
+		</section>
 
 	</main><!-- #main -->
 
