@@ -1,11 +1,7 @@
 <?php
+
 /**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
+ * The template for display the Contact Jen page only
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -15,28 +11,23 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+<main id="primary" class="site-main">
+    <section>
+        <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+        <?php the_content(); ?>
 
-		<section>
-			<?php the_content(); ?>
+        <?php if (is_active_sidebar('accordion-faqs')) {
+            dynamic_sidebar('accordion-faqs');
+        };
+        ?>
 
-            <section class="accordion">    
-                <?php if (is_active_sidebar('accordion-faqs')) {
-                        dynamic_sidebar('accordion-faqs');
-                    }; 
-                ?>
-            </section>
+        <?php if (is_active_sidebar('subscription-main')) {
+            dynamic_sidebar('subscription-main');
+        };
+        ?>
+    </section>
 
-            <section class="subscription">
-                <?php if (is_active_sidebar('subscription-main')) {
-                        dynamic_sidebar('subscription-main');
-                    }; 
-                ?>
-            </section>
-		</section>
-
-	</main><!-- #main -->
+</main><!-- #main -->
 
 <?php
 get_sidebar();
