@@ -18,12 +18,20 @@ get_header();
 
         <?php if (is_active_sidebar('accordion-faqs')) {
             dynamic_sidebar('accordion-faqs');
-        };
+        }
+        ;
         ?>
 
         <?php if (is_active_sidebar('subscription-main')) {
             dynamic_sidebar('subscription-main');
-        };
+        }
+        ;
+        ?>
+
+        <?php if (is_active_sidebar('instagram')) {
+            dynamic_sidebar('instagram');
+        }
+        ;
         ?>
     </section>
 
