@@ -2,8 +2,9 @@
 <main id="primary" class="site-main">
 
     <section>
-        <h1><?php single_post_title(); ?></h1>
+        <h2><?php single_post_title(); ?></h2>
         <section>
+            <h3>Heading 3</h3>
             <div class="posts-banner">
                 <div class="posts-banner__bg-image"></div>
                 <div class="post-banner">
@@ -17,7 +18,7 @@
                             $banner_category->the_post(); ?>
                             <article class="banner-category-content">
                                 <p><span>Blog</span><span>feature post</span></p>
-                                <h2><?php the_title(); ?></h2>
+                                <h4><?php the_title(); ?></h4>
                                 <p><?php the_excerpt(); ?></p>
                                 <a href="<?php the_permalink(); ?>">View More</a>
                             </article>
@@ -47,7 +48,7 @@
             </nav>
         </section>
         <section class="latest-articles">
-            <h2>Recent Posts</h2>
+            <h3>Recent Posts</h3>
             <?php while (have_posts()) {
                 the_post(); ?>
                 <div class="posts">
@@ -62,7 +63,7 @@
                         </div>
                         <div class="content-post">
                             <a href="<?php the_permalink(); ?>">
-                                <h3><?php the_title(); ?></h3>
+                                <h4><?php the_title(); ?></h4>
                             </a>
                         </div>
                     </article>
@@ -101,7 +102,7 @@
                             </div>
                             <div class="content-post">
                                 <a href="<?php the_permalink(); ?>">
-                                    <h3><?php the_title(); ?></h3>
+                                    <h4><?php the_title(); ?></h4>
                                 </a>
                             </div>
                         </article>
@@ -127,33 +128,30 @@
         <?php endif; ?>
 
         <section id="cruise">
-            <h2>Cruise Travel Blog</h2>
+            <h3>Cruise Travel Blog</h3>
             <?php display_category_posts('Cruise') ?>
             <a href="<?php echo esc_url(get_category_link(get_cat_ID('Cruise'))); ?>">Check our more</a>
 
         </section>
 
         <section id="disney">
-            <h2>Disney Travel Blog</h2>
+            <h3>Disney Travel Blog</h3>
             <?php display_category_posts('Disney') ?>
             <a href="<?php echo esc_url(get_category_link(get_cat_ID('Disney'))); ?>">Check our more</a>
         </section>
 
         <section id="honeymoon-wedding">
-            <h2>Honeymoon and Wedding Travel Blog</h2>
+            <h3>Honeymoon and Wedding Travel Blog</h3>
             <?php display_category_posts(array('Honeymoon and Wedding')) ?>
             <a href="<?php echo esc_url(get_category_link(get_cat_ID('Honeymoon and Wedding'))); ?>">Check our more</a>
         </section>
 
         <section id="all-inclusive">
-            <h2>All Inclusive Travel Blog</h2>
+            <h3>All Inclusive Travel Blog</h3>
             <?php display_category_posts('All Inclusive') ?>
             <a href="<?php echo esc_url(get_category_link(get_cat_ID('All Inclusive'))); ?>">Check our more</a>
         </section>
     </section>
-
-
-
 
 
 </main>
