@@ -6,7 +6,7 @@
             <div class="post-banner">
                 <?php
                 $banner_category = new WP_Query(array(
-                    'category_name' => 'best_article',
+                    'category_name' => 'Best Article',
                     'posts_per_page' => 1
                 ));
                 if ($banner_category->have_posts()):
@@ -76,10 +76,13 @@
     <!-- Function to display category with limit 3 post (disney/cruise/all-inclusive,etc) -->
 
     <?php
-    function display_category_posts($category, $limit = 3)
+    function display_category_posts($categories, $limit = 3)
     {
+        // Join multiple categories with commas for the WP Query
+        $category_query = is_array($categories) ? implode(',', array_map('trim', $categories)) : trim($categories);
+
         $query = new WP_Query(array(
-            'category_name' => $category,
+            'category_name' => $category_query,
             'posts_per_page' => $limit
         ));
         if ($query->have_posts()):
@@ -123,27 +126,27 @@
 
     <section id="cruise">
         <h2>Cruise Travel Blog</h2>
-        <?php display_category_posts('cruise') ?>
-        <a href="<?php echo esc_url(get_category_link(get_cat_ID('cruise'))); ?>">Check our more</a>
+        <?php display_category_posts('Cruise') ?>
+        <a href="<?php echo esc_url(get_category_link(get_cat_ID('Cruise'))); ?>">Check our more</a>
 
     </section>
 
     <section id="disney">
         <h2>Disney Travel Blog</h2>
-        <?php display_category_posts('disney') ?>
-        <a href="<?php echo esc_url(get_category_link(get_cat_ID('disney'))); ?>">Check our more</a>
+        <?php display_category_posts('Disney') ?>
+        <a href="<?php echo esc_url(get_category_link(get_cat_ID('Disney'))); ?>">Check our more</a>
     </section>
 
     <section id="honeymoon-wedding">
         <h2>Honeymoon and Wedding Travel Blog</h2>
-        <?php display_category_posts('honeymoon_wedding') ?>
-        <a href="<?php echo esc_url(get_category_link(get_cat_ID('honeymoon_wedding'))); ?>">Check our more</a>
+        <?php display_category_posts(array('Honeymoon and Wedding')) ?>
+        <a href="<?php echo esc_url(get_category_link(get_cat_ID('Honeymoon and Wedding'))); ?>">Check our more</a>
     </section>
 
     <section id="all-inclusive">
         <h2>All Inclusive Travel Blog</h2>
-        <?php display_category_posts('all-inclusive') ?>
-        <a href="<?php echo esc_url(get_category_link(get_cat_ID('all-inclusive'))); ?>">Check our more</a>
+        <?php display_category_posts('All Inclusive') ?>
+        <a href="<?php echo esc_url(get_category_link(get_cat_ID('All Inclusive'))); ?>">Check our more</a>
     </section>
 </main>
 <?php get_footer(); ?>
