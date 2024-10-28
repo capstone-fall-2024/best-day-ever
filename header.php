@@ -1,13 +1,9 @@
-<?php
-/**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package Best_Day_Ever_Vacations_by_Jen
- */
+<?php /** * The header for our theme * * This is the template that displays all of the <head> section and everything up>
+	*
+	* @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+	*
+	* @package Best_Day_Ever_Vacations_by_Jen
+	*/
 
 ?>
 <!doctype html>
@@ -27,6 +23,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+	<h1 style="display:none">Best Day Ever Vacations by Jen</h1>
 	<?php wp_body_open(); ?>
 
 	<div id="page" class="site">
@@ -51,9 +48,9 @@
 				} else {
 					// Display the site title if no logo is uploaded
 					?>
-					<h1 class="site-title">
+					<div class="site-title">
 						<a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
-					</h1>
+					</div>
 					<?php
 				}
 				?>
