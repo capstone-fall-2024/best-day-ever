@@ -53,9 +53,32 @@ get_header();
 						</div>
 					</div>
 					<div class="blog-content">
-						<?php the_content(); ?>
+						<div>
+							<?php the_content(); ?>
+						</div>
+						<?php if (is_active_sidebar('blog-sidebar')): ?>
+							<?php dynamic_sidebar('blog-sidebar'); ?>
+						<?php endif; ?>
 					</div>
 				</article>
+
+				<div class="inspired-section">
+					<h3 class="inspired-heading">Inspired? Check Out More!</h3>
+					<div class="inspired-content">
+						<div class="vacation-option">
+							<p>Explore our vacation options and get a quote.</p>
+							<a href="<?php echo site_url('./vacations') ?>" class="vacation-link">All about Vacations</a>
+						</div>
+						<div class="travel-advice">
+							<p>Get expert travel advice from Jen.</p>
+							<a href="<?php echo site_url('./contact-jen') ?>" class="advice-link">Travel Advice</a>
+						</div>
+					</div>
+				</div>
+
+				<?php if (is_active_sidebar('meet-jen')): ?>
+					<?php dynamic_sidebar('meet-jen'); ?>
+				<?php endif; ?>
 
 				<section>
 					<h3>Jennifer's Travel Blog</h3>
