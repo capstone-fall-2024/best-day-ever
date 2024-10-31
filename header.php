@@ -29,6 +29,13 @@
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'bdev_by_jen'); ?></a>
 
+		<div class="search-form-box">
+			<?php get_search_form(); ?>
+			<div>
+				<i class="bi bi-x-lg"></i>
+			</div>
+		</div>
+
 		<div class="top-header">
 			<div>
 				<p>Travel Agent of Best Day Ever Vacations</p>
@@ -91,12 +98,18 @@
 			</div>
 			<!-- Navigation Menu -->
 			<nav class="nav-mobile">
-				<ul>
+				<ul class="menu-list-mobile">
 					<li>
 						<a href="#">Home</a>
 					</li>
 					<li>
-						<a href="#">Vacations</a>
+						<a href="#">Vacations<span>&darr;</span></a>
+						<ul class="submenu-mobile">
+							<li><a href="#">Disney</a></li>
+							<li><a href="#">Cruise</a></li>
+							<li><a href="#">HoneyMoon and Wedding</a></li>
+							<li><a href="#">All Inclusive</a></li>
+						</ul>
 					</li>
 					<li>
 						<a href="#">About Jen</a>
