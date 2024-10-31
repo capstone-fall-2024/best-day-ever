@@ -16,14 +16,14 @@ get_header();
 ?>
 <main id="primary" class="site-main">
 	<!-- wp:heading -->
-	<?php the_title( '<h1 class="entry-title d-none">', '</h1>' ); ?>
+	<?php the_title( '<h2 class="entry-title d-none">', '</h2>' ); ?>
 	<!-- /wp:heading -->
 	<div class="actual-content">
 		<?php the_content(); ?>
 	
 		<section>
 			<!-- wp:heading -->
-			<h2 class="wp-block-heading has-dark-green-color has-text-color has-link-color" style="font-size:48px;">Jennifer's Travel Blog</h2>
+			<h3 class="wp-block-heading has-dark-green-color has-text-color has-link-color" style="font-size:48px;">Jennifer's Travel Blog</h3>
 			<!-- /wp:heading -->
 			<div class="col-12 d-flex flex-wrap justify-content-center justify-content-lg-start">
 				<?php
@@ -54,8 +54,20 @@ get_header();
 				endif; ?>
 			</div>
 		</section>
+
+		<?php if (is_active_sidebar('instagram')) {
+				dynamic_sidebar('instagram');
+			}; 
+		?>
+
+		<?php if (is_active_sidebar('subscription-main')) {
+				dynamic_sidebar('subscription-main');
+			}; 
+		?>
 	</div>
 </main><!-- #main -->
 
 <?php
 get_footer();
+
+
