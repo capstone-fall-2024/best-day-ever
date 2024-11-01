@@ -15,10 +15,10 @@
 get_header();
 ?>
 <main id="primary" class="site-main">
-	<!-- wp:heading -->
-	<?php the_title( '<h2 class="entry-title d-none">', '</h2>' ); ?>
-	<!-- /wp:heading -->
-	<div class="actual-content">
+	<section class="actual-content">
+		<!-- wp:heading -->
+		<?php the_title( '<h2 class="entry-title d-none">', '</h2>' ); ?>
+		<!-- /wp:heading -->
 		<?php the_content(); ?>
 	
 		<section>
@@ -31,7 +31,8 @@ get_header();
 						array(
 							'post_type' => 'post',
 							"posts_per_page" => 3
-				)); ?>
+					)); 
+				?>
 				<?php if ($posts_query->have_posts()): ?>
 					<?php while ($posts_query->have_posts()): ?>
 						<div class="col-sm-6 col-lg-3">
@@ -64,7 +65,7 @@ get_header();
 				dynamic_sidebar('subscription-main');
 			}; 
 		?>
-	</div>
+	</section>
 </main><!-- #main -->
 
 <?php
