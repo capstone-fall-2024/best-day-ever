@@ -102,6 +102,7 @@ function bdev_by_jen_setup()
 			'flex-height' => true,
 		)
 	);
+
 }
 add_action('after_setup_theme', 'bdev_by_jen_setup');
 
