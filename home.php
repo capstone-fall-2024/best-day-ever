@@ -166,7 +166,7 @@
         <section id="honeymoon-wedding">
 
             <div class="container">
-                <h3>Disney Travel Blog</h3>
+                <h3>Honeymoon and Wedding</h3>
                 <div class="row">
                     <?php display_category_posts('Honeymoon and Wedding') ?>
                 </div>
@@ -182,7 +182,7 @@
         <section id="all-inclusive">
 
             <div class="container">
-                <h3>Disney Travel Blog</h3>
+                <h3>All Inclusive</h3>
                 <div class="row">
                     <?php display_category_posts('All Inclusive') ?>
                 </div>
