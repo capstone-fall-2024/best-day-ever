@@ -1,29 +1,28 @@
 <?php get_header(); ?>
 <main id="primary" class="site-main">
+    <section class="main-section">
+        <h2>Blog</h2>
+        <section class="banner-for-section">
+            <h3>Banner</h3>
+            <div class="banner">
+                <div class="banner_container">
+                    <div class="banner-section">
+                        <?php
+                        $banner_category = new WP_Query(array(
+                            'category_name' => 'Featured Post',
+                            'posts_per_page' => 1
+                        ));
 
-    <section>
-        <h2><?php single_post_title(); ?></h2>
-        <section>
-            <h3>Heading 3</h3>
-            <div class="posts-banner">
-                <div class="posts-banner__bg-image"></div>
-                <div class="post-banner">
-                    <?php
-                    $banner_category = new WP_Query(array(
-                        'category_name' => 'Featured Post',
-                        'posts_per_page' => 1
-                    ));
-                    if ($banner_category->have_posts()):
-                        while ($banner_category->have_posts()):
-                            $banner_category->the_post(); ?>
-                            <article class="banner-category-content">
-                                <p><span>Blog</span><span>feature post</span></p>
+                        if ($banner_category->have_posts()):
+                            while ($banner_category->have_posts()):
+                                $banner_category->the_post();
+                                ?>
+                                <div><span class="span1">Blog</span><span class="span2">Featured Post</span></div>
                                 <h4><?php the_title(); ?></h4>
                                 <p><?php the_excerpt(); ?></p>
-                                <a href="<?php the_permalink(); ?>">View More</a>
-                            </article>
-
-                            <div class="banner-category-image">
+                                <a href="<?php the_permalink(); ?>">View Post</a>
+                            </div>
+                            <div class="image-banner-section">
                                 <a href="<?php the_permalink(); ?>">
                                     <?php if (has_post_thumbnail()): ?>
                                         <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
@@ -31,11 +30,11 @@
                                 </a>
                             </div>
                         <?php endwhile;
-                    else: ?>
+                        else: ?>
                         <p>No posts found in this category.</p>
                     <?php endif;
-                    // Reset Post Data
-                    wp_reset_postdata(); ?>
+                        // Reset Post Data
+                        wp_reset_postdata(); ?>
                 </div>
             </div>
             <nav class="nav-for-category" aria-label="Travel Category Navigation">
@@ -47,13 +46,14 @@
                 </ul>
             </nav>
         </section>
+
         <section class="latest-articles">
             <div class="container">
                 <h3>Recent Posts</h3>
                 <div class="row">
                     <?php while (have_posts()):
                         the_post(); ?>
-                        <div class="col-12 col-sm-6 col-md-4 mt-5"> <!-- Responsive columns -->
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 mt-5"> <!-- Responsive columns -->
                             <article class="post-item">
                                 <div class="image-post">
                                     <a href="<?php the_permalink(); ?>">
@@ -95,7 +95,7 @@
             if ($query->have_posts()):
                 while ($query->have_posts()):
                     $query->the_post(); ?>
-                    <div class="col-12 col-sm-6 col-md-4 mt-5"> <!-- Responsive columns -->
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 mt-5"> <!-- Responsive columns -->
                         <article class="post-item">
                             <div class="image-post">
                                 <a href="<?php the_permalink(); ?>">
@@ -194,8 +194,7 @@
 
             </div>
         </section>
+
     </section>
-
-
 </main>
 <?php get_footer(); ?>
