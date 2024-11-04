@@ -102,6 +102,7 @@ function bdev_by_jen_setup()
 			'flex-height' => true,
 		)
 	);
+
 }
 add_action('after_setup_theme', 'bdev_by_jen_setup');
 
@@ -130,10 +131,10 @@ function bdev_by_jen_widgets_init()
 			'name' => esc_html__('Blog Sidebar', 'bdev_by_jen'),
 			'id' => 'blog-sidebar',
 			'description' => esc_html__('Add widgets here.', 'bdev_by_jen'),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget' => '</section>',
-			'before_title' => '<h2 class="widget-title">',
-			'after_title' => '</h2>',
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
 		)
 	);
 
@@ -168,8 +169,20 @@ function bdev_by_jen_widgets_init()
 			'description' => esc_html__('Add widgets here.', 'bdev_by_jen'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget' => '</section>',
-			'before_title' => '<h2 class="widget-title">',
-			'after_title' => '</h2>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name' => esc_html__('Meet Jen Blog Post', 'bdev_by_jen'),
+			'id' => 'meet-jen',
+			'description' => esc_html__('Add widgets here.', 'bdev_by_jen'),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget' => '</section>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
 		)
 	);
 

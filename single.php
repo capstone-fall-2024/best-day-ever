@@ -10,30 +10,132 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<main id="primary" class="site-main">
+	<?php
+	$author_id = get_the_author_meta('ID');
+	?>
 
+	<section>
 		<?php
-		while ( have_posts() ) :
-			the_post();
+		if (have_posts()):
+			while (have_posts()):
+				the_post();
+				?>
+				<div class="single-banner">
+					<div class="single-banner__bg-image"></div>
+					<div class="single-banner-content">
+						<p>Blog</p>
+						<h2><?php the_title(); ?></h2>
+					</div>
+				</div>
 
-			get_template_part( 'template-parts/content', get_post_type() );
+				<article class="blog">
+					<h3>Heading 3 - Main Blog</h3>
+					<div class="profile-blogger">
+						<div class="profile-img-blogger">
+							<?php echo get_avatar($author_id, 96); ?>
+						</div>
+						<div class="info-blogger">
+							<p>By: <?php echo get_the_author(); ?></p>
 
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'bdev_by_jen' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'bdev_by_jen' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
+							<?php
+							$user_background = get_field('user_background', 'user_' . $author_id);
+							if (!empty($user_background)) { ?>
+								<p><?php echo $user_background; ?></p>
+							<?php } ?>
+						</div>
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+						<div class="blog-category">
+							<p><?php the_time('F j, Y'); ?></p>
+							<?php if (has_category()): ?>
+								<p><?php the_category(' - '); ?></p>
+							<?php endif; ?>
+						</div>
+					</div>
+					<div class="blog-content">
+						<div>
+							<?php the_content(); ?>
+						</div>
+						<?php if (is_active_sidebar('blog-sidebar')): ?>
+							<?php dynamic_sidebar('blog-sidebar'); ?>
+						<?php endif; ?>
+					</div>
+				</article>
 
-		endwhile; // End of the loop.
-		?>
+				<div class="inspired-section">
+					<h3 class="inspired-heading">Inspired? Check Out More!</h3>
+					<div class="inspired-content">
+						<div class="vacation-option">
+							<p>Explore our vacation options and get a quote.</p>
+							<a href="<?php echo site_url('./vacations') ?>" class="vacation-link">All about Vacations</a>
+						</div>
+						<div class="travel-advice">
+							<p>Get expert travel advice from Jen.</p>
+							<a href="<?php echo site_url('./contact-jen') ?>" class="advice-link">Travel Advice</a>
+						</div>
+					</div>
+				</div>
 
-	</main><!-- #main -->
+				<?php if (is_active_sidebar('meet-jen')): ?>
+					<?php dynamic_sidebar('meet-jen'); ?>
+				<?php endif; ?>
+
+				<section>
+					<h3>Jennifer's Travel Blog</h3>
+
+					<?php
+					function display_category_posts($category, $limit = 3)
+					{
+						$query = new WP_Query(array(
+							'posts_per_page' => $limit
+						));
+						if ($query->have_posts()):
+							while ($query->have_posts()):
+								$query->the_post(); ?>
+								<div class="posts">
+									<article>
+										<div class="image-posts">
+											<a href="<?php the_permalink(); ?>">
+												<?php if (has_post_thumbnail()): ?>
+													<img src="<?php echo esc_url(get_the_post_thumbnail_url()); ?>" alt="<?php the_title(); ?>">
+												<?php endif; ?>
+											</a>
+										</div>
+										<div class="content-posts">
+											<a href="<?php the_permalink(); ?>">
+												<h4><?php the_title(); ?></h4>
+											</a>
+										</div>
+									</article>
+									<div class="btn-posts">
+										<a href="<?php the_permalink(); ?>">View More</a>
+									</div>
+								</div>
+							<?php endwhile;
+						else: ?>
+							<p>No posts found in this category.</p>
+						<?php endif;
+						wp_reset_postdata();
+					}
+					?>
+					<?php display_category_posts('3'); ?>
+					<div>
+						<a href="<?php echo esc_url(home_url('/blog')); ?>">Check out more</a>
+					</div>
+				</section>
+				<section>
+					<h3>Instagram</h3>
+				</section>
+
+				<?php if (is_active_sidebar('subscription-main')): ?>
+					<?php dynamic_sidebar('subscription-main'); ?>
+				<?php endif; ?>
+
+			<?php endwhile; // End of the have_posts() loop ?>
+		<?php endif; ?>
+	</section>
+
+</main><!-- #main -->
 
 <?php
 get_sidebar();

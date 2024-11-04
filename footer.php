@@ -63,7 +63,9 @@
 			</div>
 		</div>
 
-		<div class="footer_copy_right">@ 2024 Best Day Ever Vacations by Jen</div>
+		<div class="footer_copy_right">
+			<p>&commat; 2024 Best Day Ever Vacations by Jen</p>
+		</div>
 	</div>
 </footer><!-- #colophon -->
 </div><!-- #page -->

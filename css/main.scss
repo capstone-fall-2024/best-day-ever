@@ -6,6 +6,12 @@ $dark-red: #320507;
 $off-black: #0A0A0A;
 $light-grey: #D4D4D4;
 
+$line-height: 32px;
+
+h1,h2,h3,h4,h5,h6,p{
+  line-height: $line-height;
+}
+
 //Map
 
 
@@ -32,6 +38,144 @@ $light-grey: #D4D4D4;
   margin-left: 0;
 }
 
+// home.php
+.row{
+  margin-bottom: 100px;
+}
+
+.post-item{
+  border-radius: 15px;
+  border: $dark-red solid 1px;
+  padding: 50px 20px 0 20px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Bottom shadow */
+  margin-bottom: 4rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.image-post{
+  margin-bottom: -30px;
+}
+
+.card-img-top{
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.content-post{
+  margin-bottom: 40px;
+}
+
+.content-post a{
+  text-decoration: none;
+  color: $dark-red;
+}
+
+.content-post a h4 {
+  line-height: $line-height;
+}
+
+.content-post a h4:hover{
+  color: $light-orange;
+}
+
+.btn-post{
+  align-self: center;
+  margin-bottom: -25px;
+}
+
+.btn-post a {
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-weight:700;
+  background-color: #fb8f46;
+  color: $off-black;
+  border: $dark-red solid 1px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Bottom shadow */
+  cursor: pointer;
+}
+
+
+.btn-post a:hover {
+  background-color: $dark-green;
+  color: $cream;
+  border: none;
+}
+
+.pagination {
+  display: flex; /* Use flexbox for layout */
+  justify-content: flex-end; 
+  margin: 2rem 0; 
+}
+
+.pagination ul {
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
+  display: flex; 
+}
+
+.pagination li {
+  margin: 0 10px; 
+}
+
+.pagination a {
+  text-decoration: none; 
+  color: $dark-red; 
+  padding: 10px 15px; 
+  border: 1px solid transparent; 
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions */
+}
+
+.pagination a:hover {
+  background-color:#fff; 
+  border-color: $light-orange; 
+}
+
+.pagination .current {
+  color: $dark-red; 
+  background-color: $light-orange; 
+  border-color: $light-orange; 
+  padding: 10px 15px; 
+  border-radius: 5px; 
+}
+
+.pagination span {
+  color: #888; 
+  padding: 10px 15px; 
+}
+
+.link-main-category{
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center;
+  margin: 2rem 0; 
+}
+
+.link-main-category a{
+  color: $light-orange;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.link-main-category a:hover{
+  color: $dark-green;
+}
+.link-main-category a span{
+  margin-left: 2rem;
+}
+.bi-arrow-right{
+  font-size: 24px;
+}
+
 /**** base on mobile ****/
 .top-header{
   display: none;
@@ -44,7 +188,7 @@ $light-grey: #D4D4D4;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  z-index: 1000;
+  z-index: 100;
 }
 
 .search-container{
@@ -87,12 +231,48 @@ $light-grey: #D4D4D4;
   background-color: #fff;
   transition: 0.4s;
   padding-top: 130px;
+  overflow-y: auto;
+  max-height: 100px;
 }
 
 .nav-mobile{
   width: 100%;
+  position: relative;
   // background-color: lightcoral;
 }
+
+//afaf
+.menu-list-mobile{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list-mobile li {
+  position: relative;
+}
+
+.menu-list-mobile a {
+  display: block;
+}
+
+.submenu-mobile {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 0; /* Start with height 0 */
+  overflow: hidden; /* Hide overflow */
+  background: #f9f9f9;
+  transition: height 1s ease; /* Transition for height */
+}
+
+
+.submenu-mobile.active {
+  height: auto; /* Set height to auto to allow sliding */
+}
+
+//afaf
+
 
 .nav-mobile ul{
   margin-bottom: 0;
@@ -119,6 +299,8 @@ $light-grey: #D4D4D4;
 .nav-mobile ul li a:hover{
   color: $light-orange;
 }
+
+
 
 .cta-mobile{
   width: 100%;
@@ -152,6 +334,11 @@ $light-grey: #D4D4D4;
   height: 70px;
   object-fit: cover;
 }
+
+.search-form-box{
+  display: none;
+}
+
 
 @media (max-width: 678px) {
   .site-header__util{
@@ -283,7 +470,28 @@ $light-grey: #D4D4D4;
   .bi-search {
     display: block;
     font-size: 25px;
+    cursor: pointer;
   }
+
+  .search-form-box{
+    position: fixed;
+    top: -500px;
+    z-index: 101;
+    transition: top 0.3s ease;
+  }
+  
+  .search-form-box.is-active{
+    top: 50px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: rgb(216, 216, 216);  
+  }
+
+  .search-form-box{
+    display: block;
+  }
+  
   
 }
 

@@ -1,4 +1,8 @@
 @charset "UTF-8";
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p {
+  line-height: 32px;
+}
+
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors
@@ -11982,6 +11986,146 @@ textarea.form-control-lg {
   margin-left: 0;
 }
 
+.row {
+  margin-bottom: 100px;
+}
+
+.post-item {
+  border-radius: 15px;
+  border: #320507 solid 1px;
+  padding: 50px 20px 0 20px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Bottom shadow */
+  margin-bottom: 4rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.image-post {
+  margin-bottom: -30px;
+}
+
+.card-img-top {
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.content-post {
+  margin-bottom: 40px;
+}
+
+.content-post a {
+  text-decoration: none;
+  color: #320507;
+}
+
+.content-post a h4, .content-post a .h4 {
+  line-height: 32px;
+}
+
+.content-post a h4:hover, .content-post a .h4:hover {
+  color: #fb8f46;
+}
+
+.btn-post {
+  align-self: center;
+  margin-bottom: -25px;
+}
+
+.btn-post a {
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-weight: 700;
+  background-color: #fb8f46;
+  color: #0A0A0A;
+  border: #320507 solid 1px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Bottom shadow */
+  cursor: pointer;
+}
+
+.btn-post a:hover {
+  background-color: #30453b;
+  color: #F9EFE6;
+  border: none;
+}
+
+.pagination {
+  display: flex; /* Use flexbox for layout */
+  justify-content: flex-end;
+  margin: 2rem 0;
+}
+
+.pagination ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.pagination li {
+  margin: 0 10px;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: #320507;
+  padding: 10px 15px;
+  border: 1px solid transparent;
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions */
+}
+
+.pagination a:hover {
+  background-color: #fff;
+  border-color: #fb8f46;
+}
+
+.pagination .current {
+  color: #320507;
+  background-color: #fb8f46;
+  border-color: #fb8f46;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.pagination span {
+  color: #888;
+  padding: 10px 15px;
+}
+
+.link-main-category {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.link-main-category a {
+  color: #fb8f46;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.link-main-category a:hover {
+  color: #30453b;
+}
+
+.link-main-category a span {
+  margin-left: 2rem;
+}
+
+.bi-arrow-right {
+  font-size: 24px;
+}
+
 /**** base on mobile ****/
 .top-header {
   display: none;
@@ -11993,7 +12137,7 @@ textarea.form-control-lg {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  z-index: 1000;
+  z-index: 100;
 }
 
 .search-container {
@@ -12036,10 +12180,41 @@ textarea.form-control-lg {
   background-color: #fff;
   transition: 0.4s;
   padding-top: 130px;
+  overflow-y: auto;
+  max-height: 100px;
 }
 
 .nav-mobile {
   width: 100%;
+  position: relative;
+}
+
+.menu-list-mobile {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list-mobile li {
+  position: relative;
+}
+
+.menu-list-mobile a {
+  display: block;
+}
+
+.submenu-mobile {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 0; /* Start with height 0 */
+  overflow: hidden; /* Hide overflow */
+  background: #f9f9f9;
+  transition: height 1s ease; /* Transition for height */
+}
+
+.submenu-mobile.active {
+  height: auto; /* Set height to auto to allow sliding */
 }
 
 .nav-mobile ul {
@@ -12100,6 +12275,10 @@ textarea.form-control-lg {
   height: 70px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.search-form-box {
+  display: none;
 }
 
 @media (max-width: 678px) {
@@ -12213,6 +12392,23 @@ textarea.form-control-lg {
   .bi-search {
     display: block;
     font-size: 25px;
+    cursor: pointer;
+  }
+  .search-form-box {
+    position: fixed;
+    top: -500px;
+    z-index: 101;
+    transition: top 0.3s ease;
+  }
+  .search-form-box.is-active {
+    top: 50px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: rgb(216, 216, 216);
+  }
+  .search-form-box {
+    display: block;
   }
 }
 .site-footer__col-one,

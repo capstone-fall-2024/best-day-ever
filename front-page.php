@@ -15,15 +15,15 @@
 get_header();
 ?>
 <main id="primary" class="site-main">
-	<!-- wp:heading -->
-	<?php the_title( '<h1 class="entry-title d-none">', '</h1>' ); ?>
-	<!-- /wp:heading -->
-	<div class="actual-content">
+	<section class="actual-content">
+		<!-- wp:heading -->
+		<?php the_title( '<h2 class="entry-title d-none">', '</h2>' ); ?>
+		<!-- /wp:heading -->
 		<?php the_content(); ?>
 	
 		<section>
 			<!-- wp:heading -->
-			<h2 class="wp-block-heading has-dark-green-color has-text-color has-link-color" style="font-size:48px;">Jennifer's Travel Blog</h2>
+			<h3 class="wp-block-heading has-dark-green-color has-text-color has-link-color" style="font-size:48px;">Jennifer's Travel Blog</h3>
 			<!-- /wp:heading -->
 			<div class="col-12 d-flex flex-wrap justify-content-center justify-content-lg-start">
 				<?php
@@ -31,7 +31,8 @@ get_header();
 						array(
 							'post_type' => 'post',
 							"posts_per_page" => 3
-				)); ?>
+					)); 
+				?>
 				<?php if ($posts_query->have_posts()): ?>
 					<?php while ($posts_query->have_posts()): ?>
 						<div class="col-sm-6 col-lg-3">
@@ -54,8 +55,20 @@ get_header();
 				endif; ?>
 			</div>
 		</section>
-	</div>
+
+		<?php if (is_active_sidebar('instagram')) {
+				dynamic_sidebar('instagram');
+			}; 
+		?>
+
+		<?php if (is_active_sidebar('subscription-main')) {
+				dynamic_sidebar('subscription-main');
+			}; 
+		?>
+	</section>
 </main><!-- #main -->
 
 <?php
 get_footer();
+
+
