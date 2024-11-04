@@ -21,12 +21,10 @@ get_header();
 			
 			<?php the_content(); ?>
 
-			<section class="subscription">
-                <?php if (is_active_sidebar('subscription-main')) {
-                        dynamic_sidebar('subscription-main');
-                    }; 
-                ?>
-            </section>
+            <?php if (is_active_sidebar('subscription-main')) {
+                dynamic_sidebar('subscription-main');
+                }; 
+            ?>
 			
 		</section>
 
