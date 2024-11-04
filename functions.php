@@ -325,3 +325,69 @@ function theme_testing_parts_setup()
 }
 add_action('after_setup_theme', 'theme_testing_parts_setup');
 
+/**
+ * Carousel Function
+ */
+function display_testimonial_carousel_shortcode() {
+	$args = array(
+		'post_type' => 'testimonial',
+		'posts_per_page' => 2,
+	);
+
+	$testimonials_carousel_query = new WP_Query($args);
+
+	if($testimonials_carousel_query->have_posts()) {
+		ob_start();
+		?>
+		<div class="carousel slide">
+			<?php while($testimonials_carousel_query->have_posts()) : $testimonials_carousel_query->the_post();
+				if(function_exists('get_field')) {
+					$author_name = get_field('authors_name');
+					$author_vacation = get_field('authors_vacation');
+					$title = get_field('title');
+					$message = get_field('message');
+					$rating = get_field('rating');
+					$author_photo = get_field('authors_photo');
+				}
+			?>
+			
+			<div class="carousel-inner">
+				<div class="carousel-item">
+					<div class="rating">
+						<?php
+							$fullStars = intval($rating);
+							for($i=1; $i<=5; $i++) {
+								if($i <= $fullStars) {
+									echo '<span class="star filled">&#9733</span>';
+								} else {
+									echo '<span class="star">&#9734</span>';
+								}
+							}
+						?>
+					</div>
+
+					<h4><?php echo esc_html($title) ?></h4>
+					<p><?php echo esc_html($message) ?></p>
+					
+					<div>
+						<?php if($author_photo) : ?>
+							<img src="<?php echo esc_url($author_photo['url']) ?>" alt="<?php echo esc_attr($author_photo['alt']) ?>">
+						<?php endif; ?>
+
+						<div>
+							<p><?php echo esc_html($author_name); ?></p>
+							<p><?php echo esc_html($author_vacation) ?></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<?php endwhile; ?>
+		</div>
+		<?php
+		wp_reset_postdata();
+		return ob_get_clean();
+	} else {
+		return '<p>No carousel items found</p>';
+	}
+}
+add_shortcode('carousel', 'display_testimonial_carousel_shortcode');
