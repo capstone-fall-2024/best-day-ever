@@ -41,6 +41,10 @@ h1,h2,h3,h4,h5,h6,p{
 // home.php
 .main-section h3{
   color: $dark-green;
+  margin-top: 3rem;
+  margin-bottom: -2rem;
+  text-transform: capitalize;
+  font-family: 'Young Serif', serif;
 }
 .main-section h2{
   display: none;
@@ -124,6 +128,8 @@ h1,h2,h3,h4,h5,h6,p{
 
 
 //end nav blog
+
+
 .row{
   margin-bottom: 100px;
 }

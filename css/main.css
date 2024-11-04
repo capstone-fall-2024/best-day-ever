@@ -11988,6 +11988,10 @@ textarea.form-control-lg {
 
 .main-section h3, .main-section .h3 {
   color: #30453b;
+  margin-top: 3rem;
+  margin-bottom: -2rem;
+  text-transform: capitalize;
+  font-family: "Young Serif", serif;
 }
 
 .main-section h2, .main-section .h2 {
