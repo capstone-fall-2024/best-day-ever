@@ -53,6 +53,8 @@ function bdev_by_jen_setup()
 			'menu-1' => esc_html__('Primary', 'bdev_by_jen'),
 			'footer-1' => esc_html__('Footer-1', 'bdev_by_jen'),
 			'footer-2' => esc_html__('Footer-2', 'bdev_by_jen'),
+			'footer-3' => esc_html__('Additional Info', 'bdev_by_jen'),
+
 		)
 	);
 
