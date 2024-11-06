@@ -25,7 +25,7 @@
                             <div class="image-banner-section">
                                 <a href="<?php the_permalink(); ?>">
                                     <?php if (has_post_thumbnail()): ?>
-                                        <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+                                        <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
                                     <?php endif; ?>
                                 </a>
                             </div>
