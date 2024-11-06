@@ -17,6 +17,7 @@ h1,h2,h3,h4,h5,h6,p{
 @import "base/variables";
 @import "bootstrap/scss/bootstrap";
 @import "layout/header";
+@import "modules/single-banner";
 @import "layout/footer";
 
 
@@ -27,7 +28,7 @@ h1,h2,h3,h4,h5,h6,p{
   width: 80%;
   max-width: 1280px;
   margin: 0 auto;
-}
+} 
 
 .wp-block-cover:nth-of-type(1) {
   width: 100vw;

@@ -22,6 +22,9 @@ get_header();
 				the_post();
 				?>
 				<div class="single-blog-banner">
+					<?php if (has_post_thumbnail()): ?>
+						<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+					<?php endif; ?>
 					<div class="single-banner-content">
 						<p>Blog</p>
 						<h2><?php the_title(); ?></h2>
