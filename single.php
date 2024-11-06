@@ -21,8 +21,7 @@ get_header();
 			while (have_posts()):
 				the_post();
 				?>
-				<div class="single-banner">
-					<div class="single-banner__bg-image"></div>
+				<div class="single-blog-banner">
 					<div class="single-banner-content">
 						<p>Blog</p>
 						<h2><?php the_title(); ?></h2>
