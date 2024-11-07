@@ -3,7 +3,7 @@
     <img src="<?php echo $feature_image[0]; ?>" alt="Featured image as the banner of <?php the_title(); ?>" class="img-fluid">
     <div>
         <!-- wp:heading -->
-        <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+        <?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
         <!-- /wp:heading -->
     </div>
 </div>
