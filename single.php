@@ -21,41 +21,67 @@ get_header();
 			while (have_posts()):
 				the_post();
 				?>
-				<div class="single-banner">
-					<div class="single-banner__bg-image"></div>
-					<div class="single-banner-content">
-						<p>Blog</p>
-						<h2><?php the_title(); ?></h2>
+				<div class="single-blog-banner">
+					<div class="img-background">
+						<?php if (has_post_thumbnail()): ?>
+							<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+						<?php endif; ?>
+						<div class="overlay"></div>
+						<div class="single-banner-content">
+							<p>Blog</p>
+							<h2><?php the_title(); ?></h2>
+						</div>
 					</div>
 				</div>
 
 				<article class="blog">
-					<h3>Heading 3 - Main Blog</h3>
-					<div class="profile-blogger">
-						<div class="profile-img-blogger">
-							<?php echo get_avatar($author_id, 96); ?>
-						</div>
-						<div class="info-blogger">
-							<p>By: <?php echo get_the_author(); ?></p>
+					<div class="main-content">
+						<h3 class="hide-heading">Heading 3 - Main Blog</h3>
+						<div class="blogger-banner">
+							<div class="profile-blogger">
+								<div class="profile-img-blogger">
+									<?php echo get_avatar($author_id, 96); ?>
+								</div>
+								<div class="info-blogger">
+									<p>By: <?php echo get_the_author(); ?></p>
 
-							<?php
-							$user_background = get_field('user_background', 'user_' . $author_id);
-							if (!empty($user_background)) { ?>
-								<p><?php echo $user_background; ?></p>
-							<?php } ?>
-						</div>
+									<?php
+									$user_background = get_field('user_background', 'user_' . $author_id);
+									if (!empty($user_background)) { ?>
+										<p><?php echo $user_background; ?></p>
+									<?php } ?>
+								</div>
+							</div>
 
-						<div class="blog-category">
-							<p><?php the_time('F j, Y'); ?></p>
-							<?php if (has_category()): ?>
-								<p><?php the_category(' - '); ?></p>
-							<?php endif; ?>
+							<div class="blog-tag">
+								<p><?php the_time('F j, Y'); ?></p>
+								<?php
+								$tags = get_the_tags();
+
+								if ($tags) {
+									$formatted_tags = [];
+
+									foreach ($tags as $tag) {
+										$formatted_tag = ucfirst(str_replace(' ', '-', $tag->name));
+										$formatted_tags[] = '<i>' . $formatted_tag . '</i>';
+									}
+
+									echo implode('-', $formatted_tags);
+								}
+								;
+								?>
+							</div>
+						</div>
+						<div class="blog-content">
+							<div>
+								<?php the_content(); ?>
+								<?php if (is_active_sidebar('social-media-share-icon')): ?>
+									<?php dynamic_sidebar('social-media-share-icon'); ?>
+								<?php endif; ?>
+							</div>
 						</div>
 					</div>
-					<div class="blog-content">
-						<div>
-							<?php the_content(); ?>
-						</div>
+					<div clas="banner-ad">
 						<?php if (is_active_sidebar('blog-sidebar')): ?>
 							<?php dynamic_sidebar('blog-sidebar'); ?>
 						<?php endif; ?>
@@ -67,11 +93,11 @@ get_header();
 					<div class="inspired-content">
 						<div class="vacation-option">
 							<p>Explore our vacation options and get a quote.</p>
-							<a href="<?php echo site_url('./vacations') ?>" class="vacation-link">All about Vacations</a>
+							<a href="<?php echo site_url('./vacations') ?>" class="vacation-link"><span>All about Vacations</span></a>
 						</div>
 						<div class="travel-advice">
 							<p>Get expert travel advice from Jen.</p>
-							<a href="<?php echo site_url('./contact-jen') ?>" class="advice-link">Travel Advice</a>
+							<a href="<?php echo site_url('./contact-jen') ?>" class="advice-link"><span>Travel Advice</span></a>
 						</div>
 					</div>
 				</div>

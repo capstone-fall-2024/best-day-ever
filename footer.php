@@ -1,16 +1,3 @@
-<?php
-/**
- * The template for displaying the footer
- *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package Best_Day_Ever_Vacations_by_Jen
- */
-
-?>
-
 <footer id="colophon" class="site-footer">
 
 	<div class="site-info">
@@ -43,14 +30,13 @@
 
 
 			<div class="site-footer__col-four">
+				<p>Additional Info</p>
 				<?php
-				if (is_active_sidebar("footer-widget2")) {
-					dynamic_sidebar("footer-widget2");
-				}
+				wp_nav_menu(array(
+					"theme_location" => "footer-3",
+				));
 				?>
-				<!--		<p>Additional Info</p>
-				<a href="#">Disney Vacations</a>
-				<a href="#">Norwegian Cruises</a> -->
+
 			</div>
 
 			<div class="site-footer__col-five">
@@ -59,7 +45,6 @@
 					dynamic_sidebar("footer-widget3");
 				}
 				?>
-
 			</div>
 		</div>
 

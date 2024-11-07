@@ -25,7 +25,7 @@
                             <div class="image-banner-section">
                                 <a href="<?php the_permalink(); ?>">
                                     <?php if (has_post_thumbnail()): ?>
-                                        <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+                                        <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
                                     <?php endif; ?>
                                 </a>
                             </div>
@@ -182,12 +182,13 @@
         <section id="all-inclusive">
 
             <div class="container">
-                <h3>All Inclusive</h3>
+                <h3>All Inclusive &amp; More Travel Blog</h3>
                 <div class="row">
-                    <?php display_category_posts('All Inclusive') ?>
+                    <?php display_category_posts('All Inclusive, Miscellaneous') ?>
                 </div>
                 <div class="link-main-category">
-                    <a href="<?php echo esc_url(get_category_link(get_cat_ID('All Inclusive'))); ?>">Check our
+                    <a href="<?php echo esc_url(get_category_link(get_cat_ID('All Inclusive, Miscellaneous'))); ?>">Check
+                        our
                         more<span><i class="bi bi-arrow-right"></i></span></a>
 
                 </div>

@@ -53,6 +53,8 @@ function bdev_by_jen_setup()
 			'menu-1' => esc_html__('Primary', 'bdev_by_jen'),
 			'footer-1' => esc_html__('Footer-1', 'bdev_by_jen'),
 			'footer-2' => esc_html__('Footer-2', 'bdev_by_jen'),
+			'footer-3' => esc_html__('Additional Info', 'bdev_by_jen'),
+
 		)
 	);
 
@@ -181,6 +183,18 @@ function bdev_by_jen_widgets_init()
 			'description' => esc_html__('Add widgets here.', 'bdev_by_jen'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget' => '</section>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name' => esc_html__('Social Media Share Icon', 'bdev_by_jen'),
+			'id' => 'social-media-share-icon',
+			'description' => esc_html__('Add widgets here.', 'bdev_by_jen'),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget' => '</div>',
 			'before_title' => '<h3 class="widget-title">',
 			'after_title' => '</h3>',
 		)
@@ -329,7 +343,4 @@ function theme_testing_parts_setup()
 }
 add_action('after_setup_theme', 'theme_testing_parts_setup');
 
-/**
- * Carousel Function
- */
 
