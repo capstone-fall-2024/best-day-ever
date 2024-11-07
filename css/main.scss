@@ -762,6 +762,42 @@ ul#menu-footer-2.menu
 }
 
 /***************** Testimonial Carousel *****************/
-.carousel-item {
-  display: block;
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+
+  .slider-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .slider-item {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 1;
+    display: none;
+  }
+
+  .slider-item.active {
+    display: block;
+  }
+}
+
+.slider-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    background-color: transparent;
+    border: none;
+
+    i {
+      font-size: 1.5rem;
+      color: #CE5927;
+    }
+  }
 }
