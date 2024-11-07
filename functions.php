@@ -190,6 +190,18 @@ function bdev_by_jen_widgets_init()
 
 	register_sidebar(
 		array(
+			'name' => esc_html__('Social Media Share Icon', 'bdev_by_jen'),
+			'id' => 'social-media-share-icon',
+			'description' => esc_html__('Add widgets here.', 'bdev_by_jen'),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
+		)
+	);
+
+	register_sidebar(
+		array(
 			'name' => esc_html__('Accordion FAQs', 'bdev_by_jen'),
 			'id' => 'accordion-faqs',
 			'description' => esc_html__('Add widgets here.', 'bdev_by_jen'),

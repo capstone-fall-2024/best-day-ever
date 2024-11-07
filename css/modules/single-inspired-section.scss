@@ -1,0 +1,82 @@
+.inspired-section{
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  background-color: $cream;
+  height: 400px;
+}
+
+.inspired-heading{
+  margin-bottom: 24px;
+}
+
+.inspired-content{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+}
+
+.vacation-link,
+.advice-link{
+  text-decoration: none;
+}
+
+.vacation-link span ,
+.advice-link span{
+  width: 200px;
+  background-color: $light-orange;
+  color: $dark-red;
+  padding: 16px 55px;
+  border-radius: 16px;
+}
+
+
+.vacation-link span:hover,
+.advice-link span:hover{
+  color: $cream;
+  background-color: $dark-green;
+}
+
+
+
+
+
+
+// .vacation-option a,
+// .travel-advice a{
+//   display: inline-block;
+//   width: 200px;
+//   white-space: nowrap;
+//   justify-content: center;
+//   padding: 16px 55px;
+//   background-color: $light-orange;
+//   color: $dark-red;
+//   border-radius: 16px;
+//   text-decoration: none;
+//   align-self: center;
+// }
+
+// .vacation-option,
+// .travel-advice
+// {
+//   display: flex;
+//   flex-direction: column;
+// }
+
+
+
+
+.vacation-option a:hover,
+.travel-advice a:hover{
+  background-color: $dark-green;
+  color: $cream;
+}
+
+@media (min-width:768px) {
+  
+}
+
+@media (min-width:1024px) {
+  
+}
