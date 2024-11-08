@@ -45,19 +45,20 @@
   color: $off-black;
 }
 
-.banner-section a{
-  text-decoration: none;
+.button-primary{
+  @extend %button-styles;
+
   background-color: $light-orange;
+  border: 2px solid $light-orange;
   padding: 10px 55px;
-  border-radius: 10px;
-  font-weight: 500;
-  color: $off-black;
+
+  @extend %button-hover;
 }
 
-.banner-section a:hover{
-  background-color: $dark-green;
-  color: $cream;
-}
+// .banner-section a:hover{
+//   background-color: $dark-green;
+//   color: $cream;
+// }
 
 .banner-section div {
   display: flex;
@@ -136,26 +137,20 @@
 
 .btn-post{
   align-self: center;
-  margin-bottom: -25px;
+  margin-bottom: -10px;
 }
 
-.btn-post a {
+.button-blog-card{
+  @extend %button-styles;
+
+  background-color: $light-orange;
+  border: 2px solid $dark-orange;
+  box-shadow: 0 6px 4px rgba(50, 5, 7, 0.25);
   padding: 15px 30px;
-  border-radius: 10px;
-  font-weight:700;
-  background-color: #fb8f46;
-  color: $off-black;
-  border: $dark-red solid 1px;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Bottom shadow */
-  cursor: pointer;
+  
+  @extend %button-hover-shadow;
 }
 
-
-.btn-post a:hover {
-  background-color: $dark-green;
-  color: $cream;
-  border: none;
-}
 
 .pagination {
   display: flex; /* Use flexbox for layout */
@@ -265,20 +260,6 @@
 .banner-section p{
   color: $off-black;
   margin-bottom: 5px;
-}
-
-.banner-section a{
-  text-decoration: none;
-  background-color: $light-orange;
-  padding: 10px 55px;
-  border-radius: 10px;
-  font-weight: 500;
-  color: $off-black;
-}
-
-.banner-section a:hover{
-  background-color: $dark-green;
-  color: $cream;
 }
 
 

@@ -20,7 +20,7 @@
                                 <div><span class="span1">Blog</span><span class="span2">Featured Post</span></div>
                                 <h4><?php the_title(); ?></h4>
                                 <p><?php the_excerpt(); ?></p>
-                                <a href="<?php the_permalink(); ?>">View Post</a>
+                                <a class="button-primary" href="<?php the_permalink(); ?>">View Post</a>
                             </div>
                             <div class="image-banner-section">
                                 <a href="<?php the_permalink(); ?>">
@@ -69,7 +69,7 @@
                                     </a>
                                 </div>
                                 <div class="btn-post">
-                                    <a href="<?php the_permalink(); ?>" class="btn btn-primary">View More</a>
+                                    <a href="<?php the_permalink(); ?>" class="button-blog-card">View More</a>
                                 </div>
                             </article>
                         </div>
@@ -111,7 +111,7 @@
                                 </a>
                             </div>
                             <div class="btn-post">
-                                <a href="<?php the_permalink(); ?>" class="btn btn-primary">View More</a>
+                                <a href="<?php the_permalink(); ?>" class="button-blog-card">View More</a>
                             </div>
                         </article>
                     </div>
