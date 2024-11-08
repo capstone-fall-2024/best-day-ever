@@ -3,6 +3,34 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p {
   line-height: 32px;
 }
 
+.button-blog-card, .button-primary {
+  cursor: pointer;
+  font-weight: 700;
+  color: #320507;
+  text-decoration: none;
+  padding: 16px 55px;
+  border-radius: 10px;
+  transition: all 0.2s ease 0s;
+}
+
+.button-primary:hover {
+  background-color: #30453b;
+  color: #fff;
+  border: 2px solid #30453b;
+}
+
+.button-blog-card:hover {
+  background-color: #30453b;
+  color: #fff;
+  border: 2px solid #30453b;
+  box-shadow: 0 6px 4px rgba(50, 5, 7, 0.25);
+}
+
+/************ Primary **************/
+/************ Button Blog Cards **************/
+/************ Secondary, Blog Cards **************/
+/************ Vacation Cards + Subcribe**************/
+/************Home Pg Nav**************/
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors
@@ -12302,18 +12330,10 @@ textarea.form-control-lg {
   color: #0A0A0A;
 }
 
-.banner-section a {
-  text-decoration: none;
+.button-primary {
   background-color: #fb8f46;
+  border: 2px solid #fb8f46;
   padding: 10px 55px;
-  border-radius: 10px;
-  font-weight: 500;
-  color: #0A0A0A;
-}
-
-.banner-section a:hover {
-  background-color: #30453b;
-  color: #F9EFE6;
 }
 
 .banner-section div {
@@ -12389,24 +12409,14 @@ textarea.form-control-lg {
 
 .btn-post {
   align-self: center;
-  margin-bottom: -25px;
+  margin-bottom: -10px;
 }
 
-.btn-post a {
-  padding: 15px 30px;
-  border-radius: 10px;
-  font-weight: 700;
+.button-blog-card {
   background-color: #fb8f46;
-  color: #0A0A0A;
-  border: #320507 solid 1px;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Bottom shadow */
-  cursor: pointer;
-}
-
-.btn-post a:hover {
-  background-color: #30453b;
-  color: #F9EFE6;
-  border: none;
+  border: 2px solid #CE5927;
+  box-shadow: 0 6px 4px rgba(50, 5, 7, 0.25);
+  padding: 15px 30px;
 }
 
 .pagination {
@@ -12511,18 +12521,6 @@ textarea.form-control-lg {
   .banner-section p {
     color: #0A0A0A;
     margin-bottom: 5px;
-  }
-  .banner-section a {
-    text-decoration: none;
-    background-color: #fb8f46;
-    padding: 10px 55px;
-    border-radius: 10px;
-    font-weight: 500;
-    color: #0A0A0A;
-  }
-  .banner-section a:hover {
-    background-color: #30453b;
-    color: #F9EFE6;
   }
   .banner-section .span1 {
     font-weight: 500;
