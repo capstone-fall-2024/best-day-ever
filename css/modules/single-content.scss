@@ -1,3 +1,11 @@
+.single-blog{
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.main-content{
+  margin-bottom: 48px;
+}
 .hide-heading{
   display: none;
 }
@@ -36,15 +44,12 @@
 
 .blog-tag{
   padding: 5%;
-}qrqerq
+}
 
 .blog-content{
   padding: 0 5%;
 }
 
-.advertisement {
-  display: none;
-}
 
 
 @media (min-width:768px) {
@@ -56,16 +61,7 @@
 }
 
 @media (min-width:1024px) {
-  .blog{
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
   
-  .main-content{
-    flex: 2;
-  }
-
   .profile-blogger{
     padding: 0;
   }
@@ -73,20 +69,5 @@
   .blog-content{
     padding: 0;
   }
-  
-  .wp-block-image img {
-    display: block;
-  }
-  
-  // .banner-ad{
-  //   display: block;
-  //   max-width: 200px;
-  //   height: auto;
-  // }
 
-  // .banner-ad div figure img{
-  //   width: 100%;
-  //   height: auto;
-  //   object-fit: cover;
-  // }
 }

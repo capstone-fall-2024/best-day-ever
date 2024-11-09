@@ -1,9 +1,12 @@
 .inspired-section{
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: 5%;
+  margin: 0 5%;
   background-color: $cream;
-  height: 400px;
+  height: 450px;
+  border-radius: 10px;
 }
 
 .inspired-heading{
@@ -13,70 +16,70 @@
 .inspired-content{
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 48px;
   justify-content: center;
 }
 
-.vacation-link,
-.advice-link{
-  text-decoration: none;
+.vacation-option,
+.travel-advice
+{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-.vacation-link span ,
-.advice-link span{
-  width: 200px;
+
+.vacation-option div,
+.travel-advice div{
+  align-self: center;
+}
+
+
+.button-primary__vacation-link,
+.button-primary__advice-link
+{
+  @extend %button-styles;
+
   background-color: $light-orange;
-  color: $dark-red;
-  padding: 16px 55px;
-  border-radius: 16px;
+  border: 2px solid $light-orange;
+  padding: 16px 30px;
+  width: 180px;
+
+  @extend %button-hover;
 }
 
-
-.vacation-link span:hover,
-.advice-link span:hover{
-  color: $cream;
-  background-color: $dark-green;
+.horizontal_line {
+  width: 90%;
+  margin: 0 auto;
+  height: 3px;
+  border-top: 3px dotted black;
+  line-height: 80%;
 }
 
-
-
-
-
-
-// .vacation-option a,
-// .travel-advice a{
-//   display: inline-block;
-//   width: 200px;
-//   white-space: nowrap;
-//   justify-content: center;
-//   padding: 16px 55px;
-//   background-color: $light-orange;
-//   color: $dark-red;
-//   border-radius: 16px;
-//   text-decoration: none;
-//   align-self: center;
-// }
-
-// .vacation-option,
-// .travel-advice
-// {
-//   display: flex;
-//   flex-direction: column;
-// }
-
-
-
-
-.vacation-option a:hover,
-.travel-advice a:hover{
-  background-color: $dark-green;
-  color: $cream;
-}
 
 @media (min-width:768px) {
-  
+  .inspired-heading{
+    align-self: center;
+  }
+  .inspired-content{
+    flex-direction: row;
+  }
+  .horizontal_line{
+    display: none;
+  }
+  .vertical_line{
+    border-left: 3px dotted black;
+    height: 200px;
+  }
+  .vacation-option,
+  .travel-advice{
+    max-width: 250px;
+  }
 }
 
 @media (min-width:1024px) {
-  
+  .inspired-section{
+    max-width: 1024px;
+    margin: 0 auto;
+  }
 }
