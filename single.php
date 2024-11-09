@@ -34,7 +34,7 @@ get_header();
 					</div>
 				</div>
 
-				<article class="blog">
+				<article class="single-blog">
 					<div class="main-content">
 						<h3 class="hide-heading">Heading 3 - Main Blog</h3>
 						<div class="blogger-banner">
@@ -81,11 +81,6 @@ get_header();
 							</div>
 						</div>
 					</div>
-					<div clas="banner-ad">
-						<?php if (is_active_sidebar('blog-sidebar')): ?>
-							<?php dynamic_sidebar('blog-sidebar'); ?>
-						<?php endif; ?>
-					</div>
 				</article>
 
 				<div class="inspired-section">
@@ -93,11 +88,18 @@ get_header();
 					<div class="inspired-content">
 						<div class="vacation-option">
 							<p>Explore our vacation options and get a quote.</p>
-							<a href="<?php echo site_url('./vacations') ?>" class="vacation-link"><span>All about Vacations</span></a>
+							<div>
+								<a href="<?php echo site_url('./vacations') ?>" class="button-primary__vacation-link">All about
+									Vacations</a>
+							</div>
 						</div>
+						<div class="horizontal_line"></div>
+						<div class="vertical_line"></div>
 						<div class="travel-advice">
 							<p>Get expert travel advice from Jen.</p>
-							<a href="<?php echo site_url('./contact-jen') ?>" class="advice-link"><span>Travel Advice</span></a>
+							<div>
+								<a href="<?php echo site_url('./contact-jen') ?>" class="button-primary__advice-link">Travel Advice</a>
+							</div>
 						</div>
 					</div>
 				</div>

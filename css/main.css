@@ -3,7 +3,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p {
   line-height: 32px;
 }
 
-.button-blog-card, .button-primary {
+.button-primary__vacation-link,
+.button-primary__advice-link, .button-blog-card, .button-primary {
   cursor: pointer;
   font-weight: 700;
   color: #320507;
@@ -13,7 +14,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p {
   transition: all 0.2s ease 0s;
 }
 
-.button-primary:hover {
+.button-primary__vacation-link:hover,
+.button-primary__advice-link:hover, .button-primary:hover {
   background-color: #30453b;
   color: #fff;
   border: 2px solid #30453b;
@@ -12601,11 +12603,20 @@ textarea.form-control-lg {
 
 @media (min-width: 1024px) {
   .img-background {
-    max-width: 80vw;
+    max-width: 1024px;
     height: 600px;
     margin: 0 auto;
   }
 }
+.single-blog {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.main-content {
+  margin-bottom: 48px;
+}
+
 .hide-heading {
   display: none;
 }
@@ -12646,12 +12657,8 @@ textarea.form-control-lg {
   padding: 5%;
 }
 
-qrqerq .blog-content {
+.blog-content {
   padding: 0 5%;
-}
-
-.advertisement {
-  display: none;
 }
 
 @media (min-width: 768px) {
@@ -12662,30 +12669,22 @@ qrqerq .blog-content {
   }
 }
 @media (min-width: 1024px) {
-  .blog {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-  .main-content {
-    flex: 2;
-  }
   .profile-blogger {
     padding: 0;
   }
   .blog-content {
     padding: 0;
   }
-  .wp-block-image img {
-    display: block;
-  }
 }
 .inspired-section {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: 5%;
+  margin: 0 5%;
   background-color: #F9EFE6;
-  height: 400px;
+  height: 450px;
+  border-radius: 10px;
 }
 
 .inspired-heading {
@@ -12695,36 +12694,63 @@ qrqerq .blog-content {
 .inspired-content {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 48px;
   justify-content: center;
 }
 
-.vacation-link,
-.advice-link {
-  text-decoration: none;
+.vacation-option,
+.travel-advice {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-.vacation-link span,
-.advice-link span {
-  width: 200px;
+.vacation-option div,
+.travel-advice div {
+  align-self: center;
+}
+
+.button-primary__vacation-link,
+.button-primary__advice-link {
   background-color: #fb8f46;
-  color: #320507;
-  padding: 16px 55px;
-  border-radius: 16px;
+  border: 2px solid #fb8f46;
+  padding: 16px 30px;
+  width: 180px;
 }
 
-.vacation-link span:hover,
-.advice-link span:hover {
-  color: #F9EFE6;
-  background-color: #30453b;
+.horizontal_line {
+  width: 90%;
+  margin: 0 auto;
+  height: 3px;
+  border-top: 3px dotted black;
+  line-height: 80%;
 }
 
-.vacation-option a:hover,
-.travel-advice a:hover {
-  background-color: #30453b;
-  color: #F9EFE6;
+@media (min-width: 768px) {
+  .inspired-heading {
+    align-self: center;
+  }
+  .inspired-content {
+    flex-direction: row;
+  }
+  .horizontal_line {
+    display: none;
+  }
+  .vertical_line {
+    border-left: 3px dotted black;
+    height: 200px;
+  }
+  .vacation-option,
+  .travel-advice {
+    max-width: 250px;
+  }
 }
-
+@media (min-width: 1024px) {
+  .inspired-section {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}
 .site-footer__col-one,
 .site-footer__col-three,
 .site-footer__col-four,
