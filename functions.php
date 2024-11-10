@@ -332,8 +332,11 @@ if (defined('JETPACK__VERSION')) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-// get testimonial
-require_once get_template_directory(). '/parts/testimonials.php';
+// Get Shortcode for testimonials, specialties, and certifications
+require_once get_template_directory(). '/parts/testimonials-slider.php';
+require_once get_template_directory(). '/parts/specialties-slider.php';
+require_once get_template_directory(). '/parts/certificates-slider.php';
+
 /**
  * Enable theme support
  */

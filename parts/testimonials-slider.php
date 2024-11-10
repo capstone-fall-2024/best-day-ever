@@ -1,20 +1,20 @@
     <?php
-        function display_testimonial_carousel_shortcode() {
+        function display_testimonial_slider_shortcode() {
             $args = array(
                 'post_type' => 'testimonial',
                 'posts_per_page' => -1, // Show all testimonials
             );
 
-            $testimonials_carousel_query = new WP_Query($args);
+            $testimonials_slider_query = new WP_Query($args);
 
-            if ($testimonials_carousel_query->have_posts()) {
+            if ($testimonials_slider_query->have_posts()) {
                 ob_start();
                 ?>  
                 <div class="slider">
                     <div class="slider-inner">
                         <?php
                             $index = 0;
-                            while ($testimonials_carousel_query->have_posts()) : $testimonials_carousel_query->the_post();
+                            while ($testimonials_slider_query->have_posts()) : $testimonials_slider_query->the_post();
                                 if (function_exists('get_field')) {
                                     $author_name = get_field('authors_name');
                                     $author_vacation = get_field('authors_vacation');
@@ -64,8 +64,8 @@
                 wp_reset_postdata();
                 return ob_get_clean();
             } else {
-                return '<p>No carousel items found</p>';
+                return '<p>No slider items found</p>';
             }
         }
-        add_shortcode('testimonials_carousel', 'display_testimonial_carousel_shortcode');
+        add_shortcode('testimonials_carousel', 'display_testimonial_slider_shortcode');
         ?>
