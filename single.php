@@ -93,7 +93,7 @@ get_header();
 									Vacations</a>
 							</div>
 						</div>
-						<div class="horizontal_line"></div>
+						<!-- <div class="horizontal_line"></div> -->
 						<div class="vertical_line"></div>
 						<div class="travel-advice">
 							<p>Get expert travel advice from Jen.</p>
@@ -108,49 +108,19 @@ get_header();
 					<?php dynamic_sidebar('meet-jen'); ?>
 				<?php endif; ?>
 
+				<!-- template-part -->
+				<?php get_template_part('template-parts/display-category-posts'); ?>
 				<section>
-					<h3>Jennifer's Travel Blog</h3>
-
-					<?php
-					function display_category_posts($category, $limit = 3)
-					{
-						$query = new WP_Query(array(
-							'posts_per_page' => $limit
-						));
-						if ($query->have_posts()):
-							while ($query->have_posts()):
-								$query->the_post(); ?>
-								<div class="posts">
-									<article>
-										<div class="image-posts">
-											<a href="<?php the_permalink(); ?>">
-												<?php if (has_post_thumbnail()): ?>
-													<img src="<?php echo esc_url(get_the_post_thumbnail_url()); ?>" alt="<?php the_title(); ?>">
-												<?php endif; ?>
-											</a>
-										</div>
-										<div class="content-posts">
-											<a href="<?php the_permalink(); ?>">
-												<h4><?php the_title(); ?></h4>
-											</a>
-										</div>
-									</article>
-									<div class="btn-posts">
-										<a href="<?php the_permalink(); ?>">View More</a>
-									</div>
-								</div>
-							<?php endwhile;
-						else: ?>
-							<p>No posts found in this category.</p>
-						<?php endif;
-						wp_reset_postdata();
-					}
-					?>
-					<?php display_category_posts('3'); ?>
-					<div>
-						<a href="<?php echo esc_url(home_url('/blog')); ?>">Check out more</a>
+					<div class="container">
+						<h3>Jennifer's Travel Blog</h3>
+						<?php display_category_posts('', 3); ?>
+						<div class="link-main-category">
+							<a href="<?php echo esc_url(home_url('/blog')); ?>">Check out more<span><i
+										class="bi bi-arrow-right"></i></span></a>
+						</div>
 					</div>
 				</section>
+
 				<section>
 					<h3>Instagram</h3>
 				</section>

@@ -3,7 +3,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p {
   line-height: 32px;
 }
 
-.button-primary__vacation-link,
+.button-secondary, .button-primary__vacation-link,
 .button-primary__advice-link, .button-blog-card, .button-primary {
   cursor: pointer;
   font-weight: 700;
@@ -14,7 +14,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p {
   transition: all 0.2s ease 0s;
 }
 
-.button-primary__vacation-link:hover,
+.button-secondary:hover, .button-primary__vacation-link:hover,
 .button-primary__advice-link:hover, .button-primary:hover {
   background-color: #30453b;
   color: #fff;
@@ -12564,8 +12564,9 @@ textarea.form-control-lg {
 }
 
 .img-background {
+  background: url("../img/get-a-quote.jpg") no-repeat center center/cover;
+  height: 400px;
   position: relative;
-  background-color: lightblue;
 }
 
 .img-background img {
@@ -12680,10 +12681,9 @@ textarea.form-control-lg {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 5%;
+  padding: 24px;
   margin: 0 5%;
   background-color: #F9EFE6;
-  height: 450px;
   border-radius: 10px;
 }
 
@@ -12694,7 +12694,7 @@ textarea.form-control-lg {
 .inspired-content {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 32px;
   justify-content: center;
 }
 
@@ -12726,27 +12726,99 @@ textarea.form-control-lg {
   line-height: 80%;
 }
 
+.travel-advice {
+  border-top: 3px dotted black;
+  margin: 24px 0;
+}
+
+.travel-advice > p {
+  margin-top: 16px;
+}
+
 @media (min-width: 768px) {
-  .inspired-heading {
-    align-self: center;
+  .inspired-section {
+    padding: 55px;
+    max-width: 1024px;
+    margin: 0 5%;
   }
   .inspired-content {
     flex-direction: row;
+    align-items: flex-start;
   }
-  .horizontal_line {
-    display: none;
+  .inspired-content > div > p {
+    max-width: 220px;
+    margin: 0 auto;
   }
   .vertical_line {
     border-left: 3px dotted black;
     height: 200px;
   }
-  .vacation-option,
+  .vacation-option, .travel-advice {
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    align-items: flex-end;
+  }
+  .vacation-option div,
+  .travel-advice div {
+    margin: auto 0;
+  }
+  .inspired-heading {
+    align-self: center;
+  }
   .travel-advice {
-    max-width: 250px;
+    border-top: none;
+    margin-top: 0;
+  }
+  .travel-advice > p {
+    margin-top: 0;
   }
 }
 @media (min-width: 1024px) {
   .inspired-section {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}
+.meet-jen-blog-section {
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.meet-jen-blog-section > div > figure > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+}
+
+.button-secondary {
+  background-color: #fff;
+  border: 2px solid #30453b;
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .meet-jen-blog-section {
+    margin-left: 5%;
+    margin-right: 5%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1024px) {
+  .meet-jen-blog-section {
     max-width: 1024px;
     margin: 0 auto;
   }

@@ -5,8 +5,11 @@
 }
 
 .img-background{
+  background:url("../img/get-a-quote.jpg") no-repeat center center / cover;
+
+  height: 400px;
   position: relative;
-  background-color: lightblue;
+  // background-color: lightblue;
 }
 
 .img-background img{
