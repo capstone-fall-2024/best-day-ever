@@ -3,7 +3,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p {
   line-height: 32px;
 }
 
-.button-secondary, .button-primary__vacation-link,
+.footer-btn-contact-jen, .button-secondary, .button-primary__vacation-link,
 .button-primary__advice-link, .button-blog-card, .button-primary {
   cursor: pointer;
   font-weight: 700;
@@ -14,7 +14,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p {
   transition: all 0.2s ease 0s;
 }
 
-.button-secondary:hover, .button-primary__vacation-link:hover,
+.footer-btn-contact-jen:hover, .button-secondary:hover, .button-primary__vacation-link:hover,
 .button-primary__advice-link:hover, .button-primary:hover {
   background-color: #30453b;
   color: #fff;
@@ -12938,6 +12938,11 @@ a.wp-block-button__link:hover {
 
 div.menu-additional-info-footer-container {
   margin-top: 10px;
+}
+
+.footer-btn-contact-jen {
+  background-color: #fff;
+  border: 2px solid #30453b;
 }
 
 .footer_copy_right {
