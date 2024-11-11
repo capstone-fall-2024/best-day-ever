@@ -12662,11 +12662,33 @@ textarea.form-control-lg {
   padding: 0 5%;
 }
 
+.social-icon-share-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  padding-left: 0;
+}
+
+.social-icon-share-list > li {
+  list-style: none;
+  width: 29px;
+  height: 29px;
+}
+
 @media (min-width: 768px) {
   .blogger-banner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  .social-icon-share-list {
+    gap: 24px;
+  }
+  .social-icon-share-list > li {
+    list-style: none;
+    width: 32px;
+    height: 32px;
   }
 }
 @media (min-width: 1024px) {
@@ -12716,6 +12738,10 @@ textarea.form-control-lg {
   border: 2px solid #fb8f46;
   padding: 16px 30px;
   width: 180px;
+}
+
+.button-primary__advice-link {
+  padding: 16px 53px;
 }
 
 .horizontal_line {
