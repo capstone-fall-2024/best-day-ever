@@ -95,13 +95,13 @@ div.menu-additional-info-footer-container{
   margin-top: 10px;
 }
 
-.footer-btn-contact-jen{
+.footer-btn-contact-jen a{
 
   @extend %button-styles;
 
   background-color: #fff;
   border: 2px solid $dark-green;
-
+  padding: 12px 0;
 
   @extend %button-hover;
 
