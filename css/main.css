@@ -12362,6 +12362,9 @@ textarea.form-control-lg {
   display: none;
 }
 
+.row {
+  margin-bottom: 100px;
+}
 .row .blog-card {
   border-radius: 10px;
   border: #320507 solid 1px;
@@ -12460,7 +12463,7 @@ textarea.form-control-lg {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin: 4rem 0;
+  margin: 1rem 0;
 }
 
 .link-main-category a {

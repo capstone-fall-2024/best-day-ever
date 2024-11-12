@@ -133,9 +133,9 @@
             <section id="honeymoon-and-wedding">
                 <div class="container">
                     <h3>Honeymoon and Wedding</h3>
-                    <div class="row">
-                        <?php display_category_posts('honeymoon-and-wedding') ?> <!-- Use category slug here as well -->
-                    </div>
+
+                    <?php display_category_posts('honeymoon-and-wedding', 3) ?> <!-- Use category slug here as well -->
+
                     <div class="link-main-category">
                         <a href="<?php echo esc_url(get_category_link(get_cat_ID('honeymoon and wedding'))); ?>">Check out
                             more<span><i class="bi bi-arrow-right"></i></span></a>
@@ -151,13 +151,11 @@
             <section id="all-inclusive">
                 <div class="container">
                     <h3>All Inclusive &amp; More Travel Blog</h3>
-                    <div class="row">
-                        <?php display_category_posts('all-inclusive, miscellaneous') ?>
-                        <!-- Use category slug here as well -->
-                    </div>
+                    <?php display_category_posts('all-inclusive, miscellaneous', 3) ?>
+                    <!-- Use category slug here as well -->
+
                     <div class="link-main-category">
-                        <a href="<?php echo esc_url(get_category_link(get_cat_ID('all inclusive'))); ?>">Check
-                            out
+                        <a href="<?php echo esc_url(get_category_link(get_cat_ID('all inclusive'))); ?>">Check out
                             more<span><i class="bi bi-arrow-right"></i></span></a>
                     </div>
                 </div>
