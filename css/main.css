@@ -4,7 +4,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p {
 }
 
 .footer-btn-contact-jen a, .button-secondary, .button-primary__vacation-link,
-.button-primary__advice-link, .button-blog-card, .button-primary {
+.button-primary__advice-link, .row .blog-card .content-post__btn-post .button-blog-card, .button-primary {
   cursor: pointer;
   font-weight: 700;
   color: #320507;
@@ -21,7 +21,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p {
   border: 2px solid #30453b;
 }
 
-.button-blog-card:hover {
+.row .blog-card .content-post__btn-post .button-blog-card:hover {
   background-color: #30453b;
   color: #fff;
   border: 2px solid #30453b;
@@ -12301,8 +12301,7 @@ textarea.form-control-lg {
 }
 
 .banner {
-  background: url("") no-repeat center center/cover scroll;
-  background-color: lightblue;
+  background: url("../img/get-a-quote.jpg") no-repeat center center/cover scroll;
 }
 
 .banner_container {
@@ -12363,58 +12362,50 @@ textarea.form-control-lg {
   display: none;
 }
 
-.row {
-  margin-bottom: 100px;
-}
-
-.post-item {
-  border-radius: 15px;
+.row .blog-card {
+  border-radius: 10px;
   border: #320507 solid 1px;
-  padding: 50px 20px 0 20px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Bottom shadow */
-  margin-bottom: 4rem;
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+  gap: 3rem;
+  height: 500px;
 }
-
-.image-post {
-  margin-bottom: -30px;
-}
-
-.card-img-top {
-  height: 300px;
+.row .blog-card__card-img {
+  width: 100%;
+  height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 1.5rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
-
-.content-post {
-  margin-bottom: 40px;
+@media (max-width: 768px) {
+  .row .blog-card__card-img {
+    height: 300px;
+  }
 }
-
-.content-post a {
+.row .blog-card .content-post {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 0 5%;
+}
+.row .blog-card .content-post__title-post {
   text-decoration: none;
   color: #320507;
 }
-
-.content-post a h4, .content-post a .h4 {
-  line-height: 32px;
-}
-
-.content-post a h4:hover, .content-post a .h4:hover {
+.row .blog-card .content-post__title-post:hover {
   color: #fb8f46;
 }
-
-.btn-post {
+.row .blog-card .content-post__btn-post {
   align-self: center;
-  margin-bottom: -10px;
+  margin-top: auto;
 }
-
-.button-blog-card {
+.row .blog-card .content-post__btn-post .button-blog-card {
   background-color: #fb8f46;
   border: 2px solid #CE5927;
   box-shadow: 0 6px 4px rgba(50, 5, 7, 0.25);
@@ -12469,7 +12460,7 @@ textarea.form-control-lg {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin: 2rem 0;
+  margin: 4rem 0;
 }
 
 .link-main-category a {
@@ -12496,13 +12487,12 @@ textarea.form-control-lg {
 @media (min-width: 768px) {
   /******home.php*******/
   .banner {
-    background: url("../tree.jpg") no-repeat center center/cover scroll;
+    background: url("../img/get-a-quote.jpg") no-repeat center bottom/cover scroll;
   }
   .banner_container {
     display: flex;
     justify-content: center;
     height: 450px;
-    background-color: lightcoral;
   }
   .banner-section {
     background-color: #F9EFE6;

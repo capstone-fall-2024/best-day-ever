@@ -157,6 +157,7 @@ get_header();
 
 				<!-- template-part -->
 				<?php get_template_part('template-parts/display-category-posts'); ?>
+
 				<section>
 					<div class="container">
 						<h3>Jennifer's Travel Blog</h3>
