@@ -38,12 +38,23 @@
                 </div>
             </div>
             <nav class="nav-for-category" aria-label="Travel Category Navigation">
-                <ul>
-                    <li><a href="#disney">Disney Travel</a></li>
-                    <li><a href="#cruise">Cruise Travel</a></li>
-                    <li><a href="#honeymoon-wedding">Honeymoon & Wedding</a></li>
-                    <li><a href="#all-inclusive">All Inclusive Travel</a></li>
+                <ul class="nav-for-category__non-carousel-menu">
+                    <li class='nav-for-category__item'><a href="#disney">Disney Travel</a></li>
+                    <li class='nav-for-category__item'><a href="#cruise">Cruise Travel</a></li>
+                    <li class='nav-for-category__item'><a href="#honeymoon-and-wedding">Honeymoon & Wedding</a></li>
+                    <li class='nav-for-category__item'><a href="#all-inclusive">All Inclusive & More</a></li>
                 </ul>
+                <ul class="nav-for-category__carousel-menu">
+                    <li class='carousel-menu__item'><a href="#disney">Disney Travel</a></li>
+                    <li class='carousel-menu__item'><a href="#cruise">Cruise Travel</a></li>
+                    <li class='carousel-menu__item'><a href="#honeymoon-and-wedding">Honeymoon &
+                            Wedding</a></li>
+                    <li class='carousel-menu__item'><a href="#all-inclusive">All Inclusive & More</a>
+                    </li>
+                </ul>
+                <!-- Next and previous buttons -->
+                <a class="prev"><i class="bi bi-chevron-left"></i></a>
+                <a class="next"><i class="bi bi-chevron-right"></i></a>
             </nav>
         </section>
 

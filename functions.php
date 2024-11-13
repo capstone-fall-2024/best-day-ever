@@ -280,7 +280,7 @@ function bdev_by_jen_scripts()
 	wp_style_add_data('bdev_by_jen-style', 'rtl', 'replace');
 
 	wp_enqueue_script('bdev_by_jen-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
-	wp_enqueue_script('bdev_by_jen-slider', get_template_directory_uri().'/js/slider.js', array(), null, true);
+	wp_enqueue_script('bdev_by_jen-slider', get_template_directory_uri() . '/js/slider.js', array(), null, true);
 	wp_enqueue_script('jquery');
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
@@ -333,7 +333,7 @@ if (defined('JETPACK__VERSION')) {
 }
 
 // get testimonial
-require_once get_template_directory(). '/parts/testimonials.php';
+require_once get_template_directory() . '/parts/testimonials.php';
 /**
  * Enable theme support
  */
