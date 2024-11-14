@@ -21,12 +21,6 @@ get_header();
 
 		<?php the_content(); ?>
 
-		<?php if (is_active_sidebar('subscription-main')) {
-			dynamic_sidebar('subscription-main');
-		}
-		;
-		?>
-
 
 		<?php
 		get_template_part('template-parts/display-category-posts');
@@ -45,7 +39,7 @@ get_header();
 					</div>
 				</section>
 			<?php endif;
-		elseif (is_page('cruise')):
+		elseif (is_page('cruises')):
 			if (count_blog_posts('cruise') > 0): ?>
 				<section id="cruise">
 					<div class="container">
@@ -62,7 +56,7 @@ get_header();
 			if (count_blog_posts('honeymoon-and-wedding') > 0): ?>
 				<section id="honeymoon-and-wedding">
 					<div class="container">
-						<h3>Honeymoon &amp; Wedding</h3>
+						<h3>Honeymoon &amp; Wedding Travel Blog</h3>
 						<?php display_category_posts('honeymoon-and-wedding', 3); ?>
 						<div class="link-main-category">
 							<a href="<?php echo esc_url(get_category_link(get_cat_ID('honeymoon and wedding'))); ?>">Check out
@@ -98,7 +92,10 @@ get_header();
 		<?php endif; ?>
 
 
-
+		<?php if (is_active_sidebar('subscription-main')) {
+			dynamic_sidebar('subscription-main');
+		}
+		?>
 
 
 	</section>
