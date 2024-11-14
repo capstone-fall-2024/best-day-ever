@@ -1,3 +1,17 @@
+// MEDIA QUERY
+
+@mixin media($breakpoint) {
+  @if $breakpoint == small {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == medium {
+    @media (min-width: 769px) and (max-width:1023px) {
+      @content;
+    }
+  }
+}
+
 // home.php
 .main-section h3{
   color: $dark-green;
@@ -14,8 +28,7 @@
   display: none;
 }
 .banner { 
-  background: url('') no-repeat center center / cover scroll;
-  background-color: lightblue;
+  background: url("../img/get-a-quote.jpg") no-repeat center center / cover scroll;
 }
 
 .banner_container{
@@ -55,11 +68,6 @@
   @extend %button-hover;
 }
 
-// .banner-section a:hover{
-//   background-color: $dark-green;
-//   color: $cream;
-// }
-
 .banner-section div {
   display: flex;
   justify-content: space-between;
@@ -85,71 +93,171 @@
   display: none;
 }
 //end banner 
-//nav blog
+
+//nav category blog
+.nav-for-category{
+  height: 50px;
+  width: 100%;
+  background-color: $dark-red;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  &__carousel-menu{
+    display: none;
+  }
+
+  .prev, .next{
+    display: none;
+  }
+
+  &__non-carousel-menu{
+    cursor: pointer;
+    max-width: 1200px;
+    // padding: 0 5%;
+    width: 100%;
+    margin: 0 auto;
+    list-style: none;
+    font-style: italic;
+
+    // background-color: lightblue;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item > a{
+    color: $cream;
+    text-decoration: none;
+  }
+
+  &__item > a:hover{
+    color: $light-orange;
+  }
+
+  @include media(medium){
+    &__non-carousel-menu{
+      padding: 0 5%;
+    }
+  }
+
+  @include media(small){
+    &__non-carousel-menu{
+      display: none;
+    }
+
+    &__carousel-menu{
+      display: block;
+      // background-color: lightblue;
+      margin-bottom: 0;
+      padding: 0;
+      font-style: italic;
+
+      .carousel-menu__item{
+        display: none;
+      }
+
+      .carousel-menu__item a{
+        text-decoration: none;
+        color: $cream;
+      }
+
+      .carousel-menu__item a:hover{
+        color: $light-orange;
+      }
+    }
+  
+    .prev, .next{
+      display: block;
+      position: absolute;
+      width: auto;
+      text-decoration: none;
+      color: $cream;
+      cursor: pointer;
+      font-size: 24px;
+    }
+
+    .prev{
+      left: 5%;
+    }
+
+    .next{
+      right: 5%;
+    }
+  }
 
 
-//end nav blog
+}
+//end nav category blog
 
 
 .row{
   margin-bottom: 100px;
+
+  .blog-card{
+    border-radius: 10px;
+    border: $dark-red solid 1px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Bottom shadow */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
+    height: 500px;
+
+    &__card-img{
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+
+      @include media(small) {
+        // padding: 30px 30px 0 30px;
+        height: 300px;
+        // border-radius: 10px;
+      }
+    }
+
+    .content-post{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
+      padding: 0 5%;
+
+      &__title-post{
+        text-decoration: none;
+        color: $dark-red;
+
+        &:hover{
+          color: $light-orange;
+        }
+      }
+      
+      &__btn-post{
+        align-self: center;
+        margin-top: auto;
+
+        .button-blog-card{
+          @extend %button-styles;
+        
+          background-color: $light-orange;
+          border: 2px solid $dark-orange;
+          box-shadow: 0 6px 4px rgba(50, 5, 7, 0.25);
+          padding: 15px 30px;
+          
+          @extend %button-hover-shadow;
+        }
+      }
+    }
+  }
 }
 
-.post-item{
-  border-radius: 15px;
-  border: $dark-red solid 1px;
-  padding: 50px 20px 0 20px;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Bottom shadow */
-  margin-bottom: 4rem;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
-.image-post{
-  margin-bottom: -30px;
-}
 
-.card-img-top{
-  height: 300px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 1.5rem;
-}
-
-.content-post{
-  margin-bottom: 40px;
-}
-
-.content-post a{
-  text-decoration: none;
-  color: $dark-red;
-}
-
-.content-post a h4 {
-  line-height: $line-height;
-}
-
-.content-post a h4:hover{
-  color: $light-orange;
-}
-
-.btn-post{
-  align-self: center;
-  margin-bottom: -10px;
-}
-
-.button-blog-card{
-  @extend %button-styles;
-
-  background-color: $light-orange;
-  border: 2px solid $dark-orange;
-  box-shadow: 0 6px 4px rgba(50, 5, 7, 0.25);
-  padding: 15px 30px;
-  
-  @extend %button-hover-shadow;
-}
 
 
 .pagination {
@@ -200,7 +308,7 @@
   display: flex;
   justify-content: flex-end; 
   align-items: center;
-  margin: 2rem 0; 
+  margin: 1rem 0; 
 }
 
 .link-main-category a{
@@ -229,7 +337,7 @@
 
   // banner desktop
 .banner { 
-  background: url('../tree.jpg') no-repeat center center / cover scroll;
+  background: url("../img/get-a-quote.jpg") no-repeat center bottom / cover scroll;
 
 }
 
@@ -237,7 +345,6 @@
   display: flex;
   justify-content: center;
   height: 450px;
-  background-color: lightcoral;
 }
 
 .banner-section{
@@ -302,3 +409,32 @@
 
 /****** END home.php*******/
 }
+
+// .grid1{
+//   display: grid;
+//   max-width: 1200px;
+//   margin: 0 auto;
+//   border: 1px solid black;
+//   grid-template-columns: repeat(
+//     auto-fit,
+//     minmax(20rem, 1fr)
+//   );
+//   grid-gap: 3rem;
+
+//   .card1{
+//     display: flex;
+//     flex-direction: column;
+  
+//   }
+    
+
+//       &__img{
+//         display: block;
+//         width: 100%;
+//         height: 300px;
+//         object-fit: cover;
+//         background-color: lightcoral;
+//       }
+
+  
+// }

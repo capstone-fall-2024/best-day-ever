@@ -38,12 +38,23 @@
                 </div>
             </div>
             <nav class="nav-for-category" aria-label="Travel Category Navigation">
-                <ul>
-                    <li><a href="#disney">Disney Travel</a></li>
-                    <li><a href="#cruise">Cruise Travel</a></li>
-                    <li><a href="#honeymoon-wedding">Honeymoon & Wedding</a></li>
-                    <li><a href="#all-inclusive">All Inclusive Travel</a></li>
+                <ul class="nav-for-category__non-carousel-menu">
+                    <li class='nav-for-category__item'><a href="#disney">Disney Travel</a></li>
+                    <li class='nav-for-category__item'><a href="#cruise">Cruise Travel</a></li>
+                    <li class='nav-for-category__item'><a href="#honeymoon-and-wedding">Honeymoon & Wedding</a></li>
+                    <li class='nav-for-category__item'><a href="#all-inclusive">All Inclusive & More</a></li>
                 </ul>
+                <ul class="nav-for-category__carousel-menu">
+                    <li class='carousel-menu__item'><a href="#disney">Disney Travel</a></li>
+                    <li class='carousel-menu__item'><a href="#cruise">Cruise Travel</a></li>
+                    <li class='carousel-menu__item'><a href="#honeymoon-and-wedding">Honeymoon &
+                            Wedding</a></li>
+                    <li class='carousel-menu__item'><a href="#all-inclusive">All Inclusive & More</a>
+                    </li>
+                </ul>
+                <!-- Next and previous buttons -->
+                <a class="prev"><i class="bi bi-chevron-left"></i></a>
+                <a class="next"><i class="bi bi-chevron-right"></i></a>
             </nav>
         </section>
 
@@ -54,23 +65,27 @@
                     <?php while (have_posts()):
                         the_post(); ?>
                         <div class="col-12 col-sm-12 col-md-6 col-lg-4 mt-5"> <!-- Responsive columns -->
-                            <article class="post-item">
-                                <div class="image-post">
-                                    <a href="<?php the_permalink(); ?>">
-                                        <?php if (has_post_thumbnail()): ?>
-                                            <img class="card-img-top" src="<?php echo get_the_post_thumbnail_url(); ?>"
-                                                alt="<?php the_title(); ?>" loading="lazy">
-                                        <?php endif; ?>
-                                    </a>
-                                </div>
+                            <article class="blog-card">
+
+                                <a href="<?php the_permalink(); ?>">
+                                    <?php if (has_post_thumbnail()): ?>
+                                        <img class="blog-card__card-img" src="<?php echo get_the_post_thumbnail_url(); ?>"
+                                            alt="<?php the_title(); ?>" loading="lazy">
+                                    <?php else: ?>
+                                        <div class="blog-card__card-img"></div> <!-- Placeholder for missing image -->
+                                    <?php endif; ?>
+                                </a>
+
                                 <div class="content-post">
-                                    <a href="<?php the_permalink(); ?>">
+                                    <a class="content-post__title-post" href="<?php the_permalink(); ?>">
                                         <h4><?php the_title(); ?></h4>
                                     </a>
+
+                                    <div class="content-post__btn-post">
+                                        <a href="<?php the_permalink(); ?>" class="button-blog-card">View More</a>
+                                    </div>
                                 </div>
-                                <div class="btn-post">
-                                    <a href="<?php the_permalink(); ?>" class="button-blog-card">View More</a>
-                                </div>
+
                             </article>
                         </div>
                     <?php endwhile; ?>
@@ -80,51 +95,10 @@
                 </div>
             </div>
         </section>
-        <!-- Function to display category with limit 3 post (disney/cruise/all-inclusive,etc) -->
 
-        <?php
-        function display_category_posts($categories, $limit = 3)
-        {
-            // Join multiple categories with commas for the WP Query
-            $category_query = is_array($categories) ? implode(',', array_map('trim', $categories)) : trim($categories);
 
-            $query = new WP_Query(array(
-                'category_name' => $category_query,
-                'posts_per_page' => $limit
-            ));
-            if ($query->have_posts()):
-                while ($query->have_posts()):
-                    $query->the_post(); ?>
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 mt-5"> <!-- Responsive columns -->
-                        <article class="post-item">
-                            <div class="image-post">
-                                <a href="<?php the_permalink(); ?>">
-                                    <?php if (has_post_thumbnail()): ?>
-                                        <img class="card-img-top" src="<?php echo get_the_post_thumbnail_url(); ?>"
-                                            alt="<?php the_title(); ?>" loading="lazy">
-                                    <?php endif; ?>
-                                </a>
-                            </div>
-                            <div class="content-post">
-                                <a href="<?php the_permalink(); ?>">
-                                    <h4><?php the_title(); ?></h4>
-                                </a>
-                            </div>
-                            <div class="btn-post">
-                                <a href="<?php the_permalink(); ?>" class="button-blog-card">View More</a>
-                            </div>
-                        </article>
-                    </div>
-                <?php endwhile;
-            else: ?>
-                <p>No posts found in this category.</p>
-            <?php endif;
-            wp_reset_postdata();
-        }
 
-        // End Function
-        
-        ?>
+
         <!-- Subscription-main -->
         <?php if (is_active_sidebar('subscription-main')): ?>
 
@@ -132,69 +106,73 @@
 
         <?php endif; ?>
 
-        <section id="cruise">
-            <div class="container">
-                <h3>Cruise Travel Blog</h3>
-                <div class="row">
-                    <?php display_category_posts('Cruise') ?>
+        <?php get_template_part('template-parts/display-category-posts'); ?>
+        <?php get_template_part('template-parts/count-blog-posts'); ?>
+
+        <?php
+        if (count_blog_posts('cruise') > 0) { ?>
+            <section id="cruise">
+                <div class="container">
+                    <h3>Cruise Travel Blog</h3>
+                    <?php display_category_posts('Cruise', 3); ?>
+                    <div class="link-main-category">
+                        <a href="<?php echo esc_url(get_category_link(get_cat_ID('cruise'))); ?>">Check out
+                            more<span><i class="bi bi-arrow-right"></i></span></a>
+                    </div>
                 </div>
-                <div class="link-main-category">
-                    <a href="<?php echo esc_url(get_category_link(get_cat_ID('Cruise'))); ?>">Check our more<span><i
-                                class="bi bi-arrow-right"></i></span></a>
+            </section>
+        <?php }
+        ?>
 
+        <?php
+        if (count_blog_posts('disney') > 0) { ?>
+            <section id="disney">
+                <div class="container">
+                    <h3>Disney Travel Blog</h3>
+                    <?php display_category_posts('disney', 3); ?>
+                    <div class="link-main-category">
+                        <a href="<?php echo esc_url(get_category_link(get_cat_ID('disney'))); ?>">Check out
+                            more<span><i class="bi bi-arrow-right"></i></span></a>
+                    </div>
                 </div>
+            </section>
+        <?php }
+        ?>
 
-            </div>
-        </section>
 
-        <section id="disney">
-            <div class="container">
-                <h3>Disney Travel Blog</h3>
-                <div class="row">
-                    <?php display_category_posts('Disney') ?>
+        <?php if (count_blog_posts('honeymoon-and-wedding') > 0) { ?>
+            <section id="honeymoon-and-wedding">
+                <div class="container">
+                    <h3>Honeymoon and Wedding</h3>
+
+                    <?php display_category_posts('honeymoon-and-wedding', 3) ?> <!-- Use category slug here as well -->
+
+                    <div class="link-main-category">
+                        <a href="<?php echo esc_url(get_category_link(get_cat_ID('honeymoon and wedding'))); ?>">Check out
+                            more<span><i class="bi bi-arrow-right"></i></span></a>
+                    </div>
                 </div>
-                <div class="link-main-category">
-                    <a href="<?php echo esc_url(get_category_link(get_cat_ID('Disney'))); ?>">Check our more<span><i
-                                class="bi bi-arrow-right"></i></span></a>
+            </section>
+        <?php }
+        ?>
 
+
+        <?php
+        if (count_blog_posts('all-inclusive, miscellaneous ') > 0) { ?>
+            <section id="all-inclusive">
+                <div class="container">
+                    <h3>All Inclusive &amp; More Travel Blog</h3>
+                    <?php display_category_posts('all-inclusive, miscellaneous', 3) ?>
+                    <!-- Use category slug here as well -->
+
+                    <div class="link-main-category">
+                        <a href="<?php echo esc_url(get_category_link(get_cat_ID('all inclusive'))); ?>">Check out
+                            more<span><i class="bi bi-arrow-right"></i></span></a>
+                    </div>
                 </div>
-
-            </div>
-
-        </section>
-
-        <section id="honeymoon-wedding">
-
-            <div class="container">
-                <h3>Honeymoon and Wedding</h3>
-                <div class="row">
-                    <?php display_category_posts('Honeymoon and Wedding') ?>
-                </div>
-                <div class="link-main-category">
-                    <a href="<?php echo esc_url(get_category_link(get_cat_ID('Honeymoon and Wedding'))); ?>">Check our
-                        more<span><i class="bi bi-arrow-right"></i></span></a>
-
-                </div>
-
-            </div>
-        </section>
-
-        <section id="all-inclusive">
-
-            <div class="container">
-                <h3>All Inclusive &amp; More Travel Blog</h3>
-                <div class="row">
-                    <?php display_category_posts('All Inclusive, Miscellaneous') ?>
-                </div>
-                <div class="link-main-category">
-                    <a href="<?php echo esc_url(get_category_link(get_cat_ID('All Inclusive, Miscellaneous'))); ?>">Check
-                        our
-                        more<span><i class="bi bi-arrow-right"></i></span></a>
-
-                </div>
-
-            </div>
-        </section>
+            </section>
+        <?php }
+        ?>
 
     </section>
 </main>

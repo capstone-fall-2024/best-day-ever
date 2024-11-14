@@ -50,6 +50,20 @@
   padding: 0 5%;
 }
 
+.social-icon-share-list{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  padding-left: 0;
+}
+
+.social-icon-share-list > li {
+  list-style: none;
+  width: 29px;
+  height: 29px;
+}
+
 
 
 @media (min-width:768px) {
@@ -57,6 +71,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  .social-icon-share-list {
+    gap: 24px;
+  }
+  .social-icon-share-list > li {
+    list-style: none;
+    width: 32px;
+    height: 32px;
   }
 }
 

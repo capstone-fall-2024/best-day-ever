@@ -75,9 +75,56 @@ get_header();
 						<div class="blog-content">
 							<div>
 								<?php the_content(); ?>
-								<?php if (is_active_sidebar('social-media-share-icon')): ?>
-									<?php dynamic_sidebar('social-media-share-icon'); ?>
-								<?php endif; ?>
+								<div class="social-icon-share-block">
+									<p><strong>Share the Posts&#33;</strong></p>
+									<ul class="social-icon-share-list">
+										<li>
+											<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo get_permalink(get_the_ID()); ?>"
+												target="_blank">
+												<img src="<?php echo get_theme_file_uri('/img/facebook-copy.png'); ?>" alt="Share on Facebook">
+											</a>
+										</li>
+										<li>
+											<a href="https://twitter.com/intent/tweet?url=<?php echo urlencode(get_permalink(get_the_ID())); ?>&text=<?php echo urlencode(get_the_title()); ?>"
+												target="_blank">
+												<img src="<?php echo get_theme_file_uri('/img/twitter.png'); ?>" alt="Share on X">
+											</a>
+										</li>
+										<li>
+											<a href="https://www.instagram.com/" target="_blank">
+												<img src="<?php echo get_theme_file_uri('/img/instagram-copy.png'); ?>" alt="Share on Instagram">
+											</a>
+										</li>
+										<li><a
+												href="https://mail.google.com/mail/?view=cm&fs=1&to=&su=<?php echo urlencode(get_the_title()); ?>&body=<?php echo urlencode(get_permalink(get_the_ID())); ?>"
+												target="_blank">
+												<img src="<?php echo get_theme_file_uri('/img/google.png'); ?>" alt="Share via Gmail">
+											</a></li>
+										<li>
+											<a href="https://twitter.com/intent/tweet?url=<?php echo urlencode(get_permalink(get_the_ID())); ?>&text=<?php echo urlencode(get_the_title()); ?>"
+												target="_blank">
+												<img src="<?php echo get_theme_file_uri('/img/twitter-1.png'); ?>" alt="Share on X">
+											</a>
+										</li>
+										<li>
+											<a href="https://pinterest.com/pin/create/button/?url=<?php echo urlencode(get_permalink(get_the_ID())); ?>&media=<?php echo urlencode(get_theme_file_uri('/img/pinterest.png')); ?>&description=<?php echo urlencode(get_the_title()); ?>"
+												target="_blank">
+												<img src="<?php echo get_theme_file_uri('/img/pinterest.png'); ?>" alt="Share on Pinterest">
+											</a>
+										</li>
+										<li>
+											<a href="https://t.me/share/url?url=<?php echo urlencode(get_permalink(get_the_ID())); ?>&text=<?php echo urlencode(get_the_title()); ?>"
+												target="_blank">
+												<img src="<?php echo get_theme_file_uri('/img/send.png'); ?>" alt="Share on Telegram">
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<img src="<?php echo get_theme_file_uri('/img/share.png'); ?>" alt="Share">
+											</a>
+										</li>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -93,7 +140,7 @@ get_header();
 									Vacations</a>
 							</div>
 						</div>
-						<div class="horizontal_line"></div>
+						<!-- <div class="horizontal_line"></div> -->
 						<div class="vertical_line"></div>
 						<div class="travel-advice">
 							<p>Get expert travel advice from Jen.</p>
@@ -108,49 +155,20 @@ get_header();
 					<?php dynamic_sidebar('meet-jen'); ?>
 				<?php endif; ?>
 
-				<section>
-					<h3>Jennifer's Travel Blog</h3>
+				<!-- template-part -->
+				<?php get_template_part('template-parts/display-category-posts'); ?>
 
-					<?php
-					function display_category_posts($category, $limit = 3)
-					{
-						$query = new WP_Query(array(
-							'posts_per_page' => $limit
-						));
-						if ($query->have_posts()):
-							while ($query->have_posts()):
-								$query->the_post(); ?>
-								<div class="posts">
-									<article>
-										<div class="image-posts">
-											<a href="<?php the_permalink(); ?>">
-												<?php if (has_post_thumbnail()): ?>
-													<img src="<?php echo esc_url(get_the_post_thumbnail_url()); ?>" alt="<?php the_title(); ?>">
-												<?php endif; ?>
-											</a>
-										</div>
-										<div class="content-posts">
-											<a href="<?php the_permalink(); ?>">
-												<h4><?php the_title(); ?></h4>
-											</a>
-										</div>
-									</article>
-									<div class="btn-posts">
-										<a href="<?php the_permalink(); ?>">View More</a>
-									</div>
-								</div>
-							<?php endwhile;
-						else: ?>
-							<p>No posts found in this category.</p>
-						<?php endif;
-						wp_reset_postdata();
-					}
-					?>
-					<?php display_category_posts('3'); ?>
-					<div>
-						<a href="<?php echo esc_url(home_url('/blog')); ?>">Check out more</a>
+				<section>
+					<div class="container">
+						<h3>Jennifer's Travel Blog</h3>
+						<?php display_category_posts('', 3); ?>
+						<div class="link-main-category">
+							<a href="<?php echo esc_url(home_url('/blog')); ?>">Check out more<span><i
+										class="bi bi-arrow-right"></i></span></a>
+						</div>
 					</div>
 				</section>
+
 				<section>
 					<h3>Instagram</h3>
 				</section>
