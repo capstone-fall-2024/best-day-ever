@@ -174,6 +174,11 @@
         <?php }
         ?>
 
+        <?php if (is_active_sidebar('instagram')) {
+            dynamic_sidebar('instagram');
+        }
+        ?>
+
     </section>
 </main>
 <?php get_footer(); ?>

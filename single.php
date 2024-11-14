@@ -169,9 +169,10 @@ get_header();
 					</div>
 				</section>
 
-				<section>
-					<h3>Instagram</h3>
-				</section>
+				<?php if (is_active_sidebar('instagram')) {
+					dynamic_sidebar('instagram');
+				}
+				?>
 
 				<?php if (is_active_sidebar('subscription-main')): ?>
 					<?php dynamic_sidebar('subscription-main'); ?>
