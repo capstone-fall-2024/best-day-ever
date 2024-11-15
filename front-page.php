@@ -128,7 +128,7 @@ get_template_part('parts/home-banner');
 	<!-- /wp:heading -->
 
 	<!-- wp:shortcode -->
-	<?php echo do_shortcode('[testimonials_carousel]'); ?>
+	<?php echo do_shortcode('[testimonials_slider]'); ?>
 	<!-- /wp:shortcode --></div>
 	<!-- /wp:group --></div></section>
 	<!-- /wp:cover -->
