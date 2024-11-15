@@ -15,14 +15,9 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
-		<section>
-			<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
-			
-			<?php the_content(); ?>
 <main id="primary" class="site-main">
 	<section>
-		<?php the_title('<h3 class="entry-title">', '</h3>'); ?>
+		<?php the_title('<h2 class="entry-title">', '</h2>'); ?>
 
 		<?php the_content(); ?>
 

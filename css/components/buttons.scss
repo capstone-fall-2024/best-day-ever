@@ -27,60 +27,61 @@
 
 /************ Primary **************/
 
-// .button-primary{
-//   @extend %button-styles;
+.button-primary{
+  @extend %button-styles;
 
-//   background-color: $light-orange;
-//   border: 2px solid $light-orange;
+  background-color: $light-orange;
+  border: 2px solid $light-orange;
 
-//   @extend %button-hover;
-// }
+  @extend %button-hover;
+}
 
 /************ Button Blog Cards **************/
 
-// .button-blog-card{
-//   @extend %button-styles;
+.button-blog-card{
+  @extend %button-styles;
 
-//   background-color: $light-orange;
-//   border: 2px solid $dark-orange;
-//   box-shadow: 0 6px 4px rgba(50, 5, 7, 0.25);
+  background-color: $light-orange;
+  border: 2px solid $dark-orange;
+  box-shadow: 0 6px 4px rgba(50, 5, 7, 0.25);
   
-//   @extend %button-hover-shadow;
-// }
+  @extend %button-hover-shadow;
+}
+
 
 
 /************ Secondary, Blog Cards **************/
 
-// .button-secondary {
-//   @extend %button-styles;
+.button-secondary {
+  @extend %button-styles;
 
-//   background-color: #fff;
-//   border: 2px solid $dark-green;
+  background-color: #fff;
+  border: 2px solid $dark-green;
 
 
-//   @extend %button-hover;
-// }
+  @extend %button-hover;
+}
 
 
 /************ Vacation Cards + Subcribe**************/
 
-// .button-yellow{
-//   @extend %button-styles;
+.button-yellow{
+  @extend %button-styles;
 
-//   background-color: $bright-yellow;
-//   border: 2px solid $bright-yellow;
+  background-color: $bright-yellow;
+  border: 2px solid $bright-yellow;
 
-//   @extend %button-hover;
-// }
+  @extend %button-hover;
+}
 
 
 /************Home Pg Nav**************/
 
-// .button-cream{
-//   @extend %button-styles;
+.button-cream{
+  @extend %button-styles;
 
-//   background-color: $cream;
-//   border: 2px solid $cream;
+  background-color: $cream;
+  border: 2px solid $cream;
 
-//   @extend %button-hover;
-// }
+  @extend %button-hover;
+}
