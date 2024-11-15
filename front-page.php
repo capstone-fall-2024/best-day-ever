@@ -1,11 +1,9 @@
 <?php
 /**
- * The template for displaying all pages
+ * The template for displaying the home page
  *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
+ * Used only for the home page! It won't carry over
+ * to any other page on the site.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -15,157 +13,153 @@
 get_template_part('parts/home-banner');
 
 ?>
-<main id="primary" class="site-main">
-	<section class="actual-content">
-		<!-- wp:heading -->
-		<?php the_title( '<h2 class="entry-title d-none">', '</h2>' ); ?>
-		<!-- /wp:heading -->
-		<section class="container-fluid">
-			<div class="flex justify-content-center g-5">
-				<div><img src="https://placehold.co/400x600" alt="Photograph of Jennifer"></div>
-				<div>
-					<h3>Hi, I'm Jen!</h3>
-					<p>I'm a professionally trained Travel Agent with Best Day Ever Vacations, specializing in Disney Vacations.</p>
-					<p>My goal is to book the complete dream vacation for you, your friends, and your family!</p>
-					<a href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/about-jen/"><button class="wp-block-button">More About Me</button></a>
-				</div>
-			</div>
-		</section>
+<main id="primary" class="site-main home-main">
+<section class="actual-content">
+	<!-- wp:heading -->
+	<?php the_title( '<h2 class="entry-title d-none">', '</h2>' ); ?>
+	<!-- /wp:heading -->
 
-		<!-- Proud Member of Section widget -->
-		<section class="abstract-bg">
-		<div class="container-fluid">
-			<h3>Proud Member of</h3>
-			<p>Content placeholder</p>
-		</div>
-		</section>
+	<!-- About Jen Section -->
+	<!-- wp:group {"tagName":"section","metadata":{"name":"Meet Jen"},"style":{"spacing":{"margin":{"top":"64px","bottom":"64px"}}},"layout":{"type":"constrained"}} -->
+	<section class="wp-block-group" style="margin-top:64px;margin-bottom:64px"><!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"24px","left":"24px"}}}} -->
+	<div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
+	<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","align":"center","style":{"border":{"radius":"10px"}}} -->
+	<figure class="wp-block-image aligncenter size-large has-custom-border"><img src="https://placehold.co/400x600" alt="" style="border-radius:10px"/></figure>
+	<!-- /wp:image --></div>
+	<!-- /wp:column -->
 
-		<!-- Jennifer's Specialties rotator -->
-		<section class="container-fluid">
+	<!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
+	<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%"><!-- wp:group {"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group"><!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"48px"},"elements":{"link":{"color":{"text":"var:preset|color|dark-red"}}}},"textColor":"dark-red"} -->
+	<h3 class="wp-block-heading has-dark-red-color has-text-color has-link-color" style="font-size:48px">Hi, I'm Jen!</h3>
+	<!-- /wp:heading -->
+
+	<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|off-black"}}}},"textColor":"off-black"} -->
+	<p class="has-off-black-color has-text-color has-link-color">I'm a professionally trained Travel Agent with Best Day Ever Vacations, specializing in Disney Vacations.</p>
+	<!-- /wp:paragraph -->
+
+	<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|off-black"}}}},"textColor":"off-black"} -->
+	<p class="has-off-black-color has-text-color has-link-color">My goal is to book the complete dream vacation for you, your friends, and your family!</p>
+	<!-- /wp:paragraph -->
+
+	<!-- wp:buttons -->
+	<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"light-orange","textColor":"dark-red","style":{"typography":{"fontStyle":"normal","fontWeight":"500"},"elements":{"link":{"color":{"text":"var:preset|color|dark-red"}}},"border":{"width":"2px","color":"#fb8f46","radius":"10px"}}} -->
+	<div class="wp-block-button" style="font-style:normal;font-weight:500"><a class="wp-block-button__link has-dark-red-color has-light-orange-background-color has-text-color has-background has-link-color has-border-color wp-element-button" href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/about-jen/" style="border-color:#fb8f46;border-width:2px;border-radius:10px">More About Me</a></div>
+	<!-- /wp:button --></div>
+	<!-- /wp:buttons --></div>
+	<!-- /wp:group --></div>
+	<!-- /wp:column --></div>
+	<!-- /wp:columns --></section>
+	<!-- /wp:group -->
+
+	<!-- Proud Member of Section widget -->
+	<section class="abstract-bg">
+	<div class="container">
+		<h3>Proud Member of</h3>
+		<?php if (is_active_sidebar('proud-member')) {
+				dynamic_sidebar('proud-member');
+			};
+		?>
+	</div>
+	</section>
+
+	<!-- Jennifer's Specialties rotator -->
+	<section class="container">
 		<h3>Jennifer's Specialties</h3>
-		<div>
+    <div>
 			<?php echo do_shortcode('[specialty_slider]'); ?>
 		</div>
-		</section>
+	</section>
 
-		<!-- Special Deals -->
-		<section class="container-fluid">
+	<!-- SPECIAL DEALS -->
+	<section class="container">
 		<h3>Special Deals</h3>
 		<div>
 			<?php
-				$posts_query = new WP_Query(
-					array(
-						'post_type' => 'special-deal',
-						"posts_per_page" => 2
-				)); 
+			$posts_query = new WP_Query(
+				array(
+					'post_type' => 'special-deal',
+					'posts_per_page' => 2
+				)
+			);
 			?>
+
 			<?php if ($posts_query->have_posts()): ?>
-				<?php while ($posts_query->have_posts()): ?>
-					<section class="d-flex justify-content-between align-items-center">
+				<?php $counter = 1; ?>
+				<?php while ($posts_query->have_posts()): $posts_query->the_post(); ?>
+					<?php
+						$layout = ($counter % 2 == 0) ? 'layout-reversed' : 'layout-default';
+					?>
+					<section class="d-flex justify-content-between align-items-center <?php echo $layout; ?>">
+
 						<div class="col-12 col-md-6">
-							<img class="card-img-top" src="<?php get_field('deal_featured_image'); ?>"
-								alt="<?php get_field('deal_title'); ?>" loading="lazy">
+							<img class="img-rounded" src="<?php the_field('deal_featured_image'); ?>"
+								alt="Featured image of <?php the_title(); ?>" loading="lazy">
 						</div>
+
 						<div class="col-12 col-md-6">
-							<h4><?php get_field('deal_title'); ?></h4>
-							<p><?php get_field('deal_description'); ?></p>
-							<a href="<?php the_permalink(); ?>" class="wp-block-button">Learn More</a>
+							<h4><?php the_title(); ?></h4>
+							<p><?php the_field('deal_description'); ?></p>
+							<a href="<?php the_field('deal_url'); ?>" class="wp-block-button">Learn More</a>
 						</div>
+
 					</section>
-				<?php endwhile;
-				wp_reset_postdata();
-			endif; ?>
-
-			<section class="d-flex justify-content-between align-items-center">
-				<div><img src="" alt=""></div>
-				<div>
-					<h4>Special Deal 1</h4>
-					<p>Placeholder for ACF Content</p>
-					<a href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/special-deals/"><button class="wp-block-button">Learn More</button></a>
-				</div>
-			</section>
-			<section class="d-flex justify-content-between align-items-center">
-				<div>
-					<h4>Special Deal 2</h4>
-					<p>Placeholder for ACF Content</p>
-					<a href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/special-deals/"><button class="wp-block-button">Learn More</button></a>
-				</div>
-				<div><img src="" alt=""></div>
-			</section>
-			<a href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/special-deals/"><p class="me-3">Check Out More</p> <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#ce5927" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path><title>Arrow pointing right</title></svg></a>
+					<?php $counter++; ?>
+				<?php endwhile; ?>
+				<?php wp_reset_postdata(); ?>
+			<?php endif; ?>
 		</div>
-		</section>
+  </section>
 
-		<!-- Ad -->
-		<aside><h3>Disney Ad placeholder</h3></aside>
-
-		<!-- Testimonials -->
-		<!-- wp:cover {"url":"https://best-day-ever.web.dmitcapstone.ca/wordpress2/wp-content/uploads/2024/10/testimonial-bg.webp","id":225,"dimRatio":0,"overlayColor":"light-grey","isUserOverlayColor":true,"focalPoint":{"x":0.72,"y":0.19},"isDark":false,"tagName":"section","metadata":{"name":"Testimonials"},"style":{"spacing":{"padding":{"top":"64px","bottom":"64px","left":"64px","right":"64px"},"margin":{"top":"64px","bottom":"64px"}}},"layout":{"type":"constrained"}} -->
-		<section class="wp-block-cover is-light" style="margin-top:64px;margin-bottom:64px;padding-top:64px;padding-right:64px;padding-bottom:64px;padding-left:64px"><span aria-hidden="true" class="wp-block-cover__background has-light-grey-background-color has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-225" alt="" src="https://best-day-ever.web.dmitcapstone.ca/wordpress2/wp-content/uploads/2024/10/testimonial-bg.webp" style="object-position:72% 19%" data-object-fit="cover" data-object-position="72% 19%"/><div class="wp-block-cover__inner-container"><!-- wp:group {"metadata":{"name":"Inner Content"},"style":{"spacing":{"blockGap":"0px"},"layout":{"selfStretch":"fill","flexSize":null}},"layout":{"type":"constrained","contentSize":"","wideSize":""}} -->
-		<div class="wp-block-group"><!-- wp:heading {"textAlign":"left","level":3,"align":"wide","style":{"typography":{"fontSize":"48px","fontStyle":"normal","fontWeight":"700","textTransform":"capitalize","letterSpacing":"0px","lineHeight":"1"},"spacing":{"padding":{"left":"0px"},"margin":{"bottom":"16px"}}}} -->
-		<h3 class="wp-block-heading alignwide has-text-align-left" style="margin-bottom:16px;padding-left:0px;font-size:48px;font-style:normal;font-weight:700;letter-spacing:0px;line-height:1;text-transform:capitalize">What Our Travelers are Saying</h3>
-		<!-- /wp:heading -->
-		<?php echo do_shortcode('[testimonials_slider]'); ?>
-		
-		</div>
-		</section>
-		<!-- /wp:cover -->
-
-
-		<?php the_content(); ?>
-	
-		<section class="container">
-			<!-- wp:heading -->
-			<h3 class="wp-block-heading has-dark-green-color has-text-color has-link-color" style="font-size:48px;">Jennifer's Travel Blog</h3>
-			<!-- /wp:heading -->
-			<div class="row">
-				<?php
-					$posts_query = new WP_Query(
-						array(
-							'post_type' => 'post',
-							"posts_per_page" => 3
-					)); 
-				?>
-				<?php if ($posts_query->have_posts()): ?>
-					<?php while ($posts_query->have_posts()): ?>
-						<div class="col-12 col-sm-6 col-md-4 mt-5">
-						<article class="post-item">
-                                <div class="image-post">
-                                    <a href="<?php the_permalink(); ?>">
-                                        <?php if (has_post_thumbnail()): ?>
-                                            <img class="card-img-top" src="<?php echo get_the_post_thumbnail_url(); ?>"
-                                                alt="<?php the_title(); ?>" loading="lazy">
-                                        <?php endif; ?>
-                                    </a>
-                                </div>
-                                <div class="content-post">
-                                    <a href="<?php the_permalink(); ?>">
-                                        <h4><?php the_title(); ?></h4>
-                                    </a>
-                                </div>
-                                <div class="btn-post">
-                                    <a href="<?php the_permalink(); ?>" class="btn btn-primary">View More</a>
-                                </div>
-                            </article>
-						</div>
-					<?php endwhile;
-					wp_reset_postdata();
-				endif; ?>
-			</div>
-		</section>
-
-		<div class="container-fluid">
-			<?php if (is_active_sidebar('instagram')) {
-					dynamic_sidebar('instagram');
-				};
-			?>
-		</div>
-
-		<?php if (is_active_sidebar('subscription-main')) {
-				dynamic_sidebar('subscription-main');
-			}; 
+	<!-- Ad -->
+	<div class="container">
+		<?php
+			if (is_active_sidebar('home-pg-marketing-banner')) {
+				dynamic_sidebar('home-pg-marketing-banner');
+			};
 		?>
+	</div>
+
+	<!-- Testimonials -->
+	<!-- wp:cover {"url":"https://best-day-ever.web.dmitcapstone.ca/wordpress2/wp-content/uploads/2024/10/testimonial-bg.webp","id":225,"dimRatio":0,"overlayColor":"light-grey","isUserOverlayColor":true,"focalPoint":{"x":0.72,"y":0.19},"isDark":false,"tagName":"section","metadata":{"name":"Testimonials"},"style":{"spacing":{"padding":{"top":"64px","bottom":"64px","left":"64px","right":"64px"},"margin":{"top":"64px","bottom":"64px"}}},"layout":{"type":"constrained"}} -->
+	<section class="wp-block-cover is-light" style="margin-top:64px;margin-bottom:64px;padding-top:64px;padding-right:64px;padding-bottom:64px;padding-left:64px"><span aria-hidden="true" class="wp-block-cover__background has-light-grey-background-color has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-225" alt="Cream background with palm leaf graphics on the top right and bottom left corners to give a tropical feel" src="https://best-day-ever.web.dmitcapstone.ca/wordpress2/wp-content/uploads/2024/10/testimonial-bg.webp" style="object-position:72% 19%" data-object-fit="cover" data-object-position="72% 19%"/><div class="wp-block-cover__inner-container"><!-- wp:group {"metadata":{"name":"Inner Content"},"style":{"spacing":{"blockGap":"0px"},"layout":{"selfStretch":"fill","flexSize":null}},"layout":{"type":"constrained","contentSize":"","wideSize":""}} -->
+	<div class="wp-block-group"><!-- wp:heading {"textAlign":"left","level":3,"align":"wide","style":{"typography":{"fontSize":"48px","fontStyle":"normal","fontWeight":"700","textTransform":"capitalize","letterSpacing":"0px","lineHeight":"1"},"spacing":{"padding":{"left":"0px"},"margin":{"bottom":"16px"}}}} -->
+	<h3 class="wp-block-heading alignwide has-text-align-left" style="margin-bottom:16px;padding-left:0px;font-size:48px;font-style:normal;font-weight:700;letter-spacing:0px;line-height:1;text-transform:capitalize">What Our Travelers are Saying</h3>
+	<!-- /wp:heading -->
+
+	<!-- wp:shortcode -->
+	<?php echo do_shortcode('[testimonials_carousel]'); ?>
+	<!-- /wp:shortcode --></div>
+	<!-- /wp:group --></div></section>
+	<!-- /wp:cover -->
+
+	<!-- Blog Loop -->
+	<?php get_template_part('template-parts/display-category-posts'); ?>
+
+	<section>
+		<div class="container">
+			<h3>Jennifer's Travel Blog</h3>
+			<?php display_category_posts('', 3); ?>
+			<div class="link-main-category">
+				<a href="<?php echo esc_url(home_url('/blog')); ?>">Check out more<span><i class="bi bi-arrow-right"></i></span></a>
+			</div>
+		</div>
 	</section>
+
+	<!-- Instagram -->
+	<div class="container">
+		<?php if (is_active_sidebar('instagram')) {
+				dynamic_sidebar('instagram');
+			};
+		?>
+	</div>
+
+	<!-- Newsletter -->
+	<?php if (is_active_sidebar('subscription-main')) {
+			dynamic_sidebar('subscription-main');
+		}; 
+	?>
+</section>
 </main><!-- #main -->
 
 <?php
