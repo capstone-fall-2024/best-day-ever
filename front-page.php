@@ -66,7 +66,9 @@ get_template_part('parts/home-banner');
 	<!-- Jennifer's Specialties rotator -->
 	<section class="container">
 		<h3>Jennifer's Specialties</h3>
-		<p>Rotator placeholder</p>
+    <div>
+			<?php echo do_shortcode('[specialty_slider]'); ?>
+		</div>
 	</section>
 
 	<!-- SPECIAL DEALS -->
@@ -107,7 +109,7 @@ get_template_part('parts/home-banner');
 				<?php wp_reset_postdata(); ?>
 			<?php endif; ?>
 		</div>
-	</section>
+  </section>
 
 	<!-- Ad -->
 	<div class="container">

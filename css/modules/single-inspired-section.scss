@@ -1,0 +1,160 @@
+.inspired-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px;
+  margin: 0 5%;
+  background-color: $cream;
+  border-radius: 10px;
+}
+
+.inspired-heading{
+  margin-bottom: 24px;
+}
+
+.inspired-content{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+}
+
+.vacation-option,
+.travel-advice
+{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+
+.vacation-option div,
+.travel-advice div{
+  align-self: center;
+}
+
+
+.button-primary__vacation-link,
+.button-primary__advice-link
+{
+  @extend %button-styles;
+
+  background-color: $light-orange;
+  border: 2px solid $light-orange;
+  padding: 16px 30px;
+  width: 180px;
+
+  @extend %button-hover;
+}
+
+.button-primary__advice-link{
+  padding: 16px 53px;
+}
+
+.horizontal_line {
+  width: 90%;
+  margin: 0 auto;
+  height: 3px;
+  border-top: 3px dotted black;
+  line-height: 80%;
+}
+
+.travel-advice{
+  border-top: 3px dotted black;
+  margin: 24px 0;
+}
+
+.travel-advice>p {
+  margin-top: 16px;
+}
+
+@media (min-width:768px) {
+
+  .inspired-section{
+    padding: 55px;
+    max-width: 1024px;
+    margin: 0 5%;
+  }
+
+  .inspired-content {
+    flex-direction: row;
+    align-items: flex-start;
+
+}
+
+.inspired-content>div>p {
+  max-width: 220px;
+  margin: 0 auto;
+}
+
+  .vertical_line{
+    border-left: 3px dotted black;
+    height: 200px;
+  }
+
+.vacation-option, .travel-advice {
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+
+    align-items: flex-end;
+}
+
+.vacation-option div,
+.travel-advice div{
+  margin: auto 0;
+}
+
+
+
+  // .inspired-section{
+  //   padding: 55px;
+  // }
+  // .inspired-heading{
+  //   align-self: center;
+  // }
+  // .inspired-content{
+  //   flex-direction: row;
+  //   justify-content: center;
+  //   align-items: center;
+  //   gap: 0;
+  // }
+  // // .horizontal_line{
+  // //   display: none;
+  // // }
+  // // .vertical_line{
+  // //   border-left: 3px dotted black;
+  // //   height: 200px;
+  // // }
+  // .vacation-option,
+  // .travel-advice{
+  //   max-width: 250px;
+  // }
+
+  .inspired-heading{
+    align-self: center;
+  }
+
+  .travel-advice{
+    border-top: none;
+    margin-top: 0;
+  }
+
+  .travel-advice>p {
+    margin-top: 0;
+  }
+}
+
+@media (min-width:1024px) {
+  .inspired-section{
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}

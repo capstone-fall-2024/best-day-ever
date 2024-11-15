@@ -21,44 +21,112 @@ get_header();
 			while (have_posts()):
 				the_post();
 				?>
-				<div class="single-banner">
-					<div class="single-banner__bg-image"></div>
-					<div class="single-banner-content">
-						<p>Blog</p>
-						<h2><?php the_title(); ?></h2>
+				<div class="single-blog-banner">
+					<div class="img-background">
+						<?php if (has_post_thumbnail()): ?>
+							<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+						<?php endif; ?>
+						<div class="overlay"></div>
+						<div class="single-banner-content">
+							<p>Blog</p>
+							<h2><?php the_title(); ?></h2>
+						</div>
 					</div>
 				</div>
 
-				<article class="blog">
-					<h3>Heading 3 - Main Blog</h3>
-					<div class="profile-blogger">
-						<div class="profile-img-blogger">
-							<?php echo get_avatar($author_id, 96); ?>
-						</div>
-						<div class="info-blogger">
-							<p>By: <?php echo get_the_author(); ?></p>
+				<article class="single-blog">
+					<div class="main-content">
+						<h3 class="hide-heading">Heading 3 - Main Blog</h3>
+						<div class="blogger-banner">
+							<div class="profile-blogger">
+								<div class="profile-img-blogger">
+									<?php echo get_avatar($author_id, 96); ?>
+								</div>
+								<div class="info-blogger">
+									<p>By: <?php echo get_the_author(); ?></p>
 
-							<?php
-							$user_background = get_field('user_background', 'user_' . $author_id);
-							if (!empty($user_background)) { ?>
-								<p><?php echo $user_background; ?></p>
-							<?php } ?>
-						</div>
+									<?php
+									$user_background = get_field('user_background', 'user_' . $author_id);
+									if (!empty($user_background)) { ?>
+										<p><?php echo $user_background; ?></p>
+									<?php } ?>
+								</div>
+							</div>
 
-						<div class="blog-category">
-							<p><?php the_time('F j, Y'); ?></p>
-							<?php if (has_category()): ?>
-								<p><?php the_category(' - '); ?></p>
-							<?php endif; ?>
+							<div class="blog-tag">
+								<p><?php the_time('F j, Y'); ?></p>
+								<?php
+								$tags = get_the_tags();
+
+								if ($tags) {
+									$formatted_tags = [];
+
+									foreach ($tags as $tag) {
+										$formatted_tag = ucfirst(str_replace(' ', '-', $tag->name));
+										$formatted_tags[] = '<i>' . $formatted_tag . '</i>';
+									}
+
+									echo implode('-', $formatted_tags);
+								}
+								;
+								?>
+							</div>
 						</div>
-					</div>
-					<div class="blog-content">
-						<div>
-							<?php the_content(); ?>
+						<div class="blog-content">
+							<div>
+								<?php the_content(); ?>
+								<div class="social-icon-share-block">
+									<p><strong>Share the Posts&#33;</strong></p>
+									<ul class="social-icon-share-list">
+										<li>
+											<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo get_permalink(get_the_ID()); ?>"
+												target="_blank">
+												<img src="<?php echo get_theme_file_uri('/img/facebook-copy.png'); ?>" alt="Share on Facebook">
+											</a>
+										</li>
+										<li>
+											<a href="https://twitter.com/intent/tweet?url=<?php echo urlencode(get_permalink(get_the_ID())); ?>&text=<?php echo urlencode(get_the_title()); ?>"
+												target="_blank">
+												<img src="<?php echo get_theme_file_uri('/img/twitter.png'); ?>" alt="Share on X">
+											</a>
+										</li>
+										<li>
+											<a href="https://www.instagram.com/" target="_blank">
+												<img src="<?php echo get_theme_file_uri('/img/instagram-copy.png'); ?>" alt="Share on Instagram">
+											</a>
+										</li>
+										<li><a
+												href="https://mail.google.com/mail/?view=cm&fs=1&to=&su=<?php echo urlencode(get_the_title()); ?>&body=<?php echo urlencode(get_permalink(get_the_ID())); ?>"
+												target="_blank">
+												<img src="<?php echo get_theme_file_uri('/img/google.png'); ?>" alt="Share via Gmail">
+											</a></li>
+										<li>
+											<a href="https://twitter.com/intent/tweet?url=<?php echo urlencode(get_permalink(get_the_ID())); ?>&text=<?php echo urlencode(get_the_title()); ?>"
+												target="_blank">
+												<img src="<?php echo get_theme_file_uri('/img/twitter-1.png'); ?>" alt="Share on X">
+											</a>
+										</li>
+										<li>
+											<a href="https://pinterest.com/pin/create/button/?url=<?php echo urlencode(get_permalink(get_the_ID())); ?>&media=<?php echo urlencode(get_theme_file_uri('/img/pinterest.png')); ?>&description=<?php echo urlencode(get_the_title()); ?>"
+												target="_blank">
+												<img src="<?php echo get_theme_file_uri('/img/pinterest.png'); ?>" alt="Share on Pinterest">
+											</a>
+										</li>
+										<li>
+											<a href="https://t.me/share/url?url=<?php echo urlencode(get_permalink(get_the_ID())); ?>&text=<?php echo urlencode(get_the_title()); ?>"
+												target="_blank">
+												<img src="<?php echo get_theme_file_uri('/img/send.png'); ?>" alt="Share on Telegram">
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<img src="<?php echo get_theme_file_uri('/img/share.png'); ?>" alt="Share">
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
 						</div>
-						<?php if (is_active_sidebar('blog-sidebar')): ?>
-							<?php dynamic_sidebar('blog-sidebar'); ?>
-						<?php endif; ?>
 					</div>
 				</article>
 
@@ -67,11 +135,18 @@ get_header();
 					<div class="inspired-content">
 						<div class="vacation-option">
 							<p>Explore our vacation options and get a quote.</p>
-							<a href="<?php echo site_url('./vacations') ?>" class="vacation-link">All about Vacations</a>
+							<div>
+								<a href="<?php echo site_url('./vacations') ?>" class="button-primary__vacation-link">All about
+									Vacations</a>
+							</div>
 						</div>
+						<!-- <div class="horizontal_line"></div> -->
+						<div class="vertical_line"></div>
 						<div class="travel-advice">
 							<p>Get expert travel advice from Jen.</p>
-							<a href="<?php echo site_url('./contact-jen') ?>" class="advice-link">Travel Advice</a>
+							<div>
+								<a href="<?php echo site_url('./contact-jen') ?>" class="button-primary__advice-link">Travel Advice</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -80,52 +155,24 @@ get_header();
 					<?php dynamic_sidebar('meet-jen'); ?>
 				<?php endif; ?>
 
-				<section>
-					<h3>Jennifer's Travel Blog</h3>
+				<!-- template-part -->
+				<?php get_template_part('template-parts/display-category-posts'); ?>
 
-					<?php
-					function display_category_posts($category, $limit = 3)
-					{
-						$query = new WP_Query(array(
-							'posts_per_page' => $limit
-						));
-						if ($query->have_posts()):
-							while ($query->have_posts()):
-								$query->the_post(); ?>
-								<div class="posts">
-									<article>
-										<div class="image-posts">
-											<a href="<?php the_permalink(); ?>">
-												<?php if (has_post_thumbnail()): ?>
-													<img src="<?php echo esc_url(get_the_post_thumbnail_url()); ?>" alt="<?php the_title(); ?>">
-												<?php endif; ?>
-											</a>
-										</div>
-										<div class="content-posts">
-											<a href="<?php the_permalink(); ?>">
-												<h4><?php the_title(); ?></h4>
-											</a>
-										</div>
-									</article>
-									<div class="btn-posts">
-										<a href="<?php the_permalink(); ?>">View More</a>
-									</div>
-								</div>
-							<?php endwhile;
-						else: ?>
-							<p>No posts found in this category.</p>
-						<?php endif;
-						wp_reset_postdata();
-					}
-					?>
-					<?php display_category_posts('3'); ?>
-					<div>
-						<a href="<?php echo esc_url(home_url('/blog')); ?>">Check out more</a>
+				<section>
+					<div class="container">
+						<h3>Jennifer's Travel Blog</h3>
+						<?php display_category_posts('', 3); ?>
+						<div class="link-main-category">
+							<a href="<?php echo esc_url(home_url('/blog')); ?>">Check out more<span><i
+										class="bi bi-arrow-right"></i></span></a>
+						</div>
 					</div>
 				</section>
-				<section>
-					<h3>Instagram</h3>
-				</section>
+
+				<?php if (is_active_sidebar('instagram')) {
+					dynamic_sidebar('instagram');
+				}
+				?>
 
 				<?php if (is_active_sidebar('subscription-main')): ?>
 					<?php dynamic_sidebar('subscription-main'); ?>

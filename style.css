@@ -482,7 +482,7 @@ hr {
 	margin-bottom: 1.5em;
 }
 
-ul,
+/* ul,
 ol {
 	margin: 0 0 1.5em 3em;
 }
@@ -499,7 +499,7 @@ li > ul,
 li > ol {
 	margin-bottom: 0;
 	margin-left: 1.5em;
-}
+} */
 
 dt {
 	font-weight: 700;
@@ -532,7 +532,7 @@ table {
 
 /* Links
 --------------------------------------------- */
-a {
+/* a {
 	color: #4169e1;
 }
 
@@ -553,7 +553,7 @@ a:focus {
 a:hover,
 a:active {
 	outline: 0;
-}
+} */
 
 /* Forms
 --------------------------------------------- */
