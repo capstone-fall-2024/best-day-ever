@@ -3,7 +3,7 @@
 // Include custom variables default overrides here
 
 
-$line-height: 32px;
+$line-height: 1.5;
 
 h1,h2,h3,h4,h5,h6,p{
   line-height: $line-height;
@@ -28,6 +28,8 @@ h1,h2,h3,h4,h5,h6,p{
 @import "modules/single-inspired-section";
 @import "modules/meet-jen-widget";
 
+//Slider
+@import "modules/slider";
 
 @import "layout/footer";
 
@@ -51,40 +53,4 @@ h1,h2,h3,h4,h5,h6,p{
   margin-left: 0;
 }
 
-
-/***************** Testimonial Carousel *****************/
-.slider {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-  overflow: hidden;
-}
-.slider .slider-inner {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-.slider .slider-item {
-  width: 50%;
-  padding: 20px;
-  box-sizing: border-box;
-  opacity: 1;
-  display: none;
-}
-.slider .slider-item.active {
-  display: block;
-}
-
-.slider-control {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.slider-control button {
-  background-color: transparent;
-  border: none;
-}
-.slider-control button i {
-  font-size: 1.5rem;
-  color: #CE5927;
-}
 

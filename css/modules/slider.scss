@@ -1,0 +1,157 @@
+/***************** Testimonial Carousel *****************/
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+
+    .testimonial-slider-inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 2rem;
+        transition: transform 0.5s ease;
+        margin-top: 1.75rem;
+    }
+
+    .testimonial-slider-item {
+        flex: 1 0 100%;
+        width: 80%;
+        box-sizing: border-box;
+        opacity: 0;
+        display: none;
+        background-color: $white;
+        box-shadow: 
+            -8px -8px 0px 0px $dark-orange,
+            0px 6px 4px 0px rgba(50, 5, 7, 0.25);
+        border: 1px solid rgba(50, 5, 7, 0.25);
+        border-radius: 15px;
+
+        &.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .testimonial {
+            display: flex;
+            flex-direction: column;
+            padding: 2.25rem 1.5rem;
+
+            .rating {
+                .star {
+                    font-size: 1.5rem;
+                    color: $dark-orange;
+                }
+            }
+
+            h4 {
+                color: $dark-red;
+                padding-top: 2.25rem;
+            }
+
+            .message {
+                padding-bottom: 2.25rem;
+                margin-bottom: 0;
+            }
+
+            .author-info {
+                display: flex;
+                gap: 2rem;
+                align-items: center;
+
+                img {
+                    width: 10vw;
+                    height: auto;
+                    aspect-ratio: 1/1;
+                    border-radius: 50%;
+                }
+
+                .author-details {
+                    p {
+                        margin-bottom: 0;
+                    }
+                    p:first-of-type {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
+    .certificate-slider-inner {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2rem;
+        transition: transform 0.5s ease;
+
+        .certificate-slider-item {
+            width: 30%;
+            padding: 20px;
+            box-sizing: border-box;
+            opacity: 1;
+            display: none;
+
+            &.active {
+                display: block;
+            }
+
+            .certificate {
+                text-align: center;
+
+                img {
+                    min-width: 550px;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+.slider-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+        background-color: transparent;
+        border: none;
+
+        i {
+            font-size: 1.5rem;
+            color: $dark-orange;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .slider {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .testimonial-slider-inner {
+            flex-direction: row; 
+            width: 70%;
+    
+            .testimonial-slider-item {
+                flex: 1 0 50%;
+                max-width: 530px;
+                padding: 0;
+                margin: 0;
+
+                .author-info {
+                    img {
+                        width: 10%;
+                    }
+                }
+            }
+        }
+
+        .slider-control {
+            width: 100%;
+        }
+    }
+
+    
+}
