@@ -17,8 +17,6 @@
 
 <!-- Banner start -->
 <div class="home-banner">
-    <img src="<?php echo $feature_image[0]; ?>" alt="Featured image as the banner of <?php the_title(); ?>" class="img-fluid">
-
     <h1 style="display:none">Best Day Ever Vacations by Jen</h1>
 	<?php wp_body_open(); ?>
 
@@ -34,11 +32,11 @@
 
 		<div class="top-header">
 			<div>
-				<p>Travel Agent of <a href="https://bestdayevervacations.com/">Best Day Ever Vacations</a></p>
+				<p>Travel Agent of <a href="https://bestdayevervacations.com/" target="_blank">Best Day Ever Vacations</a></p>
 			</div>
 			<div class="top-header-social-font">
-				<i class="bi bi-facebook"></i>
-				<i class="bi bi-instagram"></i>
+				<a href="https://www.facebook.com/profile.php?id=61555368848155" target="_blank"><i class="bi bi-facebook"></i></a>
+				<a href="https://www.instagram.com/best_day_ever_vacations_by_jen/" target="_blank"><i class="bi bi-instagram"></i></a>
 			</div>
 		</div>
 
@@ -74,13 +72,13 @@
 
 			<!-- Hamburger Menu Icon for Mobile -->
 			<div class="hamburger">
-				<i class="bi bi-list"></i> <!-- This is the hamburger icon -->
+				<i class="bi bi-list"></i>
 			</div>
 
 
 
 			<div class="site-header__util">
-				<button class="cta">get a quote</button>
+				<button class="cta" href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/quote/">get a quote</button>
 				<i class="bi bi-search"></i>
 			</div>
 
@@ -96,71 +94,71 @@
 			<nav class="nav-mobile">
 				<ul class="menu-list-mobile">
 					<li>
-						<a href="#">Home</a>
+						<a href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/">Home</a>
 					</li>
 					<li>
-						<a href="#">Vacations<span>&darr;</span></a>
+						<a href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/vacations/">Vacations<span>&darr;</span></a>
 						<ul class="submenu-mobile">
-							<li><a href="#">Disney</a></li>
-							<li><a href="#">Cruise</a></li>
-							<li><a href="#">HoneyMoon and Wedding</a></li>
-							<li><a href="#">All Inclusive & More</a></li>
+							<li><a href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/vacations/disney/">Disney</a></li>
+							<li><a href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/vacations/cruises/">Cruise</a></li>
+							<li><a href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/vacations/honeymoon-wedding/">HoneyMoon and Wedding</a></li>
+							<li><a href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/vacations/all-inclusive/">All Inclusive & More</a></li>
 						</ul>
 					</li>
 					<li>
-						<a href="#">About Jen</a>
+						<a href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/about-jen/">About Jen</a>
 					</li>
 					<li>
-						<a href="#">Blog</a>
+						<a href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/blog/">Blog</a>
 					</li>
 					<li>
-						<a href="#">Special Deals</a>
+						<a href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/special-deals/">Special Deals</a>
 					</li>
 					<li>
-						<a href="#">Contact Jen</a>
+						<a href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/contact-jen/">Contact Jen</a>
 					</li>
 				</ul>
 			</nav>
 
-			<button class="cta-mobile">get a quote</button> <!-- turn off on desktop -->
+			<button class="cta-mobile" href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/quote/">get a quote</button>
 
 			<div>
 				<p>Travel Agent of <a href="https://bestdayevervacations.com/">Best Day Ever Vacations</a></p>
 			</div>
 			<div class="social-font-mobile">
-				<i class="bi bi-facebook"></i>
-				<i class="bi bi-instagram"></i>
+				<a href="https://www.facebook.com/profile.php?id=61555368848155" target="_blank"><i class="bi bi-facebook"></i></a>
+				<a href="https://www.instagram.com/best_day_ever_vacations_by_jen/" target="_blank"><i class="bi bi-instagram"></i></a>
 			</div>
 		</div> <!-- end header -->
     
     <!-- Banner Content -->
-    <div class="banner-content container-fluid p-3">
-        <div>
+    <div class="banner-content container p-3">
+        <div class="home-banner-title">
            <p>A Vacation Catered <span>To You, By Jennifer</span></p>
         </div>
 
-        <div>
-            <img src="" alt="">
-            <img src="" alt="">
+        <div class="stacked-images">
+            <img src="./img/momdaughter-disney.webp" alt="Mom and daughter with Mickey Mouse ears at Disney">
+            <img src="./img/women-beach.webp" alt="Friends giving a piggyback ride at a tropical beach">
         </div>
 
-        <div>
+        <div class="home-banner-backdrop">
             <ul>
-                <li>
+                <li class="d-flex gap-1 no-wrap">
                     <svg width="25" height="25" fill="#ce5927" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
                         <path d="m173.66 98.34a8 8 0 0 1 0 11.32l-56 56a8 8 0 0 1-11.32 0l-24-24a8 8 0 0 1 11.32-11.32l18.34 18.35 50.34-50.35a8 8 0 0 1 11.32 0zm58.34 29.66a104 104 0 1 1-104-104 104.11 104.11 0 0 1 104 104zm-16 0a88 88 0 1 0-88 88 88.1 88.1 0 0 0 88-88z"/>
                         <title>Checkmark inside a circle</title>
                     </svg>
                     <p>Booking Done for You</p>
                 </li>
-                <li>
+                <li class="d-flex gap-1 no-wrap">
                     <svg width="25" height="25" fill="#ce5927" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
                         <path d="m173.66 98.34a8 8 0 0 1 0 11.32l-56 56a8 8 0 0 1-11.32 0l-24-24a8 8 0 0 1 11.32-11.32l18.34 18.35 50.34-50.35a8 8 0 0 1 11.32 0zm58.34 29.66a104 104 0 1 1-104-104 104.11 104.11 0 0 1 104 104zm-16 0a88 88 0 1 0-88 88 88.1 88.1 0 0 0 88-88z"/>
                         <title>Checkmark inside a circle</title>
                     </svg>
                     <p>Offering You Exclusive Deals</p>
                 </li>
-                <li>
+                <li class="d-flex gap-1 no-wrap">
                     <svg width="25" height="25" fill="#ce5927" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
                         <path d="m173.66 98.34a8 8 0 0 1 0 11.32l-56 56a8 8 0 0 1-11.32 0l-24-24a8 8 0 0 1 11.32-11.32l18.34 18.35 50.34-50.35a8 8 0 0 1 11.32 0zm58.34 29.66a104 104 0 1 1-104-104 104.11 104.11 0 0 1 104 104zm-16 0a88 88 0 1 0-88 88 88.1 88.1 0 0 0 88-88z"/>
                         <title>Checkmark inside a circle</title>
@@ -170,8 +168,8 @@
             </ul>
 
             <div>
-                <a href=""><button>Get A Quote</button></a>
-                <a href=""><button>Contact Jennifer</button></a>
+                <a href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/quote/" class="wp-block-button">Get A Quote</a>
+                <a href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/contact-jen/" class="wp-block-button">Contact Jennifer</a>
             </div>
         </div>
     </div>
