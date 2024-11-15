@@ -21,7 +21,7 @@ if (!defined('_S_VERSION')) {
  */
 function bdev_by_jen_setup()
 {
-	/*
+	/**
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on Best Day Ever Vacations by Jen, use a find and replace
@@ -32,7 +32,7 @@ function bdev_by_jen_setup()
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support('automatic-feed-links');
 
-	/*
+	/**
 	 * Let WordPress manage the document title.
 	 * By adding theme support, we declare that this theme does not use a
 	 * hard-coded <title> tag in the document head, and expect WordPress to
@@ -147,8 +147,8 @@ function bdev_by_jen_widgets_init()
 			'description' => esc_html__('Add widgets here.', 'bdev_by_jen'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget' => '</section>',
-			'before_title' => '<h2 class="widget-title">',
-			'after_title' => '</h2>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
 		)
 	);
 
@@ -159,8 +159,8 @@ function bdev_by_jen_widgets_init()
 			'description' => esc_html__('Add widgets here.', 'bdev_by_jen'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget' => '</section>',
-			'before_title' => '<h2 class="widget-title">',
-			'after_title' => '</h2>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
 		)
 	);
 
@@ -207,8 +207,8 @@ function bdev_by_jen_widgets_init()
 			'description' => esc_html__('Add widgets here.', 'bdev_by_jen'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget' => '</section>',
-			'before_title' => '<h2 class="widget-title">',
-			'after_title' => '</h2>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
 		)
 	);
 
@@ -219,8 +219,8 @@ function bdev_by_jen_widgets_init()
 			'description' => esc_html__('Add widgets here.', 'bdev_by_jen'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget' => '</section>',
-			'before_title' => '<h2 class="widget-title">',
-			'after_title' => '</h2>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
 		)
 	);
 
@@ -231,8 +231,8 @@ function bdev_by_jen_widgets_init()
 			'description' => esc_html__('Add widgets here.', 'bdev_by_jen'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget' => '</section>',
-			'before_title' => '<h2 class="widget-title">',
-			'after_title' => '</h2>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
 		)
 	);
 
@@ -304,7 +304,6 @@ function enqueue_custom_fonts()
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_fonts');
 
-
 /**
  * Implement the Custom Header feature.
  */
@@ -336,9 +335,6 @@ if (defined('JETPACK__VERSION')) {
 require_once get_template_directory(). '/parts/testimonials-slider.php';
 require_once get_template_directory(). '/parts/specialties-slider.php';
 require_once get_template_directory(). '/parts/certificates-slider.php';
-
-// get testimonial
-require_once get_template_directory() . '/parts/testimonials.php';
 
 /**
  * Enable theme support

@@ -43,7 +43,9 @@ get_template_part('parts/home-banner');
 		<!-- Jennifer's Specialties rotator -->
 		<section class="container-fluid">
 		<h3>Jennifer's Specialties</h3>
-		<p>Rotator placeholder</p>
+		<div>
+			<?php echo do_shortcode('[specialty_slider]'); ?>
+		</div>
 		</section>
 
 		<!-- Special Deals -->
@@ -103,11 +105,10 @@ get_template_part('parts/home-banner');
 		<div class="wp-block-group"><!-- wp:heading {"textAlign":"left","level":3,"align":"wide","style":{"typography":{"fontSize":"48px","fontStyle":"normal","fontWeight":"700","textTransform":"capitalize","letterSpacing":"0px","lineHeight":"1"},"spacing":{"padding":{"left":"0px"},"margin":{"bottom":"16px"}}}} -->
 		<h3 class="wp-block-heading alignwide has-text-align-left" style="margin-bottom:16px;padding-left:0px;font-size:48px;font-style:normal;font-weight:700;letter-spacing:0px;line-height:1;text-transform:capitalize">What Our Travelers are Saying</h3>
 		<!-- /wp:heading -->
-
-		<!-- wp:shortcode -->
-		[testimonials_carousel]
-		<!-- /wp:shortcode --></div>
-		<!-- /wp:group --></div></section>
+		<?php echo do_shortcode('[testimonials_slider]'); ?>
+		
+		</div>
+		</section>
 		<!-- /wp:cover -->
 
 

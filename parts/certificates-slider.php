@@ -1,7 +1,7 @@
 <?php
     function display_certificate_slider_shortcode() {
         $args = array(
-            'post_type' => 'certificate',
+            'post_type' => 'certification',
             'posts_per_page' => -1,
         );
 
@@ -10,15 +10,15 @@
             ob_start();
         ?>
         <div class="slider">
-            <div class="slider-inner">
+            <div class="certificate-slider-inner">
                 <?php
                     $index = 0;
                     while($certificate_slider_query->have_posts()) : $certificate_slider_query->the_post();
                     if(function_exists('get_field')) {
-                        $certificate_url = get_field('certification_image');
+                        $certificate_url = get_field('certificate_image');
                     }
                 ?>
-                <div class="slider-item <?php echo ($index < 2) ? 'active' : '' ?>">
+                <div class="certificate-slider-item <?php echo ($index < 2) ? 'active' : '' ?>">
                     <div class="certificate">
                         <img src="<?php echo esc_url($certificate_url['url']); ?>" alt="<?php echo esc_attr($certificate_url['alt']); ?>">
                     </div>
@@ -29,10 +29,9 @@
                 ?>
             </div>
             <!-- Carousel Slider Arrow -->
-            <div class="specialty-slider-control">
-                <?php  echo $certificate_url; ?>
-                <button class="slider-prev"><i class="bi bi-arrow-left-circle"></i></button>
-                <button class="slider-next"><i class="bi bi-arrow-right-circle"></i></button>
+            <div class="slider-control">
+                <button class="slider-prev certificate-prev"><i class="bi bi-arrow-left-circle"></i></button>
+                <button class="slider-next certificate-next"><i class="bi bi-arrow-right-circle"></i></button>
             </div>
         </div>
         <?php

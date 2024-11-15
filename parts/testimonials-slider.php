@@ -11,7 +11,7 @@
                 ob_start();
                 ?>  
                 <div class="slider">
-                    <div class="slider-inner">
+                    <div class="testimonial-slider-inner">
                         <?php
                             $index = 0;
                             while ($testimonials_slider_query->have_posts()) : $testimonials_slider_query->the_post();
@@ -24,8 +24,8 @@
                                     $author_photo = get_field('authors_photo');
                                 }
                         ?>
-                            <!-- Make only the first item active, the rest will be visible but not active -->
-                            <div class="slider-item <?php echo ($index < 2) ? 'active' : ''; ?>">
+
+                            <div class="testimonial-slider-item <?php echo $index; ?>">
                                 <div class="testimonial">
                                     <div class="rating">
                                     <?php
@@ -36,7 +36,7 @@
                                     ?>
                                     </div>
                                     <h4><?php echo esc_html($title); ?></h4>
-                                    <p><?php echo esc_html($message); ?></p>
+                                    <p class="message"><?php echo esc_html($message); ?></p>
                                     <div class="author-info">
                                         <?php if ($author_photo) : ?>
                                             <img src="<?php echo esc_url($author_photo['url']); ?>" alt="<?php echo esc_attr($author_photo['alt']); ?>">
@@ -56,8 +56,8 @@
 
                     <!-- Carousel Slider Arrow -->
                     <div class="slider-control">
-                        <button class="slider-prev"><i class="bi bi-arrow-left-circle"></i></button>
-                        <button class="slider-next"><i class="bi bi-arrow-right-circle"></i></button>
+                        <button class="slider-prev testimonial-prev"><i class="bi bi-arrow-left-circle"></i></button>
+                        <button class="slider-next testimonial-next"><i class="bi bi-arrow-right-circle"></i></button>
                     </div>
                 </div>
             <?php
@@ -67,5 +67,5 @@
                 return '<p>No slider items found</p>';
             }
         }
-        add_shortcode('testimonials_carousel', 'display_testimonial_slider_shortcode');
+        add_shortcode('testimonials_slider', 'display_testimonial_slider_shortcode');
         ?>
