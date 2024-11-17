@@ -23,6 +23,9 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+	<div class="site-overlay"></div>
+
 	<h1 style="display:none">Best Day Ever Vacations by Jen</h1>
 	<?php wp_body_open(); ?>
 
@@ -76,11 +79,65 @@
 
 			<!-- mobile-nav -->
 
-			<!-- Hamburger Menu Icon for Mobile -->
-			<div class="hamburger">
-				<i class="bi bi-list"></i> <!-- This is the hamburger icon -->
+			<div class="sidebar-menu">
+				<div class="sidebar-menu__haha"></div>
+				<div class="sidebar-menu__container">
+					<div class="search-form-box">
+						<?php get_search_form(); ?>
+						<div>
+							<i class="bi bi-x-lg"></i>
+						</div>
+					</div>
+					<!-- Navigation Menu -->
+					<nav class="nav-mobile">
+						<ul class="menu-list-mobile">
+							<li>
+								<a href="<?php echo site_url('/home'); ?>">Home</a>
+							</li>
+							<li>
+								<a href="<?php echo site_url('/vacations'); ?>">Vacations<span>&darr;</span></a>
+							</li>
+							<ul class="submenu-mobile">
+								<li><a href="<?php echo site_url('/disney'); ?>">Disney</a></li>
+								<li><a href="#">Cruise</a></li>
+								<li><a href="#">HoneyMoon and Wedding</a></li>
+								<li><a href="#">All Inclusive</a></li>
+							</ul>
+							</li>
+							<li>
+								<a href="https://github.com/capstone-fall-2024/best-day-ever">About Jen</a>
+							</li>
+							<li>
+								<a href="<?php echo site_url('/blog'); ?>">Blog</a>
+							</li>
+							<li>
+								<a href="#">Special Deals</a>
+							</li>
+							<li>
+								<a href="#">Contact Jen</a>
+							</li>
+						</ul>
+					</nav>
+
+					<button class="cta-mobile">get a quote</button> <!-- turn off on desktop -->
+
+					<div>
+						<p>Travel Agent of Best Day Ever Vacations</p>
+					</div>
+					<div class="social-font-mobile">
+						<i class="bi bi-facebook"></i>
+						<i class="bi bi-instagram"></i>
+					</div>
+
+				</div>
+
 			</div>
 
+			<div class="hamburger">
+				<span class="hamburger__span"></span>
+				<span class="hamburger__span"></span>
+				<span class="hamburger__span"></span>
+			</div>
 
 
 			<div class="site-header__util">
@@ -90,50 +147,4 @@
 
 		</header><!-- #masthead -->
 
-		<div class="mobile-menu-container">
-
-			<div class="search-container">
-				<input type="text" placeholder="Search">
-				<i class="bi bi-search"></i>
-			</div>
-			<!-- Navigation Menu -->
-			<nav class="nav-mobile">
-				<ul class="menu-list-mobile">
-					<li>
-						<a href="#">Home</a>
-					</li>
-					<li>
-						<a href="#">Vacations<span>&darr;</span></a>
-						<ul class="submenu-mobile">
-							<li><a href="#">Disney</a></li>
-							<li><a href="#">Cruise</a></li>
-							<li><a href="#">HoneyMoon and Wedding</a></li>
-							<li><a href="#">All Inclusive</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="#">About Jen</a>
-					</li>
-					<li>
-						<a href="#">Blog</a>
-					</li>
-					<li>
-						<a href="#">Special Deals</a>
-					</li>
-					<li>
-						<a href="#">Contact Jen</a>
-					</li>
-				</ul>
-			</nav>
-
-			<button class="cta-mobile">get a quote</button> <!-- turn off on desktop -->
-
-			<div>
-				<p>Travel Agent of Best Day Ever Vacations</p>
-			</div>
-			<div class="social-font-mobile">
-				<i class="bi bi-facebook"></i>
-				<i class="bi bi-instagram"></i>
-			</div>
-
-		</div>
+		<!-- Hamburger Menu Icon for Mobile -->
