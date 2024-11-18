@@ -314,6 +314,18 @@ function bdev_by_jen_scripts()
 add_action('wp_enqueue_scripts', 'bdev_by_jen_scripts');
 
 /**
+ * Enqueue Owl Carousel.
+ */
+function bdev_owl_carousel() 
+{
+	wp_enqueue_style('owl_carousel_css', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css');
+	wp_enqueue_style('owl_carousel_default_theme', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css');
+	wp_enqueue_script('owl_carousel_js', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js');
+}
+add_action('wp_enqueue_scripts', 'bdev_owl_carousel');
+
+
+/**
  * Implement the Custom Fonts
  */
 function enqueue_custom_fonts()

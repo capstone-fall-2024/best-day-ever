@@ -1,0 +1,160 @@
+@font-face {
+  font-family: youngSerif;
+  src: url(/fonts/young-serif.woff2);
+}
+
+.home-banner {
+  background: url("../img/beach-banner-800.webp") no-repeat center center /
+    cover scroll;
+  max-height: 146vh;
+
+  .top-header a,
+  .mobile-menu-container > p > a {
+    color: $dark-orange;
+
+    :hover {
+      color: $dark-green;
+    }
+  }
+
+  .top-header > div > a {
+    color: $dark-red;
+
+    :hover {
+      color: $dark-green;
+    }
+  }
+
+  .main-navigation a {
+    color: $cream;
+
+    :hover {
+      color: $dark-orange;
+    }
+  }
+}
+
+.home-banner-content {
+  padding: 0 1rem 2rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.home-banner-title {
+  p {
+    font-family: youngSerif;
+    font-size: clamp(2.4375rem, 1.8125rem + 3.125vw, 3.8125rem);
+    color: $white;
+    box-shadow: 0 6px 4px rgba(50, 5, 7, 0.25);
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.stacked-images {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr) 2fr;
+  grid-template-rows: repeat(4, 2fr) 1fr;
+
+  img {
+    max-width: 250px;
+    width: 100%;
+  }
+
+  img:first-child {
+    box-shadow: 6px 6px 4px rgba(50, 5, 7, 0.25);
+    transform: rotate(8deg);
+    grid-column: 2 / span 4;
+    grid-row: 1 / span 3;
+  }
+
+  img:last-child {
+    box-shadow: 0 6px 4px rgba(50, 5, 7, 0.25);
+    transform: rotate(-10deg);
+    grid-column: 1 / span 4;
+    grid-row: 3 / span 3;
+  }
+}
+
+.home-banner-backdrop {
+  padding: 2rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 480px;
+  background-color: rgba(249, 239, 230, 0.75);
+  border-radius: 0.625rem;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    margin-bottom: 1rem;
+  }
+  svg {
+    min-width: 25px;
+  }
+
+  a {
+    width: 150px;
+  }
+
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    gap: 1rem;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .home-banner {
+    background: url("../img/beach-banner.webp") no-repeat center center / cover;
+    max-height: 250vh;
+  }
+
+  .home-banner-title {
+    span {
+      margin-left: 3rem;
+    }
+  }
+
+  .home-banner-content {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 2fr 2fr;
+    gap: 2rem;
+
+    div:first-of-type {
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1;
+    }
+  }
+
+  .home-content-backdrop {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    div > a {
+      max-width: 130px;
+    }
+  }
+
+  .stacked-images {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
+
+    img {
+      max-width: unset;
+    }
+  }
+}
