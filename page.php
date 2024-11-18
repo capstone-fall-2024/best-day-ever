@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying all pages
  *
@@ -21,7 +22,15 @@ get_header();
 
 		<?php the_content(); ?>
 
+		<!-- Testimonials -->
+		<section class="testimonials">
+			<div class="container testimonials-inner">
+				<h3>What Our Travelers Are Saying</h3>
+				<?php echo do_shortcode('[testimonials_slider]'); ?>
+			</div>
+		</section>
 
+		<!-- Blog Query Loops -->
 		<?php
 		get_template_part('template-parts/display-category-posts');
 		get_template_part('template-parts/count-blog-posts');
@@ -91,7 +100,7 @@ get_header();
 			</section>
 		<?php endif; ?>
 
-
+		<!-- Subscription -->
 		<?php if (is_active_sidebar('subscription-main')) {
 			dynamic_sidebar('subscription-main');
 		}

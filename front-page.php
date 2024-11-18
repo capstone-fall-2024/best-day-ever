@@ -117,17 +117,12 @@ get_template_part('parts/home-banner');
 	?>
 
 	<!-- Testimonials -->
-	<!-- wp:cover {"url":"https://best-day-ever.web.dmitcapstone.ca/wordpress2/wp-content/uploads/2024/10/testimonial-bg.webp","id":225,"dimRatio":0,"overlayColor":"light-grey","isUserOverlayColor":true,"focalPoint":{"x":0.72,"y":0.19},"isDark":false,"tagName":"section","metadata":{"name":"Testimonials"},"style":{"spacing":{"padding":{"top":"64px","bottom":"64px","left":"64px","right":"64px"},"margin":{"top":"64px","bottom":"64px"}}},"layout":{"type":"constrained"}} -->
-	<section class="wp-block-cover is-light" style="margin-top:64px;margin-bottom:64px;padding-top:64px;padding-right:64px;padding-bottom:64px;padding-left:64px"><span aria-hidden="true" class="wp-block-cover__background has-light-grey-background-color has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-225" alt="Cream background with palm leaf graphics on the top right and bottom left corners to give a tropical feel" src="https://best-day-ever.web.dmitcapstone.ca/wordpress2/wp-content/uploads/2024/10/testimonial-bg.webp" style="object-position:72% 19%" data-object-fit="cover" data-object-position="72% 19%"/><div class="wp-block-cover__inner-container"><!-- wp:group {"metadata":{"name":"Inner Content"},"style":{"spacing":{"blockGap":"0px"},"layout":{"selfStretch":"fill","flexSize":null}},"layout":{"type":"constrained","contentSize":"","wideSize":""}} -->
-	<div class="wp-block-group"><!-- wp:heading {"textAlign":"left","level":3,"align":"wide","style":{"typography":{"fontSize":"48px","fontStyle":"normal","fontWeight":"700","textTransform":"capitalize","letterSpacing":"0px","lineHeight":"1"},"spacing":{"padding":{"left":"0px"},"margin":{"bottom":"16px"}}}} -->
-	<h3 class="wp-block-heading alignwide has-text-align-left" style="margin-bottom:16px;padding-left:0px;font-size:48px;font-style:normal;font-weight:700;letter-spacing:0px;line-height:1;text-transform:capitalize">What Our Travelers are Saying</h3>
-	<!-- /wp:heading -->
-
-	<!-- wp:shortcode -->
-	<?php echo do_shortcode('[testimonials_slider]'); ?>
-	<!-- /wp:shortcode --></div>
-	<!-- /wp:group --></div></section>
-	<!-- /wp:cover -->
+	<section class="testimonials">
+		<div class="container testimonials-inner">
+			<h3>What Our Travelers Are Saying</h3>
+			<?php echo do_shortcode('[testimonials_slider]'); ?>
+		</div>
+	</section>
 
 	<!-- Blog Loop -->
 	<?php get_template_part('template-parts/display-category-posts'); ?>
