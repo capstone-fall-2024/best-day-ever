@@ -1,9 +1,11 @@
-<?php /** * The header for our theme * * This is the template that displays all of the <head> section and everything up>
-	*
-	* @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
-	*
-	* @package Best_Day_Ever_Vacations_by_Jen
-	*/
+<?php
+
+/** * The header for our theme * * This is the template that displays all of the <head> section and everything up>
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package Best_Day_Ever_Vacations_by_Jen
+ */
 
 ?>
 <!doctype html>
@@ -11,7 +13,7 @@
 
 <head>
 	<title><?php bloginfo('name');
-	wp_title(); ?></title>
+			wp_title(); ?></title>
 	<meta name="description" content="<?php bloginfo('description'); ?>">
 	<!-- addtitle10-22 -->
 
@@ -57,11 +59,11 @@
 					the_custom_logo(); // Display the custom logo if it exists
 				} else {
 					// Display the site title if no logo is uploaded
-					?>
+				?>
 					<div class="site-title">
 						<a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
 					</div>
-					<?php
+				<?php
 				}
 				?>
 			</div>

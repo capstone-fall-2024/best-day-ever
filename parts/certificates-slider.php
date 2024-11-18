@@ -9,7 +9,7 @@
         if($certificate_slider_query->have_posts()) {
             ob_start();
         ?>
-        <div class="slider">
+        <div class="slider certificates">
             <div class="certificate-slider-inner">
                 <?php
                     $index = 0;
