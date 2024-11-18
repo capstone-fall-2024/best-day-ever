@@ -16,7 +16,7 @@
 <body <?php body_class(); ?>>
 
 <!-- Banner start -->
-<div class="home-banner">
+<div class="home-banner" aria-label="Best Day Ever Vacations background image of a beach">
     <h1 style="display:none">Best Day Ever Vacations by Jen</h1>
 	<?php wp_body_open(); ?>
 
@@ -132,14 +132,14 @@
 		</div> <!-- end header -->
     
     <!-- Banner Content -->
-    <div class="banner-content container p-3">
+    <div class="home-banner-content container">
         <div class="home-banner-title">
            <p>A Vacation Catered <span>To You, By Jennifer</span></p>
         </div>
 
         <div class="stacked-images">
-            <img src="./img/momdaughter-disney.webp" alt="Mom and daughter with Mickey Mouse ears at Disney">
-            <img src="./img/women-beach.webp" alt="Friends giving a piggyback ride at a tropical beach">
+            <img src="<?php echo get_theme_file_uri('/img/momdaughter-disney.webp') ?>" alt="Mom and daughter with Mickey Mouse ears at Disney">
+            <img src="<?php echo get_theme_file_uri('/img/women-beach.webp') ?>" alt="Friends giving a piggyback ride at a tropical beach">
         </div>
 
         <div class="home-banner-backdrop">
@@ -168,8 +168,8 @@
             </ul>
 
             <div>
-                <a href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/quote/" class="wp-block-button">Get A Quote</a>
-                <a href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/contact-jen/" class="wp-block-button">Contact Jennifer</a>
+                <a href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/quote/" class="button-primary">Get A Quote</a>
+                <a href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/contact-jen/" class="button-cream">Contact Jennifer</a>
             </div>
         </div>
     </div>

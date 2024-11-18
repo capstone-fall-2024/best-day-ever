@@ -1,10 +1,18 @@
-
-
 // Include custom variables default overrides here
 
+$line-height: 1.5;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  line-height: $line-height;
+}
 
 //Map
-
 
 //Merge Map
 @import "base/variables";
@@ -12,6 +20,10 @@
 @import "components/buttons";
 @import "bootstrap/scss/bootstrap";
 @import "layout/header";
+
+// Home Page
+@import "modules/home-banner";
+@import "layout/homepage";
 
 // Category Page
 @import "modules/blog-posts";
@@ -30,15 +42,18 @@
 
 @import "layout/footer";
 
-
-
 // Then add additional custom code here
 /******************* LAYOUT ********************/
+
+a {
+  text-decoration: none;
+}
+
 .entry-content {
   width: 80%;
   max-width: 1280px;
   margin: 0 auto;
-} 
+}
 
 .wp-block-cover:nth-of-type(1) {
   width: 100vw;
@@ -49,5 +64,3 @@
   width: 100%;
   margin-left: 0;
 }
-
-

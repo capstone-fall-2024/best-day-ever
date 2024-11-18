@@ -24,7 +24,7 @@ get_template_part('parts/home-banner');
 	<section class="wp-block-group" style="margin-top:64px;margin-bottom:64px"><!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"24px","left":"24px"}}}} -->
 	<div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
 	<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","align":"center","style":{"border":{"radius":"10px"}}} -->
-	<figure class="wp-block-image aligncenter size-large has-custom-border"><img src="https://placehold.co/400x600" alt="" style="border-radius:10px"/></figure>
+	<figure class="wp-block-image aligncenter size-large has-custom-border"><img src="https://placehold.co/400x600" alt="Photo of Jen" style="border-radius:10px"/></figure>
 	<!-- /wp:image --></div>
 	<!-- /wp:column -->
 
@@ -43,9 +43,8 @@ get_template_part('parts/home-banner');
 	<!-- /wp:paragraph -->
 
 	<!-- wp:buttons -->
-	<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"light-orange","textColor":"dark-red","style":{"typography":{"fontStyle":"normal","fontWeight":"500"},"elements":{"link":{"color":{"text":"var:preset|color|dark-red"}}},"border":{"width":"2px","color":"#fb8f46","radius":"10px"}}} -->
-	<div class="wp-block-button" style="font-style:normal;font-weight:500"><a class="wp-block-button__link has-dark-red-color has-light-orange-background-color has-text-color has-background has-link-color has-border-color wp-element-button" href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/about-jen/" style="border-color:#fb8f46;border-width:2px;border-radius:10px">More About Me</a></div>
-	<!-- /wp:button --></div>
+	<div class="wp-block-buttons"><!-- wp:button -->
+	<a class="button-primary" href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/about-jen/">More About Me</a>
 	<!-- /wp:buttons --></div>
 	<!-- /wp:group --></div>
 	<!-- /wp:column --></div>
@@ -53,26 +52,23 @@ get_template_part('parts/home-banner');
 	<!-- /wp:group -->
 
 	<!-- Proud Member of Section widget -->
-	<section class="abstract-bg">
-	<div class="container">
-		<h3>Proud Member of</h3>
+	<div class="abstract-bg">
 		<?php if (is_active_sidebar('proud-member')) {
 				dynamic_sidebar('proud-member');
 			};
 		?>
 	</div>
-	</section>
 
 	<!-- Jennifer's Specialties rotator -->
 	<section class="container">
 		<h3>Jennifer's Specialties</h3>
-    <div>
+		<div>
 			<?php echo do_shortcode('[specialty_slider]'); ?>
 		</div>
 	</section>
 
 	<!-- SPECIAL DEALS -->
-	<section class="container">
+	<section class="container home-specials">
 		<h3>Special Deals</h3>
 		<div>
 			<?php
@@ -90,17 +86,17 @@ get_template_part('parts/home-banner');
 					<?php
 						$layout = ($counter % 2 == 0) ? 'layout-reversed' : 'layout-default';
 					?>
-					<section class="d-flex justify-content-between align-items-center <?php echo $layout; ?>">
+					<section class="<?php echo $layout; ?>">
 
-						<div class="col-12 col-md-6">
-							<img class="img-rounded" src="<?php the_field('deal_featured_image'); ?>"
+						<div>
+							<img class="img-rounded" src="<?php echo esc_url(get_field('deal_featured_image')['url']); ?>"
 								alt="Featured image of <?php the_title(); ?>" loading="lazy">
 						</div>
 
-						<div class="col-12 col-md-6">
+						<div>
 							<h4><?php the_title(); ?></h4>
 							<p><?php the_field('deal_description'); ?></p>
-							<a href="<?php the_field('deal_url'); ?>" class="wp-block-button">Learn More</a>
+							<a href="<?php the_field('deal_url'); ?>" class="button-primary">Learn More</a>
 						</div>
 
 					</section>
@@ -109,16 +105,16 @@ get_template_part('parts/home-banner');
 				<?php wp_reset_postdata(); ?>
 			<?php endif; ?>
 		</div>
-  </section>
+
+		<a href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/special-deals/">Check out more<span><i class="bi bi-arrow-right"></i></span></a>
+	</section>
 
 	<!-- Ad -->
-	<div class="container">
-		<?php
-			if (is_active_sidebar('home-pg-marketing-banner')) {
-				dynamic_sidebar('home-pg-marketing-banner');
-			};
-		?>
-	</div>
+	<?php
+		if (is_active_sidebar('home-pg-marketing-banner')) {
+			dynamic_sidebar('home-pg-marketing-banner');
+		};
+	?>
 
 	<!-- Testimonials -->
 	<section class="testimonials">
@@ -136,7 +132,7 @@ get_template_part('parts/home-banner');
 			<h3>Jennifer's Travel Blog</h3>
 			<?php display_category_posts('', 3); ?>
 			<div class="link-main-category">
-				<a href="<?php echo esc_url(home_url('/blog')); ?>">Check out more<span><i class="bi bi-arrow-right"></i></span></a>
+				<a href="<?php echo esc_url(home_url('/blog')); ?>">Check Out More<span><i class="bi bi-arrow-right"></i></span></a>
 			</div>
 		</div>
 	</section>
