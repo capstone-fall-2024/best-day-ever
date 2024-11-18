@@ -79,59 +79,6 @@
 
 			<!-- mobile-nav -->
 
-			<div class="sidebar-menu">
-				<div class="sidebar-menu__haha"></div>
-				<div class="sidebar-menu__container">
-					<div class="search-form-box">
-						<?php get_search_form(); ?>
-						<div>
-							<i class="bi bi-x-lg"></i>
-						</div>
-					</div>
-					<!-- Navigation Menu -->
-					<nav class="nav-mobile">
-						<ul class="menu-list-mobile">
-							<li>
-								<a href="<?php echo site_url('/home'); ?>">Home</a>
-							</li>
-							<li>
-								<a href="<?php echo site_url('/vacations'); ?>">Vacations<span>&darr;</span></a>
-							</li>
-							<ul class="submenu-mobile">
-								<li><a href="<?php echo site_url('/disney'); ?>">Disney</a></li>
-								<li><a href="#">Cruise</a></li>
-								<li><a href="#">HoneyMoon and Wedding</a></li>
-								<li><a href="#">All Inclusive</a></li>
-							</ul>
-							</li>
-							<li>
-								<a href="https://github.com/capstone-fall-2024/best-day-ever">About Jen</a>
-							</li>
-							<li>
-								<a href="<?php echo site_url('/blog'); ?>">Blog</a>
-							</li>
-							<li>
-								<a href="#">Special Deals</a>
-							</li>
-							<li>
-								<a href="#">Contact Jen</a>
-							</li>
-						</ul>
-					</nav>
-
-					<button class="cta-mobile">get a quote</button> <!-- turn off on desktop -->
-
-					<div>
-						<p>Travel Agent of Best Day Ever Vacations</p>
-					</div>
-					<div class="social-font-mobile">
-						<i class="bi bi-facebook"></i>
-						<i class="bi bi-instagram"></i>
-					</div>
-
-				</div>
-
-			</div>
 
 			<div class="hamburger">
 				<span class="hamburger__span"></span>
@@ -148,3 +95,79 @@
 		</header><!-- #masthead -->
 
 		<!-- Hamburger Menu Icon for Mobile -->
+
+		<div class="sidebar-menu">
+			<div class="sidebar-menu__closed">
+				<div class="hamburger-closed">
+					<span class="hamburger-closed__span"></span>
+					<span class="hamburger-closed__span"></span>
+					<span class="hamburger-closed__span"></span>
+				</div>
+			</div>
+
+			<div class="sidebar-menu__container">
+
+				<div class="search-form-mobile">
+					<?php get_search_form(); ?>
+					<i class="bi bi-search"></i>
+				</div>
+				<!-- Navigation Menu -->
+				<nav class="nav-mobile">
+					<ul class="nav-mobile__menu-list-mobile">
+						<li>
+							<a href="<?php echo site_url('/'); ?>">Home</a>
+						</li>
+
+						<li>
+							<div class="vacations-drop-down-menuMobile">
+								<a href="<?php echo site_url('/vacations'); ?>">Vacations</a>
+								<i class="bi bi-chevron-down"></i>
+							</div>
+
+							<ul class="submenu-mobile">
+								<li class="submenu-mobile__item"><a href="<?php echo site_url('/vacations/disney'); ?>">Disney</a>
+									</lisu>
+								<li class="submenu-mobile__item"><a href="<?php echo site_url('/vacations/cruises'); ?>">Cruise</a>
+								</li>
+								<li class="submenu-mobile__item"><a
+										href="<?php echo site_url('/vacations/honeymoon-wedding'); ?>">Honeymoon & Wedding</a></li>
+								<li class="submenu-mobile__item"><a href="<?php echo site_url('/vacations/all-inclusive'); ?>">All
+										Inclusive & More</a></li>
+							</ul>
+
+						</li>
+
+						</li>
+						<li>
+							<a href="<?php echo site_url('/about-jen'); ?>">About Jen</a>
+						</li>
+						<li>
+
+							<a href="<?php echo site_url('/blog'); ?>">Blog</a>
+
+						</li>
+						<li>
+							<a href="<?php echo site_url('/special-deals'); ?>">Special Deals</a>
+						</li>
+						<li>
+							<a href="<?php echo site_url('/contact-jen'); ?>">Contact Jen</a>
+						</li>
+					</ul>
+				</nav>
+
+				<a href="<?php echo site_url('/quote') ?>" class="cta-mobile">get a quote</a> <!-- turn off on desktop -->
+
+				<div class="paragraph">
+					<p>Travel Agent of Best Day Ever Vacations</p>
+				</div>
+
+				<div class="social-font-mobile">
+					<a href="https://www.facebook.com/profile.php?id=61555368848155"><i class="bi bi-facebook"></i></a>
+					<a href="https://www.instagram.com/best_day_ever_vacations_by_jen?igsh=YTFnMnFoZWVnaDdp&utm_source=qr"><i
+							class="bi bi-instagram"></i></a>
+				</div>
+
+			</div>
+
+
+		</div>
