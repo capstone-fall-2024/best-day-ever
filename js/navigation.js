@@ -1,91 +1,92 @@
-/**
- * File navigation.js.
- *
- * Handles toggling the navigation menu for small screens and enables TAB key
- * navigation support for dropdown menus.
- */
-
 document.addEventListener('DOMContentLoaded', function() {
-	const menu_btn = document.querySelector('.hamburger');
-	const mobile_menu = document.querySelector('.mobile-menu-container');
+  const menu_btn = document.querySelector('.hamburger');
+  const mobile_menu = document.querySelector('.sidebar-menu');
+  const menuItems = document.querySelectorAll('.menu-list-mobile > li > a');
+	const body = document.body; //Select the body element
+  const overlay = document.querySelector('.site-overlay');
 
-	const menuItems = document.querySelectorAll('.menu-list-mobile > li > a');
+  const search = document.querySelector('.bi-search');
+  const searchForm = document.querySelector('.search-form-box');
+  const closeSearchForm = document.querySelector('.bi-x-lg');
 
-	const search = document.querySelector('.bi-search');
-	const searchForm = document.querySelector('.search-form-box');
-	const closeSearchForm = document.querySelector('.bi-x-lg')
+  // Event listener for toggling the mobile menu
+  menu_btn.addEventListener('click', function() {
+    menu_btn.classList.toggle('is-active');
+    mobile_menu.classList.toggle('is-active');
+    overlay.classList.toggle('is-active');
+		if (mobile_menu.classList.contains('is-active')) {
+      body.classList.add('no-scroll'); // Add class to disable body scroll
+    } else {
+      body.classList.remove('no-scroll'); // Remove class to re-enable body scroll
+    }
+  });
 
-	menuItems.forEach(item => {
-		item.addEventListener('click', function (e) {
-				e.preventDefault(); // Prevent default link behavior
-				const submenu = this.nextElementSibling;
+  overlay.addEventListener('click', function() {
+    menu_btn.classList.remove('is-active');
+    mobile_menu.classList.remove('is-active');
+    overlay.classList.remove('is-active');
+    body.classList.remove('no-scroll'); // Re-enable body scroll
 
-				if (submenu) {
-						submenu.classList.toggle('active');
-				}
-		});
-});
+  })
 
+  // Event listener for toggling submenus
+  menuItems.forEach(item => {
+    item.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default link behavior
+      const submenu = this.nextElementSibling;
+      if (submenu) {
+        submenu.classList.toggle('active');
+      }
+    });
+  });
 
-	menu_btn.addEventListener('click', function() {
-		// menu_btn.classList.toggle('is-active');
-		mobile_menu.classList.toggle('is-active');
-	});
+  // Event listener for showing the search form
+  search.addEventListener('click', function() {
+    console.log('hi');
+    searchForm.classList.toggle('is-active');
+  });
 
-	search.addEventListener('click', function(){
-		console.log('hi');
-		searchForm.classList.toggle('is-active');
-	});
+  // Event listener for closing the search form
+  closeSearchForm.addEventListener('click', function() {
+    console.log('closed');
+    searchForm.classList.remove('is-active');
+  });
 
-	closeSearchForm.addEventListener('click',function() {
-		console.log('closed');
-		searchForm.classList.remove('is-active');
-		
-	});
+  // Blog Category Menu Slider logic
+  let slideIndex = 1;
+  showSlides(slideIndex);
 
-	// Blog Category Menu Slider
+  // Add event listeners for the "Next" and "Previous" buttons
+  document.querySelector('.prev').addEventListener('click', function() {
+    plusSlides(-1);
+  });
 
-	let slideIndex = 1;
-    
-    showSlides(slideIndex);
+  document.querySelector('.next').addEventListener('click', function() {
+    plusSlides(1);
+  });
 
-    // Add event listeners for the "Next" and "Previous" buttons
-document.querySelector('.prev').addEventListener('click', function() {
-  plusSlides(-1);
-});
+  // Next/previous controls function
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
 
-document.querySelector('.next').addEventListener('click', function() {
-  plusSlides(1);
-});
+  // Function to show the slides
+  function showSlides(n) {
+    let i;
+    let slides = document.querySelectorAll('.carousel-menu__item');
 
-    // Next/previous controls
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
+    if (n > slides.length) {
+      slideIndex = 1;
     }
 
-    // Thumbnail image controls
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
+    if (n < 1) {
+      slideIndex = slides.length;
     }
 
-    function showSlides(n) {
-      let i;
-      let slides = document.querySelectorAll('.carousel-menu__item');
-
-      if (n > slides.length) {
-        slideIndex = 1;
-      }
-
-      if (n < 1) {
-        slideIndex = slides.length;
-      }
-
-      for (i = 0; i < slides.length; i++){
-        slides[i].style.display = 'none';
-      }
-
-      slides[slideIndex -1 ].style.display = 'block';
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = 'none';
     }
 
-
+    slides[slideIndex - 1].style.display = 'block';
+  }
 });
