@@ -10,7 +10,7 @@
             ob_start();
         ?>
         <div class="slider">
-            <div class="slider-inner">
+            <div class="specialties-slider-inner">
                 <?php
                     $index = 0;
                     while($specialty_slider_query->have_posts()) : $specialty_slider_query->the_post();
@@ -20,7 +20,7 @@
                         $specialty_url = get_field('link_to_specialty');
                     };
                 ?>
-                <div class="slider-item <?php echo ($index < 2) ? "active" : "" ?>">
+                <div class="specialties-slider-item <?php echo $index; ?>">
                     <div class="specialty">
                         <h4><?php echo esc_html($specialty_name); ?></h4>
                         <p><?php echo esc_html($specialty_description); ?></p>
@@ -34,9 +34,9 @@
             </div>  
 
             <!-- Carousel Slider Arrow -->
-            <div class="specialty-slider-control">
-                <button class="slider-prev"><i class="bi bi-arrow-left-circle"></i></button>
-                <button class="slider-next"><i class="bi bi-arrow-right-circle"></i></button>
+            <div class="slider-control">
+                <button class="slider-prev specialties-prev"><i class="bi bi-arrow-left-circle"></i></button>
+                <button class="slider-next specialties-next"><i class="bi bi-arrow-right-circle"></i></button>
             </div>
         </div>
         <?php 

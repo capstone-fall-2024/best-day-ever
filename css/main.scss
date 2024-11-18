@@ -3,18 +3,12 @@
 // Include custom variables default overrides here
 
 
-$line-height: 1.5;
-
-h1,h2,h3,h4,h5,h6,p{
-  line-height: $line-height;
-}
-
-
 //Map
 
 
 //Merge Map
 @import "base/variables";
+@import "base/fonts";
 @import "components/buttons";
 @import "bootstrap/scss/bootstrap";
 @import "layout/header";

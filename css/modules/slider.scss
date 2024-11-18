@@ -1,10 +1,39 @@
-/***************** Testimonial Carousel *****************/
+/***************** Testimonial Front Page*****************/
+.testimonials {
+    position: relative;
+    background-color: $cream;
+    overflow: hidden;
+    padding: 4rem 0 1.5rem 0;
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        display: block;
+    }
+
+    &:after {
+        background: url('../img/palm-leaves-rotate.png') top right /contain no-repeat;
+        background-size: 80%;
+        width: 60vw;
+        height: 100%;
+        top: -5%;
+        right: 0;
+    }
+}
+
+.testimonials-inner {
+    position: relative;
+    z-index: 2;
+}
+/***************** Slider *****************/
 .slider {
     position: relative;
     width: 100%;
     max-width: 100%;
     overflow: hidden;
 
+    /** Testimonial Section **/
     .testimonial-slider-inner {
         display: flex;
         flex-direction: column;
@@ -79,15 +108,17 @@
         }
     }
 
+    /** Certificate Section **/
     .certificate-slider-inner {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: flex-start;
         gap: 2rem;
         transition: transform 0.5s ease;
 
         .certificate-slider-item {
-            width: 30%;
+            width: 100%;
             padding: 20px;
             box-sizing: border-box;
             opacity: 1;
@@ -99,11 +130,28 @@
 
             .certificate {
                 text-align: center;
+            }
+        }     
+    }
 
-                img {
-                    min-width: 550px;
-                    height: auto;
-                }
+    /** Specialties Section **/
+    .specialties-slider-inner {
+        display: flex;
+        transition: transform 0.5s ease;
+        gap: 1rem;
+        width: max-content;
+
+        .specialties-slider-item {
+            position: relative;
+            flex: 0 0 100%;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            box-shadow: 0px 6px 4px 0px rgba(50, 5, 7, 0.25);
+            border: 1px solid rgba(50, 5, 7, 0.25);
+            border-radius: 15px;
+
+            .specialty {
+                padding: 20px;
+                height: 250px;
             }
         }
     }
@@ -125,18 +173,77 @@
     }
 }
 
+@media screen and (min-width: 800px) {
+    .testimonials {
+        &:before {
+            background: url('../img/palm-leaves.png') bottom left / contain no-repeat;
+            width: 50vw;
+            height: 100%;
+            bottom: -10%;
+            left: 0;
+        }
+    
+        &:after {
+            background-size: 70%;
+            width: 40vw;
+            height: 100%;
+            top: -10%;
+            right: 5%;
+        }
+    }
+    .slider {
+        .certificate-slider-inner {
+            flex-direction: row;
+    
+            .certificate-slider-item {
+                width: 50%;
+            }
+        }
+
+        .specialties-slider-inner {
+            flex-direction: column;
+
+            .specialties-slider-item {
+                flex: 0 0 50%;
+                height: 200px;
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 1024px) {
+    .testimonials {
+        &:before {
+            background-size: 75%;
+            width: 29vw;
+            height: 100%;
+            bottom: -12%;
+            left: 12%;
+        }
+    
+        &:after {
+            background-size: 70%;
+            width: 20vw;
+            height: 100%;
+            top: -10%;
+            right: 10%;
+        }
+    }
+
     .slider {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+
         .testimonial-slider-inner {
-            flex-direction: row; 
-            width: 70%;
+            flex-direction: row;
+            align-items: flex-start;
+            width: 100%;
     
             .testimonial-slider-item {
                 flex: 1 0 50%;
                 max-width: 530px;
+                min-height: 500px;
                 padding: 0;
                 margin: 0;
 
@@ -148,10 +255,32 @@
             }
         }
 
+        .certificate-slider-inner {
+            .certificate-slider-item {
+                width: 30%;
+            }
+        }
+
+        .specialties-slider-inner {
+            flex-direction: row;
+
+            .specialties-slider-item {
+                flex: 0 0 33.33%;
+                opacity: 1;
+
+                &:nth-child(3) {
+                    transform: scale(1.2);
+                    z-index: 2;
+                }
+
+                &:not(:nth-child(3)) {
+                    opacity: 0.7;
+                }
+            }
+        }
+
         .slider-control {
             width: 100%;
         }
     }
-
-    
 }

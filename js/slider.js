@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let currentIndex = 0;
     const totalCertificates = certificates.length;
 
+    console.log(nextBtn);
     function updateActiveCertificate() {
         certificates.forEach(certificate => certificate.classList.remove('active'))
 
@@ -68,4 +69,34 @@ document.addEventListener("DOMContentLoaded", function() {
         updateActiveCertificate()
     })
     updateActiveCertificate();
+})
+
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.querySelector('.specialties-slider-inner');
+    const specialties = document.querySelectorAll('.specialties-slider-item');
+    const nextBtn = document.querySelector('.specialties-next');
+    const prevBtn = document.querySelector('.specialties-prev');
+    let currentIndex = 0;
+    const totalCards = specialties.length;
+    const gap = 16;
+
+    function updateSlider() {
+        const cardWidth = specialties[0].offsetWidth;
+        const totalWidth = cardWidth * totalCards + gap * (totalCards -1);
+        slider.style.width = `${totalWidth}px`;
+        slider.style.transform =`translateX(-${(cardWidth + gap) * currentIndex}px)`;
+    }
+
+    nextBtn.addEventListener('click', function () {
+        currentIndex = (currentIndex + 1) % totalCards;
+        updateSlider();
+    });
+
+    // Previous Button functionality
+    prevBtn.addEventListener('click', function () {
+        currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+        updateSlider();
+    });
+
+    updateSlider();
 })

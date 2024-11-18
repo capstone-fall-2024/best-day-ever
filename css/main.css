@@ -1,6 +1,32 @@
 @charset "UTF-8";
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p {
+h1, .h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+p {
   line-height: 1.5;
+}
+
+body h1,
+.h1 {
+  font-size: clamp(2.4375rem, 5vw + 1.25rem, 3.8125rem);
+}
+
+body h3,
+.h3 {
+  font-size: clamp(2rem, 4.5vw + 1rem, 3rem);
+}
+
+body h4,
+.h4 {
+  font-size: clamp(1.25rem, 4vw + 1rem, 2rem);
 }
 
 .footer-btn-contact-jen a, .button-secondary, .button-primary__vacation-link,
@@ -12788,12 +12814,41 @@ textarea.form-control-lg {
     margin: 0 auto;
   }
 }
-/***************** Testimonial Carousel *****************/
+/***************** Testimonial Front Page*****************/
+.testimonials {
+  position: relative;
+  background-color: #F9EFE6;
+  overflow: hidden;
+  padding: 4rem 0 1.5rem 0;
+}
+.testimonials:before, .testimonials:after {
+  content: "";
+  position: absolute;
+  display: block;
+}
+.testimonials:after {
+  background: url("../img/palm-leaves-rotate.png") top right/contain no-repeat;
+  background-size: 80%;
+  width: 60vw;
+  height: 100%;
+  top: -5%;
+  right: 0;
+}
+
+.testimonials-inner {
+  position: relative;
+  z-index: 2;
+}
+
+/***************** Slider *****************/
 .slider {
   position: relative;
   width: 100%;
   max-width: 100%;
   overflow: hidden;
+  /** Testimonial Section **/
+  /** Certificate Section **/
+  /** Specialties Section **/
 }
 .slider .testimonial-slider-inner {
   display: flex;
@@ -12855,13 +12910,14 @@ textarea.form-control-lg {
 }
 .slider .certificate-slider-inner {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 2rem;
   transition: transform 0.5s ease;
 }
 .slider .certificate-slider-inner .certificate-slider-item {
-  width: 30%;
+  width: 100%;
   padding: 20px;
   box-sizing: border-box;
   opacity: 1;
@@ -12873,9 +12929,23 @@ textarea.form-control-lg {
 .slider .certificate-slider-inner .certificate-slider-item .certificate {
   text-align: center;
 }
-.slider .certificate-slider-inner .certificate-slider-item .certificate img {
-  min-width: 550px;
-  height: auto;
+.slider .specialties-slider-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 1rem;
+  width: max-content;
+}
+.slider .specialties-slider-inner .specialties-slider-item {
+  position: relative;
+  flex: 0 0 100%;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  box-shadow: 0px 6px 4px 0px rgba(50, 5, 7, 0.25);
+  border: 1px solid rgba(50, 5, 7, 0.25);
+  border-radius: 15px;
+}
+.slider .specialties-slider-inner .specialties-slider-item .specialty {
+  padding: 20px;
+  height: 250px;
 }
 
 .slider-control {
@@ -12892,7 +12962,50 @@ textarea.form-control-lg {
   color: #CE5927;
 }
 
+@media screen and (min-width: 800px) {
+  .testimonials:before {
+    background: url("../img/palm-leaves.png") bottom left/contain no-repeat;
+    width: 50vw;
+    height: 100%;
+    bottom: -10%;
+    left: 0;
+  }
+  .testimonials:after {
+    background-size: 70%;
+    width: 40vw;
+    height: 100%;
+    top: -10%;
+    right: 5%;
+  }
+  .slider .certificate-slider-inner {
+    flex-direction: row;
+  }
+  .slider .certificate-slider-inner .certificate-slider-item {
+    width: 50%;
+  }
+  .slider .specialties-slider-inner {
+    flex-direction: column;
+  }
+  .slider .specialties-slider-inner .specialties-slider-item {
+    flex: 0 0 50%;
+    height: 200px;
+  }
+}
 @media screen and (min-width: 1024px) {
+  .testimonials:before {
+    background-size: 75%;
+    width: 29vw;
+    height: 100%;
+    bottom: -12%;
+    left: 12%;
+  }
+  .testimonials:after {
+    background-size: 70%;
+    width: 20vw;
+    height: 100%;
+    top: -10%;
+    right: 10%;
+  }
   .slider {
     display: flex;
     flex-wrap: wrap;
@@ -12900,16 +13013,35 @@ textarea.form-control-lg {
   }
   .slider .testimonial-slider-inner {
     flex-direction: row;
-    width: 70%;
+    align-items: flex-start;
+    width: 100%;
   }
   .slider .testimonial-slider-inner .testimonial-slider-item {
     flex: 1 0 50%;
     max-width: 530px;
+    min-height: 500px;
     padding: 0;
     margin: 0;
   }
   .slider .testimonial-slider-inner .testimonial-slider-item .author-info img {
     width: 10%;
+  }
+  .slider .certificate-slider-inner .certificate-slider-item {
+    width: 30%;
+  }
+  .slider .specialties-slider-inner {
+    flex-direction: row;
+  }
+  .slider .specialties-slider-inner .specialties-slider-item {
+    flex: 0 0 33.33%;
+    opacity: 1;
+  }
+  .slider .specialties-slider-inner .specialties-slider-item:nth-child(3) {
+    transform: scale(1.2);
+    z-index: 2;
+  }
+  .slider .specialties-slider-inner .specialties-slider-item:not(:nth-child(3)) {
+    opacity: 0.7;
   }
   .slider .slider-control {
     width: 100%;
