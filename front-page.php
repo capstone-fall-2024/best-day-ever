@@ -95,8 +95,8 @@ get_template_part('parts/home-banner');
 
 						<div>
 							<h4><?php the_title(); ?></h4>
-							<p><?php the_field('deal_description'); ?></p>
-							<a href="<?php the_field('deal_url'); ?>" class="button-primary">Learn More</a>
+							<p><?php get_field('deal_description'); ?></p>
+							<a href="<?php get_field('deal_url'); ?>" class="button-primary">Learn More</a>
 						</div>
 
 					</section>
