@@ -12528,27 +12528,11 @@ textarea.form-control-lg {
 }
 .home-banner {
   background: url("../img/beach-banner-800.webp") no-repeat center center/cover scroll;
-  max-height: 146vh;
-}
-.home-banner .top-header a,
-.home-banner .mobile-menu-container > p > a {
-  color: #ce5927;
-}
-.home-banner .top-header a :hover,
-.home-banner .mobile-menu-container > p > a :hover {
-  color: #30453b;
-}
-.home-banner .top-header > div > a {
-  color: #320507;
-}
-.home-banner .top-header > div > a :hover {
-  color: #30453b;
-}
-.home-banner .main-navigation a {
-  color: #f9efe6;
-}
-.home-banner .main-navigation a :hover {
-  color: #ce5927;
+  max-height: 250vh;
+  position: relative;
+  top: 0;
+  padding-top: 6rem;
+  margin-bottom: 5rem;
 }
 
 .home-banner-content {
@@ -12566,9 +12550,10 @@ textarea.form-control-lg {
   font-family: youngSerif;
   font-size: clamp(2.4375rem, 1.8125rem + 3.125vw, 3.8125rem);
   color: #fff;
-  box-shadow: 0 6px 4px rgba(50, 5, 7, 0.25);
+  filter: drop-shadow(0px 6px 4px rgba(50, 5, 7, 0.25));
   display: flex;
   flex-direction: column;
+  margin-bottom: 0;
 }
 
 .stacked-images {
@@ -12602,17 +12587,25 @@ textarea.form-control-lg {
   background-color: rgba(249, 239, 230, 0.75);
   border-radius: 0.625rem;
 }
+.home-banner-backdrop ul {
+  margin: 0;
+  padding: 0;
+}
 .home-banner-backdrop li {
   display: flex;
   align-items: center;
   gap: 0.875rem;
   margin-bottom: 1rem;
 }
+.home-banner-backdrop li p {
+  margin-bottom: 0;
+}
 .home-banner-backdrop svg {
   min-width: 25px;
 }
 .home-banner-backdrop a {
   width: 150px;
+  padding: 10px 16px;
 }
 .home-banner-backdrop div {
   display: flex;
@@ -12634,20 +12627,19 @@ textarea.form-control-lg {
     display: grid;
     grid-template-columns: 3fr 2fr;
     grid-template-rows: 2fr 2fr;
-    gap: 2rem;
+    gap: 1rem;
   }
   .home-banner-content div:first-of-type {
     grid-column: 1/span 1;
     grid-row: 1/span 1;
   }
-  .home-content-backdrop {
+  .home-banner-backdrop {
     grid-column: 1/span 1;
     grid-row: 2/span 1;
     margin: 0 auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 2rem;
   }
-  .home-content-backdrop div > a {
+  .home-banner-backdrop div > a {
     max-width: 130px;
   }
   .stacked-images {
@@ -12665,13 +12657,36 @@ main {
 
 .img-rounded {
   border-radius: 0.875rem;
-  aspect-ratio: 5/4;
+}
+
+.im-jen {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  margin: 4rem auto;
+}
+.im-jen h3, .im-jen .h3 {
+  color: #320507;
+}
+.im-jen img {
+  aspect-ratio: 2/3;
   -o-object-fit: cover;
      object-fit: cover;
 }
+.im-jen a {
+  width: 150px;
+  padding: 10px 16px;
+  display: block;
+}
 
 .home-specials {
-  margin: 3rem 0;
+  margin: 4rem auto;
+}
+.home-specials img {
+  aspect-ratio: 5/4;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .home-specials h3, .home-specials .h3 {
   color: #320507;
@@ -12712,15 +12727,26 @@ main {
 }
 .layout-reversed a,
 .layout-default a {
+  display: block;
+  width: 150px;
   margin: 1rem auto 0 auto;
 }
 
 @media (min-width: 768px) {
+
+  .im-jen {
+    align-items: center;
+  }
+  .im-jen > div {
+    max-width: 48%;
+  }
+
   .home-specials > a {
     margin-top: 3rem;
   }
   .layout-default,
   .layout-reversed {
+    max-width: unset;
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
