@@ -38,34 +38,61 @@ document.addEventListener("DOMContentLoaded", function() {
 })
 
 document.addEventListener("DOMContentLoaded", function() {
-    const slider = document.querySelector('.certificate-slider-inner')
-    const certificates = document.querySelectorAll('.certificate-slider-item')
-    const nextBtn = document.querySelector('.certificate-next')
-    const prevBtn = document.querySelector('.certificate-prev')
-    let currentIndex = 0;
-    const totalCertificates = certificates.length;
+    const certificate = document.querySelector('.certificates')
 
-    function updateActiveCertificate() {
-        certificates.forEach(certificate => certificate.classList.remove('active'))
-
-        certificates[currentIndex].classList.add('active');
-        if(currentIndex + 1 < totalCertificates) {
-            certificates[currentIndex + 1].classList.add('active');
-        } else {
-            certificates[0].classList.add('active')
+    if(certificate) {
+        const slider = document.querySelector('.certificate-slider-inner')
+        const certificates = document.querySelectorAll('.certificate-slider-item')
+        const nextBtn = document.querySelector('.certificate-next')
+        const prevBtn = document.querySelector('.certificate-prev')
+        let currentIndex = 0;
+        const totalCertificates = certificates.length;
+    
+        console.log(nextBtn);
+        function updateActiveCertificate() {
+            certificates.forEach(certificate => certificate.classList.remove('active'))
+    
+            certificates[currentIndex].classList.add('active');
+            if(currentIndex + 1 < totalCertificates) {
+                certificates[currentIndex + 1].classList.add('active');
+            } else {
+                certificates[0].classList.add('active')
+            }
+    
+            const itemWidth = certificates[0].offsetWidth;
+            slider.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
         }
-
-        const itemWidth = certificates[0].offsetWidth;
-        slider.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+    
+        nextBtn.addEventListener('click', function () {
+            currentIndex = (currentIndex + 1) % (totalCertificates -1);
+            updateActiveCertificate();
+        })
+        prevBtn.addEventListener('click', function () {
+            currentIndex = ((currentIndex - 1) + (totalCertificates -1)) % (totalCertificates -1);
+            updateActiveCertificate()
+        })
+        updateActiveCertificate();
     }
 
-    nextBtn.addEventListener('click', function () {
-        currentIndex = (currentIndex + 1) % (totalCertificates -1);
-        updateActiveCertificate();
+})
+
+jQuery(document).ready(function($) {
+    $(".owl-carousel").owlCarousel({
+        items: 1,
+        loop: true,
+        margin: 10,
+        nav: true,
+        navText: ["<i class='bi bi-arrow-left-circle'></i>", "<i class='bi bi-arrow-right-circle'></i>"],
+        responsive: {
+            0: {
+                items: 1
+            },
+            800: {
+                items: 2
+            },
+            1024: {
+                items: 3
+            }
+        }
     })
-    prevBtn.addEventListener('click', function () {
-        currentIndex = ((currentIndex - 1) + (totalCertificates -1)) % (totalCertificates -1);
-        updateActiveCertificate()
-    })
-    updateActiveCertificate();
 })

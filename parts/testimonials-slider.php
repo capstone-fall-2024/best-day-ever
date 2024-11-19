@@ -66,6 +66,7 @@
             } else {
                 return '<p>No slider items found</p>';
             }
-        }
+        } ?>
+        <?php
         add_shortcode('testimonials_slider', 'display_testimonial_slider_shortcode');
         ?>

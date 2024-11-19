@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
   const menu_btn = document.querySelector('.hamburger');
+  const menu_btn_closed = document.querySelector('.hamburger-closed');
   const mobile_menu = document.querySelector('.sidebar-menu');
-  const menuItems = document.querySelectorAll('.menu-list-mobile > li > a');
+  const menuItems = document.querySelectorAll('.bi-chevron-down');
 	const body = document.body; //Select the body element
   const overlay = document.querySelector('.site-overlay');
 
@@ -10,8 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const closeSearchForm = document.querySelector('.bi-x-lg');
 
   // Event listener for toggling the mobile menu
-  menu_btn.addEventListener('click', function() {
-    menu_btn.classList.toggle('is-active');
+  menu_btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    // menu_btn.classList.toggle('is-active');
     mobile_menu.classList.toggle('is-active');
     overlay.classList.toggle('is-active');
 		if (mobile_menu.classList.contains('is-active')) {
@@ -21,7 +23,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  overlay.addEventListener('click', function() {
+  menu_btn_closed.addEventListener('click', function(e) {
+    e.preventDefault();
+    mobile_menu.classList.remove('is-active');
+    console.log('hi');
+    overlay.classList.remove('is-active');
+    body.classList.remove('no-scroll'); // Re-enable body scroll
+  });
+
+  overlay.addEventListener('click', function(e) {
+    e.preventDefault();
     menu_btn.classList.remove('is-active');
     mobile_menu.classList.remove('is-active');
     overlay.classList.remove('is-active');
@@ -30,15 +41,27 @@ document.addEventListener('DOMContentLoaded', function() {
   })
 
   // Event listener for toggling submenus
-  menuItems.forEach(item => {
-    item.addEventListener('click', function(e) {
-      e.preventDefault(); // Prevent default link behavior
-      const submenu = this.nextElementSibling;
-      if (submenu) {
+  // menuItems.forEach(item => {
+  //   item.addEventListener('click', function(e) {
+  //     e.preventDefault(); // Prevent default link behavior
+  //     console.log('success');
+  //     const submenu = this.nextElementSibling;
+  //     if (submenu) {
+  //       submenu.classList.toggle('active');
+  //     }
+  //   });
+  // });
+
+  const dropdown = document.querySelector('.bi-chevron-down');
+    const submenu = document.querySelector('.submenu-mobile');
+
+    dropdown.addEventListener('click', function() {
+      console.log('success');
+      dropdown.classList.toggle('active');
+        // Toggle the 'active' class to show or hide the submenu
         submenu.classList.toggle('active');
-      }
+
     });
-  });
 
   // Event listener for showing the search form
   search.addEventListener('click', function() {

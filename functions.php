@@ -241,8 +241,8 @@ function bdev_by_jen_widgets_init()
 			'name' => esc_html__('Instagram', 'bdev_by_jen'),
 			'id' => 'instagram',
 			'description' => esc_html__('Add widgets here.', 'bdev_by_jen'),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget' => '</section>',
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget' => '</div>',
 			'before_title' => '<h3 class="widget-title">',
 			'after_title' => '</h3>',
 		)
@@ -312,6 +312,18 @@ function bdev_by_jen_scripts()
 	}
 }
 add_action('wp_enqueue_scripts', 'bdev_by_jen_scripts');
+
+/**
+ * Enqueue Owl Carousel.
+ */
+function bdev_owl_carousel() 
+{
+	wp_enqueue_style('owl_carousel_css', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css');
+	wp_enqueue_style('owl_carousel_default_theme', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css');
+	wp_enqueue_script('owl_carousel_js', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js');
+}
+add_action('wp_enqueue_scripts', 'bdev_owl_carousel');
+
 
 /**
  * Implement the Custom Fonts
