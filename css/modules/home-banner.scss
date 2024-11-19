@@ -6,32 +6,11 @@
 .home-banner {
   background: url("../img/beach-banner-800.webp") no-repeat center center /
     cover scroll;
-  max-height: 146vh;
-
-  .top-header a,
-  .mobile-menu-container > p > a {
-    color: $dark-orange;
-
-    :hover {
-      color: $dark-green;
-    }
-  }
-
-  .top-header > div > a {
-    color: $dark-red;
-
-    :hover {
-      color: $dark-green;
-    }
-  }
-
-  .main-navigation a {
-    color: $cream;
-
-    :hover {
-      color: $dark-orange;
-    }
-  }
+  max-height: 250vh;
+  position: relative;
+  top: 0;
+  padding-top: 6rem;
+  margin-bottom: 5rem;
 }
 
 .home-banner-content {
@@ -50,9 +29,10 @@
     font-family: youngSerif;
     font-size: clamp(2.4375rem, 1.8125rem + 3.125vw, 3.8125rem);
     color: $white;
-    box-shadow: 0 6px 4px rgba(50, 5, 7, 0.25);
+    filter: drop-shadow(0px 6px 4px rgba(50, 5, 7, 0.25));
     display: flex;
     flex-direction: column;
+    margin-bottom: 0;
   }
 }
 
@@ -90,11 +70,20 @@
   background-color: rgba(249, 239, 230, 0.75);
   border-radius: 0.625rem;
 
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
   li {
     display: flex;
     align-items: center;
     gap: 0.875rem;
     margin-bottom: 1rem;
+
+    p {
+      margin-bottom: 0;
+    }
   }
   svg {
     min-width: 25px;
@@ -102,6 +91,7 @@
 
   a {
     width: 150px;
+    padding: 10px 16px;
   }
 
   div {
@@ -129,7 +119,7 @@
     display: grid;
     grid-template-columns: 3fr 2fr;
     grid-template-rows: 2fr 2fr;
-    gap: 2rem;
+    gap: 1rem;
 
     div:first-of-type {
       grid-column: 1 / span 1;
@@ -137,12 +127,11 @@
     }
   }
 
-  .home-content-backdrop {
+  .home-banner-backdrop {
     grid-column: 1 / span 1;
     grid-row: 2 / span 1;
     margin: 0 auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 2rem;
 
     div > a {
       max-width: 130px;

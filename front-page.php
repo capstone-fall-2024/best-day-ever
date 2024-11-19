@@ -10,54 +10,35 @@
  * @package best_day_ever_vacations
  */
 
-get_template_part('parts/home-banner');
+get_header();
 
 ?>
-<main id="primary" class="site-main home-main">
+<main id="primary" class="site-main home-main front-page">
 <section class="actual-content">
 	<!-- wp:heading -->
 	<?php the_title( '<h2 class="entry-title d-none">', '</h2>' ); ?>
 	<!-- /wp:heading -->
 
+	<?php get_template_part('parts/home-banner'); ?>
+
 	<!-- About Jen Section -->
-	<!-- wp:group {"tagName":"section","metadata":{"name":"Meet Jen"},"style":{"spacing":{"margin":{"top":"64px","bottom":"64px"}}},"layout":{"type":"constrained"}} -->
-	<section class="wp-block-group" style="margin-top:64px;margin-bottom:64px"><!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"24px","left":"24px"}}}} -->
-	<div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
-	<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","align":"center","style":{"border":{"radius":"10px"}}} -->
-	<figure class="wp-block-image aligncenter size-large has-custom-border"><img src="https://placehold.co/400x600" alt="Photo of Jen" style="border-radius:10px"/></figure>
-	<!-- /wp:image --></div>
-	<!-- /wp:column -->
-
-	<!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
-	<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%"><!-- wp:group {"layout":{"type":"constrained"}} -->
-	<div class="wp-block-group"><!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"48px"},"elements":{"link":{"color":{"text":"var:preset|color|dark-red"}}}},"textColor":"dark-red"} -->
-	<h3 class="wp-block-heading has-dark-red-color has-text-color has-link-color" style="font-size:48px">Hi, I'm Jen!</h3>
-	<!-- /wp:heading -->
-
-	<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|off-black"}}}},"textColor":"off-black"} -->
-	<p class="has-off-black-color has-text-color has-link-color">I'm a professionally trained Travel Agent with Best Day Ever Vacations, specializing in Disney Vacations.</p>
-	<!-- /wp:paragraph -->
-
-	<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|off-black"}}}},"textColor":"off-black"} -->
-	<p class="has-off-black-color has-text-color has-link-color">My goal is to book the complete dream vacation for you, your friends, and your family!</p>
-	<!-- /wp:paragraph -->
-
-	<!-- wp:buttons -->
-	<div class="wp-block-buttons"><!-- wp:button -->
-	<a class="button-primary" href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/about-jen/">More About Me</a>
-	<!-- /wp:buttons --></div>
-	<!-- /wp:group --></div>
-	<!-- /wp:column --></div>
-	<!-- /wp:columns --></section>
-	<!-- /wp:group -->
-
+	<section class="im-jen container">
+		<div>
+			<img class="img-rounded" src="https://placehold.co/400x600" alt="Photo of Jen smiling">
+		</div>
+		<div>
+			<h3>Hi, I'm Jen!</h3>
+			<p>I'm a professionally trained Travel Agent with Best Day Ever Vacations, specializing in Disney Vacations.</p>
+			<p>My goal is to book the complete dream vacation for you, your friends, and your family!</p>
+			<a class="button-primary" href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/about-jen/">More About Me</a>
+		</div>
+	</section>
+	
 	<!-- Proud Member of Section widget -->
-	<div class="abstract-bg">
-		<?php if (is_active_sidebar('proud-member')) {
-				dynamic_sidebar('proud-member');
-			};
-		?>
-	</div>
+	<?php if (is_active_sidebar('proud-member')) {
+			dynamic_sidebar('proud-member');
+		};
+	?>
 
 	<!-- Jennifer's Specialties rotator -->
 	<section class="container">
