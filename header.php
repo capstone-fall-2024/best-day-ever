@@ -13,7 +13,7 @@
 
 <head>
 	<title><?php bloginfo('name');
-			wp_title(); ?></title>
+	wp_title(); ?></title>
 	<meta name="description" content="<?php bloginfo('description'); ?>">
 	<!-- addtitle10-22 -->
 
@@ -37,17 +37,19 @@
 		<div class="search-form-box">
 			<?php get_search_form(); ?>
 			<div>
+
 				<i class="bi bi-x-lg"></i>
 			</div>
 		</div>
 
 		<div class="top-header">
 			<div>
-				<p>Travel Agent of Best Day Ever Vacations</p>
+				<p>Travel Agent of <span>Best Day Ever Vacations</span> </p>
 			</div>
 			<div class="top-header-social-font">
-				<i class="bi bi-facebook"></i>
-				<i class="bi bi-instagram"></i>
+				<a href="https://www.facebook.com/profile.php?id=61555368848155"><i class="bi bi-facebook"></i></a>
+				<a href="https://www.instagram.com/best_day_ever_vacations_by_jen?igsh=YTFnMnFoZWVnaDdp&utm_source=qr"><i
+						class="bi bi-instagram"></i></a>
 			</div>
 		</div>
 
@@ -59,11 +61,11 @@
 					the_custom_logo(); // Display the custom logo if it exists
 				} else {
 					// Display the site title if no logo is uploaded
-				?>
+					?>
 					<div class="site-title">
 						<a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
 					</div>
-				<?php
+					<?php
 				}
 				?>
 			</div>
@@ -90,7 +92,7 @@
 
 
 			<div class="site-header__util">
-				<button class="cta">get a quote</button>
+				<a class="cta" href="<?php echo site_url('/quote'); ?>">Get a Quote</a>
 				<i class="bi bi-search"></i>
 			</div>
 

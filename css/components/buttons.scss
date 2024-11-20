@@ -1,3 +1,24 @@
+@mixin buttons-design($background-color, $padding) {
+  cursor: pointer;
+  font-weight: 700;
+  color: $dark-red;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.2s ease 0s;
+  background-color: $background-color;
+  border: 2px solid $background-color;
+  padding: $padding;
+}
+
+@mixin buttons-hover() {
+  &:hover{
+    background-color: $dark-green;
+    color: #fff;
+    border: 2px solid $dark-green;
+  }
+  
+}
+
 %button-styles{
   cursor: pointer;
   font-weight: 700;
