@@ -13674,7 +13674,6 @@ textarea.form-control-lg {
   padding: 0 10px;
   width: 100%;
   box-sizing: border-box;
-  transition: all 0.4s ease;
 }
 .specialties-slider .slick-arrow {
   position: absolute;
@@ -13721,7 +13720,7 @@ textarea.form-control-lg {
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1024px) {
   .specialties-slider .slick-list {
     padding: 1rem 0 !important;
   }
@@ -13735,14 +13734,19 @@ textarea.form-control-lg {
   }
   .specialties-slider .slick-list .slick-slide {
     margin: 0;
+    transform: translate3d(0, 0, 0) scale(1) !important;
+    transition: transform 0.3s ease;
+    transition-delay: 0.3s;
   }
   .specialties-slider .slick-list .slick-active:not(.slick-center) {
-    transform: scale(0.9);
-    transition: transform 0.4s ease;
+    transform: translate3d(0, 0, 0) scale(0.9) !important;
+    transition: transform 0.3s ease;
+    transition-delay: 0.3s;
   }
   .specialties-slider .slick-list .slick-active.slick-center {
-    transform: scale(1.1);
-    transition: transform 0.4s ease;
+    transform: translate3d(0, 0, 0) scale(1.1) !important;
+    transition: transform 0.3s ease;
+    transition-delay: 0.3s;
   }
 }
 .no-results {
