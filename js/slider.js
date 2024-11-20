@@ -77,22 +77,37 @@ document.addEventListener("DOMContentLoaded", function() {
 })
 
 jQuery(document).ready(function($) {
-    $(".owl-carousel").owlCarousel({
-        items: 1,
-        loop: true,
-        margin: 10,
-        nav: true,
-        navText: ["<i class='bi bi-arrow-left-circle'></i>", "<i class='bi bi-arrow-right-circle'></i>"],
-        responsive: {
-            0: {
-                items: 1
+    $('.specialties-slider').slick({
+        infinite: true,
+        arrows: true,
+        prevArrow: '<button class="specialty-prev"><i class="bi bi-arrow-left-circle"></i></button>',
+        nextArrow: '<button class="specialty-next"><i class="bi bi-arrow-right-circle"></button>',
+        centerMode: true,
+        centerPadding: "0",
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        rows: 1,
+        responsive: [
+            {
+                breakpoint: 900,
+                settings: {
+                    centerMode: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    slidesPerRow: 1,
+                    rows: 2
+                }
+                
             },
-            800: {
-                items: 2
-            },
-            1024: {
-                items: 3
+            {
+                breakpoint: 1024,
+                settings: {
+                    centerMode: false,
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    rows: 1,
+                }
             }
-        }
+        ]
     })
 })
