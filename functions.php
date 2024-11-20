@@ -326,6 +326,16 @@ add_action('wp_enqueue_scripts', 'bdev_owl_carousel');
 
 
 /**
+ * Enqueue Slick Slider
+ */
+function bdev_slick_slider() 
+{
+	wp_enqueue_style('slick_carousel_css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css');
+	wp_enqueue_script('slick_carousel_js', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js');
+}
+add_action('wp_enqueue_scripts', 'bdev_slick_slider');
+
+/**
  * Implement the Custom Fonts
  */
 function enqueue_custom_fonts()

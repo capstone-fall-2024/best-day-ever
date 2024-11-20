@@ -10,7 +10,7 @@ function display_specialties_slider_shortcode()
     if ($specialty_slider_query->have_posts()) {
         ob_start();
 ?>
-        <div class="owl-carousel">
+        <div class="specialties-slider">
             <?php
             $index = 0;
             while ($specialty_slider_query->have_posts()) : $specialty_slider_query->the_post();
@@ -20,11 +20,13 @@ function display_specialties_slider_shortcode()
                     $specialty_url = get_field('link_to_specialty');
                 };
             ?>
-                <div class="item <?php echo $index; ?>">
-                    <div class="specialty">
-                        <h4><?php echo esc_html($specialty_name); ?></h4>
-                        <p><?php echo esc_html($specialty_description); ?></p>
-                        <a href="<?php echo esc_url($specialty_url); ?>">View More <i class="bi bi-arrow-right"></i></a>
+                <div class="slider-item">
+                    <div>
+                        <div class="specialty">
+                            <h4><?php echo esc_html($specialty_name); ?></h4>
+                            <p><?php echo esc_html($specialty_description); ?></p>
+                            <a href="<?php echo esc_url($specialty_url); ?>">View More <i class="bi bi-arrow-right"></i></a>
+                        </div>
                     </div>
                 </div>
             <?php
