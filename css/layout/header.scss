@@ -24,10 +24,15 @@
   background-color: rgba(0,0,0,0.5);
   z-index: 2;
   cursor: pointer;
+
 }
 
 .site-overlay.is-active{
   display: block;
+
+  @include media(large){
+    display: none;
+  }
 }
 /**** base on mobile ****/
 .top-header{
@@ -144,6 +149,10 @@
   overflow-y: auto;
   background-color: #fff;
 
+  @include media(large){
+    display: none;
+  }
+
   &__closed{
    
     // background-color: lightcoral;
@@ -246,6 +255,7 @@
         font-size: 20px;
         right: 10px;
         top: 2px;
+        cursor: pointer;
       }
     }
 
@@ -416,11 +426,20 @@
   
   .top-header p{
     margin-bottom: 0;
+
+    span{
+      color: $dark-orange;
+    }
   }
   
   .top-header-social-font{
     display: flex;
     gap: 20px;
+    .bi-facebook,
+      .bi-instagram
+      {
+        color: $off-black;
+      }
   }
   
   .bi-facebook,
@@ -492,23 +511,14 @@
       align-items: center;
       justify-content: space-between;
     }
-    .cta{
-      display: block;
-    }
+    
     .cta {
-      background-color: $light-orange;
-      padding: 16px 20px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.3s ease 0s;
+      @include buttons-design($light-orange, 16px 20px);
+      @include buttons-hover();
       text-transform: uppercase;
+      font-weight: 500;
     }
     
-    .cta:hover {
-      background-color: $dark-green;
-      color: $cream;
-    }
     
     .bi-search {
       display: block;
@@ -521,18 +531,52 @@
       top: -500px;
       z-index: 101;
       transition: top 0.3s ease;
+      display: block;
+
+      .search-field{
+        position: absolute;
+        left: 5%;
+        right: 5%;
+        top: 40%;
+        padding: 10px;
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid $off-black;
+      }
+
+      .bi-x-lg{
+        position: absolute;
+        top: 42%;
+        right: 6%;
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      input[type="search"]:focus {
+        outline: none;
+        box-shadow: none; /* Removes any additional shadow */
+      }
+
+      input[type="search"]::-webkit-search-cancel-button {
+        appearance: none; /* Hides the clear button */
+        display: none; /* Ensures it's not visible */
+      }
+
+      .search-submit{
+        display: none
+      }
+
     }
     
     .search-form-box.is-active{
-      top: 50px;
+      top: 0;
       left: 0;
       right: 0;
+      height: 160px;
       padding: 20px;
-      background-color: rgb(216, 216, 216);  
+      background-color: #fff;  
+      
     }
   
-    .search-form-box{
-      display: block;
-    }
     
   }
