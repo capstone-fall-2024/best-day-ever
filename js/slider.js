@@ -79,14 +79,16 @@ document.addEventListener("DOMContentLoaded", function() {
 jQuery(document).ready(function($) {
     $('.specialties-slider').slick({
         infinite: true,
-        arrows: true,
-        prevArrow: '<button class="specialty-prev"><i class="bi bi-arrow-left-circle"></i></button>',
-        nextArrow: '<button class="specialty-next"><i class="bi bi-arrow-right-circle"></button>',
         centerMode: true,
         centerPadding: "0",
         slidesToShow: 3,
         slidesToScroll: 1,
         rows: 1,
+        cssEase: 'ease',
+        speed: 300,
+        arrows: true,
+        prevArrow: '<button class="specialty-prev"><i class="bi bi-arrow-left-circle"></i></button>',
+        nextArrow: '<button class="specialty-next"><i class="bi bi-arrow-right-circle"></button>',
         responsive: [
             {
                 breakpoint: 900,
