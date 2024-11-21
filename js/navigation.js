@@ -1,3 +1,12 @@
+const quoteBtn = document.querySelector('#quote-btn')
+const frontPage = document.querySelector('.home-main')
+
+if(frontPage && frontPage.classList.contains('front-page')) {
+  quoteBtn.classList.add("cta-homepage")
+} else {
+  quoteBtn.classList.add("cta-other-page")
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   const menu_btn = document.querySelector('.hamburger');
   const menu_btn_closed = document.querySelector('.hamburger-closed');

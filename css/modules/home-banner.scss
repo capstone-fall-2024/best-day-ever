@@ -89,10 +89,10 @@
     min-width: 25px;
   }
 
-  a {
-    width: 150px;
-    padding: 10px 16px;
-  }
+  // a {
+  //   width: 150px;
+  //   padding: 10px 16px;
+  // }
 
   div {
     display: flex;
@@ -122,8 +122,7 @@
     gap: 1rem;
 
     div:first-of-type {
-      grid-column: 1 / span 1;
-      grid-row: 1 / span 1;
+      flex-wrap: nowrap;
     }
   }
 
@@ -133,9 +132,9 @@
     margin: 0 auto;
     padding: 2rem;
 
-    div > a {
-      max-width: 130px;
-    }
+    // div > a {
+    //   max-width: 130px;
+    // }
   }
 
   .stacked-images {

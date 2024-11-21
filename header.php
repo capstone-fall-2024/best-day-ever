@@ -92,7 +92,7 @@
 
 
 			<div class="site-header__util">
-				<a class="cta" href="<?php echo site_url('/quote'); ?>">Get a Quote</a>
+				<a href="<?php echo site_url('/quote'); ?>" id="quote-btn">Get a Quote</a>
 				<i class="bi bi-search"></i>
 			</div>
 

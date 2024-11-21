@@ -100,11 +100,10 @@
 
 
         <!-- Subscription-main -->
-        <?php if (is_active_sidebar('subscription-main')): ?>
-
-            <?php dynamic_sidebar('subscription-main'); ?>
-
-        <?php endif; ?>
+        <?php if (is_active_sidebar('subscription-main')) {
+			dynamic_sidebar('subscription-main');
+		    }; 
+	    ?>
 
         <?php get_template_part('template-parts/display-category-posts'); ?>
         <?php get_template_part('template-parts/count-blog-posts'); ?>
