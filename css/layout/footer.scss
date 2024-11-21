@@ -74,21 +74,11 @@ ul#menu-additional-info-footer.menu
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
 }
 
 .site-footer__col-five .wp-block-buttons{
   flex-direction: column;
-}
-
-a.wp-block-button__link{
-  background-color: $light-orange;
-  color: $dark-red;
-  border-radius: 8px;
-  width: 180px;
-}
-a.wp-block-button__link:hover{
-  background-color: $dark-green;
-  color: $cream;
 }
 
 div.menu-additional-info-footer-container{
@@ -98,6 +88,12 @@ div.menu-additional-info-footer-container{
 .footer-btn-contact-jen a{
   @include button-base($white, 1px solid $dark-green);
 }
+
+.footer-btn-quote,
+.footer-btn-contact-jen {
+  min-width: 175px
+}
+
 .footer_copy_right{
   background-color: $cream;
   padding: 40px 0;
@@ -127,11 +123,6 @@ div.menu-additional-info-footer-container{
 {
   padding: 0 0 35px 0;
   list-style: none;
-}
-
-.wp-block-buttons {
-  display: flex;
-  flex-direction: column;
 }
 
 }

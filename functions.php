@@ -253,7 +253,7 @@ function bdev_by_jen_widgets_init()
 			'name' => esc_html__('Footer', 'bdev_by_jen'),
 			'id' => 'footer',
 			'description' => esc_html__('Add widgets here.', 'bdev_by_jen'),
-			'before_widget' => '<section id="%1$s" class="widget %2$s my-4">',
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget' => '</section>',
 			'before_title' => '<h3 class="widget-title">',
 			'after_title' => '</h3>',
@@ -276,7 +276,7 @@ function bdev_by_jen_widgets_init()
 		'description' => esc_html__('Any information that user want to add.', 'bdev_by_jen'),
 		'before_title' => '<h5 class="widget-title">',
 		'after_title' => '<h5>',
-		'before_widget' => '<div id="%1$s" class="widget %2$s my-4">',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 	));
 
@@ -284,7 +284,7 @@ function bdev_by_jen_widgets_init()
 		'name' => esc_html__('Contact Jen', 'bdev_by_jen'),
 		'id' => 'footer-widget3',
 		'description' => esc_html__('Social Media and Button', 'bdev_by_jen'),
-		'before_widget' => '<div id="%1$s" class="widget %2$s my-4">',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '<h3>',
