@@ -12580,7 +12580,7 @@ textarea.form-control-lg {
     text-transform: capitalize;
   }
   .site-header__util {
-    min-width: 200px;
+    min-width: 215px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -14056,6 +14056,10 @@ textarea.form-control-lg {
   text-align: center;
 }
 
+@font-face {
+  font-family: youngSerif;
+  src: url(../fonts/young-serif.woff2);
+}
 .site-footer__col-one,
 .site-footer__col-three,
 .site-footer__col-four,
@@ -14155,6 +14159,7 @@ div.menu-additional-info-footer-container {
   text-decoration: none;
   transition: all 0.3s ease-in-out;
   width: 100%;
+  min-width: 175px;
 }
 .footer-btn-get-a-quote a:hover {
   background-color: #30453b;
@@ -14177,6 +14182,7 @@ div.menu-additional-info-footer-container {
   text-decoration: none;
   transition: all 0.3s ease-in-out;
   width: 100%;
+  min-width: 175px;
 }
 .footer-btn-contact-jen a:hover {
   background-color: #30453b;
@@ -14187,6 +14193,8 @@ div.menu-additional-info-footer-container {
 .footer_copy_right {
   background-color: #f9efe6;
   padding: 40px 0;
+  font-size: clamp(1.25rem, 0.9091rem + 1.7045vw, 2rem);
+  font-family: youngSerif;
 }
 
 @media (min-width: 768px) {
@@ -14200,8 +14208,8 @@ div.menu-additional-info-footer-container {
   div.menu-additional-info-footer-container {
     margin-top: 35px;
   }
-  .widget p {
-    margin-bottom: -5px;
+  .site-footer__col-one div p {
+    margin-bottom: -25px;
     text-align: start;
   }
   .menu-footer-1-container ul li,

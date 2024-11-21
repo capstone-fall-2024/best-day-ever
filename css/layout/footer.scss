@@ -1,3 +1,8 @@
+@font-face {
+  font-family: youngSerif;
+  src: url(../fonts/young-serif.woff2);
+}
+
 .site-footer__col-one,
 .site-footer__col-three,
 .site-footer__col-four,
@@ -92,14 +97,18 @@ div.menu-additional-info-footer-container{
 }
 .footer-btn-get-a-quote a { 
   @include button-base($light-orange, 1px solid $light-orange);
+  min-width: 175px;
 }
 
 .footer-btn-contact-jen a{
   @include button-base($white, 1px solid $dark-green);
+  min-width: 175px;
 }
 .footer_copy_right{
   background-color: $cream;
   padding: 40px 0;
+  font-size: clamp(1.25rem, 0.9091rem + 1.7045vw, 2rem);
+  font-family: youngSerif;
 }
 
 @media (min-width: 768px) {
@@ -115,8 +124,10 @@ div.menu-additional-info-footer-container{
     margin-top: 35px;
   }
 
-  .widget p{
-    margin-bottom: -5px;
+
+
+  .site-footer__col-one div p{
+    margin-bottom: -25px;
     text-align: start;
   }
 
