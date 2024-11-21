@@ -264,7 +264,7 @@ function bdev_by_jen_widgets_init()
 		'name' => esc_html__('Jen Info', 'bdev_by_jen'),
 		'id' => 'footer-widget1',
 		'description' => esc_html__('Add your own (Owner of Website) infomations here', 'bdev_by_jen'),
-		'before_widget' => '<div id="%1$s" class="widget %2$s my-4">',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '<h3>',
