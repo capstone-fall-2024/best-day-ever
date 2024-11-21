@@ -12735,9 +12735,7 @@ textarea.form-control-lg {
 }
 .layout-reversed a,
 .layout-default a {
-  display: block;
   width: 150px;
-  margin: 1rem auto 0 auto;
 }
 
 @media (min-width: 768px) {
