@@ -30,7 +30,8 @@ body h4,
   font-size: clamp(1.25rem, 0.9091rem + 1.7045vw, 2rem);
 }
 
-body .specialties-slider h4 {
+body .specialties-slider h4,
+body .testimonial h4 {
   font-size: clamp(1.25rem, 1.1364rem + 0.5682vw, 1.5rem);
 }
 

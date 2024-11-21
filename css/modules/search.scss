@@ -9,8 +9,6 @@
     margin-bottom: 2rem;
   }
   a{
-    @include buttons-design($light-orange, 16px 20px);
-    @include buttons-hover();
     text-transform: uppercase;
     font-weight: 500;
   }

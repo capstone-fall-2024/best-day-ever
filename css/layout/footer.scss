@@ -96,15 +96,7 @@ div.menu-additional-info-footer-container{
 }
 
 .footer-btn-contact-jen a{
-
-  @extend %button-styles;
-
-  background-color: #fff;
-  border: 2px solid $dark-green;
-  padding: 12px 0;
-
-  @extend %button-hover;
-
+  @include button-base($white, 1px solid $dark-green);
 }
 .footer_copy_right{
   background-color: $cream;

@@ -17,7 +17,7 @@ p {
 //Merge Map
 @import "base/variables";
 @import "base/fonts";
-@import "components/buttons";
+@import "components/button";
 @import "bootstrap/scss/bootstrap";
 @import "layout/header";
 
@@ -36,9 +36,11 @@ p {
 
 //Slider
 @import "modules/slider";
-
-//Specialties Owl Carousel
 @import "modules/specialties";
+
+//Subscription
+@import "modules/subscription";
+
 
 //Search Result
 @import "modules/search";

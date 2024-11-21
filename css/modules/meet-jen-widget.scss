@@ -22,14 +22,8 @@
 // }
 
 .button-secondary {
-  @extend %button-styles;
-
-  background-color: #fff;
-  border: 2px solid $dark-green;
-  width: 100%;
-  text-align: center;
-
-  @extend %button-hover;
+  @include button-base($white, 1px solid $dark-orange);
+  width: 50%;
 }
 
 @media (min-width:768px) {

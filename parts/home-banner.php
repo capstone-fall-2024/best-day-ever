@@ -38,7 +38,7 @@
             </ul>
 
             <div>
-                <a href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/quote/" class="button-primary">Get A Quote</a>
+                <a href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/quote/" class="btn-primary">Get A Quote</a>
                 <a href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/contact-jen/" class="button-cream">Contact Jennifer</a>
             </div>
         </div>

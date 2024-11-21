@@ -30,7 +30,7 @@ get_header();
 			<h3>Hi, I'm Jen!</h3>
 			<p>I'm a professionally trained Travel Agent with Best Day Ever Vacations, specializing in Disney Vacations.</p>
 			<p>My goal is to book the complete dream vacation for you, your friends, and your family!</p>
-			<a class="button-primary" href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/about-jen/">More About Me</a>
+			<a class="btn-primary" href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/about-jen/">More About Me</a>
 		</div>
 	</section>
 	
@@ -108,7 +108,7 @@ get_header();
 	<!-- Blog Loop -->
 	<?php get_template_part('template-parts/display-category-posts'); ?>
 
-	<section>
+	<section class="travel-blog">
 		<div class="container">
 			<h3>Jennifer's Travel Blog</h3>
 			<?php display_category_posts('', 3); ?>

@@ -260,19 +260,9 @@
     }
 
     .cta-mobile{
-      @extend %button-styles;
-
-      background-color: $light-orange;
-      text-transform: capitalize;
-      margin-bottom: 24px;
-      padding: 15px 0;
-      width: 100%;
-      border-radius: 0;
-      text-align: center;
-      font-weight: 500;
-      transition: none;
-    
-      @extend %button-hover;
+      @include button-base($light-orange, 1px solid $light-orange);
+      text-transform: uppercase;
+      margin: 1rem
     }
 
     .paragraph{
@@ -512,14 +502,16 @@
       justify-content: space-between;
     }
     
-    .cta {
-      @include buttons-design($light-orange, 16px 20px);
-      @include buttons-hover();
-      text-transform: uppercase;
-      font-weight: 500;
+    .cta-homepage {
+      @include button-base($cream, 1px solid $cream);
+      margin-right: 1rem;
     }
-    
-    
+
+    .cta-other-page {
+      @include button-base($light-orange, 1px solid $light-orange);
+      margin-right: 1rem;
+    }
+
     .bi-search {
       display: block;
       font-size: 25px;

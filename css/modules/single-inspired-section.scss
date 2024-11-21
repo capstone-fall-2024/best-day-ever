@@ -37,18 +37,8 @@
 .button-primary__vacation-link,
 .button-primary__advice-link
 {
-  @extend %button-styles;
-
-  background-color: $light-orange;
-  border: 2px solid $light-orange;
-  padding: 16px 30px;
-  width: 180px;
-
-  @extend %button-hover;
-}
-
-.button-primary__advice-link{
-  padding: 16px 53px;
+  @include button-base($light-orange, 1px solid $light-orange);
+  min-width: 200px;
 }
 
 .horizontal_line {
