@@ -6,6 +6,12 @@
   margin-bottom: 2rem;
 }
 
+.site-footer__col-one div,
+.site-footer__col-five div
+{
+  margin-top: 0;
+}
+
 .widget {
   margin: 0;
 }
@@ -80,19 +86,12 @@ ul#menu-additional-info-footer.menu
   flex-direction: column;
 }
 
-a.wp-block-button__link{
-  background-color: $light-orange;
-  color: $dark-red;
-  border-radius: 8px;
-  width: 180px;
-}
-a.wp-block-button__link:hover{
-  background-color: $dark-green;
-  color: $cream;
-}
 
 div.menu-additional-info-footer-container{
   margin-top: 10px;
+}
+.footer-btn-get-a-quote a { 
+  @include button-base($light-orange, 1px solid $light-orange);
 }
 
 .footer-btn-contact-jen a{
@@ -129,7 +128,7 @@ div.menu-additional-info-footer-container{
   list-style: none;
 }
 
-.wp-block-buttons {
+.footer-buttons {
   display: flex;
   flex-direction: column;
 }
@@ -146,7 +145,7 @@ div.menu-additional-info-footer-container{
     gap: 2rem;
     margin-top: 24px;
   }
-  .site-footer__col-five .wp-block-buttons{
+  .site-footer__col-five .footer-buttons{
     flex-direction: row;
   }
 }

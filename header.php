@@ -93,7 +93,9 @@
 
 			<div class="site-header__util">
 				<a href="<?php echo site_url('/quote'); ?>" id="quote-btn">Get a Quote</a>
-				<i class="bi bi-search"></i>
+				<i class="bi bi-search">
+					<div class="search-hover">search</div>
+				</i>
 			</div>
 
 		</header><!-- #masthead -->

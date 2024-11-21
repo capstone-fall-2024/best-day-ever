@@ -20,7 +20,7 @@
                                 <div><span class="span1">Blog</span><span class="span2">Featured Post</span></div>
                                 <h4><?php the_title(); ?></h4>
                                 <p><?php the_excerpt(); ?></p>
-                                <a class="btn-primary" href="<?php the_permalink(); ?>">View Post</a>
+                                <a class="btn-primary custom-width" href="<?php the_permalink(); ?>">View Post</a>
                             </div>
                             <div class="image-banner-section">
                                 <a href="<?php the_permalink(); ?>">
@@ -101,9 +101,10 @@
 
         <!-- Subscription-main -->
         <?php if (is_active_sidebar('subscription-main')) {
-			dynamic_sidebar('subscription-main');
-		    }; 
-	    ?>
+            dynamic_sidebar('subscription-main');
+        }
+        ;
+        ?>
 
         <?php get_template_part('template-parts/display-category-posts'); ?>
         <?php get_template_part('template-parts/count-blog-posts'); ?>
