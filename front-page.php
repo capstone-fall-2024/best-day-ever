@@ -108,7 +108,7 @@ get_header();
 	<!-- Blog Loop -->
 	<?php get_template_part('template-parts/display-category-posts'); ?>
 
-	<section>
+	<section class="travel-blog">
 		<div class="container">
 			<h3>Jennifer's Travel Blog</h3>
 			<?php display_category_posts('', 3); ?>
