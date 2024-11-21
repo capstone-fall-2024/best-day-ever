@@ -170,6 +170,76 @@ body .blog-card h4, body .blog-card .h4 {
   border: 1px solid #30453b;
 }
 
+.wp-block-button.footer-btn-quote .wp-block-button__link,
+.wp-block-button.learn-more .wp-block-button__link,
+.wp-block-button.quote-primary .wp-block-button__link {
+  height: 50px;
+  color: #320507;
+  font-weight: 700;
+  border-radius: 10px;
+  background-color: #fb8f46;
+  border: 1px solid #fb8f46;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+.wp-block-button.footer-btn-quote .wp-block-button__link:hover,
+.wp-block-button.learn-more .wp-block-button__link:hover,
+.wp-block-button.quote-primary .wp-block-button__link:hover {
+  background-color: #30453b;
+  color: #fff;
+  border: 1px solid #30453b;
+}
+
+.wp-block-button.quote-secondary .wp-block-button__link {
+  height: 50px;
+  color: #320507;
+  font-weight: 700;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #30453b;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+.wp-block-button.quote-secondary .wp-block-button__link:hover {
+  background-color: #30453b;
+  color: #fff;
+  border: 1px solid #30453b;
+}
+
+.wp-block-button.quote-yellow .wp-block-button__link {
+  height: 50px;
+  color: #0a0a0a;
+  font-weight: 700;
+  border-radius: 10px;
+  background-color: #fbcb08;
+  border: 1px solid #fbcb08;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+.wp-block-button.quote-yellow .wp-block-button__link:hover {
+  background-color: #30453b;
+  color: #fff;
+  border: 1px solid #30453b;
+}
+
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors
@@ -14134,37 +14204,27 @@ ul#menu-additional-info-footer.menu {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
 }
 
 .site-footer__col-five .wp-block-buttons {
   flex-direction: column;
 }
 
-div.menu-additional-info-footer-container {
-  margin-top: 10px;
+a.wp-block-button__link {
+  background-color: #fb8f46;
+  color: #320507;
+  border-radius: 8px;
+  width: 180px;
 }
 
-.footer-btn-get-a-quote a {
-  height: 50px;
-  color: #320507;
-  font-weight: 700;
-  border-radius: 10px;
-  background-color: #fb8f46;
-  border: 1px solid #fb8f46;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 20px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all 0.3s ease-in-out;
-  width: 100%;
-  min-width: 175px;
-}
-.footer-btn-get-a-quote a:hover {
+a.wp-block-button__link:hover {
   background-color: #30453b;
-  color: #fff;
-  border: 1px solid #30453b;
+  color: #f9efe6;
+}
+
+div.menu-additional-info-footer-container {
+  margin-top: 10px;
 }
 
 .footer-btn-contact-jen a {
@@ -14188,6 +14248,11 @@ div.menu-additional-info-footer-container {
   background-color: #30453b;
   color: #fff;
   border: 1px solid #30453b;
+}
+
+.footer-btn-quote,
+.footer-btn-contact-jen {
+  min-width: 175px;
 }
 
 .footer_copy_right {
@@ -14218,7 +14283,7 @@ div.menu-additional-info-footer-container {
     padding: 0 0 35px 0;
     list-style: none;
   }
-  .footer-buttons {
+  .wp-block-buttons {
     display: flex;
     flex-direction: column;
   }
