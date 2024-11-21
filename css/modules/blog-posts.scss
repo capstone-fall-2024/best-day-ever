@@ -58,8 +58,10 @@
   color: $off-black;
 }
 
-.button-primary {
-  @include button-base($dark-orange, 1px solid $dark-orange);
+.btn-primary.custom-width {
+  @include button-base($light-orange, 1px solid $light-orange);
+  width: auto;
+  padding: 0 30px;
 }
 
 .banner-section div {

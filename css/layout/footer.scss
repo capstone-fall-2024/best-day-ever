@@ -1,9 +1,20 @@
+@font-face {
+  font-family: youngSerif;
+  src: url(../fonts/young-serif.woff2);
+}
+
 .site-footer__col-one,
 .site-footer__col-three,
 .site-footer__col-four,
 .site-footer__col-five
 {
   margin-bottom: 2rem;
+}
+
+.site-footer__col-one div,
+.site-footer__col-five div
+{
+  margin-top: 0;
 }
 
 .widget {
@@ -81,12 +92,28 @@ ul#menu-additional-info-footer.menu
   flex-direction: column;
 }
 
+a.wp-block-button__link{
+  background-color: $light-orange;
+  color: $dark-red;
+  border-radius: 8px;
+  width: 180px;
+}
+a.wp-block-button__link:hover{
+  background-color: $dark-green;
+  color: $cream;
+}
+
 div.menu-additional-info-footer-container{
   margin-top: 10px;
+}
+.footer-btn-get-a-quote a { 
+  @include button-base($light-orange, 1px solid $light-orange);
+  min-width: 175px;
 }
 
 .footer-btn-contact-jen a{
   @include button-base($white, 1px solid $dark-green);
+  min-width: 175px;
 }
 
 .footer-btn-quote,
@@ -97,6 +124,8 @@ div.menu-additional-info-footer-container{
 .footer_copy_right{
   background-color: $cream;
   padding: 40px 0;
+  font-size: clamp(1.25rem, 0.9091rem + 1.7045vw, 2rem);
+  font-family: youngSerif;
 }
 
 @media (min-width: 768px) {
@@ -112,8 +141,10 @@ div.menu-additional-info-footer-container{
     margin-top: 35px;
   }
 
-  .widget p{
-    margin-bottom: -5px;
+
+
+  .site-footer__col-one div p{
+    margin-bottom: -25px;
     text-align: start;
   }
 
@@ -123,6 +154,11 @@ div.menu-additional-info-footer-container{
 {
   padding: 0 0 35px 0;
   list-style: none;
+}
+
+.wp-block-buttons {
+  display: flex;
+  flex-direction: column;
 }
 
 }
@@ -137,7 +173,7 @@ div.menu-additional-info-footer-container{
     gap: 2rem;
     margin-top: 24px;
   }
-  .site-footer__col-five .wp-block-buttons{
+  .site-footer__col-five .footer-buttons{
     flex-direction: row;
   }
 }

@@ -230,6 +230,9 @@
         border-radius: 10px;
         border: 1px solid $off-black;
       }
+      input[type="search"] {
+        padding: 5px;
+      }
 
       input::placeholder{
         padding-left: 10px;
@@ -262,7 +265,8 @@
     .cta-mobile{
       @include button-base($light-orange, 1px solid $light-orange);
       text-transform: uppercase;
-      margin: 1rem
+      border-radius: 0;
+      margin-bottom: 1rem;
     }
 
     .paragraph{
@@ -333,23 +337,24 @@
 
 
 .submenu-mobile {
-  height: 0;
+  max-height: 0; // Set initial maximum height to 0
   opacity: 0;
   transform: scaleY(0);
   transform-origin: top;
-  transition: height 0.5s ease, opacity 0.1s ease, transform 0.5s ease;
+  overflow: hidden; // Prevent content overflow during the animation
+  transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
 
-  &__item{
+  &__item {
     border-bottom: none;
   }
 }
 
-
 .submenu-mobile.active {
-  height: auto; /* Allows it to expand to its content height */
+  max-height: 500px; // Set a sufficiently large value to fit expanded content
   opacity: 1;
   transform: scaleY(1);
 }
+
 
 
 //afaf
@@ -474,7 +479,7 @@
     
     .menu-header-menu-container ul li a:hover {
       transition: all 0.3s ease 0s;
-      color: $light-orange;
+      color: $dark-red;
     }
     
     .sub-menu{
@@ -496,7 +501,7 @@
     }
     
     .site-header__util{
-      min-width: 200px;
+      min-width: 215px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -516,6 +521,20 @@
       display: block;
       font-size: 25px;
       cursor: pointer;
+    }
+
+    .bi-search:hover .search-hover{
+      display: block;
+    }
+
+    .search-hover{
+      display: none;
+      position: absolute;
+      background-color: #535353;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 8px;
+      font-size: 14px;
     }
   
     .search-form-box{
@@ -564,7 +583,7 @@
       top: 0;
       left: 0;
       right: 0;
-      height: 160px;
+      height: 200px;
       padding: 20px;
       background-color: #fff;  
       
