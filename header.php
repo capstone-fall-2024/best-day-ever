@@ -42,7 +42,7 @@
 			</div>
 		</div>
 
-		<div class="top-header container">
+		<div class="top-header">
 			<div>
 				<p>Travel Agent of <a href="https://bestdayevervacations.com/" target="_blank">Best Day Ever Vacations</a></p>
 			</div>

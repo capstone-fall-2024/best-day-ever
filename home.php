@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <main id="primary" class="site-main">
-    <section class="main-section">
+    <section class="main-section blog">
         <h2>Blog</h2>
         <section class="banner-for-section">
             <h3>Banner</h3>
