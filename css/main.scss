@@ -22,7 +22,7 @@ p {
 @import "layout/header";
 
 // Home Page
-@import "modules/home-banner";
+@import "modules/_home-banner";
 @import "pages/homepage";
 
 // Disney
@@ -39,6 +39,9 @@ p {
 @import "modules/single-content";
 @import "modules/single-inspired-section";
 @import "modules/meet-jen-widget";
+
+//Quote Page
+@import "modules/quote-page";
 
 //Slider
 @import "modules/slider";

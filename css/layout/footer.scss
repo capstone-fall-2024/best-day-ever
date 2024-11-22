@@ -112,13 +112,14 @@ div.menu-additional-info-footer-container {
 
 .footer_copy_right {
   background-color: $cream;
-  padding: 40px 0;
+  padding: 2rem 0;
   font-size: clamp(1.25rem, 0.9091rem + 1.7045vw, 2rem);
   font-family: youngSerif;
 
   p {
     font-family: youngSerif;
-    font-size: clamp(1.25rem, 0.9091rem + 1.7045vw, 2rem);
+    font-size: clamp(1rem, 0.9091rem + 1.7045vw, 1.25rem);
+    margin-bottom: 0;
   }
 }
 
