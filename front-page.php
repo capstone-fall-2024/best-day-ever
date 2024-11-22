@@ -75,9 +75,9 @@ get_header();
 						</div>
 
 						<div>
-							<h4><?php the_title(); ?></h4>
-							<p><?php get_field('deal_description'); ?></p>
-							<a href="<?php get_field('deal_url'); ?>" class="btn-primary">Learn More</a>
+							<h4><?php echo the_title(); ?></h4>
+							<p><?php echo get_field('deal_description'); ?></p>
+							<a href="<?php echo get_field('deal_url'); ?>" class="btn-primary">Learn More</a>
 						</div>
 
 					</section>

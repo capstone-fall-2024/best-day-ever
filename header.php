@@ -42,9 +42,9 @@
 			</div>
 		</div>
 
-		<div class="top-header">
+		<div class="top-header container">
 			<div>
-				<p>Travel Agent of <span>Best Day Ever Vacations</span> </p>
+				<p>Travel Agent of <a href="https://bestdayevervacations.com/" target="_blank">Best Day Ever Vacations</a></p>
 			</div>
 			<div class="top-header-social-font">
 				<a href="https://www.facebook.com/profile.php?id=61555368848155"><i class="bi bi-facebook"></i></a>
@@ -164,7 +164,7 @@
 				<a href="<?php echo site_url('/quote') ?>" class="cta-mobile">get a quote</a> <!-- turn off on desktop -->
 
 				<div class="paragraph">
-					<p>Travel Agent of Best Day Ever Vacations</p>
+					<p>Travel Agent of <a href="https://bestdayevervacations.com/" target="_blank">Best Day Ever Vacations</a></p>
 				</div>
 
 				<div class="social-font-mobile">

@@ -6,14 +6,12 @@
 .site-footer__col-one,
 .site-footer__col-three,
 .site-footer__col-four,
-.site-footer__col-five
-{
+.site-footer__col-five {
   margin-bottom: 2rem;
 }
 
 .site-footer__col-one div,
-.site-footer__col-five div
-{
+.site-footer__col-five div {
   margin-top: 0;
 }
 
@@ -21,66 +19,57 @@
   margin: 0;
 }
 
-.widget p{
+.widget p {
   margin-bottom: 0;
 }
 
-
 .site-footer__col-two,
-.site-footer__col-three
-{
+.site-footer__col-three {
   padding: 0 35px;
 }
-.site-footer{
+.site-footer {
   text-align: center;
   margin-top: 100px;
-  // background-color: lightblue;
 }
 
-.group{
+.group {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  // align-items: center;
-  // gap: 10px;
 }
 
 ul#menu-footer-1.menu,
 ul#menu-footer-2.menu,
-ul#menu-additional-info-footer.menu
-{
+ul#menu-additional-info-footer.menu {
   margin: 0;
   padding: 0;
 }
 .menu-footer-1-container ul li,
 .menu-footer-2-container ul li,
-.menu-additional-info-footer-container ul li
-{
+.menu-additional-info-footer-container ul li {
   padding: 0 0 15px 0;
   list-style: none;
 }
 .menu-footer-1-container ul li a,
 .menu-footer-2-container ul li a,
-.site-footer__col-four a
-{
+.site-footer__col-four a {
   color: $dark-red;
   text-decoration: none;
   font-weight: 600;
 }
 
-.site-footer__col-four p{
+.site-footer__col-four p {
   color: $dark-red;
-  font-weight: 700;  
+  font-weight: 700;
 }
 
 .menu-footer-1-container ul li a:hover,
 .menu-footer-2-container ul li a:hover,
-.site-footer__col-four a:hover
-{
+.site-footer__col-four a:hover {
   color: $light-orange;
 }
 
-.site-footer__col-five{
+.site-footer__col-five {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -88,48 +77,53 @@ ul#menu-additional-info-footer.menu
   gap: 2rem;
 }
 
-.site-footer__col-five .wp-block-buttons{
+.site-footer__col-five .wp-block-buttons {
   flex-direction: column;
 }
 
-a.wp-block-button__link{
+a.wp-block-button__link {
   background-color: $light-orange;
   color: $dark-red;
   border-radius: 8px;
   width: 180px;
 }
-a.wp-block-button__link:hover{
+a.wp-block-button__link:hover {
   background-color: $dark-green;
   color: $cream;
 }
 
-div.menu-additional-info-footer-container{
+div.menu-additional-info-footer-container {
   margin-top: 10px;
 }
-.footer-btn-get-a-quote a { 
+.footer-btn-get-a-quote a {
   @include button-base($light-orange, 1px solid $light-orange);
   min-width: 175px;
 }
 
-.footer-btn-contact-jen a{
+.footer-btn-contact-jen a {
   @include button-base($white, 1px solid $dark-green);
   min-width: 175px;
 }
 
 .footer-btn-quote,
 .footer-btn-contact-jen {
-  min-width: 175px
+  min-width: 175px;
 }
 
-.footer_copy_right{
+.footer_copy_right {
   background-color: $cream;
   padding: 40px 0;
   font-size: clamp(1.25rem, 0.9091rem + 1.7045vw, 2rem);
   font-family: youngSerif;
+
+  p {
+    font-family: youngSerif;
+    font-size: clamp(1.25rem, 0.9091rem + 1.7045vw, 2rem);
+  }
 }
 
 @media (min-width: 768px) {
-  .group{
+  .group {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -137,34 +131,33 @@ div.menu-additional-info-footer-container{
     align-items: flex-start;
   }
 
-  div.menu-additional-info-footer-container{
+  div.menu-additional-info-footer-container {
     margin-top: 35px;
   }
 
-
-
-  .site-footer__col-one div p{
+  .site-footer__col-one div p {
     margin-bottom: -25px;
-    text-align: start;
+    .widget p {
+      margin-bottom: -5px;
+      text-align: start;
+    }
+
+    .menu-footer-1-container ul li,
+    .menu-footer-2-container ul li,
+    .menu-additional-info-footer-container ul li {
+      padding: 0 0 35px 0;
+      list-style: none;
+    }
+
+    .wp-block-buttons {
+      display: flex;
+      flex-direction: column;
+    }
   }
-
-.menu-footer-1-container ul li,
-.menu-footer-2-container ul li,
-.menu-additional-info-footer-container ul li
-{
-  padding: 0 0 35px 0;
-  list-style: none;
 }
 
-.wp-block-buttons {
-  display: flex;
-  flex-direction: column;
-}
-
-}
-
-@media (min-width:768px) and (max-width:990px) {
-  .site-footer__col-five{
+@media (min-width: 768px) and (max-width: 990px) {
+  .site-footer__col-five {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -173,7 +166,9 @@ div.menu-additional-info-footer-container{
     gap: 2rem;
     margin-top: 24px;
   }
-  .site-footer__col-five .footer-buttons{
-    flex-direction: row;
+  .site-footer__col-five .footer-buttons {
+    .site-footer__col-five .wp-block-buttons {
+      flex-direction: row;
+    }
   }
 }
