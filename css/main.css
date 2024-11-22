@@ -12124,6 +12124,7 @@ textarea.form-control-lg {
   align-items: center;
   padding: 10px 20px;
   width: 100%;
+  z-index: 1;
 }
 
 .search-container {
@@ -12160,6 +12161,19 @@ textarea.form-control-lg {
 
 #primary-menu {
   display: none;
+}
+
+.site-header:has(+ div + .front-page) {
+  position: absolute;
+}
+.site-header:has(+ div + .front-page) > .site-branding {
+  z-index: 1;
+}
+.site-header:has(+ div + .front-page) .menu-header-menu-container > ul > li > a {
+  color: #fff;
+}
+.site-header:has(+ div + .front-page) .bi-search {
+  color: #fff;
 }
 
 .hamburger {
@@ -12619,12 +12633,14 @@ textarea.form-control-lg {
     box-shadow: none; /* Removes any additional shadow */
   }
   .search-form-box input[type=search]::-webkit-search-cancel-button {
-    appearance: none; /* Hides the clear button */
-    display: none; /* Ensures it's not visible */
+      appearance: none; /* Hides the clear button */
+      display: none; /* Ensures it's not visible */
   }
-  .search-form-box .search-submit {
+  .search-submit {
     display: none;
   }
+}
+
   .search-form-box.is-active {
     top: 0;
     left: 0;

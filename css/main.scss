@@ -23,13 +23,13 @@ p {
 
 // Home Page
 @import "modules/_home-banner";
-@import "pages/homepage";
+@import "pages/_homepage";
 
 // Disney
-@import "pages/disney-page";
+@import "pages/_disney-page";
 
 // Cruises
-@import "pages/cruises-page";
+@import "pages/_cruises-page";
 
 // Category Page
 @import "modules/blog-posts";
