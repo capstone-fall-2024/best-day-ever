@@ -1,0 +1,17 @@
+.no-results {
+  text-align: center;
+  margin: 100px 0;
+  padding: 0 5%;
+}
+
+.page-content p {
+  margin-bottom: 2rem;
+}
+.page-content a {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.page-header .page-title {
+  text-align: center;
+}/*# sourceMappingURL=search.css.map */

@@ -19,7 +19,7 @@
   }
 
   a {
-    width: 35vw;
+    width: 60vw;
   }
 }
 
@@ -33,12 +33,10 @@
 
   h3 {
     color: $dark-red;
-    font-size: clamp(2rem, 1.5455rem + 2.2727vw, 3rem);
   }
 
   h4 {
     color: $dark-green;
-    font-size: clamp(1.25rem, 0.9091rem + 1.7045vw, 2rem);
   }
 
   > div {

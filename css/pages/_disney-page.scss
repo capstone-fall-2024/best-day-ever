@@ -1,0 +1,11 @@
+.disney-bg {
+  background: url("../img/firework-bg-sm.webp") repeat-y center center / cover
+    scroll;
+}
+
+@media (min-width: 768px) {
+  .disney-bg {
+    background: url("../img/firework-bg.webp") repeat-y center center / cover
+      scroll;
+  }
+}
