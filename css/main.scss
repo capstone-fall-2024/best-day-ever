@@ -22,14 +22,14 @@ p {
 @import "layout/header";
 
 // Home Page
-@import "modules/home-banner";
-@import "pages/homepage";
+@import "modules/_home-banner";
+@import "pages/_homepage";
 
 // Disney
-@import "pages/disney-page";
+@import "pages/_disney-page";
 
 // Cruises
-@import "pages/cruises-page";
+@import "pages/_cruises-page";
 
 // Category Page
 @import "modules/blog-posts";
