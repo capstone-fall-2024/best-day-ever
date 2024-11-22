@@ -13009,6 +13009,15 @@ textarea.form-control-lg {
     background: url("../img/firework-bg.webp") repeat-y center center/cover scroll;
   }
 }
+.bubble-bg {
+  background: url("../img/bubble-bg-sm.webp") no-repeat bottom center/cover scroll;
+}
+
+@media (min-width: 768px) {
+  .bubble-bg {
+    background: url("../img/bubble-bg.webp") no-repeat bottom center/cover scroll;
+  }
+}
 .main-section h3, .main-section .h3 {
   color: #30453b;
   margin-top: 3rem;
