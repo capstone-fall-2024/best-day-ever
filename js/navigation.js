@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const menuItems = document.querySelectorAll('.bi-chevron-down');
 	const body = document.body; //Select the body element
   const overlay = document.querySelector('.site-overlay');
-
   const search = document.querySelector('.bi-search');
   const searchForm = document.querySelector('.search-form-box');
   const closeSearchForm = document.querySelector('.bi-x-lg');
@@ -35,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
   menu_btn_closed.addEventListener('click', function(e) {
     e.preventDefault();
     mobile_menu.classList.remove('is-active');
-    console.log('hi');
     overlay.classList.remove('is-active');
     body.classList.remove('no-scroll'); // Re-enable body scroll
   });
@@ -62,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // });
 
   const dropdown = document.querySelector('.bi-chevron-down');
-    const submenu = document.querySelector('.submenu-mobile');
+  const submenu = document.querySelector('.submenu-mobile');
 
     dropdown.addEventListener('click', function() {
       console.log('success');
@@ -74,7 +72,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Event listener for showing the search form
   search.addEventListener('click', function() {
-    console.log('hi');
     searchForm.classList.toggle('is-active');
   });
 
@@ -84,41 +81,47 @@ document.addEventListener('DOMContentLoaded', function() {
     searchForm.classList.remove('is-active');
   });
 
-  // Blog Category Menu Slider logic
-  let slideIndex = 1;
-  showSlides(slideIndex);
-
-  // Add event listeners for the "Next" and "Previous" buttons
-  document.querySelector('.prev').addEventListener('click', function() {
-    plusSlides(-1);
-  });
-
-  document.querySelector('.next').addEventListener('click', function() {
-    plusSlides(1);
-  });
-
-  // Next/previous controls function
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-
-  // Function to show the slides
-  function showSlides(n) {
-    let i;
-    let slides = document.querySelectorAll('.carousel-menu__item');
-
-    if (n > slides.length) {
-      slideIndex = 1;
+  // Second Navigation in the Blog Page
+  const blogPage = document.querySelector('.blog')
+  if(blogPage) {
+    // Blog Category Menu Slider logic
+    let slideIndex = 1;
+    showSlides(slideIndex);
+  
+    // Add event listeners for the "Next" and "Previous" buttons
+    document.querySelector('.prev').addEventListener('click', function() {
+      plusSlides(-1);
+    });
+  
+    document.querySelector('.next').addEventListener('click', function() {
+      plusSlides(1);
+    });
+  
+    // Next/previous controls function
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
     }
-
-    if (n < 1) {
-      slideIndex = slides.length;
+  
+    // Function to show the slides
+    function showSlides(n) {
+      let i;
+      let slides = document.querySelectorAll('.carousel-menu__item');
+      console.log(slides)
+      if(slides) {
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+    
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+    
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = 'none';
+        }
+    
+        slides[slideIndex - 1].style.display = 'block';
+      }
     }
-
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = 'none';
-    }
-
-    slides[slideIndex - 1].style.display = 'block';
   }
 });
