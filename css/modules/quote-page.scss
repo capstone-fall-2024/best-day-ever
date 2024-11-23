@@ -12,16 +12,20 @@
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-    padding: 3rem 1rem;
+    padding: 3rem 1.5rem 4rem;
     position: relative;
     margin-top: -5rem;
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0px 6px 4px 0px rgba($dark-red, 0.25);
     border: 1px solid rgba($dark-red, 0.25);
-    z-index: 99;
+    z-index: 2;
     width: 70%;
     max-width: 960px;
+
+    @media screen and (min-width: 950px) {
+        padding-bottom: 7rem;
+    }
 
     .steps-container {
         display: flex;
@@ -110,12 +114,14 @@
 
             .uacf7-step {
                 position: relative;
+                
 
                 .uacf7-col-4,
                 .uacf7-col-6,
                 .uacf7-col-12 {
                     display: flex;
                     flex-direction: column;
+                    justify-content: space-between;
                     gap: 8px;
                     margin: 0.5rem 0;
 
@@ -153,28 +159,68 @@
                     }
                 }
 
-                p {
-                    .uacf7-next {
+                &.step-start {
+                    p:not(.form-intro) {
                         position: absolute;
-                        left: 14%;
-                        bottom: -8.5%;
-                        width: 150px !important;
-                        @include button-base($light-orange, 1px solid $light-orange);
-
-                        &:hover {
-                            background-color: $white;
-                            color: $dark-green;
-                            border: 1px solid $dark-green;
-                        }
-
-                        @each $breakpoint, $value in (400px: 20%, 500px: 25%, 600px: 30%, 1024px: 40%) {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        left: 20%;
+                        gap:1rem;
+    
+                        @each $breakpoint, $value in (450px:30%, 750px: 35%, 900px: 40%) {
                             @media screen and (min-width: $breakpoint) {
                                 left: $value;
                             }
                         }
+                        
+                        .uacf7-prev,
+                        .uacf7-next {
+                            margin: 0;
+                        }
+    
+                        .uacf7-next {
+                            width: 150px !important;
+                            @include button-base($light-orange, 1px solid $light-orange);
+    
+                            &:hover {
+                                background-color: $white;
+                                color: $dark-green;
+                                border: 1px solid $dark-green;
+                            }
+                        }
+    
+                        span.wpcf7-spinner {
+                            background-color: $dark-red;
+                            order: -2;
+                        }
+                    }
+                }
 
-                        @media screen and (min-width: 1024px) {
-                            bottom: -5%;
+                &.step-end {
+                    .submit-btn {
+
+                        input {
+                            @include button-base($white, 1px solid $dark-green);
+    
+                            &:hover {
+                                background-color: $light-orange;
+                                color: $dark-red;
+                            }
+                        }
+
+                        p {
+                            .uacf7-prev {
+                                width: 150px !important;
+                                @include button-base($light-orange, 1px solid $light-orange);
+    
+                                &:hover {
+                                    background-color: $white;
+                                    color: $dark-green;
+                                    border: 1px solid $dark-green;
+                                }
+                            }
                         }
                     }
                 }
@@ -204,13 +250,15 @@
             form {
                 .form-title {
                     display: flex;
+                    width: 100%;
+                    gap: 1rem;
 
                     h3 {
-                        width: 40%;
+                        width: calc((100%/2) - 1rem);
                     }
 
                     p {
-                        width: 60%;
+                        width: calc((100%/2) - 1rem);
                     }
                 }
             }
