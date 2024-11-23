@@ -1,0 +1,157 @@
+@mixin media($breakpoint) {
+  @if $breakpoint == large {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  } @else if $breakpoint == medium {
+    @media (min-width: 769px) and (max-width: 1023px) {
+      @content;
+    }
+  } @else if $breakpoint == small {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+}
+
+.about-jen-container{
+
+  @include media(large){
+    width: 100%;
+    background-color: $dark-green;
+    margin-bottom: 100px;
+  }
+
+  .about-jen{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+    
+  
+    @include media(large){
+      flex-direction: row;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 5%;
+    }
+    
+    &__text{
+      z-index: 1;
+      position: relative;
+      padding: 30px 5%;
+
+      @include media(large){
+        margin-right: 100px;
+      }
+
+      p{
+        @include media(large){
+          margin-bottom: 50px;
+        }
+      }
+      
+      .paper-background{
+        background: url("../img/layer.png") no-repeat center center / cover
+        scroll;
+        position: absolute;
+        width: 1000px;
+        height: 100%;
+        top: 0;
+        left: -160px;
+        z-index: -1;
+  
+        @include media(small) {
+          display: none;
+        }
+  
+        @include media(medium){
+          display: none;
+        }
+      }
+    }
+    &__img-container{
+      width: 100%;
+      height: auto;
+      background-color: $dark-green;
+      padding: 30px 0;
+      order: -1;
+      display: flex;
+      justify-content: center;
+  
+      @include media(large){
+        background-color: transparent;
+        order: 1;
+        z-index: 2;
+        padding-top: 50px;
+
+        position: sticky;
+        top: 0; // Distance from the top of the viewport
+        z-index: 10; 
+      }
+  
+      img {
+        width: 250px; 
+        height: auto; 
+        object-fit: cover; 
+        box-shadow: 10px -10px $dark-orange;
+        border-radius: 10px;
+  
+        @include media(medium){
+          width: 300px;
+        }
+  
+        @include media(large){
+          width: 370px;
+        }
+      }
+  
+    }
+  }
+  
+}
+
+.values-container{
+  padding: 0 5%;
+  margin-bottom: 3rem;
+
+  @include media(medium) {
+    display: flex;
+    padding: 0 5%;
+    gap: 3rem;
+  }
+  
+  @include media(large) {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    gap: 3rem;
+    margin-bottom: 100px;
+  }
+  
+
+  &__img-container{
+    flex: 1;
+    width: 100%;
+    height: 100%;
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__text{
+    flex: 1;
+  }
+}
+
+.certifications{
+  padding: 0 5%;
+  text-align: center;
+}
