@@ -1,0 +1,41 @@
+section.instagram {
+    align-items: center;
+
+    h3.dotted-line {
+        display: flex;
+        color: $dark-red;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        width: 100%;
+
+        a {
+            text-decoration: underline;
+            color: $light-orange;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            flex: 1;
+            height: 0;
+            border-top: 2px dotted $dark-red;
+            margin: 0 10px;
+        }
+    }
+
+    #sb_instagram {
+        #sbi_images {
+            padding: 1rem 0;
+            margin-bottom: 1rem;
+        }
+
+        #sbi_load {
+            a.sbi_load_btn {
+                @include button-base($light-orange, 1px solid $light-orange);
+                width: fit-content;
+                box-shadow: unset !important;
+            }
+        }
+    }
+}

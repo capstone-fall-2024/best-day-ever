@@ -119,12 +119,10 @@ get_header();
 	</section>
 
 	<!-- Instagram -->
-	<div class="container">
-		<?php if (is_active_sidebar('instagram')) {
-				dynamic_sidebar('instagram');
-			};
-		?>
-	</div>
+	<?php if (is_active_sidebar('instagram')) {
+			dynamic_sidebar('instagram');
+		};
+	?>
 
 	<!-- Newsletter -->
 	<?php if (is_active_sidebar('subscription-main')) {
