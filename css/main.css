@@ -13979,7 +13979,6 @@ textarea.form-control-lg {
 /** Quote Form Confirmation **/
 .confirmation-container {
   background: url("../img/tropical-abstract-bg6.webp") center center/cover no-repeat;
-  padding-bottom: 7rem;
 }
 @media screen and (min-width: 950px) {
   .confirmation-container {
