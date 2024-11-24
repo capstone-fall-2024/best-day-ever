@@ -14209,7 +14209,7 @@ textarea.form-control-lg {
   align-items: center;
   gap: 2rem;
   transition: transform 0.5s ease;
-  margin-top: 1.75rem;
+  margin: 1.75rem 0;
 }
 .slider .testimonial-slider-item {
   flex: 1 0 100%;
@@ -14345,11 +14345,11 @@ textarea.form-control-lg {
     width: 100%;
   }
   .slider .testimonial-slider-inner .testimonial-slider-item {
-    flex: 1 0 50%;
+    flex: 1 0 40%;
     max-width: 530px;
     min-height: 500px;
     padding: 0;
-    margin: 0;
+    margin: 0 1rem;
   }
   .slider .testimonial-slider-inner .testimonial-slider-item .author-info img {
     width: 10%;
