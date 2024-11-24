@@ -41,14 +41,21 @@ get_header();
                     <h3>Thank You!</h3>
                     <p>I’m excited to assist you with your travel plans! I’m reviewing your details and will prepare a customized quote for you as soon as possible.</p>
                     <p>In the meantime, feel free to explore our <a href="<?php echo site_url('/contact-jen') ?>">FAQ</a> or <a href="<?php echo site_url('/blog') ?>">learn more</a> about my travel blogs.</p>
-    
+
                     <div class="btns">
                         <a href="<?php echo site_url('/contact-jen') ?>">Visit FAQs</a>
                         <a href="<?php echo site_url() ?>">Back to Home</a>
                     </div>
                 </div>
             </div>
+            <!-- Newsletter -->
+            <?php if (is_active_sidebar('subscription-main')) {
+                dynamic_sidebar('subscription-main');
+            };
+            ?>
         </div>
+
+
     </section>
 
 </main><!-- #main -->
