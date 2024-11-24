@@ -14209,7 +14209,7 @@ textarea.form-control-lg {
   align-items: center;
   gap: 2rem;
   transition: transform 0.5s ease;
-  margin-top: 1.75rem;
+  margin: 1.75rem 0;
 }
 .slider .testimonial-slider-item {
   flex: 1 0 100%;
@@ -14345,11 +14345,11 @@ textarea.form-control-lg {
     width: 100%;
   }
   .slider .testimonial-slider-inner .testimonial-slider-item {
-    flex: 1 0 50%;
+    flex: 1 0 40%;
     max-width: 530px;
     min-height: 500px;
     padding: 0;
-    margin: 0;
+    margin: 0 1rem;
   }
   .slider .testimonial-slider-inner .testimonial-slider-item .author-info img {
     width: 10%;
@@ -14375,6 +14375,11 @@ textarea.form-control-lg {
   padding: 1rem;
   margin: 1rem 0;
   min-height: 210px;
+}
+@media screen and (min-width: 900px) {
+  .specialties-slider .slick-list .slider-item {
+    min-height: 270px;
+  }
 }
 .specialties-slider .slick-list .slider-item .specialty {
   display: flex;
@@ -14483,7 +14488,7 @@ textarea.form-control-lg {
   border-radius: 10px;
   box-shadow: 0px 6px 4px 0px rgba(50, 5, 7, 0.25);
   margin: 2.5rem 2rem;
-  padding: 1rem;
+  padding: 4rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14492,7 +14497,6 @@ textarea.form-control-lg {
 }
 @media screen and (min-width: 1400px) {
   .subscription .subscription-container {
-    padding: 2rem;
     width: 55vw;
   }
 }
