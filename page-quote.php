@@ -1,7 +1,7 @@
 <?php
 
 /**
- * The template for display the Contact Jen page only
+ * The template for display the Quote Form Page
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -17,7 +17,7 @@ get_header();
         <?php the_content(); ?>
         <!-- Form Container -->
         <div class="quote-page">
-            <div class="quote-form container">
+            <div class="quote-form container step-1">
                 <div class="steps-container">
                     <div class="steps-step active">
                         <p class="step-number">1</p>
