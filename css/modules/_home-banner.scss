@@ -9,7 +9,7 @@
   max-height: 250vh;
   position: relative;
   top: 0;
-  padding-top: 11rem 0 9rem 0;
+  padding: 11rem 0 9rem 0;
   margin-bottom: 5rem;
 }
 
@@ -28,7 +28,7 @@
     font-family: youngSerif, serif;
     font-size: clamp(2.4375rem, 1.8125rem + 3.125vw, 3.8125rem);
     color: $white;
-    filter: drop-shadow(0px 6px 4px rgba(50, 5, 7, 0.25));
+    text-shadow: 3px 5px 2px #32050750;
     display: flex;
     flex-direction: column;
     margin-bottom: 0;
@@ -68,6 +68,7 @@
   max-width: 480px;
   background-color: rgba(249, 239, 230, 0.75);
   border-radius: 0.625rem;
+  box-shadow: 0 6px 4px #32050725;
 
   ul {
     margin: 0;

@@ -1,19 +1,8 @@
 @charset "UTF-8";
-h1, .h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6,
-p {
-  line-height: 1.5;
+@font-face {
+  font-family: youngSerif;
+  src: url(../fonts/young-serif.woff2);
 }
-
 h1, .h1,
 h2,
 .h2,
@@ -59,13 +48,18 @@ body .blog-card h4, body .blog-card .h4 {
   font-size: clamp(1.25rem, 1.1364rem + 0.5682vw, 1.5rem);
 }
 
+.vacation-buttons p {
+  font-family: youngSerif, serif;
+  font-size: clamp(1rem, 0.6585rem + 1.7073vw, 1.875rem);
+}
+
 .btn-primary {
   height: 50px;
   color: #320507;
   font-weight: 700;
   border-radius: 10px;
   background-color: #fb8f46;
-  border: 1px solid #fb8f46;
+  border: 2px solid #fb8f46;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -78,7 +72,7 @@ body .blog-card h4, body .blog-card .h4 {
 .btn-primary:hover {
   background-color: #30453b;
   color: #fff;
-  border: 1px solid #30453b;
+  border: 2px solid #30453b;
 }
 
 .button-blog-card {
@@ -87,7 +81,7 @@ body .blog-card h4, body .blog-card .h4 {
   font-weight: 700;
   border-radius: 10px;
   background-color: #fb8f46;
-  border: 1px solid rgba(50, 5, 7, 0.25);
+  border: 2px solid rgba(50, 5, 7, 0.25);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -101,7 +95,7 @@ body .blog-card h4, body .blog-card .h4 {
 .button-blog-card:hover {
   background-color: #30453b;
   color: #fff;
-  border: 1px solid #30453b;
+  border: 2px solid #30453b;
 }
 
 .button-secondary {
@@ -110,7 +104,7 @@ body .blog-card h4, body .blog-card .h4 {
   font-weight: 700;
   border-radius: 10px;
   background-color: #fff;
-  border: 1px solid #30453b;
+  border: 2px solid #30453b;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -123,7 +117,7 @@ body .blog-card h4, body .blog-card .h4 {
 .button-secondary:hover {
   background-color: #30453b;
   color: #fff;
-  border: 1px solid #30453b;
+  border: 2px solid #30453b;
 }
 
 .button-yellow {
@@ -132,7 +126,7 @@ body .blog-card h4, body .blog-card .h4 {
   font-weight: 700;
   border-radius: 10px;
   background-color: #fbcb08;
-  border: 1px solid #fbcb08;
+  border: 2px solid #fbcb08;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -145,7 +139,7 @@ body .blog-card h4, body .blog-card .h4 {
 .button-yellow:hover {
   background-color: #30453b;
   color: #fff;
-  border: 1px solid #30453b;
+  border: 2px solid #30453b;
 }
 
 .button-cream {
@@ -154,7 +148,7 @@ body .blog-card h4, body .blog-card .h4 {
   font-weight: 700;
   border-radius: 10px;
   background-color: #f9efe6;
-  border: 1px solid #f9efe6;
+  border: 2px solid #f9efe6;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -167,7 +161,7 @@ body .blog-card h4, body .blog-card .h4 {
 .button-cream:hover {
   background-color: #30453b;
   color: #fff;
-  border: 1px solid #30453b;
+  border: 2px solid #30453b;
 }
 
 .wp-block-button.footer-btn-quote .wp-block-button__link,
@@ -178,7 +172,7 @@ body .blog-card h4, body .blog-card .h4 {
   font-weight: 700;
   border-radius: 10px;
   background-color: #fb8f46;
-  border: 1px solid #fb8f46;
+  border: 2px solid #fb8f46;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -193,7 +187,7 @@ body .blog-card h4, body .blog-card .h4 {
 .wp-block-button.quote-primary .wp-block-button__link:hover {
   background-color: #30453b;
   color: #fff;
-  border: 1px solid #30453b;
+  border: 2px solid #30453b;
 }
 
 .wp-block-button.quote-secondary .wp-block-button__link {
@@ -202,7 +196,7 @@ body .blog-card h4, body .blog-card .h4 {
   font-weight: 700;
   border-radius: 10px;
   background-color: #fff;
-  border: 1px solid #30453b;
+  border: 2px solid #30453b;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -215,7 +209,7 @@ body .blog-card h4, body .blog-card .h4 {
 .wp-block-button.quote-secondary .wp-block-button__link:hover {
   background-color: #30453b;
   color: #fff;
-  border: 1px solid #30453b;
+  border: 2px solid #30453b;
 }
 
 .wp-block-button.quote-yellow .wp-block-button__link {
@@ -224,7 +218,7 @@ body .blog-card h4, body .blog-card .h4 {
   font-weight: 700;
   border-radius: 10px;
   background-color: #fbcb08;
-  border: 1px solid #fbcb08;
+  border: 2px solid #fbcb08;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -237,7 +231,7 @@ body .blog-card h4, body .blog-card .h4 {
 .wp-block-button.quote-yellow .wp-block-button__link:hover {
   background-color: #30453b;
   color: #fff;
-  border: 1px solid #30453b;
+  border: 2px solid #30453b;
 }
 
 /*!
@@ -12119,12 +12113,14 @@ textarea.form-control-lg {
 
 .site-header {
   position: relative;
+  z-index: 10;
+}
+.site-header > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 0;
   width: 100%;
-  z-index: 1;
 }
 .site-header .custom-logo {
   width: 100%;
@@ -12183,14 +12179,17 @@ textarea.form-control-lg {
 .site-header:has(+ div + .front-page) {
   position: absolute;
 }
-.site-header:has(+ div + .front-page) > .site-branding {
-  z-index: 1;
-}
 .site-header:has(+ div + .front-page) .menu-header-menu-container > ul > li > a {
   color: #fff;
 }
+.site-header:has(+ div + .front-page) .menu-header-menu-container > ul > li > a:hover {
+  color: #fb8f46;
+}
 .site-header:has(+ div + .front-page) .bi-search {
   color: #fff;
+}
+.site-header:has(+ div + .front-page) .bi-search:hover {
+  color: #fb8f46;
 }
 
 .sidebar-menu {
@@ -12212,7 +12211,7 @@ textarea.form-control-lg {
   }
 }
 .sidebar-menu__closed {
-  padding: 80px 20px 20px 20px;
+  padding: 65px 20px 20px 20px;
   display: flex;
   align-items: center;
 }
@@ -12260,7 +12259,10 @@ textarea.form-control-lg {
   right: 0;
   top: 0;
   border-radius: 10px;
-  border: 1px solid #0a0a0a;
+  border: 1px solid #320507;
+}
+.sidebar-menu__container .search-form-mobile .search-field:active {
+  border: 1px solid #ce5927;
 }
 .sidebar-menu__container .search-form-mobile input[type=search] {
   padding: 5px;
@@ -12286,6 +12288,7 @@ textarea.form-control-lg {
   right: 10px;
   top: 2px;
   cursor: pointer;
+  color: #ce5927;
 }
 .sidebar-menu__container .nav-mobile {
   width: 100%;
@@ -12373,7 +12376,7 @@ textarea.form-control-lg {
 .sidebar-menu__container .cta-mobile:hover {
   background-color: #30453b;
   color: #fff;
-  border: 1px solid #30453b;
+  border: 2px solid #30453b;
 }
 .sidebar-menu__container .paragraph {
   text-align: center;
@@ -12404,19 +12407,22 @@ textarea.form-control-lg {
 @media (min-width: 1023px) {
   /**** Top-header ****/
   .top-header {
-    display: block;
+    background-color: #fff;
+    box-shadow: 0px 6px 4px rgba(50, 5, 7, 0.1450980392);
+  }
+  .top-header > div {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: none;
-    padding: 0 10%;
-    box-shadow: 0px 4px 10px rgba(100, 100, 111, 0.2);
   }
   .top-header p {
     margin-bottom: 0;
   }
   .top-header p a {
     color: #ce5927;
+  }
+  .top-header p a:hover {
+    color: #30453b;
   }
   .top-header .top-header-social-font {
     display: flex;
@@ -12427,12 +12433,12 @@ textarea.form-control-lg {
     color: #320507;
     font-size: 25px;
   }
+  .top-header .top-header-social-font .bi-facebook:hover,
+  .top-header .top-header-social-font .bi-instagram:hover {
+    color: #fb8f46;
+  }
   .site-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 30px 5%;
-    background-color: transparent;
   }
   .site-header .site-branding {
     cursor: pointer;
@@ -12443,7 +12449,6 @@ textarea.form-control-lg {
     z-index: 2;
   }
   .site-header .main-navigation #primary-menu {
-    display: block;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -12454,13 +12459,13 @@ textarea.form-control-lg {
     border-bottom: none;
   }
   .site-header .main-navigation .menu-header-menu-container > ul > li > a {
-    color: #30453b;
+    color: #320507;
     transition: all 0.3s ease 0s;
     text-transform: uppercase;
   }
   .site-header .main-navigation .menu-header-menu-container > ul > li > a:hover {
     transition: all 0.3s ease 0s;
-    color: #320507;
+    color: #fb8f46;
   }
   .site-header .main-navigation .sub-menu {
     display: flex;
@@ -12471,6 +12476,7 @@ textarea.form-control-lg {
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
     background-color: white;
+    z-index: 2;
   }
   .site-header .main-navigation .sub-menu li:not(:last-of-type) {
     border-bottom: 1px solid #0a0a0a;
@@ -12479,8 +12485,9 @@ textarea.form-control-lg {
     padding: 1rem 20px;
     color: #320507;
     text-transform: capitalize;
+    background-color: #fff;
   }
-  .site-header .main-navigation .sub-menu li a :hover {
+  .site-header .main-navigation .sub-menu li a:hover {
     color: #ce5927;
   }
   .site-header__util {
@@ -12524,6 +12531,12 @@ textarea.form-control-lg {
     border: none;
     border-radius: 0;
     border-bottom: 1px solid #0a0a0a;
+  }
+  .search-form-box .search-field:hover {
+    border-bottom: 1px solid #30453b;
+  }
+  .search-form-box .search-field:hover {
+    border-bottom: 1px solid #ce5927;
   }
   .search-form-box .bi-x-lg {
     position: absolute;
@@ -12571,7 +12584,7 @@ textarea.form-control-lg {
   .cta-homepage:hover {
     background-color: #30453b;
     color: #fff;
-    border: 1px solid #30453b;
+    border: 2px solid #30453b;
   }
   .cta-other-page {
     height: 50px;
@@ -12593,7 +12606,7 @@ textarea.form-control-lg {
   .cta-other-page:hover {
     background-color: #30453b;
     color: #fff;
-    border: 1px solid #30453b;
+    border: 2px solid #30453b;
   }
 }
 @font-face {
@@ -12605,7 +12618,7 @@ textarea.form-control-lg {
   max-height: 250vh;
   position: relative;
   top: 0;
-  padding-top: 11rem 0 9rem 0;
+  padding: 11rem 0 9rem 0;
   margin-bottom: 5rem;
 }
 
@@ -12623,7 +12636,7 @@ textarea.form-control-lg {
   font-family: youngSerif, serif;
   font-size: clamp(2.4375rem, 1.8125rem + 3.125vw, 3.8125rem);
   color: #fff;
-  filter: drop-shadow(0px 6px 4px rgba(50, 5, 7, 0.25));
+  text-shadow: 3px 5px 2px rgba(50, 5, 7, 0.3137254902);
   display: flex;
   flex-direction: column;
   margin-bottom: 0;
@@ -12659,6 +12672,7 @@ textarea.form-control-lg {
   max-width: 480px;
   background-color: rgba(249, 239, 230, 0.75);
   border-radius: 0.625rem;
+  box-shadow: 0 6px 4px rgba(50, 5, 7, 0.1450980392);
 }
 .home-banner-backdrop ul {
   margin: 0;
@@ -12715,10 +12729,6 @@ textarea.form-control-lg {
     max-width: unset;
   }
 }
-.img-rounded {
-  border-radius: 0.875rem;
-}
-
 .im-jen {
   display: flex;
   flex-wrap: wrap;
@@ -12821,22 +12831,322 @@ textarea.form-control-lg {
     width: 15vw;
   }
 }
-.disney-bg {
-  background: url("../img/firework-bg-sm.webp") repeat-y center center/cover scroll;
+.proud-member img {
+  filter: drop-shadow(0px 6px 2px rgba(50, 5, 7, 0.3137254902));
+}
+
+.banner {
+  position: relative;
+}
+.banner img {
+  background-color: rgba(0, 0, 0, 0.15);
+  aspect-ratio: 16/7;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.banner p {
+  text-shadow: 3px 5px 2px rgba(50, 5, 7, 0.3137254902);
+  position: absolute;
+}
+
+.vacation-page .banner p {
+  color: #fff;
+  top: 50%;
+  left: 50%;
+}
+
+.vacation-card {
+  border: 1px solid rgba(50, 5, 7, 0.3137254902);
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: white;
+  flex: 0 1 440px;
+  box-shadow: 0 6px 4px rgba(50, 5, 7, 0.1882352941);
+}
+.vacation-card h3, .vacation-card .h3,
+.vacation-card h4,
+.vacation-card .h4 {
+  text-align: center;
+  color: #320507;
+}
+.vacation-card img {
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.vacation-card > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.vacation-card > div:first-of-type {
+  margin-bottom: 1rem;
+  -moz-column-gap: 1.25rem;
+       column-gap: 1.25rem;
+}
+.vacation-card > div:last-of-type {
+  gap: 1rem;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+.vacation-card > div:last-of-type div {
+  flex: 1 1 300px;
+}
+
+.dashed-line {
+  border-top: 2px dashed #0a0a0a;
+  width: 100%;
+  flex: 2;
+}
+
+.vacation-card-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 3rem;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+}
+.vacation-card-group a {
+  justify-self: center;
+  margin-top: 1.5rem;
+}
+.vacation-card-group .vacation-card:not(:last-of-type) > div:first-of-type {
+  flex-direction: column;
+}
+.vacation-card-group .vacation-card:last-of-type {
+  flex-grow: 1;
 }
 
 @media (min-width: 768px) {
-  .disney-bg {
-    background: url("../img/firework-bg.webp") repeat-y center center/cover scroll;
+  .vacation-card {
+    padding: 3rem;
+  }
+  .vacation-card > div:first-of-type {
+    flex-wrap: nowrap;
+  }
+  .vacation-card h3, .vacation-card .h3,
+  .vacation-card h4,
+  .vacation-card .h4 {
+    text-align: left;
+  }
+  .vacation-card-group vacation-card:last-of-type {
+    flex-grow: 2;
+  }
+  .vacation-card-group .vacation-card:not(:last-of-type) {
+    flex-grow: 1;
+  }
+  .vacation-card-group .vacation-card:not(:last-of-type) > div:first-of-type {
+    flex-direction: unset;
+  }
+  .card-buttons {
+    justify-content: flex-start;
+  }
+  .dashed-line {
+    min-width: 80px;
   }
 }
-.bubble-bg {
-  background: url("../img/bubble-bg-sm.webp") no-repeat bottom center/cover scroll;
+@media (min-width: 1024px) {
+  .vacation-card-group {
+    justify-content: space-between;
+  }
+}
+.cruises-page > section > section:first-of-type {
+  margin: 5rem auto 4rem auto;
+}
+.cruises-page > section > section:first-of-type img {
+  aspect-ratio: 5/4;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cruises-page > section > section:first-of-type h3, .cruises-page > section > section:first-of-type .h3 {
+  color: #320507;
+  width: 100%;
+}
+.cruises-page > section > section:first-of-type > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.cruises-page > section > section:first-of-type > div div {
+  flex: 0 1 350px;
 }
 
 @media (min-width: 768px) {
+  .cruises-page section:first-of-type > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr auto 1fr;
+    row-gap: 1rem;
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
+  }
+  .cruises-page section:first-of-type > div div:first-of-type {
+    grid-column: 2/span 1;
+    grid-row: 1/span 4;
+  }
+  .cruises-page section:first-of-type > div div:last-of-type {
+    grid-column: 1/span 1;
+    grid-row: 3/span 1;
+  }
+  .cruises-page > section:first-of-type h3, .cruises-page > section:first-of-type .h3 {
+    grid-column: 1/span 1;
+    grid-row: 2/span 1;
+  }
+}
+.vacations-page section > section:first-of-type {
+  margin: 4rem auto;
+}
+
+.vacations-page .wp-block-buttons {
+  justify-content: center;
+}
+
+.vacation-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.vacation-buttons img {
+  min-width: 100px;
+  max-width: 130px;
+}
+.vacation-buttons p {
+  color: #30453b;
+}
+.vacation-buttons p:hover {
+  color: #ce5927;
+}
+.vacation-buttons a {
+  flex: 1 1 102px;
+  display: inline-flex;
+  border: 1px solid #30453b;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.vacation-buttons a:hover {
+  border: 1px solid #320507;
+  box-shadow: 0 6px 4px rgba(50, 5, 7, 0.1450980392);
+}
+
+.featured-vacays a {
+  justify-self: center;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .vacations-page .wp-block-buttons {
+    justify-content: flex-start;
+  }
+  .vacation-buttons {
+    gap: 1.5rem;
+  }
+  .vacation-buttons a {
+    padding: 2rem;
+  }
+}
+.disney-page > section > section:first-of-type {
+  margin: 5rem auto 4rem auto;
+}
+.disney-page > section > section:first-of-type h3, .disney-page > section > section:first-of-type .h3 {
+  color: #320507;
+  width: 100%;
+}
+.disney-page > section > section:first-of-type > div:first-of-type {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+.disney-page > section > section:first-of-type > div:first-of-type img {
+  aspect-ratio: 5/4;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.disney-page > section > section:first-of-type > div:first-of-type div {
+  flex: 0 1 350px;
+}
+
+.disney-bg {
+  background: url("../img/firework-bg-sm.webp") repeat-y center/contain scroll;
+}
+.disney-bg > section {
+  margin: 4rem auto;
+}
+
+@media (min-width: 768px) {
+  .disney-page section:first-of-type > div:first-of-type {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr auto 1fr;
+    row-gap: 1rem;
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
+  }
+  .disney-page section:first-of-type > div:first-of-type div:first-of-type {
+    grid-column: 2/span 1;
+    grid-row: 1/span 4;
+  }
+  .disney-page section:first-of-type > div:first-of-type div:last-of-type {
+    grid-column: 1/span 1;
+    grid-row: 3/span 1;
+  }
+  .disney-page h3, .disney-page .h3 {
+    grid-column: 1/span 1;
+    grid-row: 2/span 1;
+  }
+  .disney-bg {
+    background: url("../img/firework-bg.webp") repeat-y center/contain scroll;
+  }
+}
+.norwegian-bg {
+  background: url("../img/couple-walking-on-the-cruise.webp") no-repeat center/cover scroll;
+  padding: 2rem 1rem;
+  height: 60vh;
+  display: flex;
+}
+
+.disney-cruise-bg {
+  background: url("../img/disney-cruise-sailing.webp") no-repeat center/cover scroll;
+  padding: 2rem 1rem;
+  height: 60vh;
+  display: flex;
+}
+
+.cruises-page .backdrop {
+  max-width: 450px;
+  background-color: rgba(255, 255, 255, 0.8156862745);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cruises-page .backdrop h3, .cruises-page .backdrop .h3 {
+  color: #320507;
+}
+.cruises-page .backdrop a {
+  align-self: center;
+}
+
+.bubble-bg {
+  background: url("../img/bubble-bg-sm.webp") no-repeat bottom/contain scroll;
+}
+
+@media (min-width: 768px) {
+  .norwegian-bg,
+  .disney-cruise-bg {
+    padding: 3rem;
+  }
   .bubble-bg {
-    background: url("../img/bubble-bg.webp") no-repeat bottom center/cover scroll;
+    background: url("../img/bubble-bg.webp") no-repeat bottom/contain scroll;
   }
 }
 .main-section h3, .main-section .h3 {
@@ -12906,7 +13216,7 @@ textarea.form-control-lg {
 .btn-primary.custom-width:hover {
   background-color: #30453b;
   color: #fff;
-  border: 1px solid #30453b;
+  border: 2px solid #30453b;
 }
 
 .banner-section div {
@@ -13078,7 +13388,7 @@ textarea.form-control-lg {
 .row .blog-card .content-post__btn-post .button-blog-card:hover {
   background-color: #30453b;
   color: #fff;
-  border: 1px solid #30453b;
+  border: 2px solid #30453b;
 }
 
 .pagination {
@@ -13545,7 +13855,7 @@ textarea.form-control-lg {
 .button-primary__advice-link:hover {
   background-color: #30453b;
   color: #fff;
-  border: 1px solid #30453b;
+  border: 2px solid #30453b;
 }
 
 .horizontal_line {
@@ -13651,7 +13961,7 @@ textarea.form-control-lg {
 .button-secondary:hover {
   background-color: #30453b;
   color: #fff;
-  border: 1px solid #30453b;
+  border: 2px solid #30453b;
 }
 
 @media (min-width: 768px) {
@@ -13854,7 +14164,7 @@ textarea.form-control-lg {
 .quote-form .form-container form .uacf7-step.step-start p:not(.form-intro) .uacf7-next:hover {
   background-color: #30453b;
   color: #fff;
-  border: 1px solid #30453b;
+  border: 2px solid #30453b;
 }
 .quote-form .form-container form .uacf7-step.step-start p:not(.form-intro) .uacf7-next:hover {
   background-color: #fff;
@@ -13894,7 +14204,7 @@ textarea.form-control-lg {
 .quote-form .form-container form .uacf7-step.step-end .submit-btn input:hover {
   background-color: #30453b;
   color: #fff;
-  border: 1px solid #30453b;
+  border: 2px solid #30453b;
 }
 .quote-form .form-container form .uacf7-step.step-end .submit-btn p .uacf7-prev {
   width: 150px !important;
@@ -13917,7 +14227,7 @@ textarea.form-control-lg {
 .quote-form .form-container form .uacf7-step.step-end .submit-btn p .uacf7-prev:hover {
   background-color: #30453b;
   color: #fff;
-  border: 1px solid #30453b;
+  border: 2px solid #30453b;
 }
 .quote-form .form-container form .uacf7-step.step-end .submit-btn p .uacf7-prev:hover {
   background-color: #fff;
@@ -14551,7 +14861,7 @@ textarea.form-control-lg {
 .tnp-subscription-minimal form input.tnp-submit:hover {
   background-color: #30453b;
   color: #fff;
-  border: 1px solid #30453b;
+  border: 2px solid #30453b;
 }
 @media screen and (min-width: 900px) {
   .tnp-subscription-minimal form {
@@ -14649,7 +14959,7 @@ section.instagram #sb_instagram #sbi_load a.sbi_load_btn:hover {
 .page-content a:hover {
   background-color: #30453b;
   color: #fff;
-  border: 1px solid #30453b;
+  border: 2px solid #30453b;
 }
 
 .page-header .page-title {
@@ -14685,9 +14995,9 @@ section.instagram #sb_instagram #sbi_load a.sbi_load_btn:hover {
   padding: 0 35px;
 }
 
-.site-footer {
+footer {
   text-align: center;
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 .group {
@@ -14777,7 +15087,7 @@ div.menu-additional-info-footer-container {
 .footer-btn-get-a-quote a:hover {
   background-color: #30453b;
   color: #fff;
-  border: 1px solid #30453b;
+  border: 2px solid #30453b;
 }
 
 .footer-btn-contact-jen a {
@@ -14800,7 +15110,7 @@ div.menu-additional-info-footer-container {
 .footer-btn-contact-jen a:hover {
   background-color: #30453b;
   color: #fff;
-  border: 1px solid #30453b;
+  border: 2px solid #30453b;
 }
 
 .footer-btn-quote,
@@ -14810,17 +15120,21 @@ div.menu-additional-info-footer-container {
 
 .footer_copy_right {
   background-color: #f9efe6;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
   font-size: clamp(1.25rem, 0.9091rem + 1.7045vw, 2rem);
   font-family: youngSerif;
 }
 .footer_copy_right p {
+  text-align: center;
   font-family: youngSerif;
   font-size: clamp(1rem, 0.9091rem + 1.7045vw, 1.25rem);
   margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
+  footer {
+    text-align: left;
+  }
   .group {
     display: flex;
     flex-wrap: wrap;
@@ -14830,9 +15144,6 @@ div.menu-additional-info-footer-container {
   }
   div.menu-additional-info-footer-container {
     margin-top: 35px;
-  }
-  .site-footer__col-one div p {
-    margin-bottom: -25px;
   }
   .site-footer__col-one div p .widget p {
     margin-bottom: -5px;
@@ -14866,6 +15177,14 @@ div.menu-additional-info-footer-container {
 /******************* LAYOUT ********************/
 a {
   text-decoration: none;
+}
+
+.title-dropshadow {
+  text-shadow: 3px 5px 2px rgba(50, 5, 7, 0.3137254902);
+}
+
+.img-rounded {
+  border-radius: 0.875rem;
 }
 
 .entry-content {

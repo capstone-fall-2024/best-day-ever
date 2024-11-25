@@ -255,8 +255,6 @@ function bdev_by_jen_widgets_init()
 			'description' => esc_html__('Add widgets here.', 'bdev_by_jen'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget' => '</section>',
-			'before_title' => '<h3 class="widget-title">',
-			'after_title' => '</h3>',
 		)
 	);
 
@@ -266,8 +264,6 @@ function bdev_by_jen_widgets_init()
 		'description' => esc_html__('Add your own (Owner of Website) infomations here', 'bdev_by_jen'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '<h3>',
 	));
 
 	register_sidebar(array(
@@ -286,8 +282,6 @@ function bdev_by_jen_widgets_init()
 		'description' => esc_html__('Social Media and Button', 'bdev_by_jen'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '<h3>',
 	));
 }
 add_action('widgets_init', 'bdev_by_jen_widgets_init');

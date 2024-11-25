@@ -1,58 +1,58 @@
 @mixin button-base($bg-color, $border, $text-color: $dark-red) {
-    height: 50px;
-    color: $text-color;
-    font-weight: 700;
-    border-radius: 10px;
-    background-color: $bg-color;
-    border: $border;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 20px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.3s ease-in-out;
-    width: 100%;
+  height: 50px;
+  color: $text-color;
+  font-weight: 700;
+  border-radius: 10px;
+  background-color: $bg-color;
+  border: $border;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
 
-    &:hover {
-        background-color: $dark-green;
-        color: $white;
-        border: 1px solid $dark-green;
-    }
+  &:hover {
+    background-color: $dark-green;
+    color: $white;
+    border: 2px solid $dark-green;
+  }
 }
 
 .btn-primary {
-    @include button-base($light-orange, 1px solid $light-orange);
+  @include button-base($light-orange, 2px solid $light-orange);
 }
 
 .button-blog-card {
-    @include button-base($light-orange, 1px solid rgba($dark-red, 0.25));
-    box-shadow: 0px 6px 4px 0px rgba($dark-red, 0.25);
+  @include button-base($light-orange, 2px solid rgba($dark-red, 0.25));
+  box-shadow: 0px 6px 4px 0px rgba($dark-red, 0.25);
 }
 
 .button-secondary {
-    @include button-base($white, 1px solid $dark-green);
+  @include button-base($white, 2px solid $dark-green);
 }
 
 .button-yellow {
-    @include button-base($bright-yellow, 1px solid $bright-yellow, $off-black);
+  @include button-base($bright-yellow, 2px solid $bright-yellow, $off-black);
 }
 
 .button-cream {
-    @include button-base($cream, 1px solid $cream)
+  @include button-base($cream, 2px solid $cream);
 }
 
 // Styled the WordPress editor button
 .wp-block-button.footer-btn-quote .wp-block-button__link,
 .wp-block-button.learn-more .wp-block-button__link,
 .wp-block-button.quote-primary .wp-block-button__link {
-    @include button-base($light-orange, 1px solid $light-orange);
+  @include button-base($light-orange, 2px solid $light-orange);
 }
 
 .wp-block-button.quote-secondary .wp-block-button__link {
-    @include button-base($white, 1px solid $dark-green);
+  @include button-base($white, 2px solid $dark-green);
 }
 
 .wp-block-button.quote-yellow .wp-block-button__link {
-    @include button-base($bright-yellow, 1px solid $bright-yellow, $off-black);
+  @include button-base($bright-yellow, 2px solid $bright-yellow, $off-black);
 }

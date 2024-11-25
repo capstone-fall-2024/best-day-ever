@@ -27,9 +27,10 @@
 .site-footer__col-three {
   padding: 0 35px;
 }
-.site-footer {
+
+footer {
   text-align: center;
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 .group {
@@ -112,11 +113,12 @@ div.menu-additional-info-footer-container {
 
 .footer_copy_right {
   background-color: $cream;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
   font-size: clamp(1.25rem, 0.9091rem + 1.7045vw, 2rem);
   font-family: youngSerif;
 
   p {
+    text-align: center;
     font-family: youngSerif;
     font-size: clamp(1rem, 0.9091rem + 1.7045vw, 1.25rem);
     margin-bottom: 0;
@@ -124,6 +126,10 @@ div.menu-additional-info-footer-container {
 }
 
 @media (min-width: 768px) {
+  footer {
+    text-align: left;
+  }
+
   .group {
     display: flex;
     flex-wrap: wrap;
@@ -137,7 +143,6 @@ div.menu-additional-info-footer-container {
   }
 
   .site-footer__col-one div p {
-    margin-bottom: -25px;
     .widget p {
       margin-bottom: -5px;
       text-align: start;

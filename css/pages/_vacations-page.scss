@@ -1,0 +1,68 @@
+.vacations-page section > section:first-of-type {
+  margin: 4rem auto;
+}
+
+.vacations-page .wp-block-buttons {
+  justify-content: center;
+}
+
+// Vacation Buttons
+
+.vacation-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  img {
+    min-width: 100px;
+    max-width: 130px;
+  }
+
+  p {
+    color: $dark-green;
+  }
+
+  p:hover {
+    color: $dark-orange;
+  }
+
+  a {
+    flex: 1 1 102px;
+    display: inline-flex;
+    border: 1px solid $dark-green;
+    background-color: $white;
+    border-radius: 10px;
+    padding: 1rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  a:hover {
+    border: 1px solid $dark-red;
+    box-shadow: 0 6px 4px #32050725;
+  }
+}
+
+// Featured Vacations
+
+.featured-vacays {
+  a {
+    justify-self: center;
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .vacations-page .wp-block-buttons {
+    justify-content: flex-start;
+  }
+
+  .vacation-buttons {
+    gap: 1.5rem;
+
+    a {
+      padding: 2rem;
+    }
+  }
+}
