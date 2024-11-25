@@ -14618,6 +14618,59 @@ section.instagram #sb_instagram #sbi_load a.sbi_load_btn:hover {
   border: 1px solid #30453b;
 }
 
+.faqs {
+  margin: 4rem 0;
+}
+.faqs .faqs-intro {
+  width: 40vw !important;
+}
+.faqs .faqs-intro h3, .faqs .faqs-intro .h3 {
+  color: #320507;
+}
+.faqs .faqs-content .wp-block-details {
+  transition: all 0.5s ease-in-out;
+  border: 1px solid #320507;
+}
+.faqs .faqs-content .wp-block-details > :where(:not(summary)) {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+.faqs .faqs-content .wp-block-details[open] {
+  padding-bottom: 2rem;
+}
+.faqs .faqs-content .wp-block-details[open] summary::after {
+  content: "";
+  float: right;
+  text-align: center;
+  width: 12px;
+  height: 12px;
+  border-bottom: 3px solid #320507;
+  border-right: 3px solid #320507;
+  transform: rotate(-135deg);
+  margin-bottom: 5px;
+}
+.faqs .faqs-content .wp-block-details summary {
+  transition: all 0.5s ease-in-out;
+  box-sizing: border-box;
+  padding: 2rem;
+  font-weight: 700;
+  color: #320507;
+}
+.faqs .faqs-content .wp-block-details summary::marker {
+  content: none;
+}
+.faqs .faqs-content .wp-block-details summary::after {
+  content: "";
+  float: right;
+  text-align: center;
+  width: 12px;
+  height: 12px;
+  border-bottom: 3px solid #320507;
+  border-right: 3px solid #320507;
+  transform: rotate(45deg);
+  margin-top: 5px;
+}
+
 .no-results {
   text-align: center;
   margin: 100px 0;
