@@ -2,7 +2,11 @@
     margin: 4rem 0;
 
     .faqs-intro {
-        width: 40vw !important;
+        width: 100% !important;
+
+        @media screen and (min-width: 1024px) {
+            width: 50vw !important;
+        }
 
         h3 {
             color: $dark-red;
