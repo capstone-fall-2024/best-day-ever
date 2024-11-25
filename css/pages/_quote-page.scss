@@ -185,6 +185,7 @@
                         span.wpcf7-spinner {
                             background-color: $dark-red;
                             grid-column: 5 / span 1;
+                            place-self: center;
                         }
                     }
                 }

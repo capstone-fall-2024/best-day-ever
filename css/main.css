@@ -14174,6 +14174,7 @@ textarea.form-control-lg {
 .quote-form .form-container form .uacf7-step.step-start p:not(.form-intro) span.wpcf7-spinner {
   background-color: #320507;
   grid-column: 5/span 1;
+  place-self: center;
 }
 .quote-form .form-container form .uacf7-step.step-end .submit-btn {
   display: flex;
@@ -14473,6 +14474,116 @@ textarea.form-control-lg {
   .confirmation-container .confirmation .confirmation-content .btns {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+.contact-page {
+  grid-template-columns: 1fr !important;
+  margin: 4rem 0;
+  gap: 5rem;
+}
+.contact-page h3, .contact-page .h3 {
+  color: #320507;
+}
+.contact-page h4, .contact-page .h4 {
+  color: #30453b;
+}
+.contact-page .contact-form .wpcf7 form .form-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-page .contact-form .wpcf7 form .form-layout label {
+  font-weight: 700;
+}
+.contact-page .contact-form .wpcf7 form .form-layout span input {
+  padding: 10px 20px;
+  border: 1px solid rgba(50, 5, 7, 0.25);
+  border-radius: 8px;
+  min-width: 70vw;
+}
+.contact-page .contact-form .wpcf7 form .form-layout .wpcf7-submit {
+  height: 50px;
+  color: #320507;
+  font-weight: 700;
+  border-radius: 10px;
+  background-color: #fb8f46;
+  border: 1px solid #fb8f46;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+.contact-page .contact-form .wpcf7 form .form-layout .wpcf7-submit:hover {
+  background-color: #30453b;
+  color: #fff;
+  border: 1px solid #30453b;
+}
+.contact-page .contact-info .jen-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.contact-page .contact-info .jen-info .info {
+  align-items: center;
+  justify-content: center;
+}
+.contact-page .contact-info .social-contact div {
+  flex-direction: column;
+  width: 100%;
+}
+@media screen and (min-width: 950px) {
+  .contact-page {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .contact-page .contact-form .wpcf7 form .form-layout span input {
+    min-width: 40vw;
+  }
+  .contact-page .contact-form .wpcf7 form .form-layout .wpcf7-submit {
+    max-width: 180px;
+  }
+  .contact-page .contact-info .jen-info {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2rem;
+    margin: 3rem 0 5rem;
+  }
+  .contact-page .contact-info .jen-info figure img {
+    width: 100px !important;
+    height: auto !important;
+    aspect-ratio: 1/1;
+  }
+  .contact-page .contact-info .jen-info .info {
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .contact-page .contact-info .social-contact div {
+    flex-direction: row;
+  }
+  .contact-page .contact-info .social-contact div figure img {
+    max-width: 50px;
+  }
+}
+
+.contact-banner .banner-content {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-banner .banner-content h3, .contact-banner .banner-content .h3 {
+  text-shadow: 0px 6px 4px rgba(50, 5, 7, 0.25);
+}
+.contact-banner .banner-content div {
+  justify-content: center;
+  align-items: center;
+}
+.contact-banner .banner-content div p {
+  font-weight: 500;
 }
 
 /***************** Testimonial Front Page*****************/
@@ -14932,7 +15043,12 @@ section.instagram #sb_instagram #sbi_load a.sbi_load_btn:hover {
   margin: 4rem 0;
 }
 .faqs .faqs-intro {
-  width: 40vw !important;
+  width: 100% !important;
+}
+@media screen and (min-width: 1024px) {
+  .faqs .faqs-intro {
+    width: 50vw !important;
+  }
 }
 .faqs .faqs-intro h3, .faqs .faqs-intro .h3 {
   color: #320507;
