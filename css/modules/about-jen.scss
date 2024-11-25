@@ -14,6 +14,10 @@
   }
 }
 
+.entry-title-about-jen{
+  display: none;
+}
+
 .about-jen-container{
 
   @include media(large){
@@ -33,9 +37,9 @@
     @include media(large){
       flex-direction: row;
       justify-content: space-between;
-      max-width: 1200px;
+      max-width: 1350px;
       margin: 0 auto;
-      padding: 0 5%;
+      padding: 0 30px;
     }
     
     &__text{
@@ -44,12 +48,20 @@
       padding: 30px 5%;
 
       @include media(large){
-        margin-right: 100px;
+        margin-right: 50px;
+        padding: 50px 3%;
       }
 
-      p{
+      h2{
+        color: $dark-red;
+        text-shadow: 0px 6px 4px rgba(10, 10, 10, 0.25);
+      }
+
+      h3{
+        color: $dark-green;
+
         @include media(large){
-          margin-bottom: 50px;
+          margin-left: 2rem;
         }
       }
       
@@ -57,10 +69,11 @@
         background: url("../img/layer.png") no-repeat center center / cover
         scroll;
         position: absolute;
-        width: 1000px;
-        height: 100%;
+        width: 950px;
+        height: auto;
         top: 0;
-        left: -160px;
+        bottom: 0;
+        left: -100px;
         z-index: -1;
   
         @include media(small) {
@@ -85,11 +98,11 @@
         background-color: transparent;
         order: 1;
         z-index: 2;
-        padding-top: 50px;
+        // padding-top: 50px;
 
-        position: sticky;
-        top: 0; // Distance from the top of the viewport
-        z-index: 10; 
+        // position: sticky;
+        // top: 0; // Distance from the top of the viewport
+        // z-index: 10; 
       }
   
       img {
