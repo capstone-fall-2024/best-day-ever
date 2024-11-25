@@ -1,17 +1,5 @@
 // Include custom variables default overrides here
 
-$line-height: 1.5;
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  line-height: $line-height;
-}
-
 //Map
 
 //Merge Map
@@ -24,11 +12,14 @@ p {
 // Home Page
 @import "modules/_home-banner";
 @import "pages/_homepage";
+@import "modules/_proud-member";
 
-// Disney
+// Vacation Pages
+@import "modules/_banner";
+@import "modules/_vacation-card";
+@import "modules/_vacation-option-intro";
+@import "pages/_vacations-page";
 @import "pages/_disney-page";
-
-// Cruises
 @import "pages/_cruises-page";
 
 // Category Page
@@ -63,6 +54,14 @@ p {
 
 a {
   text-decoration: none;
+}
+
+.title-dropshadow {
+  text-shadow: 3px 5px 2px #32050750;
+}
+
+.img-rounded {
+  border-radius: 0.875rem;
 }
 
 .entry-content {

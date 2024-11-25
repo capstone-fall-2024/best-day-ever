@@ -43,59 +43,57 @@
 		</div>
 
 		<div class="top-header">
-			<div>
-				<p>Travel Agent of <a href="https://bestdayevervacations.com/" target="_blank">Best Day Ever Vacations</a></p>
-			</div>
-			<div class="top-header-social-font">
-				<a href="https://www.facebook.com/profile.php?id=61555368848155"><i class="bi bi-facebook"></i></a>
-				<a href="https://www.instagram.com/best_day_ever_vacations_by_jen?igsh=YTFnMnFoZWVnaDdp&utm_source=qr"><i
-						class="bi bi-instagram"></i></a>
+			<div class="container">
+				<div>
+					<p>Travel Agent of <a href="https://bestdayevervacations.com/" target="_blank">Best Day Ever Vacations</a></p>
+				</div>
+				<div class="top-header-social-font">
+					<a href="https://www.facebook.com/profile.php?id=61555368848155"><i class="bi bi-facebook"></i></a>
+					<a href="https://www.instagram.com/best_day_ever_vacations_by_jen?igsh=YTFnMnFoZWVnaDdp&utm_source=qr"><i
+							class="bi bi-instagram"></i></a>
+				</div>
 			</div>
 		</div>
 
 		<header id="masthead" class="site-header">
 
-			<div class="site-branding">
-				<?php
-				if (has_custom_logo()) {
-					the_custom_logo(); // Display the custom logo if it exists
-				} else {
-					// Display the site title if no logo is uploaded
-					?>
-					<div class="site-title">
-						<a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
-					</div>
+			<div class="container">
+				<div class="site-branding">
 					<?php
-				}
-				?>
-			</div>
-
-			<nav id="site-navigation" class="main-navigation">
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'menu-1',
-						'menu_id' => 'primary-menu',
-					)
-				);
-				?>
-			</nav><!-- #site-navigation -->
-
-			<!-- mobile-nav -->
-
-
-			<div class="hamburger">
-				<span class="hamburger__span"></span>
-				<span class="hamburger__span"></span>
-				<span class="hamburger__span"></span>
-			</div>
-
-
-			<div class="site-header__util">
-				<a href="<?php echo site_url('/quote'); ?>" id="quote-btn">Get a Quote</a>
-				<i class="bi bi-search">
-					<div class="search-hover">search</div>
-				</i>
+					if (has_custom_logo()) {
+						the_custom_logo(); // Display the custom logo if it exists
+					} else {
+						// Display the site title if no logo is uploaded
+						?>
+						<div class="site-title">
+							<a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
+						</div>
+						<?php
+					}
+					?>
+				</div>
+				<nav id="site-navigation" class="main-navigation">
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'menu-1',
+							'menu_id' => 'primary-menu',
+						)
+					);
+					?>
+				</nav><!-- #site-navigation -->
+				<!-- mobile-nav -->
+				<div class="hamburger">
+					<span class="hamburger__span"></span>
+					<span class="hamburger__span"></span>
+					<span class="hamburger__span"></span>
+				</div>
+				<div class="site-header__util">
+					<a href="<?php echo site_url('/quote'); ?>" id="quote-btn">Get a Quote</a>
+					<i class="bi bi-search">
+						<div class="search-hover">search</div>
+					</i>
+				</div>
 			</div>
 
 		</header><!-- #masthead -->

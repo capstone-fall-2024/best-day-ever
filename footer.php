@@ -30,7 +30,7 @@
 
 
 			<div class="site-footer__col-four">
-				<p>Additional Info</p>
+				<p>Additional Info:</p>
 				<?php
 				wp_nav_menu(array(
 					"theme_location" => "footer-3",
