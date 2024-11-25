@@ -26,7 +26,7 @@
 .banner-for-section h3 {
   display: none;
 }
-.banner {
+.banner-blog {
   background: url("../img/get-a-quote.jpg") no-repeat center center / cover
     scroll;
 }
@@ -52,11 +52,15 @@
   align-items: center;
   text-align: center;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Bottom shadow */
+
+  p{
+    color: $off-black;
+  }
 }
 
-.banner-section p {
-  color: $off-black;
-}
+// .banner-section p {
+//   color: $off-black;
+// }
 
 .btn-primary.custom-width {
   @include button-base($light-orange, 1px solid $light-orange);
@@ -323,7 +327,7 @@
   /******home.php*******/
 
   // banner desktop
-  .banner {
+  .banner-blog {
     background: url("../img/get-a-quote.jpg") no-repeat center bottom / cover
       scroll;
   }
@@ -349,11 +353,11 @@
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Bottom shadow */
     margin-top: 50px;
     z-index: 1;
-  }
 
-  .banner-section p {
-    color: $off-black;
-    margin-bottom: 5px;
+    p{
+      color: $off-black;
+      margin-bottom: 5px;
+    }
   }
 
   .banner-section .span1 {
