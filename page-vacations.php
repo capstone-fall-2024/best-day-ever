@@ -54,52 +54,47 @@ get_header();
 
 		<?php the_content(); ?>
 		
-		<!-- <section class="container featured-vacays">
-			<h3>Featured Vacations!</h3>
-			<section>
-				<div>
-					<h4>Explore our Disney Vacations for You and Your Family!</h4>
-					<p>Create unforgettable memories with our customized Disney vacations! From enchanting park experiences to character meet-and-greets, we handle all the details— resort stays, dining reservations, and insider tips—so you can focus on the magic. Your dream Disney adventure awaits!</p>
-					<a href="" class="btn-primary">Learn More</a>
-				</div>
-				<div><img src="<?php //echo get_theme_file_uri('/img/disney-vacation.webp') ?>" alt=""></div>
-			</section>
-			
-				<section>
-					<div>
-						<h4></h4>
-						<p></p>
-						<div class="card-buttons">
-							<a href="" class="btn-primary">Learn More</a>
-							<a href="" class="button-secondary">Learn More</a>
-						</div>
-					</div>
-					<div><img src="<?php //echo get_theme_file_uri('/img/disney-vacation.webp') ?>" alt=""></div>
-				</section>
-				<section>
-					<div><img src="<?php //echo get_theme_file_uri('/img/disney-vacation.webp') ?>" alt=""></div>
-					<div>
-						<h4></h4>
-						<p></p>
-						<div class="card-buttons">
-							<a href="" class="btn-primary">Learn More</a>
-							<a href="" class="button-secondary">Learn More</a>
-						</div>
-					</div>
-				</section>
-				<section>
-					<div>
-						<h4></h4>
-						<p></p>
-						<div class="card-buttons">
-							<a href="" class="btn-primary">Learn More</a>
-							<a href="" class="button-secondary">Learn More</a>
-						</div>
-					</div>
-					<div><img src="<?php //echo get_theme_file_uri('/img/disney-vacation.webp') ?>" alt=""></div>
-				</section>
+		<!-- SPECIAL DEALS -->
+		<section class="container home-specials">
+			<h3>Special Deals</h3>
+			<div>
+				<?php
+				$posts_query = new WP_Query(
+					array(
+						'post_type' => 'special-deal',
+						'posts_per_page' => 3
+					)
+				);
+				?>
+
+				<?php if ($posts_query->have_posts()): ?>
+					<?php $counter = 1; ?>
+					<?php while ($posts_query->have_posts()): $posts_query->the_post(); ?>
+						<?php
+							$layout = ($counter % 2 == 0) ? 'layout-reversed' : 'layout-default';
+						?>
+						<section class="<?php echo $layout; ?>">
+
+							<div>
+								<img class="img-rounded" src="<?php echo esc_url(get_field('deal_featured_image')['url']); ?>"
+									alt="Featured image of <?php the_title(); ?>" loading="lazy">
+							</div>
+
+							<div>
+								<h4><?php echo the_title(); ?></h4>
+								<p><?php echo get_field('deal_description'); ?></p>
+								<a href="<?php echo get_field('deal_url'); ?>" class="btn-primary">Learn More</a>
+							</div>
+
+						</section>
+						<?php $counter++; ?>
+					<?php endwhile; ?>
+					<?php wp_reset_postdata(); ?>
+				<?php endif; ?>
 			</div>
-		</section> -->
+
+			<a href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/special-deals/">Check out more<span><i class="bi bi-arrow-right"></i></span></a>
+		</section>
 
 		<!-- Testimonials -->
 		<section class="testimonials">

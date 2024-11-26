@@ -17,6 +17,10 @@
     object-fit: cover;
   }
 
+  a {
+    width: 170px;
+  }
+
   > div {
     display: flex;
     flex-wrap: wrap;
@@ -63,6 +67,14 @@
   .vacation-card:last-of-type {
     flex-grow: 1;
   }
+}
+
+.card-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 @media (min-width: 768px) {

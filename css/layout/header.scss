@@ -50,14 +50,12 @@
 .site-header {
   position: relative;
   z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 1rem;
+  width: 100%;
 
-  > div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    width: 100%;
-  }
   .custom-logo {
     width: 100%;
     aspect-ratio: 3/4;
@@ -174,7 +172,8 @@
   max-width: 450px;
   position: fixed;
   top: 0;
-  right: -450px;
+  right: 0;
+  padding-top: 3rem;
   transition: 0.3s ease;
   scroll-behavior: smooth;
   z-index: 98;
@@ -229,11 +228,11 @@
   &__container {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 1.25rem;
 
     .search-form-mobile {
       position: relative;
-      margin-bottom: 24px;
+      margin-bottom: 1.5rem;
 
       .search-field {
         position: absolute;
@@ -273,7 +272,7 @@
 
       .bi-search {
         position: absolute;
-        font-size: 20px;
+        font-size: 1.25rem;
         right: 10px;
         top: 2px;
         cursor: pointer;
@@ -389,10 +388,6 @@
   }
 }
 
-.sidebar-menu.is-active {
-  right: 0;
-}
-
 .search-form-box {
   display: none;
 }
@@ -440,7 +435,7 @@
 
   // header
   .site-header {
-    padding: 30px 5%;
+    padding: 30px 1rem;
 
     .site-branding {
       cursor: pointer;
