@@ -2,6 +2,16 @@
   margin: 4rem auto;
 }
 
+.vacations-page h3 {
+  margin-bottom: 1.5rem;
+  color: $dark-red;
+}
+
+.vacations-page h3,
+h4 {
+  color: $dark-red;
+}
+
 .vacations-page .wp-block-buttons {
   justify-content: center;
 }
@@ -14,8 +24,7 @@
   gap: 1rem;
 
   img {
-    min-width: 100px;
-    max-width: 130px;
+    width: 6.825rem;
   }
 
   p {

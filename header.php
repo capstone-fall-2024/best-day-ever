@@ -57,43 +57,47 @@
 
 		<header id="masthead" class="site-header">
 
-			<div class="container">
-				<div class="site-branding">
-					<?php
-					if (has_custom_logo()) {
-						the_custom_logo(); // Display the custom logo if it exists
-					} else {
-						// Display the site title if no logo is uploaded
-						?>
-						<div class="site-title">
-							<a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
-						</div>
-						<?php
-					}
+			<div class="site-branding">
+				<?php
+				if (has_custom_logo()) {
+					the_custom_logo(); // Display the custom logo if it exists
+				} else {
+					// Display the site title if no logo is uploaded
 					?>
-				</div>
-				<nav id="site-navigation" class="main-navigation">
+					<div class="site-title">
+						<a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
+					</div>
 					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'menu-1',
-							'menu_id' => 'primary-menu',
-						)
-					);
-					?>
-				</nav><!-- #site-navigation -->
-				<!-- mobile-nav -->
-				<div class="hamburger">
-					<span class="hamburger__span"></span>
-					<span class="hamburger__span"></span>
-					<span class="hamburger__span"></span>
-				</div>
-				<div class="site-header__util">
-					<a href="<?php echo site_url('/quote'); ?>" id="quote-btn">Get a Quote</a>
-					<i class="bi bi-search">
-						<div class="search-hover">search</div>
-					</i>
-				</div>
+				}
+				?>
+			</div>
+
+			<nav id="site-navigation" class="main-navigation">
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'menu-1',
+						'menu_id' => 'primary-menu',
+					)
+				);
+				?>
+			</nav><!-- #site-navigation -->
+
+			<!-- mobile-nav -->
+
+
+			<div class="hamburger">
+				<span class="hamburger__span"></span>
+				<span class="hamburger__span"></span>
+				<span class="hamburger__span"></span>
+			</div>
+
+
+			<div class="site-header__util">
+				<a href="<?php echo site_url('/quote'); ?>" id="quote-btn">Get a Quote</a>
+				<i class="bi bi-search">
+					<div class="search-hover">search</div>
+				</i>
 			</div>
 
 		</header><!-- #masthead -->

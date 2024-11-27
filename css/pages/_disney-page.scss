@@ -37,7 +37,7 @@
 
 @media (min-width: 768px) {
   .disney-page {
-    section:first-of-type > div:first-of-type {
+    section > section:first-of-type > div:first-of-type {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr auto 1fr;

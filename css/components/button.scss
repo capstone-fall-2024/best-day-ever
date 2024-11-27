@@ -44,13 +44,16 @@
 
 // Styled the WordPress editor button
 .wp-block-button.footer-btn-quote .wp-block-button__link,
-.wp-block-button.learn-more .wp-block-button__link,
 .wp-block-button.quote-primary .wp-block-button__link {
   @include button-base($light-orange, 2px solid $light-orange);
 }
 
 .wp-block-button.quote-secondary .wp-block-button__link {
   @include button-base($white, 2px solid $dark-green);
+}
+
+.wp-block-button.learn-more .wp-block-button__link {
+  @include button-base($white, 2px solid $dark-orange);
 }
 
 .wp-block-button.quote-yellow .wp-block-button__link {

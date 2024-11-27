@@ -1,20 +1,32 @@
-.banner {
+.vacation-banner {
   position: relative;
 
   img {
-    background-color: rgba(0, 0, 0, 0.15);
-    aspect-ratio: 16/7;
+    height: 450px;
+    width: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
   }
 
-  p {
-    text-shadow: 3px 5px 2px #32050750;
+  > div {
     position: absolute;
-  }
-}
+    top: 0;
+    height: 450px;
+    background-color: rgba(0, 0, 0, 0.15);
+    width: 100%;
 
-.vacation-page .banner p {
-  color: $white;
-  top: 50%;
-  left: 50%;
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 450px;
+    }
+
+    p {
+      text-shadow: 3px 5px 2px rgba(50, 5, 7, 0.3137254902);
+      color: #fff;
+      font-family: youngSerif;
+      font-size: clamp(2.4375rem, 1.8125rem + 3.125vw, 3.8125rem);
+    }
+  }
 }
