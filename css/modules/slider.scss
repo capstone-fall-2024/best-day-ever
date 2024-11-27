@@ -42,7 +42,7 @@
         align-items: center;
         gap: 2rem;
         transition: transform 0.5s ease;
-        margin-top: 1.75rem;
+        margin: 1.75rem 0;
     }
 
     .testimonial-slider-item {
@@ -212,11 +212,11 @@
             width: 100%;
     
             .testimonial-slider-item {
-                flex: 1 0 50%;
+                flex: 1 0 40%;
                 max-width: 530px;
                 min-height: 500px;
                 padding: 0;
-                margin: 0;
+                margin: 0 1rem;
 
                 .author-info {
                     img {

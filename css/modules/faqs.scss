@@ -1,0 +1,69 @@
+.faqs {
+    margin: 4rem 0;
+
+    .faqs-intro {
+        width: 100% !important;
+
+        @media screen and (min-width: 1024px) {
+            width: 50vw !important;
+        }
+
+        h3 {
+            color: $dark-red;
+        }
+    }
+
+    .faqs-content {
+        .wp-block-details {
+            transition: all 0.5s ease-in-out;
+            border: 1px solid $dark-red;
+
+            > :where(:not(summary)) {
+                margin-right: 1rem;
+                margin-left: 1rem;
+            }
+
+            &[open] {
+                padding-bottom: 2rem;
+
+                summary {
+                    &::after {
+                        content: "";
+                        float: right;
+                        text-align: center;
+                        width: 12px;
+                        height: 12px;
+                        border-bottom: 3px solid $dark-red;
+                        border-right: 3px solid $dark-red;
+                        transform: rotate(-135deg);
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+
+            summary {
+                transition: all 0.5s ease-in-out;
+                box-sizing: border-box;
+                padding: 2rem;
+                font-weight: 700;
+                color: $dark-red;
+
+                &::marker {
+                    content: none;
+                }
+
+                &::after {
+                    content: "";
+                    float: right;
+                    text-align: center;
+                    width: 12px;
+                    height: 12px;
+                    border-bottom: 3px solid $dark-red;
+                    border-right: 3px solid $dark-red;
+                    transform: rotate(45deg);
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}

@@ -12,7 +12,7 @@ get_header();
 ?>
 
 <main id="primary" class="site-main">
-    <section>
+    <section class="container">
         <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
         <?php the_content(); ?>
 
@@ -21,7 +21,8 @@ get_header();
         }
         ;
         ?>
-
+    </section>
+    
         <?php if (is_active_sidebar('subscription-main')) {
             dynamic_sidebar('subscription-main');
         }
@@ -33,7 +34,6 @@ get_header();
         }
         ;
         ?>
-    </section>
 
 </main><!-- #main -->
 

@@ -13,11 +13,12 @@ get_header();
 
 <main id="primary" class="site-main">
   <section>
+    <?php the_title('<h1 class="entry-title-about-jen">', '</h1>'); ?>
     <section class="about-jen-container">
       <div class="about-jen">
         <div class="about-jen__text">
-          <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
-          <h4>Your Personal Travel Agent</h4>
+          <h2>About Jen</h2>
+          <h3>Your Personal Travel Agent</h3>
           <p>I love helping my clients see the world. Whether it is a small weekend trip, a cruise, theme park visit,
             all-inclusive, or a completely personal itinerary touring everywhere you could want to see – The world is
             your
@@ -49,14 +50,16 @@ get_header();
     <div class="values-container">
       <div class="values-container__img-container">
         <figure>
-          <img src="<?php echo get_theme_file_uri('/img/lake.jpg') ?>" alt="">
+          <img src="<?php echo get_theme_file_uri('/img/lake.jpg') ?>" alt="lake">
         </figure>
       </div>
       <div class="values-container__text">
-        <h4>My Value</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat.
+        <h3>My Value</h3>
+        <p>To be the leading travel agency in the design of exclusive and personalized
+          experiences, making our clients live memorable moments and fulfill their dreams
+          through unique trips that they will remember for the rest of their lives.
+          We do this with excellent customer and vendor relationships, professionalism, flexibility,
+          and customer service.
         </p>
       </div>
     </div>

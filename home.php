@@ -4,7 +4,7 @@
         <h2>Blog</h2>
         <section class="banner-for-section">
             <h3>Banner</h3>
-            <div class="banner">
+            <div class="banner-blog">
                 <div class="banner_container">
                     <div class="banner-section">
                         <?php
