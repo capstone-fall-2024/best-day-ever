@@ -40,11 +40,9 @@ body h4,
 
 body .specialties-slider h4, body .specialties-slider .h4,
 body .testimonial h4,
-body .testimonial .h4 {
-  font-size: clamp(1.25rem, 1.1364rem + 0.5682vw, 1.5rem);
-}
-
-body .blog-card h4, body .blog-card .h4 {
+body .testimonial .h4,
+body .blog-card h4,
+body .blog-card .h4 {
   font-size: clamp(1.25rem, 1.1364rem + 0.5682vw, 1.5rem);
 }
 
@@ -14930,6 +14928,28 @@ h4,
   font-weight: 500;
 }
 
+.error-404 > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.error-404 img {
+  max-width: 300px;
+}
+.error-404 p {
+  font-size: clamp(1rem, 0.8049rem + 0.9756vw, 1.5rem);
+}
+.error-404 a {
+  width: 170px;
+}
+
+@media (min-width: 768px) {
+  .error-404 img {
+    max-width: 500px;
+  }
+}
 /***************** Testimonial Front Page*****************/
 .testimonials {
   position: relative;
