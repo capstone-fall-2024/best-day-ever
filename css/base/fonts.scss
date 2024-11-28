@@ -1,6 +1,15 @@
 @font-face {
-  font-family: youngSerif;
+  font-family: "Young Serif";
   src: url(../fonts/young-serif.woff2);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url(../fonts/noto-sans.woff2);
+  font-weight: normal;
+  font-style: normal;
 }
 
 $line-height: 1.5;
@@ -13,6 +22,14 @@ h5,
 h6,
 p {
   line-height: $line-height;
+}
+
+body {
+  font-family: 'Noto Sans', Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Young Serif', Georgia, serif;
 }
 
 body h1,

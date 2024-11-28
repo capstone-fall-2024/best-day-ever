@@ -13,6 +13,9 @@
 
     .contact-form {
         .wpcf7 form {
+            max-width: 100%;
+            width: 100%;
+            
             .form-layout {
                 display: flex;
                 flex-direction: column;
@@ -27,7 +30,7 @@
                         padding: 10px 20px;
                         border: 1px solid rgba($dark-red, 0.25);
                         border-radius: 8px;
-                        min-width: 70vw;
+                        width: 100%;
                     }
                 }
     
@@ -54,8 +57,21 @@
 
         .social-contact {
             div {
-                flex-direction: column;
+                flex-direction: row;
                 width: 100%;
+                gap: 10px;
+
+                figure {
+                    width: 10%;
+                    img {
+                        object-fit: scale-down !important;
+                        height: 50px;
+                    }
+                }
+
+                p {
+                    width: 85%;
+                }
             }
         }
     }
@@ -96,18 +112,6 @@
                 .info {
                     align-items: flex-start;
                     gap: 10px;
-                }
-            }
-
-            .social-contact {
-                div {
-                    flex-direction: row;
-
-                    figure {
-                        img {
-                            max-width: 50px;
-                        }
-                    }
                 }
             }
         }

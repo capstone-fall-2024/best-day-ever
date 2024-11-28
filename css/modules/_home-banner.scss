@@ -1,5 +1,5 @@
 @font-face {
-  font-family: youngSerif;
+  font-family: 'Young Serif';
   src: url(../fonts/young-serif.woff2);
 }
 
@@ -25,7 +25,7 @@
 
 .home-banner-title {
   p {
-    font-family: youngSerif, serif;
+    font-family: 'Young Serif', serif;
     font-size: clamp(2.4375rem, 1.8125rem + 3.125vw, 3.8125rem);
     color: $white;
     text-shadow: 3px 5px 2px #32050750;

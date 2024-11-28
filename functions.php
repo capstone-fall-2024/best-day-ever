@@ -309,26 +309,13 @@ function bdev_by_jen_scripts()
 add_action('wp_enqueue_scripts', 'bdev_by_jen_scripts');
 
 /**
- * Enqueue Owl Carousel.
+ * Enqueue Swiper JS
  */
-function bdev_owl_carousel() 
-{
-	wp_enqueue_style('owl_carousel_css', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css');
-	wp_enqueue_style('owl_carousel_default_theme', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css');
-	wp_enqueue_script('owl_carousel_js', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js');
+function bdev_enqueue_swiper() {
+	wp_enqueue_style('swiper-css', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css');
+	wp_enqueue_script('swiper-js', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js');
 }
-add_action('wp_enqueue_scripts', 'bdev_owl_carousel');
-
-
-/**
- * Enqueue Slick Slider
- */
-function bdev_slick_slider() 
-{
-	wp_enqueue_style('slick_carousel_css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css');
-	wp_enqueue_script('slick_carousel_js', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js');
-}
-add_action('wp_enqueue_scripts', 'bdev_slick_slider');
+add_action('wp_enqueue_scripts', 'bdev_enqueue_swiper');
 
 /**
  * Implement the Custom Fonts
@@ -336,8 +323,8 @@ add_action('wp_enqueue_scripts', 'bdev_slick_slider');
 function enqueue_custom_fonts()
 {
 	if (!is_admin()) {
-		wp_register_style('young_serif', 'https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
-		wp_register_style('noto_sans', 'https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+		wp_register_style('young_serif', 'https://fonts.googleapis.com/css2?family=Young+Serif&display=swap',[], null);
+		wp_register_style('noto_sans', 'https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap', [], null);
 
 		wp_enqueue_style('young_serif');
 		wp_enqueue_style('noto_sans');
@@ -366,6 +353,11 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
+ * Custom Columns Special Deal
+ */
+require get_template_directory() . '/inc/custom-columns.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if (defined('JETPACK__VERSION')) {
@@ -385,3 +377,4 @@ function theme_testing_parts_setup()
 	add_theme_support('block-template-parts');
 }
 add_action('after_setup_theme', 'theme_testing_parts_setup');
+

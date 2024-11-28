@@ -20,6 +20,7 @@
                                     $author_vacation = get_field('authors_vacation');
                                     $title = get_field('title');
                                     $message = get_field('message');
+                                    $truncated_message = wp_trim_words($message, 20, '...');
                                     $rating = get_field('rating');
                                     $author_photo = get_field('authors_photo');
                                 }
@@ -36,7 +37,11 @@
                                     ?>
                                     </div>
                                     <h4><?php echo esc_html($title); ?></h4>
-                                    <p class="message"><?php echo esc_html($message); ?></p>
+                                    <div class="message">
+                                        <p class="short-message"><?php echo esc_html($truncated_message); ?></p>
+                                        <p class="full-message"><?php echo esc_html($message); ?></p>
+                                        <a class="toggle-message">Read More</a>
+                                    </div>
                                     <div class="author-info">
                                         <?php if ($author_photo) : ?>
                                             <img src="<?php echo esc_url($author_photo['url']); ?>" alt="<?php echo esc_attr($author_photo['alt']); ?>">

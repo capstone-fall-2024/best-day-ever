@@ -81,8 +81,24 @@
             }
 
             .message {
-                padding-bottom: 2.25rem;
-                margin-bottom: 0;
+                padding-bottom: 2.5rem;
+                .full-message {
+                    display: none;
+                }
+    
+                .short-message {
+                    margin-bottom: 0;
+                    display: inline;
+                }
+    
+                .toggle-message {
+                    color: $dark-orange;
+                    cursor: pointer;
+    
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
             }
 
             .author-info {
@@ -169,6 +185,28 @@
             height: 100%;
             top: -10%;
             right: 5%;
+        }
+
+        .slider {
+            .testimonial-slider-inner {
+                .testimonial-slider-item {
+                    .testimonial {
+                        .full-message {
+                            padding-bottom: 2.25rem;
+                            margin-bottom: 0;
+                            display: inline;
+                        }
+            
+                        .short-message {
+                            display: none;
+                        }
+
+                        .toggle-message {
+                            display: none;
+                        }
+                    }
+                }
+            }
         }
     }
     .slider {
