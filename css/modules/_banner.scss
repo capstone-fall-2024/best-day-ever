@@ -14,18 +14,14 @@
     height: 450px;
     background-color: rgba(0, 0, 0, 0.15);
     width: 100%;
-
-    div {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 450px;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     p {
       text-shadow: 3px 5px 2px rgba(50, 5, 7, 0.3137254902);
       color: #fff;
-      font-family: youngSerif;
+      font-family: "Young Serif", serif;
       font-size: clamp(2.4375rem, 1.8125rem + 3.125vw, 3.8125rem);
     }
   }

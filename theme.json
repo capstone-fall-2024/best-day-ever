@@ -63,48 +63,6 @@
       "defaultGradients": false,
       "custom": false,
       "heading": false
-    },
-    "typography": {
-      "fontFamilies": [
-        {
-          "fontFamily": "Young Serif, serif",
-          "slug": "heading-serif",
-          "name": "Font Style for Heading",
-          "fontFace": [
-            {
-              "fontFamily": "Yeseva One",
-              "fontWeight": "400",
-              "fontStyle": "normal",
-              "src": ["file:./fonts/young-serif.woff2"]
-            }
-          ]
-        },
-        {
-          "fontFamily": "Noto Sans, sans-serif",
-          "slug": "body-sans-serif",
-          "name": "Font Style for Body text",
-          "fontFace": [
-            {
-              "fontFamily": "Noto Sans",
-              "fontWeight": "500",
-              "fontStyle": "normal",
-              "src": ["file:./fonts/noto-sans.woff2"]
-            }
-          ]
-        }
-      ]
-    }
-  },
-  "styles": {
-    "typography": {
-      "fontFamily": "var(--wp--preset--font-family--body-sans-serif) !important"
-    },
-    "elements": {
-      "heading": {
-        "typography": {
-          "fontFamily": "var(--wp--preset--font-family--heading-serif) !important"
-        }
-      }
     }
   }
 }
