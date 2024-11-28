@@ -312,8 +312,8 @@ add_action('wp_enqueue_scripts', 'bdev_by_jen_scripts');
  * Enqueue Swiper JS
  */
 function bdev_enqueue_swiper() {
-	wp_enqueue_style('swiper-css', esc_url(get_template_directory_uri() . '/assets/swiper/swiper-bundle.min.css'));
-	wp_enqueue_script('swiper-js', esc_url(get_template_directory_uri() . '/assets/swiper/swiper-bundle.min.js'));
+	wp_enqueue_style('swiper-css', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css');
+	wp_enqueue_script('swiper-js', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js');
 }
 add_action('wp_enqueue_scripts', 'bdev_enqueue_swiper');
 
