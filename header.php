@@ -13,13 +13,17 @@
 
 <head>
 	<title><?php bloginfo('name');
-	wp_title(); ?></title>
+	wp_title(); ?> | <?php echo the_title(); ?> </title>
 	<meta name="description" content="<?php bloginfo('description'); ?>">
-	<!-- addtitle10-22 -->
 
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap" rel="stylesheet">
 
 	<?php wp_head(); ?>
 </head>
@@ -57,61 +61,60 @@
 
 		<header id="masthead" class="site-header">
 
-			<div class="site-branding">
-				<?php
-				if (has_custom_logo()) {
-					the_custom_logo(); // Display the custom logo if it exists
-				} else {
-					// Display the site title if no logo is uploaded
-					?>
-					<div class="site-title">
-						<a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
+			<div>
+				<div class="container">
+					<div class="site-branding">
+						<?php
+						if (has_custom_logo()) {
+							the_custom_logo(); // Display the custom logo if it exists
+						} else {
+							// Display the site title if no logo is uploaded
+							?>
+							<div class="site-title">
+								<a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
+							</div>
+							<?php
+						}
+						?>
 					</div>
-					<?php
-				}
-				?>
-			</div>
-
-			<nav id="site-navigation" class="main-navigation">
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'menu-1',
-						'menu_id' => 'primary-menu',
-					)
-				);
-				?>
-			</nav><!-- #site-navigation -->
-
-			<!-- mobile-nav -->
-
-
-			<div class="hamburger">
-				<span class="hamburger__span"></span>
-				<span class="hamburger__span"></span>
-				<span class="hamburger__span"></span>
-			</div>
-
-
-			<div class="site-header__util">
-				<a href="<?php echo site_url('/quote'); ?>" id="quote-btn">Get a Quote</a>
-				<i class="bi bi-search">
-					<div class="search-hover">search</div>
-				</i>
-			</div>
-
-		</header><!-- #masthead -->
-
-		<!-- Hamburger Menu Icon for Mobile -->
-
-		<div class="sidebar-menu">
-			<div class="sidebar-menu__closed">
-				<div class="hamburger-closed">
-					<span class="hamburger-closed__span"></span>
-					<span class="hamburger-closed__span"></span>
-					<span class="hamburger-closed__span"></span>
+					<nav id="site-navigation" class="main-navigation">
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'menu-1',
+								'menu_id' => 'primary-menu',
+							)
+						);
+						?>
+					</nav><!-- #site-navigation -->
+					<!-- mobile-nav -->
+					<div class="hamburger">
+						<span class="hamburger__span"></span>
+						<span class="hamburger__span"></span>
+						<span class="hamburger__span"></span>
+					</div>
+					<div class="site-header__util">
+						<a href="<?php echo site_url('/quote'); ?>" id="quote-btn">Get a Quote</a>
+						<i class="bi bi-search">
+							<div class="search-hover">search</div>
+						</i>
+					</div>
+					
+					</div>
+				</div>	
+			</header><!-- #masthead -->
+					
+							<!-- Hamburger Menu Icon for Mobile -->
+					
+			<div class="sidebar-menu">
+				<div class="sidebar-menu__closed">
+					<div class="hamburger-closed">
+						<span class="hamburger-closed__span"></span>
+						<span class="hamburger-closed__span"></span>
+						<span class="hamburger-closed__span"></span>
+					</div>
 				</div>
-			</div>
+				
 
 			<div class="sidebar-menu__container">
 

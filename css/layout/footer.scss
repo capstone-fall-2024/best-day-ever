@@ -1,8 +1,3 @@
-@font-face {
-  font-family: youngSerif;
-  src: url(../fonts/young-serif.woff2);
-}
-
 .site-footer__col-one,
 .site-footer__col-three,
 .site-footer__col-four,
@@ -114,12 +109,10 @@ div.menu-additional-info-footer-container {
 .footer_copy_right {
   background-color: $cream;
   padding: 2rem 1rem;
-  font-size: clamp(1.25rem, 0.9091rem + 1.7045vw, 2rem);
-  font-family: youngSerif;
 
   p {
     text-align: center;
-    font-family: youngSerif;
+    font-family: "Young Serif", serif;
     font-size: clamp(1rem, 0.9091rem + 1.7045vw, 1.25rem);
     margin-bottom: 0;
   }

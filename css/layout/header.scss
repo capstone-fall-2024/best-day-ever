@@ -50,11 +50,14 @@
 .site-header {
   position: relative;
   z-index: 10;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 1rem;
+  padding: 10px 0;
   width: 100%;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   .custom-logo {
     width: 100%;
@@ -138,33 +141,6 @@
     color: $light-orange;
   }
 }
-
-// .search-container {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   position: relative;
-//   width: 100%;
-//   max-width: 400px;
-//   padding: 10px;
-// }
-
-// .search-container i {
-//   position: absolute;
-//   right: 5%;
-//   top: 50%;
-//   transform: translateY(-50%);
-//   color: #888;
-//   cursor: pointer;
-// }
-
-// .search-container input {
-//   width: 100%; /* Set input to 70% width */
-//   padding-left: 5px;
-//   height: 40px;
-//   border: 1px solid #ccc;
-//   border-radius: 8px;
-// }
 
 .sidebar-menu {
   height: 100vh;
@@ -378,11 +354,11 @@
     }
 
     .social-font-mobile {
-      font-size: 25px;
+      font-size: 1.5625rem;
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 15px;
+      gap: 0.9375rem;
 
       .bi-facebook,
       .bi-instagram {
@@ -399,6 +375,7 @@
 @include media(large) {
   /**** Top-header ****/
   .top-header {
+    display: block;
     background-color: $white;
     box-shadow: 0px 6px 4px #32050725;
 
@@ -439,7 +416,7 @@
 
   // header
   .site-header {
-    padding: 30px 1rem;
+    padding: 30px 0;
 
     .site-branding {
       cursor: pointer;
