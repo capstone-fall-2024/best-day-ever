@@ -20,7 +20,7 @@ if(quotePage) {
 
         nextBtns.forEach((btn) => {
             btn.addEventListener('click', () => {
-                if(validate() && currentStep < progressSteps.length - 1) {
+                if(validatedForm() && currentStep < progressSteps.length - 1) {
                     progressSteps[currentStep].classList.remove('active');
                     currentStep++;
                     progressSteps[currentStep].classList.add('active');

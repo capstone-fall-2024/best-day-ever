@@ -1,66 +1,69 @@
 document.addEventListener("DOMContentLoaded", function () {
     const slider = document.querySelector(".testimonial-slider-inner");
-    const testimonials = document.querySelectorAll(".testimonial-slider-item");
-    const nextBtn = document.querySelector(".testimonial-next");
-    const prevBtn = document.querySelector(".testimonial-prev");
-    const messageBtns = document.querySelectorAll(".toggle-message");
 
-    let currentIndex = 0;
-    const totalTestimonials = testimonials.length;
-
-    function getItemsToShow() {
-        return window.innerWidth >= 1024 ? 2 : 1;
-    }
-
-    function updateActiveTestimonial() {
-        const itemsToShow = getItemsToShow();
-        testimonials.forEach((testimonial) =>
-            testimonial.classList.remove("active")
-        );
-
-        testimonials[currentIndex].classList.add("active");
-        for (let i = 0; i < itemsToShow; i++) {
-            testimonials[(currentIndex + i) % totalTestimonials].classList.add(
-                "active"
-            );
+    if(slider) {
+        const testimonials = document.querySelectorAll(".testimonial-slider-item");
+        const nextBtn = document.querySelector(".testimonial-next");
+        const prevBtn = document.querySelector(".testimonial-prev");
+        const messageBtns = document.querySelectorAll(".toggle-message");
+    
+        let currentIndex = 0;
+        const totalTestimonials = testimonials.length;
+    
+        function getItemsToShow() {
+            return window.innerWidth >= 1024 ? 2 : 1;
         }
-    }
-
-    messageBtns.forEach((messageBtn) => {
-        messageBtn.addEventListener("click", (e) => {
-            e.preventDefault();
-            const parentMessage = e.target.closest(".message");
-            const shortMessage = parentMessage.querySelector(".short-message");
-            const fullMessage = parentMessage.querySelector(".full-message");
-
-            if (shortMessage.style.display === "none") {
-                shortMessage.style.display = "inline";
-                fullMessage.style.display = "none";
-                messageBtn.textContent = "Read More";
-            } else {
-                shortMessage.style.display = "none";
-                fullMessage.style.display = "inline";
-                messageBtn.textContent = "Read Less";
+    
+        function updateActiveTestimonial() {
+            const itemsToShow = getItemsToShow();
+            testimonials.forEach((testimonial) =>
+                testimonial.classList.remove("active")
+            );
+    
+            testimonials[currentIndex].classList.add("active");
+            for (let i = 0; i < itemsToShow; i++) {
+                testimonials[(currentIndex + i) % totalTestimonials].classList.add(
+                    "active"
+                );
             }
+        }
+    
+        messageBtns.forEach((messageBtn) => {
+            messageBtn.addEventListener("click", (e) => {
+                e.preventDefault();
+                const parentMessage = e.target.closest(".message");
+                const shortMessage = parentMessage.querySelector(".short-message");
+                const fullMessage = parentMessage.querySelector(".full-message");
+    
+                if (shortMessage.style.display === "none") {
+                    shortMessage.style.display = "inline";
+                    fullMessage.style.display = "none";
+                    messageBtn.textContent = "Read More";
+                } else {
+                    shortMessage.style.display = "none";
+                    fullMessage.style.display = "inline";
+                    messageBtn.textContent = "Read Less";
+                }
+            });
         });
-    });
-
-    function handleResize() {
-        itemsPreview = window.innerWidth >= 1024 ? 2 : 1;
+    
+        function handleResize() {
+            itemsPreview = window.innerWidth >= 1024 ? 2 : 1;
+            updateActiveTestimonial();
+        }
+    
+        nextBtn.addEventListener("click", function () {
+            currentIndex = (currentIndex + 1) % totalTestimonials;
+            updateActiveTestimonial();
+        });
+        prevBtn.addEventListener("click", function () {
+            currentIndex =
+                (currentIndex - getItemsToShow() + totalTestimonials) % totalTestimonials;
+            updateActiveTestimonial();
+        });
+        window.addEventListener("resize", handleResize);
         updateActiveTestimonial();
-    }
-
-    nextBtn.addEventListener("click", function () {
-        currentIndex = (currentIndex + 1) % totalTestimonials;
-        updateActiveTestimonial();
-    });
-    prevBtn.addEventListener("click", function () {
-        currentIndex =
-            (currentIndex - getItemsToShow() + totalTestimonials) % totalTestimonials;
-        updateActiveTestimonial();
-    });
-    window.addEventListener("resize", handleResize);
-    updateActiveTestimonial();
+    } 
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -142,10 +145,9 @@ document.addEventListener("DOMContentLoaded", function () {
 // })
 
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("DOM fully loaded and parsed");
+
     const sliderContainer = document.querySelector(".specialties-slider");
     if (!sliderContainer) {
-        console.error("Swiper container not found!");
         return;
     }
 

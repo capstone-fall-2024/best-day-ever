@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
     mobile_menu.classList.remove('is-active');
     overlay.classList.remove('is-active');
     body.classList.remove('no-scroll'); // Re-enable body scroll
-
   })
 
   // Event listener for toggling submenus
@@ -63,7 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const submenu = document.querySelector('.submenu-mobile');
 
     dropdown.addEventListener('click', function() {
-      console.log('success');
       dropdown.classList.toggle('active');
         // Toggle the 'active' class to show or hide the submenu
         submenu.classList.toggle('active');
@@ -77,7 +75,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Event listener for closing the search form
   closeSearchForm.addEventListener('click', function() {
-    console.log('closed');
     searchForm.classList.remove('is-active');
   });
 
@@ -106,7 +103,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function showSlides(n) {
       let i;
       let slides = document.querySelectorAll('.carousel-menu__item');
-      console.log(slides)
       if(slides) {
         if (n > slides.length) {
           slideIndex = 1;
