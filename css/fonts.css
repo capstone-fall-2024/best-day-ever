@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "Young Serif";
+  src: url(../fonts/young-serif.woff2);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url(../fonts/noto-sans.woff2);
+  font-weight: normal;
+  font-style: normal;
+}
 h1,
 h2,
 h3,
@@ -6,6 +18,14 @@ h5,
 h6,
 p {
   line-height: 1.5;
+}
+
+body {
+  font-family: "Noto Sans", Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Young Serif", Georgia, serif;
 }
 
 body h1,
@@ -35,4 +55,9 @@ body .testimonial h4 {
 
 body .blog-card h4 {
   font-size: clamp(1.25rem, 1.1364rem + 0.5682vw, 1.5rem);
+}
+
+.vacation-buttons p {
+  font-family: youngSerif, serif;
+  font-size: clamp(1rem, 0.6585rem + 1.7073vw, 1.875rem);
 }

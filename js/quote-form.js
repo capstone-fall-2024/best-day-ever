@@ -9,12 +9,9 @@ if(quotePage) {
 
         let currentStep = 0;
 
-        const switchStep = (step, delay = 500) => {
-            setTimeout(() => {
-                quoteForm.classList.remove('step-1', 'step-2');
-                quoteForm.classList.add(`step-${step}`);
-            }, delay)
-                
+        const switchStep = (step, delay = 300) => {
+            quoteForm.classList.remove('step-1', 'step-2');
+            quoteForm.classList.add(`step-${step}`);
         }
 
         nextBtns.forEach((btn) => {

@@ -23,16 +23,17 @@
     width: 70%;
     max-width: 960px;
 
+    @media screen and (min-width: 1024px) {
+        min-height: 920px;
+    }
+ 
     &.step-1 {
-        padding: 3rem 1.5rem 0;
-        transition: padding 0.5s ease;
-        @media screen and (min-width: 950px) {
-            padding-bottom: 4rem;
-        }
+        padding: 3rem 1.5rem 4rem;
+        transition: padding 0.3s ease-in-out;
     }
 
     &.step-2 {
-        padding: 3rem 1.5rem 7rem;
+        padding: 3rem 1.5rem 4rem;
     }
 
     .steps-container {
@@ -129,7 +130,6 @@
                 .uacf7-col-12 {
                     display: flex;
                     flex-direction: column;
-                    justify-content: space-between;
                     gap: 8px;
                     margin: 0.5rem 0;
 
@@ -139,6 +139,10 @@
                         flex-direction: column;
                         gap: 12px;
                     }
+                
+                &:last-of-type {
+                    justify-content: space-between;
+                }
 
                     span {
                         input {
@@ -166,8 +170,12 @@
                         grid-template-columns: repeat(9, 1fr);
                         align-items: center;
                         justify-content: center;
-                        margin-bottom: -1.5rem;
+                        margin-bottom: -5rem;
                         gap:1rem;
+
+                        @media screen and (min-width: 950px) {
+                            margin-bottom: -1.5rem;
+                        }
     
                         .uacf7-next {
                             width: 150px !important;
@@ -203,12 +211,14 @@
                         input {
                             @include button-base($white, 1px solid $dark-green);
                             max-width: 220px;
+                            min-width: fit-content;
+                            padding: 0 10px;
                         }
 
                         p {
                             .uacf7-prev {
                                 width: 150px !important;
-                                min-width: 220px;
+                                min-width: 210px;
                                 @include button-base($light-orange, 1px solid $light-orange);
 
                                 &:hover {
