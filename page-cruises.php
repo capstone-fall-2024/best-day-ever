@@ -31,7 +31,7 @@ get_header();
 				</div>
 				<div>
 					<p>We have cruises for ocean, river and expedition vacations with something for everyone! You can travel from 2 days to over 200 days in length and everything in between! Cruising is the fastest growing form of vacation options. We have cruise options that can take you to every corner of the globe. There really is something for everyone!</p>
-					<a href="<?php echo site_url('/vacations/quote'); ?>" class="btn-primary">Get a Quote</a>
+					<a href="<?php echo site_url('/quote'); ?>" class="btn-primary">Get a Quote</a>
 				</div>
 			</div>
 		</section><!-- End Cruise Intro -->
@@ -60,7 +60,7 @@ get_header();
                         <div><img src="<?php echo get_theme_file_uri('/img/coastal-ocean.webp') ?>" alt="Windmills and white buildings along the coastline"></div>
                         <div>
                             <p>Europe's Leading Cruise Line for 17 years in a row. Unpack once and wake up to a new, iconic city nearly every day. With the most port-rich itineraries and overnight stays, you'll have plenty of time to explore. Discover Northern Europe's picturesque towns or the sun-drenched Mediterranean. Or fall in love with Santorini's iconic blue domes. Visit a wide variety of ports when you choose from any 4- to 19-day cruises. Cruisetour and hotel packages available.</p>
-                            <div class="card-buttons"><a href="<?php echo site_url('/vacations/quote'); ?>" class="button-yellow">Get a Quote</a></div>
+                            <div class="card-buttons"><a href="<?php echo site_url('/quote'); ?>" class="button-yellow">Get a Quote</a></div>
                         </div>
                     </div>
             </section>
@@ -75,7 +75,7 @@ get_header();
                         <div><img src="<?php echo get_theme_file_uri('/img/whale.webp') ?>" alt="A whale jumping out of the water with a snowy mountain in the background."></div>
                         <div>
                             <p>When you cruise with Norwegian, the awe of Alaska stays with you throughout your cruise. From hiking up snow-capped mountains and witnessing majestic whales splash in the Pacific to coming back on board and savoring a superb meal at a specialty restaurant, catching an amazing show followed by a starlit stroll on the top deck. Choose from a wide variety of sailings expanding from 7- to 16-day itineraries. Cruisetour and hotel packages available.</p>
-                            <div class="card-buttons"><a href="<?php echo site_url('/vacations/quote'); ?>" class="button-yellow">Get a Quote</a></div>
+                            <div class="card-buttons"><a href="<?php echo site_url('/quote'); ?>" class="button-yellow">Get a Quote</a></div>
                         </div>
                     </div>
             </section>
@@ -90,7 +90,7 @@ get_header();
                         <div><img src="<?php echo get_theme_file_uri('/img/couple-and-lighthouse.webp') ?>" alt="A couple posing in front of a lighthouse surrounded by palm trees."></div>
                         <div>
                             <p>Once you've seen one island, you have to see them all. From Eastern to Western to Southern, Norwegian has been named Caribbean's Leading Cruise Line for 11 years in a row - World Travel Awards. Paradise awaits with 7 convenient departure ports, so you can explore dozens of itineraries from 3 to 15 days long. Whichever beautiful destination you choose, there's always a reason to come back to The Caribbean with Norwegian Cruise Line.</p>
-                            <div class="card-buttons"><a href="<?php echo site_url('/vacations/quote'); ?>" class="button-yellow">Get a Quote</a></div>
+                            <div class="card-buttons"><a href="<?php echo site_url('/quote'); ?>" class="button-yellow">Get a Quote</a></div>
                         </div>
                     </div>
             </section>
@@ -105,7 +105,7 @@ get_header();
                         <div><img src="<?php echo get_theme_file_uri('/img/palm-trees.webp') ?>" alt="Many palm trees along a sandy beach path and a green mountain view."></div>
                         <div>
                             <p>Only Norwegian visits four uniquely different islands in seven days - with overnight stays in Maui and Kaua'i. Hike along a majestic waterfall, step back in time during a visit to Pearl Harbor and then take in the dazzling show at an authentic lu'au. Or dive deeper into paradise on an unique Hawai'i & French Polynesia cruise. Choose from 6- to 18-day cruises from cities including Honolulu, Papeete (Tahiti) and Vancouver. Cruisetour and hotel packages available.</p>
-                            <div class="card-buttons"><a href="<?php echo site_url('/vacations/quote'); ?>" class="button-yellow">Get a Quote</a></div>
+                            <div class="card-buttons"><a href="<?php echo site_url('/quote'); ?>" class="button-yellow">Get a Quote</a></div>
                         </div>
                     </div>
             </section>
@@ -120,7 +120,7 @@ get_header();
                         <div><img src="<?php echo get_theme_file_uri('/img/princess-cruise.webp') ?>" alt="Large cruise ship view in open water."></div>
                         <div>
                             <p>Sail from over 400+ ports across the globe. Explore Asia, Australia & New Zealand, Bermuda, the Mexican Riviera or an Extraordinary Journey, Norwegian's uniquely designed itineraries that allow you a more immersive experience. Whether you're island-hoping or crossing oceans to destinations far and away, sail aboard Norwegian Cruise Line for a vacation you'll never forget. Variety of Cruisetour and hotel packages available for multiple destinations.</p>
-                            <div class="card-buttons"><a href="<?php echo site_url('/vacations/quote'); ?>" class="button-yellow">Get a Quote</a></div>
+                            <div class="card-buttons"><a href="<?php echo site_url('/quote'); ?>" class="button-yellow">Get a Quote</a></div>
                         </div>
                     </div>
             </section>
@@ -152,7 +152,7 @@ get_header();
                         <div><img src="<?php echo get_theme_file_uri('/img/disney-dream-cruise.webp') ?>" alt="A close-up view of the Disney Dream name across the side of the cruise ship."></div>
                         <div>
                             <p>A Dream Come True. Let your imagination set sail. Be front-and-center at original Broadway-caliber live shows, dine on artfully prepared meals in wondrously themed restaurants and make a splash on the AquaDuck. Combining classic beauty and modern luxury with legendary Disney storytelling, the award-winning Disney Dream invites you to embark on an unforgettable voyage where dreams really do come true.</p>
-                            <div class="card-buttons"><a href="<?php echo site_url('/vacations/quote'); ?>" class="button-yellow">Get a Quote</a></div>
+                            <div class="card-buttons"><a href="<?php echo site_url('/quote'); ?>" class="button-yellow">Get a Quote</a></div>
                         </div>
                     </div>
             </section>
@@ -167,7 +167,7 @@ get_header();
                         <div><img src="<?php echo get_theme_file_uri('/img/disney-mouses-on-the-air-balloon.webp') ?>" alt="Mickey and Minnie standing together on a golden, gated, and adorned hot air balloon."></div>
                         <div>
                             <p>Magic happens when iconic Disney, Pixar and Marvel heroes and villains spring to life on board the Disney Destiny, the newest ship in the Disney Cruise Line fleet. The Maiden Voyage sets sail on November 20, 2025, kicking off an inaugural season of 4- and 5-night cruises from Fort Lauderdale to The Bahamas and Western Caribbean.</p>
-                            <div class="card-buttons"><a href="<?php echo site_url('/vacations/quote'); ?>" class="button-yellow">Get a Quote</a></div>
+                            <div class="card-buttons"><a href="<?php echo site_url('/quote'); ?>" class="button-yellow">Get a Quote</a></div>
                         </div>
                     </div>
             </section>
@@ -183,7 +183,7 @@ get_header();
                         <div>
 							<p>Fantasy Becomes Reality.</p>
                             <p>Chart a course for adventure and wonder aboard the Disney Fantasy—where elegance and sophistication mingle with storytelling and whimsy.</p>
-                            <div class="card-buttons"><a href="<?php echo site_url('/vacations/quote'); ?>" class="button-yellow">Get a Quote</a></div>
+                            <div class="card-buttons"><a href="<?php echo site_url('/quote'); ?>" class="button-yellow">Get a Quote</a></div>
                         </div>
                     </div>
             </section>
@@ -199,7 +199,7 @@ get_header();
                         <div>
 							<p>Magic at Sea</p>
                             <p>Created with your entire family in mind, the Disney Magic combines classic nostalgia and modern amenities with Disney's world-famous service.</p>
-                            <div class="card-buttons"><a href="<?php echo site_url('/vacations/quote'); ?>" class="button-yellow">Get a Quote</a></div>
+                            <div class="card-buttons"><a href="<?php echo site_url('/quote'); ?>" class="button-yellow">Get a Quote</a></div>
                         </div>
                     </div>
             </section>
@@ -214,7 +214,7 @@ get_header();
                         <div><img src="<?php echo get_theme_file_uri('/img/disney-treasure.webp') ?>" alt="A full outer view of the Disney Treasure cruise ship."></div>
                         <div>
                             <p>Set your compass toward the Disney Treasure, the newest ship in the Disney Cruise Line fleet, where the spirit of adventure meets the daring tales of classic Disney films and Disney park attractions—sailing 7-night Eastern and Western Caribbean itineraries beginning December 2024.</p>
-                            <div class="card-buttons"><a href="<?php echo site_url('/vacations/quote'); ?>" class="button-yellow">Get a Quote</a></div>
+                            <div class="card-buttons"><a href="<?php echo site_url('/quote'); ?>" class="button-yellow">Get a Quote</a></div>
                         </div>
                     </div>
             </section>
@@ -230,7 +230,7 @@ get_header();
                         <div>
 							<p>A Wish Come True</p>
                             <p>Experience enchantment on board the Disney Wish, where fantastical worlds and beloved stories from Disney, Marvel, Star Wars and Pixar are brought to life like never before.</p>
-                            <div class="card-buttons"><a href="<?php echo site_url('/vacations/quote'); ?>" class="button-yellow">Get a Quote</a></div>
+                            <div class="card-buttons"><a href="<?php echo site_url('/quote'); ?>" class="button-yellow">Get a Quote</a></div>
                         </div>
                     </div>
             </section>
@@ -246,7 +246,7 @@ get_header();
                         <div>
 							<p>Where Wonders Never Cease</p>
                             <p>Embark on a journey aboard the Disney Wonder—featuring modern amenities and can't-miss entertainment, surrounded by lavish art nouveau details inspired by the grand era of early 20th-century cruising.</p>
-                            <div class="card-buttons"><a href="<?php echo site_url('/vacations/quote'); ?>" class="button-yellow">Get a Quote</a></div>
+                            <div class="card-buttons"><a href="<?php echo site_url('/quote'); ?>" class="button-yellow">Get a Quote</a></div>
                         </div>
                     </div>
             </section>

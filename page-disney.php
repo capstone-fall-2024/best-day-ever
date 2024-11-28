@@ -31,7 +31,7 @@ get_header();
 			</div>
 			<div>
 				<p>We help you create unforgettable memories with our customized Disney Vacations! From enchanting park experiences, character meet-and-greets, cruising around the world, or a tropical get-away, we help you so you can just focus on the magic. </p>
-				<a href="<?php echo site_url('/vacations/quote'); ?>" class="btn-primary">Get a Quote</a>
+				<a href="<?php echo site_url('/quote'); ?>" class="btn-primary">Get a Quote</a>
 			</div>
 		</div><!-- End Disney Intro -->
 
@@ -53,7 +53,7 @@ get_header();
 
 							<div class="card-buttons">
 								<a href="https://www.disneytravelcenter.com/MIN-000000000095428/sites++walt-disney-world++walt-disney-world/" target="_blank" class="btn-primary">Learn More</a>
-								<a href="<?php echo site_url('/vacations/quote'); ?>" class="button-secondary">Get a Quote</a>
+								<a href="<?php echo site_url('/quote'); ?>" class="button-secondary">Get a Quote</a>
 							</div>
 						</div>
 					</div>
@@ -74,7 +74,7 @@ get_header();
 
 							<div class="card-buttons">
 								<a href="https://www.disneytravelcenter.com/MIN-000000000095428/sites++disneyland++disneyland/" target="_blank" class="btn-primary">Learn More</a>
-								<a href="<?php echo site_url('/vacations/quote'); ?>" class="button-secondary">Get a Quote</a>
+								<a href="<?php echo site_url('/quote'); ?>" class="button-secondary">Get a Quote</a>
 							</div>
 						</div>
 					</div>
@@ -95,7 +95,7 @@ get_header();
 
 							<div class="card-buttons">
 								<a href="https://www.disneytravelcenter.com/MIN-000000000095428/sites++disney-cruise-line++disney-cruise-line/" target="_blank" class="btn-primary">Learn More</a>
-								<a href="<?php echo site_url('/vacations/quote'); ?>" class="button-secondary">Get a Quote</a>
+								<a href="<?php echo site_url('/quote'); ?>" class="button-secondary">Get a Quote</a>
 							</div>
 						</div>
 					</div>
@@ -116,7 +116,7 @@ get_header();
 
 							<div class="card-buttons">
 								<a href="https://www.disneytravelcenter.com/MIN-000000000095428/sites++aulani++aulani/" target="_blank" class="btn-primary">Learn More</a>
-								<a href="<?php echo site_url('/vacations/quote'); ?>" class="button-secondary">Get a Quote</a>
+								<a href="<?php echo site_url('/quote'); ?>" class="button-secondary">Get a Quote</a>
 							</div>
 						</div>
 					</div>
@@ -137,7 +137,7 @@ get_header();
 
 							<div class="card-buttons">
 								<a href="https://www.disneytravelcenter.com/MIN-000000000095428/sites++adventures-by-disney++adventures-by-disney/" target="_blank" class="btn-primary">Learn More</a>
-								<a href="<?php echo site_url('/vacations/quote'); ?>" class="button-secondary">Get a Quote</a>
+								<a href="<?php echo site_url('/quote'); ?>" class="button-secondary">Get a Quote</a>
 							</div>
 						</div>
 					</div>
@@ -158,7 +158,7 @@ get_header();
 
 							<div class="card-buttons">
 								<a href="https://www.disneytravelcenter.com/MIN-000000000095428/sites++national-geographic-expeditions++national-geographic-expeditions/" target="_blank" class="btn-primary">Learn More</a>
-								<a href="<?php echo site_url('/vacations/quote'); ?>" class="button-secondary">Get a Quote</a>
+								<a href="<?php echo site_url('/quote'); ?>" class="button-secondary">Get a Quote</a>
 							</div>
 						</div>
 					</div>
