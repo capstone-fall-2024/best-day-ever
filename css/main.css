@@ -181,7 +181,8 @@ body .blog-card h4, body .blog-card .h4 {
 }
 
 .wp-block-button.footer-btn-quote .wp-block-button__link,
-.wp-block-button.quote-primary .wp-block-button__link {
+.wp-block-button.quote-primary .wp-block-button__link,
+.wp-block-button.learn-more .wp-block-button__link {
   height: 50px;
   color: #320507;
   font-weight: 700;
@@ -198,7 +199,8 @@ body .blog-card h4, body .blog-card .h4 {
   width: 100%;
 }
 .wp-block-button.footer-btn-quote .wp-block-button__link:hover,
-.wp-block-button.quote-primary .wp-block-button__link:hover {
+.wp-block-button.quote-primary .wp-block-button__link:hover,
+.wp-block-button.learn-more .wp-block-button__link:hover {
   background-color: #30453b;
   color: #fff;
   border: 2px solid #30453b;
@@ -226,7 +228,7 @@ body .blog-card h4, body .blog-card .h4 {
   border: 2px solid #30453b;
 }
 
-.wp-block-button.learn-more .wp-block-button__link {
+.wp-block-button.meet-jen .wp-block-button__link {
   height: 50px;
   color: #320507;
   font-weight: 700;
@@ -241,8 +243,9 @@ body .blog-card h4, body .blog-card .h4 {
   text-decoration: none;
   transition: all 0.3s ease-in-out;
   width: 100%;
+  font-size: 1rem;
 }
-.wp-block-button.learn-more .wp-block-button__link:hover {
+.wp-block-button.meet-jen .wp-block-button__link:hover {
   background-color: #30453b;
   color: #fff;
   border: 2px solid #30453b;
@@ -15428,11 +15431,6 @@ a {
   width: 80%;
   max-width: 1280px;
   margin: 0 auto;
-}
-
-.wp-block-cover:nth-of-type(1) {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
 }
 
 .actual-content .wp-block-cover {
