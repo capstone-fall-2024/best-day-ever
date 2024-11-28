@@ -1,9 +1,9 @@
 <?php
 
 /**
- * The template for displaying Honeymoon & Wedding Page
+ * The template for displaying All Inclusive and More Page
  *
- * This is the template that displays Honeymoon & Wedding Page.
+ * This is the template that displays All Inclusive and More Page.
  * Please note that this is the WordPress construct of pages
  * and that other 'pages' on your WordPress site may use a
  * different template.
@@ -16,36 +16,36 @@
 get_header();
 ?>
 
-<main id="primary" class="site-main hw-page">
+<main id="primary" class="site-main all-inclusive-page">
 	<section>
 		<?php the_title('<h2 class="entry-title">', '</h2>'); ?>
 
 		<?php the_content(); ?>
 
-		<!-- Wedding Section -->
-		<section class="wedding-intro">
+		<!-- All Inclusive Section -->
+		<section class="all-inclusive-intro">
 			<div class="container">
-				<h3>Wedding Packages</h3>
+				<h3>Our All Inclusive Trips</h3>
 				<div>
-					<img src="<?php echo get_theme_file_uri('/img/wedding-packages.webp') ?>" class="img-rounded" alt="A bride and groom linking arms as they are getting married.">
+					<img src="<?php echo get_theme_file_uri('/img/surfing.webp') ?>" class="img-rounded" alt="Someone surfing and hitting a wave.">
 				</div>
 				<div>
-					<p>Honeymoons and Destination weddings are as unique as the couples themselves. We help you find the destinations of your dreams. Whether you would like to be married on a cruise ship, Las Vegas, Tropical or something completely unique we will make your special day perfect! We work with you and our vendor's wedding specialists so that you don't ever have to worry. </p>
+					<p>We don't just do Disney and Cruises! We can plan vacations all around the world! Whether you are looking for a beautiful beach vaycay, a European tour, or even something unique like Antarctica, we can help you plan the vacation you want. We excel at planning vacations specific to you, no matter where you want to travel. We are continuously learning about new and exciting destinations so you will never run out of options!</p>
 					<a href="<?php echo site_url('/quote'); ?>" class="btn-primary">Get a Quote</a>
 				</div>
 			</div>
 
-			<!--Wedding Cards -->
+			<!--All Inclusive Cards -->
 			<?php
 				$posts_query = new WP_Query(
 					array(
-						'post_type' => 'wedding-trip'
+						'post_type' => 'all-inclusive-trip'
 					)
 				);
 			?>
 			<?php if ($posts_query->have_posts()): ?>
 			<?php while ($posts_query->have_posts()): $posts_query->the_post(); ?>
-				<section class="container flower-decor">
+				<section class="container">
 					<div class="vacation-card">
 						<div>
 							<h4><?php echo the_title(); ?></h4> 
@@ -61,7 +61,6 @@ get_header();
 							</div>
 						</div>
 					</div>
-					<img src="<?php echo get_theme_file_uri('/img/flower.png') ?>" alt="A black and white floral border decoration.">
 				</section>
 			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>
@@ -70,34 +69,33 @@ get_header();
 					<p>We currently don't have any package options for this right now.</p>
 					<p>Check back later or <a href="<?php echo site_url('/contact-jen'); ?>">Contact Me</a> if you're looking for anything specific!</p>
 				</div>
-			<?php endif; ?><!--End Wedding Cards -->
-		</section><!-- End Wedding Section -->
+			<?php endif; ?><!--End All Inclusive Cards -->
+		</section><!-- End All Inclusive Section -->
 
 
-		<!-- Honeymoon Section -->
-		<section class="honeymoon-intro">
+		<!-- Unique Section -->
+		<section class="unique-intro">
 			<div class="container">
-				<h3>Honeymoon Packages</h3>
+				<h3>Theme Parks, Unique Vacations, & More</h3>
 				<div>
-					<img src="<?php echo get_theme_file_uri('/img/couple-kissing.webp') ?>" class="img-rounded" alt="A couple kissing while sitting at the beach.">
+					<img src="<?php echo get_theme_file_uri('/img/a-girl-playing-at-the-beach.webp') ?>" class="img-rounded" alt="A little girl playing at the beach in a duck-themed floatie.">
 				</div>
 				<div>
-					<p>Looking for an amazing honeymoon? Look no further! No matter your style or your dream we can make your dreams come true! We work with you to create a honeymoon that you will remember for years to come.</p>
 					<a href="<?php echo site_url('/quote'); ?>" class="btn-primary">Get a Quote</a>
 				</div>
 			</div>
 
-			<!--Honeymoon Cards -->
+			<!-- Theme Park Cards -->
 			<?php
 				$posts_query = new WP_Query(
 					array(
-						'post_type' => 'honeymoon-trip'
+						'post_type' => array('theme-park', 'other-vacation')
 					)
 				);
 			?>
 			<?php if ($posts_query->have_posts()): ?>
 			<?php while ($posts_query->have_posts()): $posts_query->the_post(); ?>
-				<section class="container flower-decor">
+				<section class="container">
 					<div class="vacation-card">
 						<div>
 							<h4><?php echo the_title(); ?></h4> 
@@ -113,7 +111,6 @@ get_header();
 							</div>
 						</div>
 					</div>
-					<img src="<?php echo get_theme_file_uri('/img/flower.png') ?>" alt="A black and white floral border decoration.">
 				</section>
 			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>
@@ -123,8 +120,7 @@ get_header();
 					<p>Check back later or <a href="<?php echo site_url('/contact-jen'); ?>">Contact Me</a> if you're looking for anything specific!</p>
 				</div>
 			<?php endif; ?>
-		
-		</section><!-- End Wedding Section -->
+		</section><!-- End Unique Section -->
 
 
 		<!-- Testimonials -->

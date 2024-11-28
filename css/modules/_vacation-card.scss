@@ -92,7 +92,7 @@
   }
 
   .vacation-card-group {
-    vacation-card:last-of-type {
+    .vacation-card:last-of-type {
       flex-grow: 2;
     }
 
