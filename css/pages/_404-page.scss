@@ -1,0 +1,29 @@
+.error-404 {
+  > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  img {
+    max-width: 300px;
+  }
+
+  p {
+    font-size: clamp(1rem, 0.8049rem + 0.9756vw, 1.5rem);
+  }
+
+  a {
+    width: 170px;
+  }
+}
+
+@media (min-width: 768px) {
+  .error-404 {
+    img {
+      max-width: 500px;
+    }
+  }
+}
