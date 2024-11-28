@@ -125,6 +125,12 @@
             .uacf7-step {
                 position: relative;
 
+                .uacf7-row:last-of-type {
+                    .uacf7-col-6 {
+                        justify-content: space-between;
+                    }
+                }
+                
                 .uacf7-col-4,
                 .uacf7-col-6,
                 .uacf7-col-12 {
@@ -139,10 +145,6 @@
                         flex-direction: column;
                         gap: 12px;
                     }
-                
-                &:last-of-type {
-                    justify-content: space-between;
-                }
 
                     span {
                         input {
