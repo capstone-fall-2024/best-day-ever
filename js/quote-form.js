@@ -14,9 +14,13 @@ if(quotePage) {
             quoteForm.classList.add(`step-${step}`);
         }
 
+        const validatedForm = () => {
+            return !quoteForm.classList.contains('wpcf7-invalid')
+        }
+
         nextBtns.forEach((btn) => {
             btn.addEventListener('click', () => {
-                if(currentStep < progressSteps.length - 1) {
+                if(validate() && currentStep < progressSteps.length - 1) {
                     progressSteps[currentStep].classList.remove('active');
                     currentStep++;
                     progressSteps[currentStep].classList.add('active');
