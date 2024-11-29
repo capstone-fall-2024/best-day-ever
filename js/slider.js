@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerView: 1,
         spaceBetween: 10,
         breakpoints: {
-            750: {
+            768: {
                 slidesPerView: 3,
                 grid: {
                     rows: 2,

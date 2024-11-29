@@ -52,16 +52,16 @@ function display_special_deals()
                 $post_query->the_post();
 
                 $deals_description = get_field('deal_description');
-                echo '<div class="deal-content">';
+                echo '<div class="info">';
                 echo '<h4>' . get_the_title() . '</h4>';
                 echo '<p>' . esc_html($deals_description) . '</p>';
-                echo '</div>';
             }
         } else {
             echo '<p>No posts found for this category.</p>';
         }
         
         echo '<a href="' . esc_url(site_url('/special-deals')) . '" class="btn-primary">Learn More</a>';
+        echo '</div>';
         echo '</div>';
 
         wp_reset_postdata();

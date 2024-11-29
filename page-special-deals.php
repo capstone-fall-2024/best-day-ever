@@ -21,15 +21,18 @@ get_header();
             <h3>Norwegian Cruise Lines</h3>
             <div class="intro">
                 <img src="<?php echo get_theme_file_uri('/img/meal-on-the-cruise.webp') ?>" alt="A fancy on the cruises">
-                <div class="intro-content">
-                    <h4 class="deals-title">Fall into Savings for Your Next Vacation</h4>
-                    <p class="deals-content">Make your Disney Cruise Line reservation with us before 09/30/2024 and receive incredible shipboard credits to spend on your cruise and exclusive gift!</p>
+                
+                <div class="right-content">
+                    <div class="intro-content">
+                        <h4 class="deals-title">Fall into Savings for Your Next Vacation</h4>
+                        <p class="deals-content">Make your Disney Cruise Line reservation with us before 09/30/2024 and receive incredible shipboard credits to spend on your cruise and exclusive gift!</p>
+                    </div>
+                    <div class="intro-content">
+                        <h4 class="deals-title">Save 70% Off 2nd Guest</h4>
+                        <p class="deals-content">Disney Cruise Line changes their discounts and special offers weekly, if not more, so be sure to check back each week to see what’s new!</p>
+                    </div>
+                    <a href="<?php echo site_url('/vacations/cruises'); ?>" class="btn-primary">View Our Cruise</a>
                 </div>
-                <div class="intro-content">
-                    <h4 class="deals-title">Save 70% Off 2nd Guest</h4>
-                    <p class="deals-content">Disney Cruise Line changes their discounts and special offers weekly, if not more, so be sure to check back each week to see what’s new!</p>
-                </div>
-                <a href="<?php echo site_url('/vacations/cruises'); ?>" class="btn-primary">View Our Cruise</a>
             </div>
 
             <!-- Each cards deal -->
@@ -73,29 +76,35 @@ get_header();
                 </div>
 
                 <div class="swiper-arrows">
-                    <div class="swiper-button-prev"><i class="bi bi-arrow-left-circle"></i></div>
-                    <div class="swiper-button-next"><i class="bi bi-arrow-right-circle"></i></div>
+                    <div class="swiper-button-prev deals-prev"><i class="bi bi-arrow-left-circle"></i></div>
+                    <div class="swiper-button-next deals-next"><i class="bi bi-arrow-right-circle"></i></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Special Deals -->
-    <section>
+    <section class="container other-deals">
         <?php get_template_part('parts/special-deals'); ?>
     </section>
 
     <!-- Jennifer Section -->
-    <div class="jen-contact">
-        <p>Have any questions about our deals? Still unsure about which trip is right for you?</p>
-        <p>Get in touch with Jen or check the FAQ!</p>
+    <div class="container jen-contact">
+        <div class="message">
+            <p>Have any questions about our deals? Still unsure about which trip is right for you?</p>
+            <p>Get in touch with Jen or check the FAQ!</p>
+            <div class="btns-tablet">
+            <a href="<?php echo site_url('/contact-jen'); ?>" class="btn-primary">Contact Jen</a>
+            <a href="<?php echo site_url('/contact-jen#faqs'); ?>" class="button-secondary">FAQs</a>
+        </div>
+        </div>
         <div class="social-media">
             <img src="<?php echo get_theme_file_uri('/img/facebook.png') ?>" alt="Facebook Icon">
             <img src="<?php echo get_theme_file_uri('/img/instagram.png') ?>" alt="Instagram Icon">
         </div>
-        <img src="<?php echo get_theme_file_uri('/img/pixabay-woman-portrait.jpg') ?>" alt="Jennifer Portrait Image">
+        <img src="<?php echo get_theme_file_uri('/img/pixabay-woman-portrait.jpg') ?>" alt="Jennifer Portrait Image" class="portrait">
         
-        <div>
+        <div class="btns-mobile">
             <a href="<?php echo site_url('/contact-jen'); ?>" class="btn-primary">Contact Jen</a>
             <a href="<?php echo site_url('/contact-jen#faqs'); ?>" class="button-secondary">FAQs</a>
         </div>
