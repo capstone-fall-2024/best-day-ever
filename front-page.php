@@ -51,7 +51,7 @@ get_header();
 	<!-- SPECIAL DEALS -->
 	<section class="container home-specials">
 		<h3>Special Deals</h3>
-			<div>
+			<div class="deals-content">
 				<?php get_template_part('parts/special-deals-home'); ?>
 			</div>
 
