@@ -31,6 +31,7 @@ function display_special_deals()
     foreach ($categories as $category => $posts) {
         $random_image = $posts[array_rand($posts)];
         $featured_image = get_field('deal_featured_image', $random_image);
+        echo '<div class="deals-promo">';
         echo '<h3>' . esc_html($category) . '</h3>';
         if (!empty($featured_image)) {
             echo '<img src="'.$featured_image.'" alt="' . esc_attr(get_the_title()) . '"/>';
@@ -47,21 +48,24 @@ function display_special_deals()
 
         $category_query = new WP_Query($args);
 
+        echo '<div class="promo-content">';
         if ($category_query->have_posts()) {
             while ($category_query->have_posts()) {
                 $category_query->the_post();
 
                 $deals_description = get_field('deal_description');
-
+                echo '<div class="promo-info">';
                 echo '<h4>' . get_the_title() . '</h4>';
                 echo '<p>' . esc_html($deals_description) . '</p>';
+                echo '</div>';
             }
         } else {
             echo '<p>No posts found for this category.</p>';
         }
         
         echo '<a href="' . esc_url(site_url('/quote')) . '" class="btn-primary">Get a Quote</a>';
-
+        echo '</div>';
+        echo '</div>';
         wp_reset_postdata();
     }
 }

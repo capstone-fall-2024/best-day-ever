@@ -11917,7 +11917,9 @@ body .specialties-slider h4, body .specialties-slider .h4,
 body .testimonial h4,
 body .testimonial .h4,
 body .blog-card h4,
-body .blog-card .h4 {
+body .blog-card .h4,
+body .special-deals h4,
+body .special-deals .h4 {
   font-size: clamp(1.25rem, 1.1364rem + 0.5682vw, 1.5rem);
 }
 
@@ -13767,7 +13769,7 @@ h4,
 }
 
 .row {
-  margin-bottom: 100px;
+  margin-bottom: 2.5rem;
 }
 .row .blog-card {
   border-radius: 10px;
@@ -15053,6 +15055,7 @@ h4,
 }
 .special-deals .deals-banner-content p {
   color: #0a0a0a;
+  text-align: center;
 }
 .special-deals .deals-banner-content p:first-child {
   font-family: "Young Serif", serif;
@@ -15062,6 +15065,7 @@ h4,
 }
 .special-deals .cruise {
   margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 .special-deals .cruise .intro {
   display: flex;
@@ -15074,6 +15078,12 @@ h4,
   border-radius: 10px;
   box-shadow: 0px 6px 4px 0px rgba(50, 5, 7, 0.25);
 }
+.special-deals .cruise .intro .right-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+}
 .special-deals .cruise .swiper .swiper-wrapper .swiper-slide {
   flex-direction: column;
   gap: 1rem;
@@ -15083,7 +15093,137 @@ h4,
 }
 .special-deals .cruise .swiper .swiper-arrows {
   bottom: 1.5rem;
-  width: 20%;
+  width: 28%;
+}
+@media screen and (min-width: 420px) {
+  .special-deals .cruise .swiper .swiper-arrows {
+    width: 22%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .special-deals .cruise .swiper .swiper-arrows {
+    display: none;
+  }
+}
+.special-deals .other-deals {
+  margin-bottom: 4rem;
+}
+.special-deals .other-deals .deals-promo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+.special-deals .other-deals .deals-promo img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 6px 4px 0px rgba(50, 5, 7, 0.25);
+}
+.special-deals .jen-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: #f9efe6;
+  margin-bottom: 4rem;
+}
+.special-deals .jen-contact .message .btns-tablet {
+  display: none;
+}
+.special-deals .jen-contact img.portrait {
+  order: -2;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  width: 100px;
+  border-radius: 50%;
+}
+.special-deals .jen-contact .social-media {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.special-deals .jen-contact .social-media img {
+  width: 25%;
+  height: auto;
+}
+.special-deals .jen-contact .btns-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .special-deals .deals-banner-content {
+    max-width: 50vw;
+  }
+  .special-deals .cruise h3, .special-deals .cruise .h3 {
+    margin-bottom: 2rem;
+  }
+  .special-deals .cruise .intro {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .special-deals .cruise .intro img {
+    width: 40%;
+    max-width: 50%;
+  }
+  .special-deals .cruise .right-content a {
+    width: 50%;
+  }
+  .special-deals .other-deals .deals-promo {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .special-deals .other-deals .deals-promo h3, .special-deals .other-deals .deals-promo .h3 {
+    width: 100%;
+  }
+  .special-deals .other-deals .deals-promo img {
+    width: 40%;
+  }
+  .special-deals .other-deals .deals-promo .promo-content {
+    width: 55%;
+  }
+  .special-deals .other-deals .deals-promo .promo-content a {
+    width: 40%;
+  }
+  .special-deals .other-deals .deals-promo:nth-child(odd) {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+  .special-deals .jen-contact {
+    flex-direction: row;
+  }
+  .special-deals .jen-contact .message .btns-tablet {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  .special-deals .jen-contact .message .btns-tablet {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .special-deals .jen-contact .social-media {
+    flex-direction: column;
+    width: 150px;
+    align-items: center;
+  }
+  .special-deals .jen-contact img.portrait {
+    width: 150px;
+    order: 1;
+  }
+  .special-deals .jen-contact .btns-mobile {
+    display: none;
+  }
 }
 
 .error-404 > div {
@@ -15421,7 +15561,6 @@ h4,
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 6px 4px 0px rgba(50, 5, 7, 0.25);
-  margin: 2.5rem 2rem;
   padding: 4rem 1rem;
   display: flex;
   flex-direction: column;
@@ -15432,6 +15571,7 @@ h4,
 @media screen and (min-width: 1400px) {
   .subscription .subscription-container {
     width: 55vw;
+    margin: 2.5rem 2rem;
   }
 }
 .subscription .subscription-container h3, .subscription .subscription-container .h3 {
@@ -15443,8 +15583,13 @@ h4,
 }
 .subscription .subscription-container .wp-block-tnp-minimal {
   margin: 0;
-  width: 80%;
+  width: 100%;
   padding: 0;
+}
+@media screen and (min-width: 1400px) {
+  .subscription .subscription-container .wp-block-tnp-minimal {
+    width: 80%;
+  }
 }
 
 .tnp-subscription-minimal form {
@@ -15482,12 +15627,17 @@ h4,
   transition: all 0.3s ease-in-out;
   width: 100%;
   font-size: 1rem;
-  max-width: 30vw;
+  width: 100%;
 }
 .tnp-subscription-minimal form input.tnp-submit:hover {
   background-color: #30453b;
   color: #fff;
   border: 2px solid #30453b;
+}
+@media screen and (min-width: 550px) {
+  .tnp-subscription-minimal form input.tnp-submit {
+    width: 30vw;
+  }
 }
 @media screen and (min-width: 900px) {
   .tnp-subscription-minimal form {
