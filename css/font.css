@@ -17,7 +17,11 @@ h2,
 h3,
 h4,
 h5,
-h6,
+h6 {
+  line-height: 1.5;
+  font-family: "Young Serif", serif;
+}
+
 p {
   line-height: 1.5;
 }
@@ -66,4 +70,4 @@ body .blog-card h4 {
 .vacation-buttons p {
   font-family: "Young Serif", serif;
   font-size: clamp(1rem, 0.6585rem + 1.7073vw, 1.875rem);
-}/*# sourceMappingURL=fonts.css.map */
+} 

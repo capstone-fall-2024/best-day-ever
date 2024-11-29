@@ -1,0 +1,59 @@
+.special-deals {
+    h3 {
+        color: $dark-red;
+    }
+    h4 {
+        color: $dark-green;
+    }
+
+    .deals-banner-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $cream;
+        padding: 2.5rem;
+        border-radius: 10px;
+        border: 1px solid $dark-red;
+        p {
+            color: $off-black;
+            &:first-child {
+                font-family: "Young Serif", serif;
+                font-size: clamp(2rem, 1.5455rem + 2.2727vw, 3rem);
+                color: $dark-red;
+                text-shadow: 3px 5px 2px rgba(50, 5, 7, 0.3137254902);
+            }
+        }
+    }
+
+    .cruise {
+        margin-top: 4rem;
+        .intro {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            img {
+                aspect-ratio: 1 / 1;
+                object-fit: cover;
+                border-radius: 10px;
+                box-shadow: 0px 6px 4px 0px rgba(50, 5, 7, 0.25);
+            }
+        }
+
+        .swiper {
+            .swiper-wrapper {
+                .swiper-slide {
+                    flex-direction: column;
+                    gap: 1rem;
+                    &.swiper-slide-next,
+                    &.swiper-slide-next {
+                        transform: none;
+                    }
+                }
+            }
+            .swiper-arrows {
+                bottom: 1.5rem;
+                width: 30%;
+            }
+        }
+    }
+}

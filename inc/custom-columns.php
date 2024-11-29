@@ -20,14 +20,14 @@ function populate_category_column($column, $post_id) {
         $category_value = get_field('category', $post_id);
 
 		$category_choices = array(
-			'walt-disney-world'    => 'Walt Disney World',
-            'disneyland-resort'    => 'Disneyland Resort',
-            'disney-cruise-line'   => 'Disney Cruise Line',
-            'aulani-resort-spa'    => 'Aulani Resort & Spa',
-            'adventures-by-disney' => 'Adventures by Disney',
-            'nat-geo-expeditions'  => 'Nat Geo Expeditions',
-            'honeymoon-wedding'    => 'Honeymoon & Wedding',
-            'all-inclusive'        => 'All Inclusive',
+			'Walt Disney World' => 'Walt Disney World',
+            'Disneyland Resort' => 'Disneyland Resort',
+            'Disney Cruise Line' => 'Disney Cruise Line',
+            'Aulani Resort & Spa' => 'Aulani Resort & Spa',
+            'Adventures by Disney' => 'Adventures by Disney',
+            'Nat Geo Expeditions' => 'Nat Geo Expeditions',
+            'Honeymoon & Wedding' => 'Honeymoon & Wedding',
+            'All Inclusive' => 'All Inclusive',
 		);
 
 		if($category_value && isset($category_choices[$category_value])) {

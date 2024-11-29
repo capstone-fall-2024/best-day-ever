@@ -3,11 +3,12 @@
 //Map
 
 //Merge Map
-@import "base/variables";
-@import "base/fonts";
-@import "components/button";
 @import "bootstrap/scss/bootstrap";
-@import "layout/header";
+@import "base/_variables";
+@import "base/_fonts";
+@import "components/_button";
+@import "layout/_header";
+@import "layout/_footer";
 
 // Home Page
 @import "modules/_home-banner";
@@ -24,43 +25,45 @@
 @import "pages/_all-inclusive-page";
 
 // Category Page
-@import "modules/blog-posts";
+@import "modules/_blog-posts";
 
 // About Jen Page
-@import "modules/about-jen";
+@import "modules/_about-jen";
 
 // Single Blog Page
-@import "modules/single-banner";
-@import "modules/single-content";
-@import "modules/single-inspired-section";
-@import "modules/meet-jen-widget";
+@import "modules/_single-banner";
+@import "modules/_single-content";
+@import "modules/_single-inspired-section";
+@import "modules/_meet-jen-widget";
 
 //Quote Page
 @import "pages/_quote-page";
 
 //Contact Page
-@import "pages/contact_page";
+@import "pages/_contact_page";
+
+//Special Deals Page
+@import "pages/_special_deals";
 
 //Error 404 Page
 @import "pages/_404-page";
 
 //Slider
-@import "modules/slider";
-@import "modules/specialties";
+@import "modules/_slider";
+@import "modules/_specialties";
 
 //Subscription
-@import "modules/subscription";
+@import "modules/_subscription";
 
 //Instagram
-@import "modules/instagram";
+@import "modules/_instagram";
 
 //Accordion FAQs
-@import "modules/faqs";
+@import "modules/_faqs";
 
 //Search Result
-@import "modules/search";
+@import "modules/_search";
 
-@import "layout/footer";
 
 // Then add additional custom code here
 /******************* LAYOUT ********************/
