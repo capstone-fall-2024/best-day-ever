@@ -34,8 +34,8 @@ function display_specialties_slider_shortcode()
                 ?>
             </div>
             <div class="swiper-arrows">
-                <div class="swiper-button-prev"><i class="bi bi-arrow-left-circle"></i></div>
-                <div class="swiper-button-next"><i class="bi bi-arrow-right-circle"></i></div>
+                <div class="swiper-button-prev specialties-prev"><i class="bi bi-arrow-left-circle"></i></div>
+                <div class="swiper-button-next specialties-next"><i class="bi bi-arrow-right-circle"></i></div>
             </div>
         </div>
 <?php
