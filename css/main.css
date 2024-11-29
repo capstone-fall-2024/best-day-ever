@@ -11921,6 +11921,11 @@ body .blog-card .h4 {
   font-size: clamp(1.25rem, 1.1364rem + 0.5682vw, 1.5rem);
 }
 
+.wp-block-cover .title-dropshadow:first-of-type,
+.wp-block-cover .title-dropshadow:last-of-type {
+  font-family: "Young Serif", serif;
+}
+
 .vacation-buttons p {
   font-family: "Young Serif", serif;
   font-size: clamp(1rem, 0.6585rem + 1.7073vw, 1.875rem);
@@ -12927,6 +12932,9 @@ div.menu-additional-info-footer-container {
   border-radius: 0.625rem;
   box-shadow: 0 6px 4px rgba(50, 5, 7, 0.1450980392);
 }
+.home-banner-backdrop a {
+  width: 170px;
+}
 .home-banner-backdrop ul {
   margin: 0;
   padding: 0;
@@ -13450,18 +13458,31 @@ h4,
   color: #320507;
   width: 100%;
 }
-.hw-page .wedding-intro > div,
-.hw-page .honeymoon-intro > div {
+.hw-page .wedding-intro > div:first-of-type,
+.hw-page .honeymoon-intro > div:first-of-type {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
 }
-.hw-page .wedding-intro > div img,
-.hw-page .honeymoon-intro > div img {
+.hw-page .wedding-intro > div:first-of-type img,
+.hw-page .honeymoon-intro > div:first-of-type img {
   aspect-ratio: 5/4;
   object-fit: cover;
+}
+.hw-page .wedding-intro .container.text-center,
+.hw-page .honeymoon-intro .container.text-center {
+  margin: 6rem auto;
+  font-size: 1.125rem;
+}
+.hw-page .wedding-intro .container.text-center a,
+.hw-page .honeymoon-intro .container.text-center a {
+  color: #ce5927;
+}
+.hw-page .wedding-intro .container.text-center a:hover,
+.hw-page .honeymoon-intro .container.text-center a:hover {
+  color: #30453b;
 }
 .hw-page .wedding-intro > div div,
 .hw-page .honeymoon-intro > div div {
@@ -13491,21 +13512,21 @@ h4,
 }
 
 @media (min-width: 768px) {
-  .hw-page .wedding-intro > div,
-  .hw-page .honeymoon-intro > div {
+  .hw-page .wedding-intro > div:first-of-type,
+  .hw-page .honeymoon-intro > div:first-of-type {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr auto 1fr;
     row-gap: 1rem;
     column-gap: 1.5rem;
   }
-  .hw-page .wedding-intro > div div:first-of-type,
-  .hw-page .honeymoon-intro > div div:first-of-type {
+  .hw-page .wedding-intro > div:first-of-type div:first-of-type,
+  .hw-page .honeymoon-intro > div:first-of-type div:first-of-type {
     grid-column: 2/span 1;
     grid-row: 1/span 4;
   }
-  .hw-page .wedding-intro > div div:last-of-type,
-  .hw-page .honeymoon-intro > div div:last-of-type {
+  .hw-page .wedding-intro > div:first-of-type div:last-of-type,
+  .hw-page .honeymoon-intro > div:first-of-type div:last-of-type {
     grid-column: 1/span 1;
     grid-row: 3/span 1;
   }
@@ -13536,16 +13557,29 @@ h4,
   color: #320507;
   width: 100%;
 }
-.all-inclusive-page .all-inclusive-intro > div,
-.all-inclusive-page .unique-intro > div {
+.all-inclusive-page .all-inclusive-intro .container.text-center,
+.all-inclusive-page .unique-intro .container.text-center {
+  margin: 6rem auto;
+  font-size: 1.125rem;
+}
+.all-inclusive-page .all-inclusive-intro .container.text-center a,
+.all-inclusive-page .unique-intro .container.text-center a {
+  color: #ce5927;
+}
+.all-inclusive-page .all-inclusive-intro .container.text-center a:hover,
+.all-inclusive-page .unique-intro .container.text-center a:hover {
+  color: #30453b;
+}
+.all-inclusive-page .all-inclusive-intro > div:first-of-type,
+.all-inclusive-page .unique-intro > div:first-of-type {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
 }
-.all-inclusive-page .all-inclusive-intro > div img,
-.all-inclusive-page .unique-intro > div img {
+.all-inclusive-page .all-inclusive-intro > div:first-of-type img,
+.all-inclusive-page .unique-intro > div:first-of-type img {
   aspect-ratio: 5/4;
   object-fit: cover;
 }
@@ -13571,21 +13605,21 @@ h4,
 }
 
 @media (min-width: 768px) {
-  .all-inclusive-page .all-inclusive-intro > div,
-  .all-inclusive-page .unique-intro > div {
+  .all-inclusive-page .all-inclusive-intro > div:first-of-type,
+  .all-inclusive-page .unique-intro > div:first-of-type {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr auto 1fr;
     row-gap: 1rem;
     column-gap: 1.5rem;
   }
-  .all-inclusive-page .all-inclusive-intro > div div:first-of-type,
-  .all-inclusive-page .unique-intro > div div:first-of-type {
+  .all-inclusive-page .all-inclusive-intro > div:first-of-type div:first-of-type,
+  .all-inclusive-page .unique-intro > div:first-of-type div:first-of-type {
     grid-column: 2/span 1;
     grid-row: 1/span 4;
   }
-  .all-inclusive-page .all-inclusive-intro > div div:last-of-type,
-  .all-inclusive-page .unique-intro > div div:last-of-type {
+  .all-inclusive-page .all-inclusive-intro > div:first-of-type div:last-of-type,
+  .all-inclusive-page .unique-intro > div:first-of-type div:last-of-type {
     grid-column: 1/span 1;
     grid-row: 3/span 1;
   }
