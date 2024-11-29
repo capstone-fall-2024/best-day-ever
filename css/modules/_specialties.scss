@@ -61,8 +61,12 @@
         position: absolute;
         bottom: 1rem;
         left: calc((100%/2) - 50px);
-        width: 18%;
+        width: 25%;
         z-index: 10;
+
+        @media screen and (min-width: 750px) {
+            width: 18%;
+        }
 
         .swiper-button-next,
         .swiper-button-prev {
