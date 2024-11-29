@@ -193,3 +193,31 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const dealsContainer = document.querySelector('.deals-cards')
+
+    if(!dealsContainer) {
+        return
+    };
+
+    const dealsSlider = new Swiper(".deals-cards", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        slidesPerView: 1,
+        spaceBetween: 10,
+        breakpoints: {
+            750: {
+                slidesPerView: 3,
+                grid: {
+                    rows: 2,
+                    fill: 'row',
+                },
+                allowTouchMove: false,
+            }
+        }
+
+    })
+})

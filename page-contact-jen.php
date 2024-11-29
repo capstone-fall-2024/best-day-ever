@@ -12,10 +12,10 @@ get_header();
 ?>
 
 <main id="primary" class="site-main">
-    <section class="container">
-        <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
-        <?php the_content(); ?>
-
+    <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+    <?php the_content(); ?>
+    
+    <section class="container" id="faqs">
         <?php if (is_active_sidebar('accordion-faqs')) {
             dynamic_sidebar('accordion-faqs');
         }
