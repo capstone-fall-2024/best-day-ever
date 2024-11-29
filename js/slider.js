@@ -153,8 +153,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const specialtiesSlider = new Swiper(".specialties-slider", {
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".specialties-next",
+            prevEl: ".specialties-prev",
         },
         centeredSlides: true,
         breakpoints: {
@@ -203,8 +203,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const dealsSlider = new Swiper(".deals-cards", {
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".deals-next",
+            prevEl: ".deals-prev",
         },
         slidesPerView: 1,
         spaceBetween: 10,
