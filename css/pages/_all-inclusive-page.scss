@@ -8,7 +8,21 @@
       width: 100%;
     }
 
-    > div {
+    .container.text-center {
+      margin: 6rem auto;
+
+      font-size: 1.125rem;
+
+      a {
+        color: $dark-orange;
+      }
+
+      a:hover {
+        color: $dark-green;
+      }
+    }
+
+    > div:first-of-type {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
@@ -46,8 +60,8 @@
 
 @media (min-width: 768px) {
   .all-inclusive-page {
-    .all-inclusive-intro > div,
-    .unique-intro > div {
+    .all-inclusive-intro > div:first-of-type,
+    .unique-intro > div:first-of-type {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr auto 1fr;
