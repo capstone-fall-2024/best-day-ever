@@ -23,48 +23,36 @@ function display_special_deals()
             }
         }
     } else {
-        echo '<p>No posts found in the initial query.</p>';
+        echo '<p>No posts found.</p>';
     }
 
     wp_reset_postdata();
 
     foreach ($categories as $category => $posts) {
-        $random_image = $posts[array_rand($posts)];
-        $featured_image = get_field('deal_featured_image', $random_image);
+        
         echo '<div class="deals-promo">';
         echo '<h3>' . esc_html($category) . '</h3>';
-        if (!empty($featured_image)) {
-            echo '<img src="'.$featured_image.'" alt="' . esc_attr(get_the_title()) . '"/>';
-        }
 
-        $args = array(
-            'post_type' => 'special-deal', // Correct post type
-            'posts_per_page' => 2,
-            'orderby' => 'date',
-            'order' => 'DESC',
-            'post__in' => $posts,
-            'post_status' => 'publish',
-        );
-
-        $category_query = new WP_Query($args);
-
-        echo '<div class="promo-content">';
-        if ($category_query->have_posts()) {
-            while ($category_query->have_posts()) {
-                $category_query->the_post();
-
-                $deals_description = get_field('deal_description');
-                echo '<div class="promo-info">';
-                echo '<h4>' . get_the_title() . '</h4>';
-                echo '<p>' . esc_html($deals_description) . '</p>';
-                echo '</div>';
+        foreach ($posts as $post_id) {
+            $deal_title = get_the_title($post_id);
+            $deal_image = get_field('deal_featured_image', $post_id);
+            $deal_description = get_field('deal_description', $post_id);
+            $deal_url = get_field('deal_url', $post_id);
+            
+            echo '<div class="deals-item">';
+            if(!empty($deal_image)) {
+                echo '<img src="' . esc_url($deal_image) .'" alt="'. esc_attr($deal_title) .'"/>';
             }
-        } else {
-            echo '<p>No posts found for this category.</p>';
+            echo '<div class="promo-info">';
+            echo '<h4>' . $deal_title . '</h4>';
+            echo '<p>' . esc_html($deal_description) . '</p>';
+            echo '<div class="cta-btns">';
+            echo '<a href="' . esc_url(site_url('/quote')) . '" class="btn-primary">Get a Quote</a>';
+            echo '<a href="' . esc_url($deal_url) . '" class="button-secondary">Learn More</a>';
+            echo '</div>';
+            echo '</div>';
+            echo '</div>';
         }
-        
-        echo '<a href="' . esc_url(site_url('/quote')) . '" class="btn-primary">Get a Quote</a>';
-        echo '</div>';
         echo '</div>';
         wp_reset_postdata();
     }
