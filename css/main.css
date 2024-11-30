@@ -16041,7 +16041,6 @@ section.instagram #sb_instagram #sbi_load a.sbi_load_btn:hover {
 
 .page-header .page-title {
   text-align: center;
-  margin-bottom: 5rem;
 }
 
 .breadcrumbs {
@@ -16059,6 +16058,12 @@ section.instagram #sb_instagram #sbi_load a.sbi_load_btn:hover {
   text-decoration: underline;
 }
 
+.row .breadcrumbs-search a {
+  color: #0a0a0a;
+}
+.row .breadcrumbs-search a:hover {
+  text-decoration: underline;
+}
 .row .search-result {
   list-style: none;
 }

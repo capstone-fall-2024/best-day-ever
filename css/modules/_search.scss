@@ -29,7 +29,7 @@
 .page-header{
   .page-title{
     text-align: center;
-    margin-bottom: 5rem;
+    
   }
 }
 
@@ -50,6 +50,15 @@
 }
 
 .row{
+  .breadcrumbs-search{
+  
+    a{
+        color: $off-black;
+      }
+    a:hover{
+        text-decoration: underline;
+      }
+  }
   .search-result{
     list-style: none;
     h4:hover{
