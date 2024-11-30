@@ -158,11 +158,11 @@
 
 
         <?php
-        if (count_blog_posts('all-inclusive, miscellaneous ') > 0) { ?>
+        if (count_blog_posts('all-inclusive, miscellaneous, Boutique ') > 0) { ?>
             <section id="all-inclusive">
                 <div class="container">
                     <h3>All Inclusive &amp; More Travel Blog</h3>
-                    <?php display_category_posts('all-inclusive, miscellaneous', 3) ?>
+                    <?php display_category_posts('all-inclusive, miscellaneous, Boutique', 3) ?>
                     <!-- Use category slug here as well -->
 
                     <div class="link-main-category">

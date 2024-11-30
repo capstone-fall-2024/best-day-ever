@@ -21,6 +21,7 @@ get_header();
 			while (have_posts()):
 				the_post();
 				?>
+
 				<div class="single-blog-banner">
 					<div class="img-background">
 						<?php if (has_post_thumbnail()): ?>
@@ -37,6 +38,11 @@ get_header();
 				<article class="single-blog">
 					<div class="main-content">
 						<h3 class="hide-heading">Heading 3 - Main Blog</h3>
+						<?php
+						if (function_exists('yoast_breadcrumb')) {
+							yoast_breadcrumb('<p class="breadcrumbs" id="breadcrumbs">', '</p>');
+						}
+						?>
 						<div class="blogger-banner">
 							<div class="profile-blogger">
 								<div class="profile-img-blogger">
