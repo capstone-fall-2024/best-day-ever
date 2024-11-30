@@ -4,7 +4,7 @@
 		<h2>Blog</h2>
 		<section class="banner-for-section">
 			<h3>Banner</h3>
-			<div class="banner">
+			<div class="banner-blog">
 				<div class="banner_container">
 					<div class="banner-section">
 						<?php
@@ -20,7 +20,7 @@
 								<div><span class="span1">Blog</span><span class="span2">Featured Post</span></div>
 								<h4><?php the_title(); ?></h4>
 								<p><?php the_excerpt(); ?></p>
-								<a class="button-primary" href="<?php the_permalink(); ?>">View Post</a>
+								<a class="btn-primary custom-width" href="<?php the_permalink(); ?>">View Post</a>
 							</div>
 							<div class="image-banner-section">
 								<a href="<?php the_permalink(); ?>">

@@ -15304,7 +15304,8 @@ h4,
 }
 .special-deals .other-deals .deals-promo img {
   aspect-ratio: 1/1;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 10px;
   box-shadow: 0px 6px 4px 0px rgba(50, 5, 7, 0.25);
 }
@@ -15324,7 +15325,8 @@ h4,
 .special-deals .jen-contact img.portrait {
   order: -2;
   aspect-ratio: 1/1;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100px;
   border-radius: 50%;
 }
@@ -15424,7 +15426,8 @@ h4,
 }
 .home-specials .deals-content .special-deal-card img {
   aspect-ratio: 1/1;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 10px;
   box-shadow: 0px 6px 4px 0px rgba(50, 5, 7, 0.25);
 }
@@ -16038,6 +16041,29 @@ section.instagram #sb_instagram #sbi_load a.sbi_load_btn:hover {
 
 .page-header .page-title {
   text-align: center;
+  margin-bottom: 5rem;
+}
+
+.breadcrumbs {
+  padding: 0 5%;
+}
+@media (min-width: 1024px) {
+  .breadcrumbs {
+    padding: 0;
+  }
+}
+.breadcrumbs a {
+  color: #0a0a0a;
+}
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.row .search-result {
+  list-style: none;
+}
+.row .search-result h4:hover, .row .search-result .h4:hover {
+  text-decoration: underline;
 }
 
 /******************* LAYOUT ********************/

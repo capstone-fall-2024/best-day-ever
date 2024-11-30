@@ -27,32 +27,45 @@ get_header();
 			<div class="container">
 				<div class="row">
 
+					<?php
+					if (function_exists('yoast_breadcrumb')) {
+						yoast_breadcrumb('<p class="breadcrumbs" id="breadcrumbs">', '</p>');
+					}
+					?>
+
 					<?php while (have_posts()):
 						the_post(); ?>
-						<div class="col-12 col-sm-12 col-md-6 col-lg-4 mt-5"> <!-- Responsive columns -->
-							<article class="blog-card">
 
-								<a href="<?php the_permalink(); ?>">
-									<?php if (has_post_thumbnail()): ?>
-										<img class="blog-card__card-img" src="<?php echo get_the_post_thumbnail_url(); ?>"
-											alt="<?php the_title(); ?>" loading="lazy">
-									<?php else: ?>
-										<div class="blog-card__card-img"></div> <!-- Placeholder for missing image -->
-									<?php endif; ?>
+						<ol class="search-result">
+							<li>
+								<a class="content-post__title-post" href="<?php the_permalink(); ?>">
+									<h4><?php the_title(); ?></h4>
 								</a>
+								<p>
+									<?php
+									$meta_description = get_post_meta(get_the_ID(), 'meta_description', true);
+									if (!$meta_description) {
+										$meta_description = get_post_meta(get_the_ID(), '_yoast_wpseo_metadesc', true); // Yoast SEO
+									}
 
-								<div class="content-post">
-									<a class="content-post__title-post" href="<?php the_permalink(); ?>">
-										<h4><?php the_title(); ?></h4>
-									</a>
+									if (!$meta_description) {
+										$meta_description = get_post_meta(get_the_ID(), '_rank_math_description', true); // Rank Math
+									}
 
-									<div class="content-post__btn-post">
-										<a href="<?php the_permalink(); ?>" class="button-blog-card">View More</a>
-									</div>
-								</div>
+									if (!$meta_description) {
+										$meta_description = get_the_excerpt();
+									}
 
-							</article>
-						</div>
+									if (strlen($meta_description) > 150) {
+										$meta_description = wp_trim_words($meta_description, 30, '...');
+									}
+									?>
+									<?php echo esc_html($meta_description) ?>
+								</p>
+							</li>
+						</ol>
+
+
 					<?php endwhile;
 	else:
 
