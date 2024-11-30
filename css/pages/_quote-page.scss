@@ -1,4 +1,9 @@
 /** Quote Form Step **/
+.form-header {
+    font-family: "Young Serif", serif;
+    font-size: clamp(2rem, 1.5455rem + 2.2727vw, 3rem);
+}
+
 .quote-page {
     background: url("../img/tropical-abstract-bg6.webp") center center / cover no-repeat;
     padding-bottom: 7rem;
@@ -20,7 +25,7 @@
     box-shadow: 0px 6px 4px 0px rgba($dark-red, 0.25);
     border: 1px solid rgba($dark-red, 0.25);
     z-index: 2;
-    width: 70%;
+    width: 80%;
     max-width: 960px;
 
     @media screen and (min-width: 1024px) {
@@ -30,10 +35,17 @@
     &.step-1 {
         padding: 3rem 1.5rem 4rem;
         transition: padding 0.3s ease-in-out;
+        @media screen and (min-width: 950px) {
+            padding-bottom: 0;
+        }
     }
 
     &.step-2 {
-        padding: 3rem 1.5rem 4rem;
+        padding: 3rem 1.5rem 7rem;
+        transition: padding 0.3s ease-in-out;
+        @media screen and (min-width: 800px) {
+            padding-bottom: 4rem;
+        }
     }
 
     .steps-container {
@@ -96,7 +108,7 @@
                 }
 
                 @media screen and (min-width: 800px) {
-                    width: calc(100% + 20vw);
+                    width: calc(100% + 22vw);
                 }
             }
 
@@ -181,14 +193,14 @@
     
                         .uacf7-next {
                             width: 150px !important;
-                            @include button-base($light-orange, 1px solid $light-orange);
+                            @include button-base($light-orange, 2px solid $light-orange);
                             grid-row: row2;
                             grid-column: 5 / span 1;
     
                             &:hover {
                                 background-color: $white;
                                 color: $dark-green;
-                                border: 1px solid $dark-green;
+                                border: 2px solid $dark-green;
                             }
                         }
     
@@ -211,17 +223,18 @@
                         width: 100%;
 
                         input {
-                            @include button-base($white, 1px solid $dark-green);
+                            @include button-base($white, 2px solid $dark-green);
                             max-width: 220px;
                             min-width: fit-content;
                             padding: 0 10px;
+                            order: 1;
                         }
 
                         p {
                             .uacf7-prev {
                                 width: 150px !important;
                                 min-width: 210px;
-                                @include button-base($light-orange, 1px solid $light-orange);
+                                @include button-base($light-orange, 2px solid $light-orange);
 
                                 &:hover {
                                     background-color: $white;
@@ -241,19 +254,20 @@
                             grid-template-columns: repeat(9, 1fr);
 
                             input {
-                                grid-column: 4 / span 1;
+                                grid-column: 6 / span 1;
                                 grid-row-start: row2;
                                 margin-top: 5px;
                             }
 
                             span.wpcf7-spinner {
                                 order: 0;
-                                grid-column-start: 3;
+                                grid-column-start: 5;
+                                justify-self: center;
                                 margin: 0;
                             }
 
                             p {
-                                grid-column: 6 / span 1;
+                                grid-column: 4 / span 1;
                                 grid-row-start: row2;
                                 margin: 0;
                             }
@@ -301,6 +315,22 @@
         }
     }
 }
+
+/** Failed notice from Contact Form 7 **/
+.wpcf7-form {
+    .wpcf7-response-output {
+        position: absolute;
+        bottom: -9%;
+        color: $white;
+        margin: 0;
+        padding: 0;
+
+        @media screen and (min-width: 1024px) {
+            bottom: -6%;
+        }
+    }
+}
+
 
 /** Quote Form Confirmation **/
 .confirmation-container {

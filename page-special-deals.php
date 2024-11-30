@@ -89,7 +89,7 @@ get_header();
     </section>
 
     <!-- Jennifer Section -->
-    <div class="container jen-contact">
+    <div class="jen-contact">
         <div class="message">
             <p>Have any questions about our deals? Still unsure about which trip is right for you?</p>
             <p>Get in touch with Jen or check the FAQ!</p>

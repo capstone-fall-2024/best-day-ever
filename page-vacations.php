@@ -56,45 +56,13 @@ get_header();
 		
 		<!-- SPECIAL DEALS -->
 		<section class="container home-specials">
-			<h3>Special Deals</h3>
-			<div>
-				<?php
-				$posts_query = new WP_Query(
-					array(
-						'post_type' => 'special-deal',
-						'posts_per_page' => 3
-					)
-				);
-				?>
-
-				<?php if ($posts_query->have_posts()): ?>
-					<?php $counter = 1; ?>
-					<?php while ($posts_query->have_posts()): $posts_query->the_post(); ?>
-						<?php
-							$layout = ($counter % 2 == 0) ? 'layout-reversed' : 'layout-default';
-						?>
-						<section class="<?php echo $layout; ?>">
-
-							<div>
-								<img class="img-rounded" src="<?php echo esc_url(get_field('deal_featured_image')['url']); ?>"
-									alt="Featured image of <?php the_title(); ?>" loading="lazy">
-							</div>
-
-							<div>
-								<h4><?php echo the_title(); ?></h4>
-								<p><?php echo get_field('deal_description'); ?></p>
-								<a href="<?php echo get_field('deal_url'); ?>" class="btn-primary">Learn More</a>
-							</div>
-
-						</section>
-						<?php $counter++; ?>
-					<?php endwhile; ?>
-					<?php wp_reset_postdata(); ?>
-				<?php endif; ?>
+		<h3>Special Deals</h3>
+			<div class="deals-content">
+				<?php get_template_part('parts/special-deals-home'); ?>
 			</div>
 
-			<a href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/special-deals/">Check out more<span><i class="bi bi-arrow-right"></i></span></a>
-		</section>
+		<a href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/special-deals/">Check out more<span><i class="bi bi-arrow-right"></i></span></a>
+	</section>
 
 		<!-- Testimonials -->
 		<section class="testimonials">

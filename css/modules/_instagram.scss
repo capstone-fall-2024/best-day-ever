@@ -7,21 +7,26 @@ section.instagram {
         align-items: center;
         text-align: center;
         position: relative;
-        width: 100%;
+        
 
         a {
             text-decoration: underline;
             color: $light-orange;
         }
 
-        &::before,
-        &::after {
-            content: '';
-            flex: 1;
-            height: 0;
-            border-top: 2px dotted $dark-red;
-            margin: 0 10px;
+        @media screen and (min-width: 400px) {
+            width: 100%;
+            
+            &::before,
+            &::after {
+                content: '';
+                flex: 1;
+                height: 0;
+                border-top: 2px dotted $dark-red;
+                margin: 0 10px;
+            }
         }
+
     }
 
     #sb_instagram {
