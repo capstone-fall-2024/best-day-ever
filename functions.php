@@ -378,3 +378,40 @@ function theme_testing_parts_setup()
 }
 add_action('after_setup_theme', 'theme_testing_parts_setup');
 
+/**
+ * Add validation for phone number and child ages format in the Form
+ */
+function custom_validate_phone_and_child_ages($result, $tag) {
+	$name = $tag->name;
+	$value = isset($_POST[$name]) ? sanitize_text_field($_POST[$name]) : ''; 
+
+	if($name === 'mobile-phone') {
+		$digits_only = preg_replace('/\D/', '', $value);
+		if (strlen($digits_only) !== 10) {
+            $result->invalidate($tag, 'Please enter a valid phone number with exactly 10 digits.');
+        } else {
+            $formatted_number = '(' . substr($digits_only, 0, 3) . ') ' . substr($digits_only, 3, 3) . '-' . substr($digits_only, 6);
+            $_POST[$name] = $formatted_number;
+        }
+	}
+	
+	if($name === 'home-phone') {
+		$digits_only = preg_replace('/\D/', '', $value);
+		if ($name === 'mobile-phone' || $name === 'home-phone') {
+			if (!preg_match('/^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$/', $value)) {
+				$result->invalidate($tag, 'Please enter a valid phone number (e.g., 123-456-7890).');
+			}
+		}
+	}
+
+	 // Validation for child ages
+	 if ($name === 'child-ages') { // Replace 'child-ages' with your actual field name
+        if (!preg_match('/^\d+(,\s?\d+)*$/', $value)) {
+            $result->invalidate($tag, 'Please enter only numbers separated by commas, e.g., "2, 3" or just "2".');
+        }
+    }
+
+	return $result;
+}
+add_filter('wpcf7_validate_text*', 'custom_validate_phone_and_child_ages', 20, 2);
+add_filter('wpcf7_validate_text', 'custom_validate_phone_and_child_ages', 20, 2);
