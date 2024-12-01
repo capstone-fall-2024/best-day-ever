@@ -19,7 +19,7 @@
         }
     
         .contact-form {
-            .wpcf7 form {
+            form {
                 max-width: 100%;
                 width: 100%;
                 
@@ -42,7 +42,7 @@
                     }
         
                     .wpcf7-submit {
-                        @include button-base($light-orange, 1px solid $light-orange);
+                        @include button-base($light-orange, 2px solid $light-orange);
                     }
                 }
             }
@@ -91,11 +91,11 @@
             grid-template-columns: repeat(2, 1fr) !important;
     
             .contact-form {
-                .wpcf7 form {
+                form {
                     .form-layout {
                         span {
                             input {
-                                min-width: 40vw;
+                                min-width: 25vw;
                             }
                         }
                         .wpcf7-submit {

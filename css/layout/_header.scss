@@ -343,7 +343,7 @@
     }
 
     .cta-mobile {
-      @include button-base($light-orange, 1px solid $light-orange);
+      @include button-base($light-orange, 2px solid $light-orange);
       text-transform: uppercase;
       border-radius: 0;
       margin-bottom: 1rem;

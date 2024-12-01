@@ -17,8 +17,8 @@
     margin-bottom: 2rem;
   }
 
-  a {
-    @include button-base($light-orange, 1px solid $light-orange);
+  a{
+    @include button-base($light-orange, 2px solid $light-orange);
     width: auto;
     text-transform: uppercase;
     font-weight: 500;
