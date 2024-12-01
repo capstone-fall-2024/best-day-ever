@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Function to initialize progress steps after the form is loaded
+
     const initializeProgressSteps = () => {
         const quoteForm = document.querySelector('.wpcf7');
         const nextBtns = document.querySelectorAll('.uacf7-next');
