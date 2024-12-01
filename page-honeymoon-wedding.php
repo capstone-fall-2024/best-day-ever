@@ -23,11 +23,11 @@ get_header();
 		<?php the_content(); ?>
 
 		<!-- Wedding Section -->
-		<section class="wedding-intro">
+		<section class="wedding-intro" id="wedding">
 			<div class="container">
 				<h3>Wedding Packages</h3>
 				<div>
-					<img src="<?php echo get_theme_file_uri('/img/wedding-packages.webp') ?>" class="img-rounded" alt="A bride and groom linking arms as they are getting married.">
+					<img srcset="<?php echo get_theme_file_uri('/img/wedding-packages-sm.webp') ?> 450w, <?php echo get_theme_file_uri('/img/wedding-packages-lg.webp') ?> 650w" class="img-rounded" alt="A bride and groom linking arms as they are getting married." width="650px" height="433px">
 				</div>
 				<div>
 					<p>Honeymoons and Destination weddings are as unique as the couples themselves. We help you find the destinations of your dreams. Whether you would like to be married on a cruise ship, Las Vegas, Tropical or something completely unique we will make your special day perfect! We work with you and our vendor's wedding specialists so that you don't ever have to worry. </p>
@@ -75,11 +75,11 @@ get_header();
 
 
 		<!-- Honeymoon Section -->
-		<section class="honeymoon-intro">
+		<section class="honeymoon-intro" id="honeymoon">
 			<div class="container">
 				<h3>Honeymoon Packages</h3>
 				<div>
-					<img src="<?php echo get_theme_file_uri('/img/couple-kissing.webp') ?>" class="img-rounded" alt="A couple kissing while sitting at the beach.">
+					<img srcset="<?php echo get_theme_file_uri('/img/couple-kissing-sm.webp') ?> 450w, <?php echo get_theme_file_uri('/img/couple-kissing-lg.webp') ?> 650w" class="img-rounded" alt="A couple kissing while sitting at the beach." width="650px" height="433px">
 				</div>
 				<div>
 					<p>Looking for an amazing honeymoon? Look no further! No matter your style or your dream we can make your dreams come true! We work with you to create a honeymoon that you will remember for years to come.</p>

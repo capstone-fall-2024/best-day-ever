@@ -27,7 +27,7 @@ get_header();
 		<div class="container">
 			<h3>Disney: Your Dream Vacation</h3>
 			<div>
-				<img src="<?php echo get_theme_file_uri('/img/disney-vacation.webp') ?>" class="img-rounded" alt="Mickey Mouse with a family at disney with a castle in the background">
+				<img srcset="<?php echo get_theme_file_uri('/img/disney-vacation-sm.webp')?> 450w, <?php echo get_theme_file_uri('/img/disney-vacation-lg.webp')?> 650w" class="img-rounded" alt="Mickey Mouse with a family at disney with a castle in the background" width="650px" height="520px">
 			</div>
 			<div>
 				<p>We help you create unforgettable memories with our customized Disney Vacations! From enchanting park experiences, character meet-and-greets, cruising around the world, or a tropical get-away, we help you so you can just focus on the magic. </p>
@@ -47,7 +47,7 @@ get_header();
 						<div class="dashed-line"></div>
 					</div>
 					<div>
-						<div><img src="<?php echo get_theme_file_uri('/img/cinderella-castle.webp') ?>" alt="Cinderella's Castle at Walt Disney World Resort in Florida"></div>
+						<div><img srcset="<?php echo get_theme_file_uri('/img/cinderella-castle-sm.webp') ?> 500w, <?php echo get_theme_file_uri('/img/cinderella-castle-lg.webp') ?> 600w" alt="Cinderella's Castle at Walt Disney World Resort in Florida" width="600px" height="399px"></div>
 						<div>
 							<p>Vacation at Disney World Resort in Orlando, Florida! Enjoy attractions themed after Ratatouille, Snow White, Star Wars, and more! Meet your favorite characters and explore the enchanted world of Disney. Tickets, hotel, and anything you need, we will help you get.</p>
 
@@ -68,7 +68,7 @@ get_header();
 						<div class="dashed-line"></div>
 					</div>
 					<div>
-						<div><img src="<?php echo get_theme_file_uri('/img/sleeping-beauty-castle.webp') ?>" alt="Sleeping Beauty's Castle at Walt Disneyland Resort in California"></div>
+						<div><img srcset="<?php echo get_theme_file_uri('/img/sleeping-beauty-castle-sm.webp') ?> 500w, <?php echo get_theme_file_uri('/img/sleeping-beauty-castle-lg.webp') ?> 600w" alt="Sleeping Beauty's Castle at Walt Disneyland Resort in California" width="600px" height="506px"></div>
 						<div>
 							<p>Vacation at Disneyland Resort in Anaheim, California! Enjoy rides themed after Pirates of the Caribbean, Indiana Jones, Finding Nemo, and more! Meet your favorite characters and explore the enchanted world of Disney. Tickets, hotel, and anything you need, we will help you get.</p>
 
@@ -89,7 +89,8 @@ get_header();
 						<div class="dashed-line"></div>
 					</div>
 					<div>
-						<div><img src="<?php echo get_theme_file_uri('/img/disney-cruise.webp') ?>" alt="Two Disney cruise ships in open water"></div>
+						<div><img srcset="<?php echo get_theme_file_uri('/img/disney-cruise-line-sm.webp') ?> 500w,
+						<?php echo get_theme_file_uri('/img/disney-cruise-line-lg.webp') ?> 600w" alt="A Disney cruise ship in open water." width="600px" height="350px"></div>
 						<div>
 							<p>Explore the seas with a relaxing and fantastical Disney cruise. Learn more about all the different cruises Disney has to offer. Pick what suits you best, or we can help!</p>
 
@@ -110,7 +111,7 @@ get_header();
 						<div class="dashed-line"></div>
 					</div>
 					<div>
-						<div><img src="<?php echo get_theme_file_uri('/img/aulani-resort.webp') ?>" alt="A view of Aulani resort from the pool"></div>
+						<div><img srcset="<?php echo get_theme_file_uri('/img/aulani-resort-sm.webp') ?> 500w, <?php echo get_theme_file_uri('/img/aulani-resort-lg.webp') ?> 600w" alt="A view of Aulani resort from the pool" width="600px" height="400px"></div>
 						<div>
 							<p>Discover a family paradise with a touch of magic at Aulani, A Disney Resort & Spa in Ko Olina, Hawai'i. There's something for everyone to enjoy at this award-winning Resort, and so much is included with your stay and more!</p>
 
@@ -131,7 +132,7 @@ get_header();
 						<div class="dashed-line"></div>
 					</div>
 					<div>
-						<div><img src="<?php echo get_theme_file_uri('/img/old-castle.webp') ?>" alt="A scenic, hilly view with an old castle across a bridge."></div>
+						<div><img srcset="<?php echo get_theme_file_uri('/img/old-castle-sm.webp') ?> 500w, <?php echo get_theme_file_uri('/img/old-castle-lg.webp') ?> 600w" alt="A scenic, hilly view with an old castle across a bridge." width="600px" height="400px"></div>
 						<div>
 							<p>Delight in a dream Disney family vacation and gain a lifetime of memories with Adventures by Disney—a leader in guided group travel. Let us be your storyteller as we show you the way, taking you to the exciting destinations you want to visit.</p>
 
@@ -152,7 +153,7 @@ get_header();
 						<div class="dashed-line"></div>
 					</div>
 					<div>
-						<div><img src="<?php echo get_theme_file_uri('/img/natgeo-truck.webp') ?>" alt="A National Geographic truck overlooking a herd of animals."></div>
+						<div><img srcset="<?php echo get_theme_file_uri('/img/natgeo-truck-sm.webp') ?> 500w, <?php echo get_theme_file_uri('/img/natgeo-truck-lg.webp') ?> 600w" alt="A National Geographic truck overlooking a herd of animals." width="600px" height="400px"></div>
 						<div>
 							<p>When you travel with National Geographic on an expedition, you'll enjoy boundless opportunities to be surrounded by natural wonders and exotic wildlife, to explore celebrated archaeological sites, to learn about different cultures and share in local traditions. A National Geographic Expert or expert team accompanies most expeditions, sharing their knowledge and passion for a region and making each experience enriching and unforgettable.</p>
 

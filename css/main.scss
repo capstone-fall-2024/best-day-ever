@@ -1,9 +1,5 @@
-// Include custom variables default overrides here
-
-//Map
-
 //Merge Map
-@import "bootstrap/scss/bootstrap";
+@import "base/_reset";
 @import "base/_variables";
 @import "base/_fonts";
 @import "components/_button";
@@ -63,7 +59,6 @@
 
 //Search Result
 @import "modules/_search";
-
 
 // Then add additional custom code here
 /******************* LAYOUT ********************/

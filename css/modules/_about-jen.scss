@@ -14,60 +14,58 @@
   }
 }
 
-.entry-title-about-jen{
+.entry-title-about-jen {
   display: none;
 }
 
-.about-jen-container{
-
-  @include media(large){
+.about-jen-container {
+  @include media(large) {
     width: 100%;
     background-color: $dark-green;
     margin-bottom: 100px;
   }
 
-  .about-jen{
+  .about-jen {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     align-items: flex-start;
     margin-bottom: 3rem;
-    
-  
-    @include media(large){
+
+    @include media(large) {
       flex-direction: row;
       justify-content: space-between;
       max-width: 1350px;
       margin: 0 auto;
       padding: 0 30px;
     }
-    
-    &__text{
+
+    &__text {
       z-index: 1;
       position: relative;
       padding: 30px 5%;
 
-      @include media(large){
+      @include media(large) {
         margin-right: 50px;
         padding: 50px 3%;
       }
 
-      h2{
+      h2 {
         color: $dark-red;
         text-shadow: 0px 6px 4px rgba(10, 10, 10, 0.25);
       }
 
-      h3{
+      h3 {
         color: $dark-green;
 
-        @include media(large){
+        @include media(large) {
           margin-left: 2rem;
         }
       }
-      
-      .paper-background{
+
+      .paper-background {
         background: url("../img/layer.png") no-repeat center center / cover
-        scroll;
+          scroll;
         position: absolute;
         width: 950px;
         height: auto;
@@ -75,17 +73,17 @@
         bottom: 0;
         left: -100px;
         z-index: -1;
-  
+
         @include media(small) {
           display: none;
         }
-  
-        @include media(medium){
+
+        @include media(medium) {
           display: none;
         }
       }
     }
-    &__img-container{
+    &__img-container {
       width: 100%;
       height: auto;
       background-color: $dark-green;
@@ -93,78 +91,72 @@
       order: -1;
       display: flex;
       justify-content: center;
-  
-      @include media(large){
+
+      @include media(large) {
         background-color: transparent;
         order: 1;
         z-index: 2;
-        // padding-top: 50px;
-
-        // position: sticky;
-        // top: 0; // Distance from the top of the viewport
-        // z-index: 10; 
       }
-  
+
       img {
-        width: 250px; 
-        height: auto; 
-        object-fit: cover; 
+        width: 250px;
+        height: auto;
+        object-fit: cover;
         box-shadow: 10px -10px $dark-orange;
         border-radius: 10px;
-  
-        @include media(medium){
+
+        @include media(medium) {
           width: 300px;
         }
-  
-        @include media(large){
+
+        @include media(large) {
           width: 370px;
         }
       }
-  
     }
   }
-  
 }
 
-.values-container{
+.values-container {
   padding: 0 5%;
   margin-bottom: 3rem;
 
   @include media(medium) {
     display: flex;
+    align-items: center;
     padding: 0 5%;
     gap: 3rem;
   }
-  
+
   @include media(large) {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
     gap: 3rem;
     margin-bottom: 100px;
   }
-  
 
-  &__img-container{
+  &__img-container {
     flex: 1;
     width: 100%;
     height: 100%;
 
-    img{
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
 
-  &__text{
+  &__text {
     flex: 1;
   }
 }
 
-.certifications{
+.certifications {
   padding: 0 5%;
   text-align: center;
 }
