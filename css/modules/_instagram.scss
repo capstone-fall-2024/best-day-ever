@@ -19,13 +19,18 @@ section.instagram {
       color: $dark-green;
     }
 
-    &::before,
-    &::after {
-      content: "";
-      flex: 1;
-      height: 0;
-      border-top: 2px dotted $dark-red;
-      margin: 0 10px;
+      @media screen and (min-width: 400px) {
+          width: 100%;
+
+          &::before,
+          &::after {
+              content: '';
+              flex: 1;
+              height: 0;
+              border-top: 2px dotted $dark-red;
+              margin: 0 10px;
+          }
+      }
     }
   }
 
