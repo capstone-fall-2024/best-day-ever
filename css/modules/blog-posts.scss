@@ -121,6 +121,7 @@
     // padding: 0 5%;
     width: 100%;
     margin: 0 auto;
+    list-style: none;
     font-style: italic;
 
     // background-color: lightblue;
@@ -192,7 +193,7 @@
 //end nav category blog
 
 .row {
-  margin-bottom: 2.5rem;
+  margin-bottom: 100px;
 
   .blog-card {
     border-radius: 10px;
@@ -259,6 +260,7 @@
 }
 
 .pagination ul {
+  list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
@@ -303,8 +305,8 @@
 }
 
 .link-main-category a {
-  color: $dark-red;
-  text-decoration: underline;
+  color: $light-orange;
+  text-decoration: none;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -312,11 +314,10 @@
 }
 
 .link-main-category a:hover {
-  color: $dark-orange;
-  text-decoration: underline;
+  color: $dark-green;
 }
 .link-main-category a span {
-  margin-left: 1rem;
+  margin-left: 2rem;
 }
 .bi-arrow-right {
   font-size: 24px;
