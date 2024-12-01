@@ -41,7 +41,7 @@ get_header();
         </div>
         <div class="about-jen__img-container">
           <figure>
-            <img src="<?php echo get_theme_file_uri('/img/pixabay-woman-portrait.jpg') ?>" alt="A photo of a woman smiling.">
+            <img src="<?php echo get_theme_file_uri('/img/pixabay-woman-portrait.jpg') ?>" alt="A photo of a woman smiling at the camera.">
           </figure>
         </div>
       </div>
@@ -50,7 +50,7 @@ get_header();
     <div class="values-container">
       <div class="values-container__img-container">
         <figure>
-          <img src="<?php echo get_theme_file_uri('/img/lake.jpg') ?>" alt="First person view of sitting on a wooden boat on a lake, surrounded by the mountains." class="img-rounded">
+          <img srcset="<?php echo get_theme_file_uri('/img/lake-sm.webp') ?> 550w, <?php echo get_theme_file_uri('/img/lake-lg.webp') ?> 800w" alt="First person view of sitting on a wooden boat on a lake, surrounded by the mountains." class="img-rounded" width="800px" height="800px">
         </figure>
       </div>
       <div class="values-container__text">
