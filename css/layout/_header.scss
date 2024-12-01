@@ -140,6 +140,11 @@
   .bi-search:hover {
     color: $light-orange;
   }
+
+  .site-header__util a {
+    @include button-base($cream, 1px solid $cream);
+    margin-right: 1rem;
+  }
 }
 
 .sidebar-menu {
@@ -265,14 +270,13 @@
       position: relative;
 
       &__menu-list-mobile {
-        list-style: none;
         padding: 0;
         margin: 0;
 
         li {
           position: relative;
           border-bottom: solid 1px $off-black;
-          list-style: none;
+
           padding: 15px;
 
           a {
@@ -389,11 +393,13 @@
       margin-bottom: 0;
 
       a {
-        color: $dark-orange;
+        color: $dark-red;
+        text-decoration: underline;
       }
 
       a:hover {
-        color: $dark-green;
+        color: $dark-orange;
+        text-decoration: underline;
       }
     }
 
@@ -431,7 +437,6 @@
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        list-style: none;
       }
 
       .menu-header-menu-container ul li {
@@ -566,12 +571,12 @@
     background-color: #fff;
   }
 
-  .cta-homepage {
-    @include button-base($cream, 1px solid $cream);
-    margin-right: 1rem;
-  }
+  // .cta-homepage {
+  //   @include button-base($cream, 1px solid $cream);
+  //   margin-right: 1rem;
+  // }
 
-  .cta-other-page {
+  .site-header__util a {
     @include button-base($light-orange, 1px solid $light-orange);
     margin-right: 1rem;
   }

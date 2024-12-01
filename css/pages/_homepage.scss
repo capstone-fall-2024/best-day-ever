@@ -44,19 +44,19 @@
   }
 
   > a {
-    color: $dark-orange;
-    text-decoration: none;
+    color: $dark-red;
+    text-decoration: underline;
     font-weight: 500;
-    text-transform: capitalize;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 1rem;
     margin-top: 1.5rem;
+  }
 
-    :hover {
-      color: $dark-green;
-    }
+  a:hover {
+    color: $dark-orange;
+    text-decoration: underline;
   }
 }
 

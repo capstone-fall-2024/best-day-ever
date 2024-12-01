@@ -23,11 +23,11 @@ get_header();
 		<?php the_content(); ?>
 
 		<!-- All Inclusive Section -->
-		<section class="all-inclusive-intro">
+		<section class="all-inclusive-intro" id="all-inclusive">
 			<div class="container">
 				<h3>Our All Inclusive Trips</h3>
 				<div>
-					<img src="<?php echo get_theme_file_uri('/img/surfing.webp') ?>" class="img-rounded" alt="Someone surfing and hitting a wave.">
+					<img srcset="<?php echo get_theme_file_uri('/img/surfing-sm.webp') ?> 450w, <?php echo get_theme_file_uri('/img/surfing-lg.webp') ?> 650w" class="img-rounded" alt="Someone surfing and hitting a wave." width="650px" height="433px">
 				</div>
 				<div>
 					<p>We don't just do Disney and Cruises! We can plan vacations all around the world! Whether you are looking for a beautiful beach vaycay, a European tour, or even something unique like Antarctica, we can help you plan the vacation you want. We excel at planning vacations specific to you, no matter where you want to travel. We are continuously learning about new and exciting destinations so you will never run out of options!</p>
@@ -74,11 +74,11 @@ get_header();
 
 
 		<!-- Unique Section -->
-		<section class="unique-intro">
+		<section class="unique-intro" id="unique-vacations">
 			<div class="container">
 				<h3>Theme Parks, Unique Vacations, & More</h3>
 				<div>
-					<img src="<?php echo get_theme_file_uri('/img/a-girl-playing-at-the-beach.webp') ?>" class="img-rounded" alt="A little girl playing at the beach in a duck-themed floatie.">
+					<img srcset="<?php echo get_theme_file_uri('/img/a-girl-playing-at-the-beach-sm.webp') ?> 450w, <?php echo get_theme_file_uri('/img/a-girl-playing-at-the-beach-lg.webp') ?> 650w" class="img-rounded" alt="A little girl playing at the beach in a duck-themed floatie." width="650px" height="432px">
 				</div>
 				<div>
 					<a href="<?php echo site_url('/quote'); ?>" class="btn-primary">Get a Quote</a>

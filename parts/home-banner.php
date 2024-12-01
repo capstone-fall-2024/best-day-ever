@@ -8,8 +8,10 @@
         </div>
 
         <div class="stacked-images">
-            <img src="<?php echo get_theme_file_uri('/img/momdaughter-disney.webp') ?>" alt="Mom and daughter with Mickey Mouse ears at Disney">
-            <img src="<?php echo get_theme_file_uri('/img/women-beach.webp') ?>" alt="Friends giving a piggyback ride at a tropical beach">
+            <img srcset="<?php echo get_theme_file_uri('/img/momdaughter-disney-sm.webp') ?> 250w, 
+            <?php echo get_theme_file_uri('/img/momdaughter-disney-lg.webp') ?> 450w" alt="Mom and daughter with Mickey Mouse ears at Disney" width="450px" height="335px">
+            <img srcset="<?php echo get_theme_file_uri('/img/women-beach-sm.webp') ?> 250w,
+            <?php echo get_theme_file_uri('/img/women-beach-lg.webp') ?> 450w" alt="Friends giving a piggyback ride at a tropical beach" width="450px" height="313px">
         </div>
 
         <div class="home-banner-backdrop">

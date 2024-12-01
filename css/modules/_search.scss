@@ -1,4 +1,4 @@
-@mixin media($breakpoint){
+@mixin media($breakpoint) {
   @if $breakpoint == large {
     @media (min-width: 1024px) {
       @content;
@@ -6,62 +6,57 @@
   }
 }
 
-.no-results{
+.no-results {
   text-align: center;
   margin: 100px 0;
   padding: 0 5%;
 }
 
 .page-content {
-  p{
+  p {
     margin-bottom: 2rem;
   }
 
-  a{
+  a {
     @include button-base($light-orange, 1px solid $light-orange);
     width: auto;
     text-transform: uppercase;
     font-weight: 500;
   }
-  
 }
 
-.page-header{
-  .page-title{
+.page-header {
+  .page-title {
     text-align: center;
-    
   }
 }
 
-
-.breadcrumbs{
+.breadcrumbs {
   padding: 0 5%;
-  
-  @include media(large){
+
+  @include media(large) {
     padding: 0;
   }
 
-  a{
-      color: $off-black;
-    }
-  a:hover{
-      text-decoration: underline;
-    }
+  a {
+    color: $off-black;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
 }
 
-.row{
-  .breadcrumbs-search{
-  
-    a{
-        color: $off-black;
-      }
-    a:hover{
-        text-decoration: underline;
-      }
+.row {
+  .breadcrumbs-search {
+    a {
+      color: $off-black;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
   }
-  .search-result{
-    list-style: none;
-    h4:hover{
+  .search-result {
+    h4:hover {
       text-decoration: underline;
     }
   }

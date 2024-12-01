@@ -1,47 +1,52 @@
 section.instagram {
+  align-items: center;
+
+  h3.dotted-line {
+    display: flex;
+    color: $dark-red;
     align-items: center;
+    text-align: center;
+    position: relative;
+    width: 100%;
 
-    h3.dotted-line {
-        display: flex;
-        color: $dark-red;
-        align-items: center;
-        text-align: center;
-        position: relative;
-        
-
-        a {
-            text-decoration: underline;
-            color: $light-orange;
-        }
-
-        @media screen and (min-width: 400px) {
-            width: 100%;
-            
-            &::before,
-            &::after {
-                content: '';
-                flex: 1;
-                height: 0;
-                border-top: 2px dotted $dark-red;
-                margin: 0 10px;
-            }
-        }
-
+    a {
+      text-decoration: underline;
+      color: $dark-orange;
     }
 
-    #sb_instagram {
-        #sbi_images {
-            padding: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        #sbi_load {
-            a.sbi_load_btn {
-                @include button-base($light-orange, 2px solid $light-orange);
-                font-size: 1rem;
-                width: fit-content;
-                box-shadow: unset !important;
-            }
-        }
+    a:hover {
+      text-decoration: underline;
+      color: $dark-green;
     }
+
+      @media screen and (min-width: 400px) {
+          width: 100%;
+
+          &::before,
+          &::after {
+              content: '';
+              flex: 1;
+              height: 0;
+              border-top: 2px dotted $dark-red;
+              margin: 0 10px;
+          }
+      }
+    }
+  }
+
+  #sb_instagram {
+    #sbi_images {
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    #sbi_load {
+      a.sbi_load_btn {
+        @include button-base($light-orange, 2px solid $light-orange);
+        font-size: 1rem;
+        width: fit-content;
+        box-shadow: unset !important;
+      }
+    }
+  }
 }

@@ -45,7 +45,7 @@ get_header();
 				</a>
 				<a href="<?php echo site_url('/vacations/all-inclusive'); ?>">
 					<div>
-						<img src="<?php echo get_theme_file_uri('/img/all-inclusive-icon.png') ?>" alt="Graphic of a dish and drink under an umbrella, palm tree and a sun to symbolize All Inclusive.">
+						<img src="<?php echo get_theme_file_uri('/img/all-inclusive-icon.png') ?>" alt="Graphic of a dish and drink under an umbrella, palm tree and a sun to symbolize All Inclusive vacations.">
 						<p>All Inclusive & More</p>
 					</div>
 				</a>
