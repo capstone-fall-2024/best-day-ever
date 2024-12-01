@@ -20,7 +20,7 @@ get_header();
         <div class="cruise">
             <h3>Norwegian Cruise Lines</h3>
             <div class="intro">
-                <img src="<?php echo get_theme_file_uri('/img/meal-on-the-cruise.webp') ?>" alt="A fancy on the cruises">
+                <img srcset="<?php echo get_theme_file_uri('/img/meal-on-the-cruise-sm.webp') ?> 400w, <?php echo get_theme_file_uri('/img/meal-on-the-cruise-lg.webp') ?> 550w" alt="Someone enjoying a fancy meal on a cruise while reading the newspaper." width="550px" height="550px">
                 
                 <div class="right-content">
                     <div class="intro-content">
