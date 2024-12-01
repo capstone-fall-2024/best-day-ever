@@ -1,7 +1,6 @@
-
 /* http://meyerweb.com/eric/tools/css/reset/ 
-  v2.0 | 20110126
-  License: none (public domain)
+   v2.0 | 20110126
+   License: none (public domain)
 */
 html,
 body,
@@ -922,35 +921,13 @@ body .home-specials h4 {
     padding: 20px;
     background-color: #fff;
   }
-  .cta-homepage {
-    height: 50px;
-    color: #320507;
-    font-weight: 700;
-    border-radius: 10px;
-    background-color: #f9efe6;
-    border: 1px solid #f9efe6;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 20px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.3s ease-in-out;
-    width: 100%;
-    margin-right: 1rem;
-  }
-  .cta-homepage:hover {
-    background-color: #30453b;
-    color: #fff;
-    border: 2px solid #30453b;
-  }
-  .cta-other-page {
+  .site-header__util a {
     height: 50px;
     color: #320507;
     font-weight: 700;
     border-radius: 10px;
     background-color: #fb8f46;
-    border: 2px solid #fb8f46;
+    border: 1px solid #fb8f46;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -2863,7 +2840,11 @@ h4 {
 .quote-form .form-container {
   margin-top: 3rem;
 }
+.quote-form .form-container form .step-start .form-title {
+  margin-bottom: 2.5rem;
+}
 .quote-form .form-container form .form-title {
+  padding-bottom: 1rem;
   border-bottom: 1px solid #30453b;
 }
 .quote-form .form-container form .form-title h3 {
@@ -3217,7 +3198,7 @@ h4 {
   font-weight: 700;
   border-radius: 10px;
   background-color: #fb8f46;
-  border: 2px solid #fb8f46;
+  border: 1px solid #fb8f46;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -3238,7 +3219,7 @@ h4 {
   font-weight: 700;
   border-radius: 10px;
   background-color: #fff;
-  border: 2px solid #30453b;
+  border: 1px solid #30453b;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -3288,11 +3269,10 @@ h4 {
   margin: 4rem 0;
   gap: 4rem;
 }
-
-.contact-jen .contact-page h3, .contact-jen .contact-page .h3 {
+.contact-jen .contact-page h3 {
   color: #320507;
 }
-.contact-jen .contact-page h4, .contact-jen .contact-page .h4 {
+.contact-jen .contact-page h4 {
   color: #30453b;
 }
 .contact-jen .contact-page .contact-form form {
@@ -3334,54 +3314,57 @@ h4 {
   color: #fff;
   border: 2px solid #30453b;
 }
-.contact-jen .contact-page .contact-info .jen-info {
+.contact-jen .contact-page .wpcf7-submit {
+  max-width: 180px;
+}
+.contact-jen .contact-info .jen-info {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
 }
-.contact-jen .contact-page .contact-info .jen-info .info {
+.contact-jen .contact-info .jen-info .info {
   align-items: center;
   justify-content: center;
 }
-.contact-jen .contact-page .contact-info .social-contact div {
+.contact-jen .contact-info .social-contact div {
   flex-direction: row;
   width: 100%;
   gap: 10px;
 }
-.contact-jen .contact-page .contact-info .social-contact div figure {
+.contact-jen .contact-info .social-contact div figure {
   width: 10%;
 }
-.contact-jen .contact-page .contact-info .social-contact div figure img {
+.contact-jen .contact-info .social-contact div figure img {
   object-fit: scale-down !important;
   height: 50px;
 }
-.contact-jen .contact-page .contact-info .social-contact div p {
+.contact-jen .contact-info .social-contact div p {
   width: 85%;
 }
 @media screen and (min-width: 950px) {
   .contact-jen .contact-page {
     grid-template-columns: repeat(2, 1fr) !important;
   }
-  .contact-jen .contact-page .contact-form form .form-layout span input {
+  .contact-jen .contact-form form .form-layout span input {
     min-width: 25vw;
   }
-  .contact-jen .contact-page .contact-form form .form-layout .wpcf7-submit {
+  .contact-jen .contact-form form .form-layout .wpcf7-submit {
     max-width: 180px;
   }
-  .contact-jen .contact-page .contact-info .jen-info {
+  .contact-jen .contact-info .jen-info {
     flex-direction: row;
     justify-content: flex-start;
     gap: 2rem;
     margin: 3rem 0 5rem;
   }
-  .contact-jen .contact-page .contact-info .jen-info figure img {
+  .contact-jen .contact-info .jen-info figure img {
     width: 100px !important;
     height: auto !important;
     aspect-ratio: 1/1;
   }
-  .contact-jen .contact-page .contact-info .jen-info .info {
+  .contact-jen .contact-info .jen-info .info {
     align-items: flex-start;
     gap: 10px;
   }
@@ -3484,8 +3467,7 @@ h4 {
 }
 .special-deals .other-deals .deals-promo img {
   aspect-ratio: 1/1;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 10px;
   box-shadow: 0px 6px 4px 0px rgba(50, 5, 7, 0.25);
 }
@@ -3516,8 +3498,7 @@ h4 {
 .special-deals .jen-contact img.portrait {
   order: -2;
   aspect-ratio: 1/1;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100px;
   border-radius: 50%;
 }
@@ -3560,7 +3541,7 @@ h4 {
     align-items: center;
     gap: 1rem;
   }
-  .special-deals .other-deals .deals-promo .deals-item h3, .special-deals .other-deals .deals-promo .deals-item .h3 {
+  .special-deals .other-deals .deals-promo .deals-item h3 {
     width: 100%;
   }
   .special-deals .other-deals .deals-promo .deals-item img {
@@ -3635,8 +3616,7 @@ h4 {
 }
 .home-specials .deals-content .special-deal-card img {
   aspect-ratio: 1/1;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 10px;
   box-shadow: 0px 6px 4px 0px rgba(50, 5, 7, 0.25);
 }
@@ -4064,8 +4044,8 @@ h4 {
   color: #0a0a0a;
   font-weight: 700;
   border-radius: 10px;
-  background-color: #ffc107;
-  border: 1px solid #ffc107;
+  background-color: #fbcb08;
+  border: 2px solid #fbcb08;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -4111,6 +4091,7 @@ section.instagram h3.dotted-line {
   align-items: center;
   text-align: center;
   position: relative;
+  width: 100%;
 }
 section.instagram h3.dotted-line a {
   text-decoration: underline;
@@ -4120,12 +4101,11 @@ section.instagram h3.dotted-line a:hover {
   text-decoration: underline;
   color: #30453b;
 }
-
 @media screen and (min-width: 400px) {
-  section.instagram h3.dotted-line, section.instagram .dotted-line.h3 {
+  section.instagram h3.dotted-line {
     width: 100%;
   }
-  section.instagram h3.dotted-line::before, section.instagram .dotted-line.h3::before, section.instagram h3.dotted-line::after, section.instagram .dotted-line.h3::after {
+  section.instagram h3.dotted-line::before, section.instagram h3.dotted-line::after {
     content: "";
     flex: 1;
     height: 0;
@@ -4133,11 +4113,12 @@ section.instagram h3.dotted-line a:hover {
     margin: 0 10px;
   }
 }
-section.instagram #sb_instagram #sbi_images {
+
+#sb_instagram #sbi_images {
   padding: 1rem;
   margin-bottom: 1rem;
 }
-section.instagram #sb_instagram #sbi_load a.sbi_load_btn {
+#sb_instagram #sbi_load a.sbi_load_btn {
   height: 50px;
   color: #320507;
   font-weight: 700;
@@ -4156,7 +4137,7 @@ section.instagram #sb_instagram #sbi_load a.sbi_load_btn {
   width: fit-content;
   box-shadow: unset !important;
 }
-section.instagram #sb_instagram #sbi_load a.sbi_load_btn:hover {
+#sb_instagram #sbi_load a.sbi_load_btn:hover {
   background-color: #30453b;
   color: #fff;
   border: 2px solid #30453b;

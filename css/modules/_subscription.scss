@@ -64,7 +64,7 @@
       }
 
       &.tnp-submit {
-        @include button-base($yellow, 2px solid $yellow, $black);
+        @include button-base($bright-yellow, 2px solid $bright-yellow, $off-black);
         font-size: 1rem;
         width: 100%;
 
