@@ -339,7 +339,7 @@
     }
 
     .cta-mobile {
-      @include button-base($light-orange, 1px solid $light-orange);
+      @include button-base($light-orange, 2px solid $light-orange);
       text-transform: uppercase;
       border-radius: 0;
       margin-bottom: 1rem;
@@ -567,12 +567,12 @@
   }
 
   .cta-homepage {
-    @include button-base($cream, 1px solid $cream);
+    @include button-base($cream, 2px solid $cream);
     margin-right: 1rem;
   }
 
   .cta-other-page {
-    @include button-base($light-orange, 1px solid $light-orange);
+    @include button-base($light-orange, 2px solid $light-orange);
     margin-right: 1rem;
   }
 }

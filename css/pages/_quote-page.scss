@@ -465,11 +465,11 @@
                 margin-bottom: -1.5rem;
 
                 a:first-child {
-                    @include button-base($light-orange, 1px solid $light-orange);
+                    @include button-base($light-orange, 2px solid $light-orange);
                 }
 
                 a:last-child {
-                    @include button-base($white, 1px solid $dark-green);
+                    @include button-base($white, 2px solid $dark-green);
                 }
             }
         }

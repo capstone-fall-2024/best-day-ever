@@ -12424,7 +12424,7 @@ body .home-specials .h4 {
   font-weight: 700;
   border-radius: 10px;
   background-color: #fb8f46;
-  border: 1px solid #fb8f46;
+  border: 2px solid #fb8f46;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -12631,7 +12631,7 @@ body .home-specials .h4 {
     font-weight: 700;
     border-radius: 10px;
     background-color: #f9efe6;
-    border: 1px solid #f9efe6;
+    border: 2px solid #f9efe6;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -12653,7 +12653,7 @@ body .home-specials .h4 {
     font-weight: 700;
     border-radius: 10px;
     background-color: #fb8f46;
-    border: 1px solid #fb8f46;
+    border: 2px solid #fb8f46;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -12773,7 +12773,7 @@ div.menu-additional-info-footer-container {
   font-weight: 700;
   border-radius: 10px;
   background-color: #fb8f46;
-  border: 1px solid #fb8f46;
+  border: 2px solid #fb8f46;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -12796,7 +12796,7 @@ div.menu-additional-info-footer-container {
   font-weight: 700;
   border-radius: 10px;
   background-color: #fff;
-  border: 1px solid #30453b;
+  border: 2px solid #30453b;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -13682,7 +13682,7 @@ h4,
   font-weight: 700;
   border-radius: 10px;
   background-color: #fb8f46;
-  border: 1px solid #fb8f46;
+  border: 2px solid #fb8f46;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -13855,7 +13855,7 @@ h4,
   font-weight: 700;
   border-radius: 10px;
   background-color: #fb8f46;
-  border: 1px solid rgba(50, 5, 7, 0.25);
+  border: 2px solid rgba(50, 5, 7, 0.25);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -14332,7 +14332,7 @@ h4,
   font-weight: 700;
   border-radius: 10px;
   background-color: #fb8f46;
-  border: 1px solid #fb8f46;
+  border: 2px solid #fb8f46;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -14928,7 +14928,7 @@ h4,
   font-weight: 700;
   border-radius: 10px;
   background-color: #fb8f46;
-  border: 1px solid #fb8f46;
+  border: 2px solid #fb8f46;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -14949,7 +14949,7 @@ h4,
   font-weight: 700;
   border-radius: 10px;
   background-color: #fff;
-  border: 1px solid #30453b;
+  border: 2px solid #30453b;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -15005,31 +15005,31 @@ h4,
 .contact-jen .contact-page h4, .contact-jen .contact-page .h4 {
   color: #30453b;
 }
-.contact-jen .contact-page .contact-form .wpcf7 form {
+.contact-jen .contact-page .contact-form form {
   max-width: 100%;
   width: 100%;
 }
-.contact-jen .contact-page .contact-form .wpcf7 form .form-layout {
+.contact-jen .contact-page .contact-form form .form-layout {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-.contact-jen .contact-page .contact-form .wpcf7 form .form-layout label {
+.contact-jen .contact-page .contact-form form .form-layout label {
   font-weight: 700;
 }
-.contact-jen .contact-page .contact-form .wpcf7 form .form-layout span input {
+.contact-jen .contact-page .contact-form form .form-layout span input {
   padding: 10px 20px;
   border: 1px solid rgba(50, 5, 7, 0.25);
   border-radius: 8px;
   width: 100%;
 }
-.contact-jen .contact-page .contact-form .wpcf7 form .form-layout .wpcf7-submit {
+.contact-jen .contact-page .contact-form form .form-layout .wpcf7-submit {
   height: 50px;
   color: #320507;
   font-weight: 700;
   border-radius: 10px;
   background-color: #fb8f46;
-  border: 1px solid #fb8f46;
+  border: 2px solid #fb8f46;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -15039,7 +15039,7 @@ h4,
   transition: all 0.3s ease-in-out;
   width: 100%;
 }
-.contact-jen .contact-page .contact-form .wpcf7 form .form-layout .wpcf7-submit:hover {
+.contact-jen .contact-page .contact-form form .form-layout .wpcf7-submit:hover {
   background-color: #30453b;
   color: #fff;
   border: 2px solid #30453b;
@@ -15074,10 +15074,10 @@ h4,
   .contact-jen .contact-page {
     grid-template-columns: repeat(2, 1fr) !important;
   }
-  .contact-jen .contact-page .contact-form .wpcf7 form .form-layout span input {
-    min-width: 40vw;
+  .contact-jen .contact-page .contact-form form .form-layout span input {
+    min-width: 25vw;
   }
-  .contact-jen .contact-page .contact-form .wpcf7 form .form-layout .wpcf7-submit {
+  .contact-jen .contact-page .contact-form form .form-layout .wpcf7-submit {
     max-width: 180px;
   }
   .contact-jen .contact-page .contact-info .jen-info {
@@ -15772,7 +15772,7 @@ h4,
   font-weight: 700;
   border-radius: 10px;
   background-color: #ffc107;
-  border: 1px solid #ffc107;
+  border: 2px solid #ffc107;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -15942,7 +15942,7 @@ section.instagram #sb_instagram #sbi_load a.sbi_load_btn:hover {
   font-weight: 700;
   border-radius: 10px;
   background-color: #fb8f46;
-  border: 1px solid #fb8f46;
+  border: 2px solid #fb8f46;
   display: inline-flex;
   align-items: center;
   justify-content: center;

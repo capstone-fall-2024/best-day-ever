@@ -37,7 +37,7 @@
 .button-primary__vacation-link,
 .button-primary__advice-link
 {
-  @include button-base($light-orange, 1px solid $light-orange);
+  @include button-base($light-orange, 2px solid $light-orange);
   min-width: 200px;
 }
 

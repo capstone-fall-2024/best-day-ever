@@ -92,12 +92,12 @@ div.menu-additional-info-footer-container {
   margin-top: 10px;
 }
 .footer-btn-get-a-quote a {
-  @include button-base($light-orange, 1px solid $light-orange);
+  @include button-base($light-orange, 2px solid $light-orange);
   min-width: 175px;
 }
 
 .footer-btn-contact-jen a {
-  @include button-base($white, 1px solid $dark-green);
+  @include button-base($white, 2px solid $dark-green);
   min-width: 175px;
 }
 

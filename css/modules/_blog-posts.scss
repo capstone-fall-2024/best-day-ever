@@ -63,7 +63,7 @@
 // }
 
 .btn-primary.custom-width {
-  @include button-base($light-orange, 1px solid $light-orange);
+  @include button-base($light-orange, 2px solid $light-orange);
   width: auto;
   padding: 0 30px;
 }
@@ -245,7 +245,7 @@
         margin-top: auto;
 
         .button-blog-card {
-          @include button-base($light-orange, 1px solid rgba($dark-red, 0.25));
+          @include button-base($light-orange, 2px solid rgba($dark-red, 0.25));
           box-shadow: 0px 6px 4px 0px rgba($dark-red, 0.25);
         }
       }
