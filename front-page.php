@@ -41,7 +41,7 @@ get_header();
 	?>
 
 	<!-- Jennifer's Specialties rotator -->
-	<section class="container">
+	<section class="container jen-specialties">
 		<h3>Jennifer's Specialties</h3>
 		<div>
 			<?php echo do_shortcode('[specialty_slider]'); ?>

@@ -280,6 +280,10 @@
     }
     
     .deals-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        
         .special-deal-card {
             display: flex;
             flex-direction: column;
