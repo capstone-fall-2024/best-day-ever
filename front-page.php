@@ -30,7 +30,7 @@ get_header();
 			<h3>Hi, I'm Jen!</h3>
 			<p>I'm a professionally trained Travel Agent with Best Day Ever Vacations, specializing in Disney Vacations.</p>
 			<p>My goal is to book the complete dream vacation for you, your friends, and your family!</p>
-			<a class="btn-primary" href="<?php echo esc_url(home_url('/about-jen')); ?>">More About Me</a>
+			<a class="btn-primary" href="<?php echo esc_url(home_url('/about-jen')); ?>" aria-label="Learn more about Jenifer">More About Me</a>
 		</div>
 	</section>
 	
@@ -55,7 +55,7 @@ get_header();
 				<?php get_template_part('parts/special-deals-home'); ?>
 			</div>
 
-		<a href="<?php echo esc_url(home_url('/special-deals')); ?>" class="check-more">Check out more<span><i class="bi bi-arrow-right"></i></span></a>
+		<a href="<?php echo esc_url(home_url('/special-deals')); ?>" class="check-more">Check out more<span><i class="bi bi-arrow-right" aria-label="Check out more special deals"></i></span></a>
 	</section>
 
 	<!-- Ad -->
@@ -81,7 +81,7 @@ get_header();
 			<h3>Jennifer's Travel Blog</h3>
 			<?php display_category_posts('', 3); ?>
 			<div class="link-main-category">
-				<a href="<?php echo esc_url(home_url('/blog')); ?>">Check Out More<span><i class="bi bi-arrow-right"></i></span></a>
+				<a href="<?php echo esc_url(home_url('/blog')); ?>">Check Out More<span><i class="bi bi-arrow-right" aria-label="check out more travel blog posts"></i></span></a>
 			</div>
 		</div>
 	</section>

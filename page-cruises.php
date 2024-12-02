@@ -275,7 +275,7 @@ get_header();
 						<?php display_category_posts('disney', 3); ?>
 						<div class="link-main-category">
 							<a href="<?php echo esc_url(get_category_link(get_cat_ID('disney'))); ?>">Check out more<span><i
-										class="bi bi-arrow-right"></i></span></a>
+										class="bi bi-arrow-right" aria-label="check out more disney blog"></i></span></a>
 						</div>
 					</div>
 				</section>
@@ -288,7 +288,7 @@ get_header();
 						<?php display_category_posts('cruise', 3); ?>
 						<div class="link-main-category">
 							<a href="<?php echo esc_url(get_category_link(get_cat_ID('cruise'))); ?>">Check out more<span><i
-										class="bi bi-arrow-right"></i></span></a>
+										class="bi bi-arrow-right" aria-label="Check out more cruise blog"></i></span></a>
 						</div>
 					</div>
 				</section>
@@ -301,7 +301,7 @@ get_header();
 						<?php display_category_posts('honeymoon-and-wedding', 3); ?>
 						<div class="link-main-category">
 							<a href="<?php echo esc_url(get_category_link(get_cat_ID('honeymoon and wedding'))); ?>">Check out
-								more<span><i class="bi bi-arrow-right"></i></span></a>
+								more<span><i class="bi bi-arrow-right" aria-label="Check out more Honey and Wedding Blog"></i></span></a>
 						</div>
 					</div>
 				</section>
@@ -314,7 +314,7 @@ get_header();
 						<?php display_category_posts('all-inclusive, miscellaneous', 3); ?>
 						<div class="link-main-category">
 							<a href="<?php echo esc_url(get_category_link(get_cat_ID('all inclusive'))); ?>">Check out more<span><i
-										class="bi bi-arrow-right"></i></span></a>
+										class="bi bi-arrow-right" aria-label="Check out more All Inclusive and Other Travel Blog"></i></span></a>
 						</div>
 					</div>
 				</section>
@@ -326,7 +326,7 @@ get_header();
 					<?php display_category_posts('', 3); ?>
 					<div class="link-main-category">
 						<a href="<?php echo esc_url(home_url('/blog')); ?>">Check out more<span><i
-									class="bi bi-arrow-right"></i></span></a>
+									class="bi bi-arrow-right" aria-label="Check out more blog post"></i></span></a>
 					</div>
 				</div>
 			</section>

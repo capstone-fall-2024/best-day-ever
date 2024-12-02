@@ -63,8 +63,8 @@
 
                     <!-- Carousel Slider Arrow -->
                     <div class="slider-control">
-                        <button class="slider-prev testimonial-prev"><i class="bi bi-arrow-left-circle"></i></button>
-                        <button class="slider-next testimonial-next"><i class="bi bi-arrow-right-circle"></i></button>
+                        <button class="slider-prev testimonial-prev"><i class="bi bi-arrow-left-circle" aria-label="previous testimonial review"></i></button>
+                        <button class="slider-next testimonial-next"><i class="bi bi-arrow-right-circle" aria-label="next testimonial review"></i></button>
                     </div>
                 </div>
             <?php
