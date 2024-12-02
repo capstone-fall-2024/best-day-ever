@@ -2974,7 +2974,7 @@ h4 {
 @media (min-width: 768px) {
   /******home.php*******/
   .banner-blog {
-    background: url("../img/blog-banner.webp") no-repeat center bottom/cover scroll;
+    background: url("../img/blog-banner.webp") no-repeat center/cover scroll;
   }
   .banner_container {
     display: flex;
