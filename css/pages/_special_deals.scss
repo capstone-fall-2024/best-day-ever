@@ -116,6 +116,9 @@
         margin-bottom: 4rem;
 
         .message {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
             .btns-tablet {
                 display: none;
             }
@@ -188,6 +191,9 @@
                         max-width: 30%;
                     }
                     .promo-info {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
                         .cta-btns {
                             flex-direction: row;
                             a {
@@ -225,6 +231,7 @@
                 flex-direction: column;
                 width: 150px;
                 align-items: center;
+                cursor: pointer;
             }
 
             img.portrait {
