@@ -3637,6 +3637,11 @@ h4 {
   color: #ce5927;
   text-decoration: underline;
 }
+.home-specials .deals-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 .home-specials .deals-content .special-deal-card {
   display: flex;
   flex-direction: column;

@@ -40,7 +40,7 @@
                                     <div class="message">
                                         <p class="short-message"><?php echo esc_html($truncated_message); ?></p>
                                         <p class="full-message"><?php echo esc_html($message); ?></p>
-                                        <a class="toggle-message">Read More</a>
+                                        <p class="toggle-message">Read More</p>
                                     </div>
                                     <div class="author-info">
                                         <?php if ($author_photo) : ?>
