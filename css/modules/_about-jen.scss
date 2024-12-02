@@ -22,7 +22,7 @@
   @include media(large) {
     width: 100%;
     background-color: $dark-green;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
   }
 
   .about-jen {
@@ -37,13 +37,15 @@
       justify-content: space-between;
       max-width: 1350px;
       margin: 0 auto;
-      padding: 0 30px;
+      padding: 0 1.875rem;
     }
 
     &__text {
       z-index: 1;
       position: relative;
-      padding: 30px 5%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
 
       @include media(large) {
         margin-right: 50px;
@@ -71,7 +73,7 @@
         height: auto;
         top: 0;
         bottom: 0;
-        left: -100px;
+        left: -6.25rem;
         z-index: -1;
 
         @include media(small) {
@@ -96,6 +98,7 @@
         background-color: transparent;
         order: 1;
         z-index: 2;
+        margin-top: 2rem;
       }
 
       img {
@@ -118,13 +121,11 @@
 }
 
 .values-container {
-  padding: 0 5%;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 
   @include media(medium) {
     display: flex;
     align-items: center;
-    padding: 0 5%;
     gap: 3rem;
   }
 
@@ -132,11 +133,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
     gap: 3rem;
-    margin-bottom: 100px;
   }
 
   &__img-container {
@@ -154,10 +151,18 @@
 
   &__text {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 }
 
 .certifications {
-  padding: 0 5%;
-  text-align: center;
+  margin: 4rem auto;
+  >div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
 }

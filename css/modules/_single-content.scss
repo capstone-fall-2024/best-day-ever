@@ -45,7 +45,20 @@
 }
 
 .blog-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   padding: 0 5%;
+}
+
+.social-icon-share-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  p {
+    color: $dark-red;
+    font-weight: 700;
+  }
 }
 
 .social-icon-share-list {
