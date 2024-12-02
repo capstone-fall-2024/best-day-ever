@@ -3071,6 +3071,7 @@ h4 {
 /** Quote Form Confirmation **/
 .confirmation-container {
   background: url("../img/tropical-abstract-bg6.webp") center center/cover no-repeat;
+  padding-bottom: 5rem;
 }
 @media screen and (min-width: 950px) {
   .confirmation-container {
@@ -3090,8 +3091,14 @@ h4 {
   box-shadow: 0px 6px 4px 0px rgba(50, 5, 7, 0.25);
   border: 1px solid rgba(50, 5, 7, 0.25);
   z-index: 2;
-  width: 70%;
+  width: 80%;
   max-width: 960px;
+}
+@media screen and (min-width: 950px) {
+  .confirmation-container .confirmation {
+    width: 70%;
+    margin-top: 0;
+  }
 }
 .confirmation-container .confirmation .steps-container {
   display: flex;
@@ -3144,17 +3151,17 @@ h4 {
 }
 @media screen and (min-width: 550px) {
   .confirmation-container .confirmation .steps-container .steps-step:not(:last-child)::after {
-    width: calc(100% + 13vw);
+    width: calc(100% + 15vw);
   }
 }
 @media screen and (min-width: 650px) {
   .confirmation-container .confirmation .steps-container .steps-step:not(:last-child)::after {
-    width: calc(100% + 17vw);
+    width: calc(100% + 19vw);
   }
 }
 @media screen and (min-width: 800px) {
   .confirmation-container .confirmation .steps-container .steps-step:not(:last-child)::after {
-    width: calc(100% + 20vw);
+    width: calc(100% + 25vw);
   }
 }
 .confirmation-container .confirmation .steps-container .steps-step.confirmed {
@@ -3164,7 +3171,7 @@ h4 {
   background-color: #fff;
 }
 .confirmation-container .confirmation .confirmation-content {
-  margin-top: 3rem;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3200,7 +3207,7 @@ h4 {
   font-weight: 700;
   border-radius: 10px;
   background-color: #fb8f46;
-  border: 1px solid #fb8f46;
+  border: 2px solid #fb8f46;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -3221,7 +3228,7 @@ h4 {
   font-weight: 700;
   border-radius: 10px;
   background-color: #fff;
-  border: 1px solid #30453b;
+  border: 2px solid #30453b;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -3251,7 +3258,7 @@ h4 {
     width: 100%;
   }
   .confirmation-container .confirmation .confirmation-content {
-    padding-bottom: 4rem;
+    padding-bottom: 5rem;
   }
   .confirmation-container .confirmation .confirmation-content .btns {
     grid-template-columns: repeat(2, 1fr);
