@@ -2812,17 +2812,17 @@ h4 {
 }
 @media screen and (min-width: 550px) {
   .quote-form .steps-container .steps-step:not(:last-child)::after {
-    width: calc(100% + 13vw);
+    width: calc(100% + 15vw);
   }
 }
 @media screen and (min-width: 650px) {
   .quote-form .steps-container .steps-step:not(:last-child)::after {
-    width: calc(100% + 17vw);
+    width: calc(100% + 19vw);
   }
 }
 @media screen and (min-width: 800px) {
   .quote-form .steps-container .steps-step:not(:last-child)::after {
-    width: calc(100% + 22vw);
+    width: calc(100% + 25vw);
   }
 }
 .quote-form .steps-container .steps-step.active {
@@ -2939,7 +2939,7 @@ h4 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.2rem;
+  gap: 0.5rem;
   width: 100%;
 }
 .quote-form .form-container form .uacf7-step.step-end .submit-btn input {
@@ -2968,6 +2968,11 @@ h4 {
   color: #fff;
   border: 2px solid #30453b;
 }
+.quote-form .form-container form .uacf7-step.step-end .submit-btn input:hover {
+  background-color: #fff;
+  color: #ce5927;
+  border: 2px solid #320507;
+}
 .quote-form .form-container form .uacf7-step.step-end .submit-btn p .uacf7-prev {
   width: 150px !important;
   min-width: 210px;
@@ -2994,7 +2999,7 @@ h4 {
 .quote-form .form-container form .uacf7-step.step-end .submit-btn p .uacf7-prev:hover {
   background-color: #fff;
   color: #30453b;
-  border: 1px solid #30453b;
+  border: 2px solid #30453b;
 }
 .quote-form .form-container form .uacf7-step.step-end .submit-btn span.wpcf7-spinner {
   background-color: #320507;
