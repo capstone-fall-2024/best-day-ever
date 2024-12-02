@@ -49,10 +49,10 @@ get_header();
                 </div>
             </div>
             <!-- Newsletter -->
-            <?php if (is_active_sidebar('subscription-main')) {
+            <!-- <?php if (is_active_sidebar('subscription-main')) {
                 dynamic_sidebar('subscription-main');
             };
-            ?>
+            ?> -->
         </div>
 
 
