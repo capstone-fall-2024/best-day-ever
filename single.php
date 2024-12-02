@@ -79,7 +79,19 @@ get_header();
 							</div>
 						</div>
 						<div class="blog-content">
-							<?php the_content(); ?>
+							<div class="d-flex flex-wrap">
+								<div class="col-12 col-md-10">
+									<?php the_content(); ?></div>
+								<div class="col-12 col-md-2">
+									<!-- Ad -->
+									<?php
+										if (is_active_sidebar('banner-sidebar')) {
+											dynamic_sidebar('banner-sidebar');
+										};
+									?>
+								</div>
+								
+							</div>
 							<div class="social-icon-share-block">
 								<p><strong>Share the Posts&#33;</strong></p>
 								<ul class="social-icon-share-list">
@@ -140,7 +152,7 @@ get_header();
 						<div class="vacation-option">
 							<p>Explore our vacation options and get a quote.</p>
 							<div>
-								<a href="<?php echo site_url('./vacations') ?>" class="button-primary__vacation-link">All about
+								<a href="<?php echo site_url('./vacations') ?>" class="button-primary__vacation-link">All About
 									Vacations</a>
 							</div>
 						</div>
@@ -158,6 +170,13 @@ get_header();
 				<?php if (is_active_sidebar('meet-jen')): ?>
 					<?php dynamic_sidebar('meet-jen'); ?>
 				<?php endif; ?>
+
+				<!-- Ad -->
+				<?php
+					if (is_active_sidebar('marketing-banner-main')) {
+						dynamic_sidebar('marketing-banner-main');
+					};
+				?>
 
 				<!-- template-part -->
 				<?php get_template_part('template-parts/display-category-posts'); ?>
