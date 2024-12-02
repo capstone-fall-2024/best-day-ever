@@ -61,7 +61,7 @@ get_header();
 				<?php get_template_part('parts/special-deals-home'); ?>
 			</div>
 
-		<a href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/special-deals/">Check out more<span><i class="bi bi-arrow-right"></i></span></a>
+		<a href="<?php echo site_url('/special-deals'); ?>" class="check-more">Check out more<span><i class="bi bi-arrow-right" aria-label="check out more special deals"></i></span></a>
 	</section>
 
 		<!-- Testimonials -->
@@ -80,7 +80,7 @@ get_header();
 				<h3>Jennifer's Travel Blog</h3>
 				<?php display_category_posts('', 3); ?>
 				<div class="link-main-category">
-					<a href="<?php echo esc_url(home_url('/blog')); ?>">Check Out More<span><i class="bi bi-arrow-right"></i></span></a>
+					<a href="<?php echo esc_url(home_url('/blog')); ?>">Check Out More<span><i class="bi bi-arrow-right" aria-label="check out more blog posts"></i></span></a>
 				</div>
 			</div>
 		</section>

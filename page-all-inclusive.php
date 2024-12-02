@@ -170,7 +170,7 @@ get_header();
 						<?php display_category_posts('honeymoon-and-wedding', 3); ?>
 						<div class="link-main-category">
 							<a href="<?php echo esc_url(get_category_link(get_cat_ID('honeymoon and wedding'))); ?>">Check out
-								more<span><i class="bi bi-arrow-right"></i></span></a>
+								more<span><i class="bi bi-arrow-right" aria-label="Check out more Honeymoon and Wedding"></i></span></a>
 						</div>
 					</div>
 				</section>

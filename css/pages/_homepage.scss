@@ -15,48 +15,8 @@
   }
 
   a {
+    margin-top: 1rem;
     width: 60vw;
-  }
-}
-
-.home-specials {
-  margin: 4rem auto;
-
-  img {
-    aspect-ratio: 5/4;
-    object-fit: cover;
-  }
-
-  h3 {
-    color: $dark-red;
-    margin-bottom: 1.5rem;
-  }
-
-  h4 {
-    color: $dark-green;
-  }
-
-  > div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 3rem;
-  }
-
-  > a {
-    color: $dark-red;
-    text-decoration: underline;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 1rem;
-    margin-top: 1.5rem;
-  }
-
-  a:hover {
-    color: $dark-orange;
-    text-decoration: underline;
   }
 }
 

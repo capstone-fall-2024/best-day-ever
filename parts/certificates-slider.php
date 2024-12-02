@@ -30,8 +30,8 @@
             </div>
             <!-- Carousel Slider Arrow -->
             <div class="slider-control">
-                <button class="slider-prev certificate-prev"><i class="bi bi-arrow-left-circle"></i></button>
-                <button class="slider-next certificate-next"><i class="bi bi-arrow-right-circle"></i></button>
+                <button class="slider-prev certificate-prev"><i class="bi bi-arrow-left-circle" aria-label="Previous Certificate"></i></button>
+                <button class="slider-next certificate-next"><i class="bi bi-arrow-right-circle" aria-label="Next Certificate"></i></button>
             </div>
         </div>
         <?php

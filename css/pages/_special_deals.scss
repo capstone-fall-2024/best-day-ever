@@ -63,6 +63,14 @@
                 bottom: 1.5rem;
                 width: 28%;
 
+                .swiper-button-prev,
+                .swiper-button-next {
+                    transition: color 0.3s ease-in-out;
+                    &:hover {
+                        color: $dark-orange;
+                    }
+                }
+
                 @media screen and (min-width: 420px) {
                     width: 22%;
                 }
@@ -94,7 +102,9 @@
             .deals-item {
                 margin-top: 2rem;
                 .promo-info {
-                    margin: 1rem 0;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
                 }
                 .cta-btns {
                     display: flex;
@@ -251,8 +261,16 @@
     flex-direction: column;
     gap: 1rem;
 
-    a {
-        margin: 0;
+    .check-more {
+        color: $dark-orange;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 7px;
+        &:hover {
+            color: $dark-orange;
+            text-decoration: underline;
+        }
     }
     
     .deals-content {
@@ -291,7 +309,10 @@
                     align-items: flex-start;
                     justify-content: center;
                     a {
-                        width: 30%;
+                        width: 50%;
+                        @media screen and (min-width: 1024px) {
+                            width: 30%;
+                        }
                     }
                 }
 

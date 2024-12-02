@@ -19,6 +19,7 @@
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="icon" href="./img/bdev-logo.png" type="image/png">
 
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,7 +46,7 @@
 			<?php get_search_form(); ?>
 			<div>
 
-				<i class="bi bi-x-lg"></i>
+				<i class="bi bi-x-lg" aria-label="Search Icon"></i>
 			</div>
 		</div>
 
@@ -123,7 +124,7 @@
 
 				<div class="search-form-mobile">
 					<?php get_search_form(); ?>
-					<i class="bi bi-search"></i>
+					<i class="bi bi-search" aria-label="Search"></i>
 				</div>
 				<!-- Navigation Menu -->
 				<nav class="nav-mobile">
@@ -135,7 +136,7 @@
 						<li>
 							<div class="vacations-drop-down-menuMobile">
 								<a href="<?php echo site_url('/vacations'); ?>">Vacations</a>
-								<i class="bi bi-chevron-down"></i>
+								<i class="bi bi-chevron-down" aria-label="Expand sub-menu"></i>
 							</div>
 
 							<ul class="submenu-mobile">
