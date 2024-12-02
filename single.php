@@ -173,19 +173,20 @@ get_header();
 					</div>
 				</section>
 
-				<?php if (is_active_sidebar('instagram')) {
-					dynamic_sidebar('instagram');
-				}
-				?>
-
-				<?php if (is_active_sidebar('subscription-main')): ?>
-					<?php dynamic_sidebar('subscription-main'); ?>
-				<?php endif; ?>
-
 			<?php endwhile; // End of the have_posts() loop 
 			?>
 		<?php endif; ?>
 	</section>
+
+	<?php if (is_active_sidebar('instagram')) {
+		dynamic_sidebar('instagram');
+	}
+	?>
+
+	<?php if (is_active_sidebar('subscription-main')): ?>
+		<?php dynamic_sidebar('subscription-main'); ?>
+	<?php endif; ?>
+
 
 </main><!-- #main -->
 

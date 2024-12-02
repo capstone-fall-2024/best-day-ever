@@ -3934,6 +3934,10 @@ h4 {
     width: 100%;
   }
 }
+.jen-specialties {
+  margin: 4rem auto;
+}
+
 .swiper {
   width: 100%;
   height: auto;
