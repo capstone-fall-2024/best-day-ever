@@ -16,7 +16,7 @@ get_header();
     <?php the_title('<h1 class="entry-title-about-jen">', '</h1>'); ?>
     <section class="about-jen-container">
       <div class="about-jen">
-        <div class="about-jen__text">
+        <div class="about-jen__text container">
           <h2>About Jen</h2>
           <h3>Your Personal Travel Agent</h3>
           <p>I love helping my clients see the world. Whether it is a small weekend trip, a cruise, theme park visit,
@@ -47,13 +47,13 @@ get_header();
       </div>
     </section>
 
-    <div class="values-container">
+    <div class="values-container container">
       <div class="values-container__img-container">
         <figure>
           <img srcset="<?php echo get_theme_file_uri('/img/lake-sm.webp') ?> 550w, <?php echo get_theme_file_uri('/img/lake-lg.webp') ?> 800w" alt="First person view of sitting on a wooden boat on a lake, surrounded by the mountains." class="img-rounded" width="800px" height="800px">
         </figure>
       </div>
-      <div class="values-container__text">
+      <div class="values-container__text container">
         <h3>Our Mission is...</h3>
         <p>To be the leading travel agency in the design of exclusive and personalized
           experiences, making our clients live memorable moments and fulfill their dreams
@@ -64,7 +64,7 @@ get_header();
       </div>
     </div>
 
-    <div class="certifications">
+    <div class="certifications container">
       <div>
         <h3>My Certifications</h3>
         <p>I know Disney is a big draw for many families, but don’t worry, I am fully certified with all of the major

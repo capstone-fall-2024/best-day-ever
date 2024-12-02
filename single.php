@@ -16,7 +16,7 @@ get_header();
 	$author_id = get_the_author_meta('ID');
 	?>
 
-	<section>
+	<section class="container">
 		<?php
 		if (have_posts()):
 			while (have_posts()):
@@ -38,7 +38,7 @@ get_header();
 
 				<article class="single-blog">
 					<div class="main-content">
-						<h3 class="hide-heading">Heading 3 - Main Blog</h3>
+						<h3 class="hide-heading">Blog Content</h3>
 						<?php
 						if (function_exists('yoast_breadcrumb')) {
 							yoast_breadcrumb('<p class="breadcrumbs" id="breadcrumbs">', '</p>');
@@ -79,58 +79,56 @@ get_header();
 							</div>
 						</div>
 						<div class="blog-content">
-							<div>
-								<?php the_content(); ?>
-								<div class="social-icon-share-block">
-									<p><strong>Share the Posts&#33;</strong></p>
-									<ul class="social-icon-share-list">
-										<li>
-											<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo get_permalink(get_the_ID()); ?>"
-												target="_blank">
-												<img src="<?php echo get_theme_file_uri('/img/facebook-copy.png'); ?>" alt="Share on Facebook">
-											</a>
-										</li>
-										<li>
-											<a href="https://twitter.com/intent/tweet?url=<?php echo urlencode(get_permalink(get_the_ID())); ?>&text=<?php echo urlencode(get_the_title()); ?>"
-												target="_blank">
-												<img src="<?php echo get_theme_file_uri('/img/twitter.png'); ?>" alt="Share on X">
-											</a>
-										</li>
-										<li>
-											<a href="https://www.instagram.com/" target="_blank">
-												<img src="<?php echo get_theme_file_uri('/img/instagram-copy.png'); ?>" alt="Share on Instagram">
-											</a>
-										</li>
-										<li><a
-												href="https://mail.google.com/mail/?view=cm&fs=1&to=&su=<?php echo urlencode(get_the_title()); ?>&body=<?php echo urlencode(get_permalink(get_the_ID())); ?>"
-												target="_blank">
-												<img src="<?php echo get_theme_file_uri('/img/google.png'); ?>" alt="Share via Gmail">
-											</a></li>
-										<li>
-											<a href="https://twitter.com/intent/tweet?url=<?php echo urlencode(get_permalink(get_the_ID())); ?>&text=<?php echo urlencode(get_the_title()); ?>"
-												target="_blank">
-												<img src="<?php echo get_theme_file_uri('/img/twitter-1.png'); ?>" alt="Share on X">
-											</a>
-										</li>
-										<li>
-											<a href="https://pinterest.com/pin/create/button/?url=<?php echo urlencode(get_permalink(get_the_ID())); ?>&media=<?php echo urlencode(get_theme_file_uri('/img/pinterest.png')); ?>&description=<?php echo urlencode(get_the_title()); ?>"
-												target="_blank">
-												<img src="<?php echo get_theme_file_uri('/img/pinterest.png'); ?>" alt="Share on Pinterest">
-											</a>
-										</li>
-										<li>
-											<a href="https://t.me/share/url?url=<?php echo urlencode(get_permalink(get_the_ID())); ?>&text=<?php echo urlencode(get_the_title()); ?>"
-												target="_blank">
-												<img src="<?php echo get_theme_file_uri('/img/send.png'); ?>" alt="Share on Telegram">
-											</a>
-										</li>
-										<li>
-											<a href="">
-												<img src="<?php echo get_theme_file_uri('/img/share.png'); ?>" alt="Share">
-											</a>
-										</li>
-									</ul>
-								</div>
+							<?php the_content(); ?>
+							<div class="social-icon-share-block">
+								<p><strong>Share the Posts&#33;</strong></p>
+								<ul class="social-icon-share-list">
+									<li>
+										<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo get_permalink(get_the_ID()); ?>"
+											target="_blank">
+											<img src="<?php echo get_theme_file_uri('/img/facebook-copy.png'); ?>" alt="Share on Facebook">
+										</a>
+									</li>
+									<li>
+										<a href="https://twitter.com/intent/tweet?url=<?php echo urlencode(get_permalink(get_the_ID())); ?>&text=<?php echo urlencode(get_the_title()); ?>"
+											target="_blank">
+											<img src="<?php echo get_theme_file_uri('/img/twitter.png'); ?>" alt="Share on X">
+										</a>
+									</li>
+									<li>
+										<a href="https://www.instagram.com/" target="_blank">
+											<img src="<?php echo get_theme_file_uri('/img/instagram-copy.png'); ?>" alt="Share on Instagram">
+										</a>
+									</li>
+									<li><a
+											href="https://mail.google.com/mail/?view=cm&fs=1&to=&su=<?php echo urlencode(get_the_title()); ?>&body=<?php echo urlencode(get_permalink(get_the_ID())); ?>"
+											target="_blank">
+											<img src="<?php echo get_theme_file_uri('/img/google.png'); ?>" alt="Share via Gmail">
+										</a></li>
+									<li>
+										<a href="https://twitter.com/intent/tweet?url=<?php echo urlencode(get_permalink(get_the_ID())); ?>&text=<?php echo urlencode(get_the_title()); ?>"
+											target="_blank">
+											<img src="<?php echo get_theme_file_uri('/img/twitter-1.png'); ?>" alt="Share on X">
+										</a>
+									</li>
+									<li>
+										<a href="https://pinterest.com/pin/create/button/?url=<?php echo urlencode(get_permalink(get_the_ID())); ?>&media=<?php echo urlencode(get_theme_file_uri('/img/pinterest.png')); ?>&description=<?php echo urlencode(get_the_title()); ?>"
+											target="_blank">
+											<img src="<?php echo get_theme_file_uri('/img/pinterest.png'); ?>" alt="Share on Pinterest">
+										</a>
+									</li>
+									<li>
+										<a href="https://t.me/share/url?url=<?php echo urlencode(get_permalink(get_the_ID())); ?>&text=<?php echo urlencode(get_the_title()); ?>"
+											target="_blank">
+											<img src="<?php echo get_theme_file_uri('/img/send.png'); ?>" alt="Share on Telegram">
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="<?php echo get_theme_file_uri('/img/share.png'); ?>" alt="Share">
+										</a>
+									</li>
+								</ul>
 							</div>
 						</div>
 					</div>

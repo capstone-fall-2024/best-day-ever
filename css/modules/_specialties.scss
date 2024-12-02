@@ -48,6 +48,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
 
         h4 {
             color: $dark-red;
@@ -58,10 +59,10 @@
             justify-content: center;
             align-items: center;
             gap: 5px;
-            color: $dark-orange;
+            color: $dark-red;
             &:hover {
                 text-decoration: underline;
-                color: $dark-red;
+                color: $dark-orange;
             }
         }
     }

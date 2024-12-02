@@ -43,7 +43,7 @@
             .right-content {
                 display: flex;
                 flex-direction: column;
-                gap: 1rem;
+                gap: 1.5rem;
                 justify-content: center;
             }
         }
@@ -191,7 +191,7 @@
             .deals-promo {
                 .deals-item {
                     display: flex;
-                    align-items: center;
+                    align-items: flex-start;
                     gap: 1rem;
                     h3 {
                         width: 100%;
@@ -203,7 +203,7 @@
                     .promo-info {
                         display: flex;
                         flex-direction: column;
-                        gap: 1rem;
+                        gap: 1.5rem;
                         .cta-btns {
                             flex-direction: row;
                             a {
@@ -262,7 +262,7 @@
     gap: 1rem;
 
     .check-more {
-        color: $dark-orange;
+        color: $dark-red;
         display: flex;
         align-items: center;
         justify-content: flex-end;

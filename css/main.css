@@ -461,8 +461,7 @@ body .home-specials h4 {
   width: 100%;
   aspect-ratio: 3/4;
   height: auto;
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
+  object-fit: scale-down;
 }
 .site-header .main-navigation {
   display: none;
@@ -629,9 +628,6 @@ body .home-specials h4 {
 .sidebar-menu__container .search-form-mobile input[type=search] {
   padding: 5px;
 }
-.sidebar-menu__container .search-form-mobile input::-moz-placeholder {
-  padding-left: 10px;
-}
 .sidebar-menu__container .search-form-mobile input::placeholder {
   padding-left: 10px;
 }
@@ -641,8 +637,7 @@ body .home-specials h4 {
   padding-left: 5px;
 }
 .sidebar-menu__container .search-form-mobile input[type=search]::-webkit-search-cancel-button {
-  -webkit-appearance: none;
-          appearance: none; /* Hides the clear button */
+  appearance: none; /* Hides the clear button */
   display: none; /* Ensures it's not visible */
 }
 .sidebar-menu__container .search-form-mobile .search-submit {
@@ -912,8 +907,7 @@ body .home-specials h4 {
     box-shadow: none; /* Removes any additional shadow */
   }
   .search-form-box input[type=search]::-webkit-search-cancel-button {
-    -webkit-appearance: none;
-            appearance: none; /* Hides the clear button */
+    appearance: none; /* Hides the clear button */
     display: none; /* Ensures it's not visible */
   }
   .search-form-box .search-submit {
@@ -1278,8 +1272,7 @@ div.menu-additional-info-footer-container {
 }
 .im-jen img {
   aspect-ratio: 2/3;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .im-jen a {
   margin-top: 1rem;
@@ -1381,8 +1374,7 @@ div.menu-additional-info-footer-container {
 }
 .vacation-card img {
   aspect-ratio: 16/9;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .vacation-card a {
   margin-top: 1rem;
@@ -1395,13 +1387,11 @@ div.menu-additional-info-footer-container {
 }
 .vacation-card > div:first-of-type {
   margin-bottom: 1rem;
-  -moz-column-gap: 1.25rem;
-       column-gap: 1.25rem;
+  column-gap: 1.25rem;
 }
 .vacation-card > div:last-of-type {
   gap: 1rem;
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
+  column-gap: 2rem;
 }
 .vacation-card > div:last-of-type div {
   flex: 1 1 300px;
@@ -1418,8 +1408,7 @@ div.menu-additional-info-footer-container {
   flex-wrap: wrap;
   justify-content: center;
   row-gap: 3rem;
-  -moz-column-gap: 1.5rem;
-       column-gap: 1.5rem;
+  column-gap: 1.5rem;
 }
 .vacation-card-group a {
   justify-self: center;
@@ -1554,8 +1543,7 @@ h4 {
 }
 .disney-page > section > section:first-of-type > div:first-of-type img {
   aspect-ratio: 5/4;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .disney-page > section > section:first-of-type > div:first-of-type div {
   flex: 0 1 350px;
@@ -1578,8 +1566,7 @@ h4 {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr auto 1fr;
     row-gap: 1rem;
-    -moz-column-gap: 1.5rem;
-         column-gap: 1.5rem;
+    column-gap: 1.5rem;
   }
   .disney-page section > section:first-of-type > div:first-of-type div:first-of-type {
     grid-column: 2/span 1;
@@ -1618,8 +1605,7 @@ h4 {
 }
 .cruises-page > section > section:first-of-type img {
   aspect-ratio: 5/4;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .cruises-page > section > section:first-of-type h3 {
   color: #320507;
@@ -1676,8 +1662,7 @@ h4 {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr auto 1fr;
     row-gap: 1rem;
-    -moz-column-gap: 1.5rem;
-         column-gap: 1.5rem;
+    column-gap: 1.5rem;
   }
   .cruises-page > section > section:first-of-type > div div:first-of-type {
     grid-column: 2/span 1;
@@ -1719,8 +1704,7 @@ h4 {
 .hw-page .wedding-intro > div:first-of-type img,
 .hw-page .honeymoon-intro > div:first-of-type img {
   aspect-ratio: 5/4;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .hw-page .wedding-intro .container.text-center,
 .hw-page .honeymoon-intro .container.text-center {
@@ -1770,8 +1754,7 @@ h4 {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr auto 1fr;
     row-gap: 1rem;
-    -moz-column-gap: 1.5rem;
-         column-gap: 1.5rem;
+    column-gap: 1.5rem;
   }
   .hw-page .wedding-intro > div:first-of-type div:first-of-type,
   .hw-page .honeymoon-intro > div:first-of-type div:first-of-type {
@@ -1833,8 +1816,7 @@ h4 {
 .all-inclusive-page .all-inclusive-intro > div:first-of-type img,
 .all-inclusive-page .unique-intro > div:first-of-type img {
   aspect-ratio: 5/4;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .all-inclusive-page .all-inclusive-intro > div:first-of-type a,
 .all-inclusive-page .unique-intro > div:first-of-type a {
@@ -1867,8 +1849,7 @@ h4 {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr auto 1fr;
     row-gap: 1rem;
-    -moz-column-gap: 1.5rem;
-         column-gap: 1.5rem;
+    column-gap: 1.5rem;
   }
   .all-inclusive-page .all-inclusive-intro > div:first-of-type div:first-of-type,
   .all-inclusive-page .unique-intro > div:first-of-type div:first-of-type {
@@ -2071,8 +2052,7 @@ h4 {
 .row .blog-card__card-img {
   width: 100%;
   height: 250px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 0;
@@ -2179,7 +2159,6 @@ h4 {
 
 .link-main-category a {
   color: #320507;
-  text-decoration: underline;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -2253,8 +2232,7 @@ h4 {
   .image-banner-section a img {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     border-radius: 10px;
   }
   .pagination {
@@ -2269,7 +2247,7 @@ h4 {
   .about-jen-container {
     width: 100%;
     background-color: #30453b;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
   }
 }
 .about-jen-container .about-jen {
@@ -2285,13 +2263,15 @@ h4 {
     justify-content: space-between;
     max-width: 1350px;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 1.875rem;
   }
 }
 .about-jen-container .about-jen__text {
   z-index: 1;
   position: relative;
-  padding: 30px 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 @media (min-width: 1024px) {
   .about-jen-container .about-jen__text {
@@ -2318,7 +2298,7 @@ h4 {
   height: auto;
   top: 0;
   bottom: 0;
-  left: -100px;
+  left: -6.25rem;
   z-index: -1;
 }
 @media (max-width: 768px) {
@@ -2345,13 +2325,13 @@ h4 {
     background-color: transparent;
     order: 1;
     z-index: 2;
+    margin-top: 2rem;
   }
 }
 .about-jen-container .about-jen__img-container img {
   width: 250px;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   box-shadow: 10px -10px #ce5927;
   border-radius: 10px;
 }
@@ -2367,14 +2347,12 @@ h4 {
 }
 
 .values-container {
-  padding: 0 5%;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 @media (min-width: 769px) and (max-width: 1023px) {
   .values-container {
     display: flex;
     align-items: center;
-    padding: 0 5%;
     gap: 3rem;
   }
 }
@@ -2383,11 +2361,7 @@ h4 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
     gap: 3rem;
-    margin-bottom: 100px;
   }
 }
 .values-container__img-container {
@@ -2397,18 +2371,25 @@ h4 {
 }
 .values-container__img-container img {
   aspect-ratio: 1/1;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 10px;
   box-shadow: 0px 6px 4px 0px rgba(50, 5, 7, 0.25);
 }
 .values-container__text {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .certifications {
-  padding: 0 5%;
-  text-align: center;
+  margin: 4rem auto;
+}
+.certifications > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
 }
 
 .single-blog-banner {
@@ -2426,8 +2407,8 @@ h4 {
 .img-background img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
+  filter: brightness(0.7);
 }
 
 .overlay {
@@ -2448,6 +2429,7 @@ h4 {
   padding: 0 5% 5% 5%;
   color: #f9efe6;
   z-index: 2;
+  text-shadow: 3px 5px 2px rgba(50, 5, 7, 0.3137254902);
 }
 
 .single-banner-content p {
@@ -2494,8 +2476,7 @@ h4 {
 .profile-img-blogger img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 50px;
 }
 
@@ -2513,7 +2494,20 @@ h4 {
 }
 
 .blog-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   padding: 0 5%;
+}
+
+.social-icon-share-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.social-icon-share-block p {
+  color: #320507;
+  font-weight: 700;
 }
 
 .social-icon-share-list {
@@ -2555,28 +2549,28 @@ h4 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 24px;
-  margin: 0 5%;
+  padding: 1.5rem;
   background-color: #f9efe6;
   border-radius: 10px;
+  box-shadow: 0px 6px 4px 0px rgba(50, 5, 7, 0.25);
 }
 
 .inspired-heading {
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 
 .inspired-content {
   display: flex;
   flex-direction: column;
-  gap: 32px;
   justify-content: center;
+  align-items: center;
 }
 
 .vacation-option,
 .travel-advice {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 1.5rem;
 }
 
 .vacation-option div,
@@ -2613,28 +2607,26 @@ h4 {
   width: 90%;
   margin: 0 auto;
   height: 3px;
-  border-top: 3px dotted black;
+  border-top: 2px dotted black;
   line-height: 80%;
 }
 
 .travel-advice {
-  border-top: 3px dotted black;
-  margin: 24px 0;
+  border-top: 2px dotted black;
+  margin: 1.5rem 0;
 }
 
 .travel-advice > p {
-  margin-top: 16px;
+  margin-top: 1rem;
 }
 
 @media (min-width: 768px) {
   .inspired-section {
-    padding: 55px;
-    max-width: 1024px;
-    margin: 0 5%;
+    padding: 3.5rem;
   }
   .inspired-content {
     flex-direction: row;
-    align-items: flex-start;
+    gap: 2rem;
   }
   .inspired-content > div > p {
     max-width: 220px;
@@ -2648,7 +2640,7 @@ h4 {
     width: 100%;
     height: 120px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -2671,40 +2663,38 @@ h4 {
     margin-top: 0;
   }
 }
-@media (min-width: 1024px) {
-  .inspired-section {
-    max-width: 1024px;
-    margin: 0 auto;
-  }
-}
 .meet-jen-blog-section {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 4rem 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center !important;
+  gap: 1rem;
 }
 
-.meet-jen-blog-section > div > figure > img {
+.meet-jen-blog-section > div:first-child > figure > img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 15px;
+  box-shadow: 0px 6px 4px 0px rgba(50, 5, 7, 0.25);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 780px) {
   .meet-jen-blog-section {
-    margin-left: 5%;
-    margin-right: 5%;
     flex-direction: row;
     justify-content: space-between;
+    gap: 1.5rem;
+  }
+  .meet-jen-blog-section > div:nth-child(2) > div:first-child {
+    justify-self: flex-end;
+  }
+  .meet-jen-blog-section > div:nth-child(2) a {
+    width: 30vw;
   }
 }
-@media (min-width: 1024px) {
-  .meet-jen-blog-section {
-    max-width: 1024px;
-    margin: 0 auto;
+@media screen and (min-width: 780px) and (min-width: 1024px) {
+  .meet-jen-blog-section > div:nth-child(2) a {
+    width: 20vw;
   }
 }
 /** Quote Form Step **/
@@ -2881,8 +2871,7 @@ h4 {
   border: 0;
   vertical-align: middle;
   -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
+  appearance: none;
   padding: 10px 20px;
   border: 1px solid rgba(50, 5, 7, 0.25);
   border-radius: 8px;
@@ -2960,7 +2949,6 @@ h4 {
   transition: all 0.3s ease-in-out;
   width: 100%;
   max-width: 220px;
-  min-width: -moz-fit-content;
   min-width: fit-content;
   padding: 0 10px;
   order: 1;
@@ -3187,8 +3175,7 @@ h4 {
 }
 .confirmation-container .confirmation .confirmation-content h3 {
   color: #30453b;
-  -webkit-text-decoration: uppercase;
-          text-decoration: uppercase;
+  text-decoration: uppercase;
 }
 .confirmation-container .confirmation .confirmation-content p {
   text-align: center;
@@ -3348,8 +3335,7 @@ h4 {
   width: 10%;
 }
 .contact-jen .contact-info .social-contact div figure img {
-  -o-object-fit: scale-down !important;
-     object-fit: scale-down !important;
+  object-fit: scale-down !important;
   height: 50px;
   cursor: pointer;
 }
@@ -3436,15 +3422,14 @@ h4 {
 }
 .special-deals .cruise .intro img {
   aspect-ratio: 1/1;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 10px;
   box-shadow: 0px 6px 4px 0px rgba(50, 5, 7, 0.25);
 }
 .special-deals .cruise .intro .right-content {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
   justify-content: center;
 }
 .special-deals .cruise .swiper .swiper-wrapper .swiper-slide {
@@ -3489,8 +3474,7 @@ h4 {
 }
 .special-deals .other-deals .deals-promo img {
   aspect-ratio: 1/1;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 10px;
   box-shadow: 0px 6px 4px 0px rgba(50, 5, 7, 0.25);
 }
@@ -3528,8 +3512,7 @@ h4 {
 .special-deals .jen-contact img.portrait {
   order: -2;
   aspect-ratio: 1/1;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100px;
   border-radius: 50%;
 }
@@ -3569,7 +3552,7 @@ h4 {
   }
   .special-deals .other-deals .deals-promo .deals-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 1rem;
   }
   .special-deals .other-deals .deals-promo .deals-item h3 {
@@ -3582,7 +3565,7 @@ h4 {
   .special-deals .other-deals .deals-promo .deals-item .promo-info {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
   }
   .special-deals .other-deals .deals-promo .deals-item .promo-info .cta-btns {
     flex-direction: row;
@@ -3644,7 +3627,7 @@ h4 {
   gap: 1rem;
 }
 .home-specials .check-more {
-  color: #ce5927;
+  color: #320507;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -3661,8 +3644,7 @@ h4 {
 }
 .home-specials .deals-content .special-deal-card img {
   aspect-ratio: 1/1;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 10px;
   box-shadow: 0px 6px 4px 0px rgba(50, 5, 7, 0.25);
 }
@@ -3870,11 +3852,11 @@ h4 {
 }
 .slider-control button i {
   font-size: 1.5rem;
-  color: #ce5927;
+  color: #320507;
   transition: color 0.3s ease-in-out;
 }
 .slider-control button i:hover {
-  color: #320507;
+  color: #ce5927;
 }
 
 @media screen and (min-width: 800px) {
@@ -3997,6 +3979,7 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1rem;
 }
 .swiper .specialty h4 {
   color: #320507;
@@ -4006,11 +3989,11 @@ h4 {
   justify-content: center;
   align-items: center;
   gap: 5px;
-  color: #ce5927;
+  color: #320507;
 }
 .swiper .specialty a:hover {
   text-decoration: underline;
-  color: #320507;
+  color: #ce5927;
 }
 .swiper .swiper-arrows {
   display: flex;
@@ -4207,7 +4190,6 @@ section.instagram h3.dotted-line a:hover {
   transition: all 0.3s ease-in-out;
   width: 100%;
   font-size: 1rem;
-  width: -moz-fit-content;
   width: fit-content;
   box-shadow: unset !important;
 }
@@ -4365,4 +4347,4 @@ a {
 .actual-content .wp-block-cover {
   width: 100%;
   margin-left: 0;
-}/*# sourceMappingURL=main.css.map */
+}
