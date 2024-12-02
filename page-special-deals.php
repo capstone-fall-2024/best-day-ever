@@ -76,8 +76,8 @@ get_header();
                 </div>
 
                 <div class="swiper-arrows">
-                    <div class="swiper-button-prev deals-prev"><i class="bi bi-arrow-left-circle"></i></div>
-                    <div class="swiper-button-next deals-next"><i class="bi bi-arrow-right-circle"></i></div>
+                    <div class="swiper-button-prev deals-prev"><i class="bi bi-arrow-left-circle" aria-label="Previous deals"></i></div>
+                    <div class="swiper-button-next deals-next"><i class="bi bi-arrow-right-circle" aria-label="Next deals"></i></div>
                 </div>
             </div>
         </div>
@@ -123,7 +123,7 @@ get_header();
                     <?php display_category_posts('disney', 3); ?>
                     <div class="link-main-category">
                         <a href="<?php echo esc_url(get_category_link(get_cat_ID('disney'))); ?>">Check out more<span><i
-                                    class="bi bi-arrow-right"></i></span></a>
+                                    class="bi bi-arrow-right" aria-label="check out more disney blog"></i></span></a>
                     </div>
                 </div>
             </section>
@@ -136,7 +136,7 @@ get_header();
                     <?php display_category_posts('cruise', 3); ?>
                     <div class="link-main-category">
                         <a href="<?php echo esc_url(get_category_link(get_cat_ID('cruise'))); ?>">Check out more<span><i
-                                    class="bi bi-arrow-right"></i></span></a>
+                                    class="bi bi-arrow-right" aria-label="check out more cruise blog"></i></span></a>
                     </div>
                 </div>
             </section>
@@ -149,7 +149,7 @@ get_header();
                     <?php display_category_posts('honeymoon-and-wedding', 3); ?>
                     <div class="link-main-category">
                         <a href="<?php echo esc_url(get_category_link(get_cat_ID('honeymoon and wedding'))); ?>">Check out
-                            more<span><i class="bi bi-arrow-right"></i></span></a>
+                            more<span><i class="bi bi-arrow-right" aria-label="check out more honeymoon and wedding blog"></i></span></a>
                     </div>
                 </div>
             </section>
@@ -162,7 +162,7 @@ get_header();
                     <?php display_category_posts('all-inclusive, miscellaneous', 3); ?>
                     <div class="link-main-category">
                         <a href="<?php echo esc_url(get_category_link(get_cat_ID('all inclusive'))); ?>">Check out more<span><i
-                                    class="bi bi-arrow-right"></i></span></a>
+                                    class="bi bi-arrow-right" aria-label="check out more all-inclusive blog"></i></span></a>
                     </div>
                 </div>
             </section>
@@ -174,7 +174,7 @@ get_header();
                 <?php display_category_posts('', 3); ?>
                 <div class="link-main-category">
                     <a href="<?php echo esc_url(home_url('/blog')); ?>">Check out more<span><i
-                                class="bi bi-arrow-right"></i></span></a>
+                                class="bi bi-arrow-right" aria-label="check out more blog posts"></i></span></a>
                 </div>
             </div>
         </section>

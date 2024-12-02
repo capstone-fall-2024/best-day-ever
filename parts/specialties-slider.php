@@ -25,7 +25,7 @@ function display_specialties_slider_shortcode()
                     <div class="specialty">
                         <h4><?php echo esc_html($specialty_name); ?></h4>
                         <p><?php echo esc_html($specialty_description); ?></p>
-                        <a href="<?php echo esc_url($specialty_url); ?>">View More <i class="bi bi-arrow-right"></i></a>
+                        <a href="<?php echo esc_url($specialty_url); ?>">View More <i class="bi bi-arrow-right" aria-label="check out more specialties"></i></a>
                     </div>
                 </div>
                 <?php
@@ -34,8 +34,8 @@ function display_specialties_slider_shortcode()
                 ?>
             </div>
             <div class="swiper-arrows">
-                <div class="swiper-button-prev specialties-prev"><i class="bi bi-arrow-left-circle"></i></div>
-                <div class="swiper-button-next specialties-next"><i class="bi bi-arrow-right-circle"></i></div>
+                <div class="swiper-button-prev specialties-prev"><i class="bi bi-arrow-left-circle" aria-label="previous specialty service"></i></div>
+                <div class="swiper-button-next specialties-next"><i class="bi bi-arrow-right-circle" aria-label="next specialty service"></i></div>
             </div>
         </div>
 <?php

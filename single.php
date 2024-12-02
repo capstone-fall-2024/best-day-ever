@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying all single posts
  *
@@ -20,7 +21,7 @@ get_header();
 		if (have_posts()):
 			while (have_posts()):
 				the_post();
-				?>
+		?>
 
 				<div class="single-blog-banner">
 					<div class="img-background">
@@ -73,8 +74,7 @@ get_header();
 									}
 
 									echo implode('-', $formatted_tags);
-								}
-								;
+								};
 								?>
 							</div>
 						</div>
@@ -170,7 +170,7 @@ get_header();
 						<?php display_category_posts('', 3); ?>
 						<div class="link-main-category">
 							<a href="<?php echo esc_url(home_url('/blog')); ?>">Check out more<span><i
-										class="bi bi-arrow-right"></i></span></a>
+										class="bi bi-arrow-right" aria-label="check out more travel blog"></i></span></a>
 						</div>
 					</div>
 				</section>
@@ -184,7 +184,8 @@ get_header();
 					<?php dynamic_sidebar('subscription-main'); ?>
 				<?php endif; ?>
 
-			<?php endwhile; // End of the have_posts() loop ?>
+			<?php endwhile; // End of the have_posts() loop 
+			?>
 		<?php endif; ?>
 	</section>
 

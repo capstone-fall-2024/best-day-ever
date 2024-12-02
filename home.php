@@ -53,8 +53,8 @@
                     </li>
                 </ul>
                 <!-- Next and previous buttons -->
-                <a class="prev"><i class="bi bi-chevron-left"></i></a>
-                <a class="next"><i class="bi bi-chevron-right"></i></a>
+                <a class="prev"><i class="bi bi-chevron-left" aria-label="Previous Blog Category"></i></a>
+                <a class="next"><i class="bi bi-chevron-right" aria-label="Next Blog Category"></i></a>
             </nav>
         </section>
 
@@ -117,7 +117,7 @@
                     <?php display_category_posts('Cruise', 3); ?>
                     <div class="link-main-category">
                         <a href="<?php echo esc_url(get_category_link(get_cat_ID('cruise'))); ?>">Check out
-                            more<span><i class="bi bi-arrow-right"></i></span></a>
+                            more<span><i class="bi bi-arrow-right" aria-label="Check more Cruise Blog"></i></span></a>
                     </div>
                 </div>
             </section>
@@ -132,7 +132,7 @@
                     <?php display_category_posts('disney', 3); ?>
                     <div class="link-main-category">
                         <a href="<?php echo esc_url(get_category_link(get_cat_ID('disney'))); ?>">Check out
-                            more<span><i class="bi bi-arrow-right"></i></span></a>
+                            more<span><i class="bi bi-arrow-right" aria-label="Check more Disney Blog"></i></span></a>
                     </div>
                 </div>
             </section>
@@ -149,7 +149,7 @@
 
                     <div class="link-main-category">
                         <a href="<?php echo esc_url(get_category_link(get_cat_ID('honeymoon and wedding'))); ?>">Check out
-                            more<span><i class="bi bi-arrow-right"></i></span></a>
+                            more<span><i class="bi bi-arrow-right" aria-label="Check more Honeymoon and Wedding Blog"></i></span></a>
                     </div>
                 </div>
             </section>
@@ -167,7 +167,7 @@
 
                     <div class="link-main-category">
                         <a href="<?php echo esc_url(get_category_link(get_cat_ID('all inclusive'))); ?>">Check out
-                            more<span><i class="bi bi-arrow-right"></i></span></a>
+                            more<span><i class="bi bi-arrow-right" aria-label="Check out more All Inclusive and Others"></i></span></a>
                     </div>
                 </div>
             </section>

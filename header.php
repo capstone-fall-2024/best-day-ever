@@ -46,7 +46,7 @@
 			<?php get_search_form(); ?>
 			<div>
 
-				<i class="bi bi-x-lg"></i>
+				<i class="bi bi-x-lg" aria-label="Search Icon"></i>
 			</div>
 		</div>
 
@@ -124,7 +124,7 @@
 
 				<div class="search-form-mobile">
 					<?php get_search_form(); ?>
-					<i class="bi bi-search"></i>
+					<i class="bi bi-search" aria-label="Search"></i>
 				</div>
 				<!-- Navigation Menu -->
 				<nav class="nav-mobile">
@@ -136,7 +136,7 @@
 						<li>
 							<div class="vacations-drop-down-menuMobile">
 								<a href="<?php echo site_url('/vacations'); ?>">Vacations</a>
-								<i class="bi bi-chevron-down"></i>
+								<i class="bi bi-chevron-down" aria-label="Expand sub-menu"></i>
 							</div>
 
 							<ul class="submenu-mobile">
