@@ -24,7 +24,7 @@ get_header();
 	<!-- About Jen Section -->
 	<section class="im-jen container">
 		<div>
-			<img class="img-rounded" src="<?php echo get_theme_file_uri('/img/woman-portrait.webp') ?>" alt="Stock photo of woman smiling">
+			<img class="img-rounded" src="<?php echo get_theme_file_uri('/img/woman-portrait.webp') ?>" alt="A photo of a woman smiling at the camera.">
 		</div>
 		<div>
 			<h3>Hi, I'm Jen!</h3>
