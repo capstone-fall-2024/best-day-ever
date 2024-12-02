@@ -41,7 +41,7 @@ get_header();
         </div>
         <div class="about-jen__img-container">
           <figure>
-            <img src="<?php echo get_theme_file_uri('/img/pixabay-woman-portrait.jpg') ?>" alt="A photo of a woman smiling at the camera.">
+            <img src="<?php echo get_theme_file_uri('/img/woman-portrait.webp') ?>" alt="A photo of a woman smiling at the camera.">
           </figure>
         </div>
       </div>

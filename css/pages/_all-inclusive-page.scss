@@ -1,7 +1,7 @@
 .all-inclusive-page {
   .all-inclusive-intro,
   .unique-intro {
-    margin: 5rem auto 0 auto;
+    margin: 5rem auto 4rem auto;
 
     h3 {
       color: $dark-red;
@@ -10,7 +10,6 @@
 
     .container.text-center {
       margin: 6rem auto;
-
       font-size: 1.125rem;
 
       a {
@@ -40,12 +39,10 @@
     }
 
     a {
-      margin-top: 1rem;
       width: 170px;
     }
 
     .card-buttons {
-      margin-top: 0;
       justify-content: center;
 
       a {

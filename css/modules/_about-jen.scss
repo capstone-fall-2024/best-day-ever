@@ -22,7 +22,7 @@
   @include media(large) {
     width: 100%;
     background-color: $dark-green;
-    margin-bottom: 100px;
+    margin-bottom: 5rem;
   }
 
   .about-jen {
@@ -87,7 +87,7 @@
       width: 100%;
       height: auto;
       background-color: $dark-green;
-      padding: 30px 0;
+      padding: 1.125rem 0 0 0;
       order: -1;
       display: flex;
       justify-content: center;

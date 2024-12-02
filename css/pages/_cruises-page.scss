@@ -45,17 +45,15 @@
     }
 
     a {
-      margin-top: 1rem;
       width: 170px;
     }
+  }
 
-    .card-buttons {
+  .vacation-card-group .vacation-card .card-buttons {
+    justify-content: center;
+
+    a {
       margin-top: 0;
-      justify-content: center;
-
-      a {
-        margin-top: 0;
-      }
     }
   }
 
