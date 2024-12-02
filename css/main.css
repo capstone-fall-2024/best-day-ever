@@ -461,6 +461,7 @@ body .home-specials h4 {
   width: 100%;
   aspect-ratio: 3/4;
   height: auto;
+  -o-object-fit: scale-down;
   object-fit: scale-down;
 }
 .site-header .main-navigation {
@@ -514,10 +515,18 @@ body .home-specials h4 {
 .site-header:has(+ div + .front-page) {
   position: absolute;
 }
-.site-header:has(+ div + .front-page) .menu-header-menu-container > ul > li > a {
+.site-header:has(+ div + .front-page)
+  .menu-header-menu-container
+  > ul
+  > li
+  > a {
   color: #fff;
 }
-.site-header:has(+ div + .front-page) .menu-header-menu-container > ul > li > a:hover {
+.site-header:has(+ div + .front-page)
+  .menu-header-menu-container
+  > ul
+  > li
+  > a:hover {
   color: #fb8f46;
 }
 .site-header:has(+ div + .front-page) .bi-search {
@@ -625,18 +634,24 @@ body .home-specials h4 {
 .sidebar-menu__container .search-form-mobile .search-field:active {
   border: 1px solid #ce5927;
 }
-.sidebar-menu__container .search-form-mobile input[type=search] {
+.sidebar-menu__container .search-form-mobile input[type="search"] {
   padding: 5px;
+}
+.sidebar-menu__container .search-form-mobile input::-moz-placeholder {
+  padding-left: 10px;
 }
 .sidebar-menu__container .search-form-mobile input::placeholder {
   padding-left: 10px;
 }
-.sidebar-menu__container .search-form-mobile input[type=search]:focus {
+.sidebar-menu__container .search-form-mobile input[type="search"]:focus {
   outline: none;
   box-shadow: none; /* Removes any additional shadow */
   padding-left: 5px;
 }
-.sidebar-menu__container .search-form-mobile input[type=search]::-webkit-search-cancel-button {
+.sidebar-menu__container
+  .search-form-mobile
+  input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
   appearance: none; /* Hides the clear button */
   display: none; /* Ensures it's not visible */
 }
@@ -673,19 +688,30 @@ body .home-specials h4 {
 .sidebar-menu__container .nav-mobile__menu-list-mobile li a:hover {
   color: #fb8f46;
 }
-.sidebar-menu__container .nav-mobile__menu-list-mobile li .vacations-drop-down-menuMobile {
+.sidebar-menu__container
+  .nav-mobile__menu-list-mobile
+  li
+  .vacations-drop-down-menuMobile {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
 }
-.sidebar-menu__container .nav-mobile__menu-list-mobile li .vacations-drop-down-menuMobile .bi-chevron-down {
+.sidebar-menu__container
+  .nav-mobile__menu-list-mobile
+  li
+  .vacations-drop-down-menuMobile
+  .bi-chevron-down {
   font-size: 24px;
   display: inline-block;
   transition: 0.5s;
   cursor: pointer;
 }
-.sidebar-menu__container .nav-mobile__menu-list-mobile li .vacations-drop-down-menuMobile .bi-chevron-down.active {
+.sidebar-menu__container
+  .nav-mobile__menu-list-mobile
+  li
+  .vacations-drop-down-menuMobile
+  .bi-chevron-down.active {
   transform: rotate(-180deg);
   transition: 0.5s;
 }
@@ -701,11 +727,18 @@ body .home-specials h4 {
 .sidebar-menu__container .nav-mobile__menu-list-mobile li .submenu-mobile li {
   border-bottom: 0;
 }
-.sidebar-menu__container .nav-mobile__menu-list-mobile li .submenu-mobile li:first-child {
+.sidebar-menu__container
+  .nav-mobile__menu-list-mobile
+  li
+  .submenu-mobile
+  li:first-child {
   margin-top: 10px;
   border-top: solid 1px #0a0a0a;
 }
-.sidebar-menu__container .nav-mobile__menu-list-mobile li .submenu-mobile.active {
+.sidebar-menu__container
+  .nav-mobile__menu-list-mobile
+  li
+  .submenu-mobile.active {
   max-height: 500px;
   opacity: 1;
   transform: scaleY(1);
@@ -820,7 +853,12 @@ body .home-specials h4 {
     transition: all 0.3s ease 0s;
     text-transform: uppercase;
   }
-  .site-header .main-navigation .menu-header-menu-container > ul > li > a:hover {
+  .site-header
+    .main-navigation
+    .menu-header-menu-container
+    > ul
+    > li
+    > a:hover {
     transition: all 0.3s ease 0s;
     color: #fb8f46;
   }
@@ -902,11 +940,12 @@ body .home-specials h4 {
     font-size: 24px;
     cursor: pointer;
   }
-  .search-form-box input[type=search]:focus {
+  .search-form-box input[type="search"]:focus {
     outline: none;
     box-shadow: none; /* Removes any additional shadow */
   }
-  .search-form-box input[type=search]::-webkit-search-cancel-button {
+  .search-form-box input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
     appearance: none; /* Hides the clear button */
     display: none; /* Ensures it's not visible */
   }
@@ -971,7 +1010,7 @@ body .home-specials h4 {
 
 footer {
   text-align: center;
-  margin-top: 80px;
+  margin-top: 5rem;
 }
 
 .group {
@@ -1114,7 +1153,7 @@ div.menu-additional-info-footer-container {
     align-items: flex-start;
   }
   div.menu-additional-info-footer-container {
-    margin-top: 35px;
+    margin-top: 1rem;
   }
   .site-footer__col-one div p .widget p {
     margin-bottom: -5px;
@@ -1140,12 +1179,16 @@ div.menu-additional-info-footer-container {
     gap: 2rem;
     margin-top: 24px;
   }
-  .site-footer__col-five .footer-buttons .site-footer__col-five .wp-block-buttons {
+  .site-footer__col-five
+    .footer-buttons
+    .site-footer__col-five
+    .wp-block-buttons {
     flex-direction: row;
   }
 }
 .home-banner {
-  background: url("../img/beach-banner-800.webp") no-repeat center center/cover scroll;
+  background: url("../img/beach-banner-800.webp") no-repeat center center/cover
+    scroll;
   max-height: 250vh;
   position: relative;
   top: 0;
@@ -1185,14 +1228,14 @@ div.menu-additional-info-footer-container {
 .stacked-images img:first-child {
   box-shadow: 6px 6px 4px rgba(50, 5, 7, 0.25);
   transform: rotate(8deg);
-  grid-column: 2/span 4;
-  grid-row: 1/span 3;
+  grid-column: 2 / span 4;
+  grid-row: 1 / span 3;
 }
 .stacked-images img:last-child {
   box-shadow: 0 6px 4px rgba(50, 5, 7, 0.25);
   transform: rotate(-10deg);
-  grid-column: 1/span 4;
-  grid-row: 3/span 3;
+  grid-column: 1 / span 4;
+  grid-row: 3 / span 3;
 }
 
 .home-banner-backdrop {
@@ -1247,14 +1290,14 @@ div.menu-additional-info-footer-container {
     flex-wrap: nowrap;
   }
   .home-banner-backdrop {
-    grid-column: 1/span 1;
-    grid-row: 2/span 1;
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
     margin: 0 auto;
     padding: 2rem;
   }
   .stacked-images {
-    grid-column: 2/span 1;
-    grid-row: 1/span 2;
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
   }
   .stacked-images img {
     max-width: unset;
@@ -1272,6 +1315,7 @@ div.menu-additional-info-footer-container {
 }
 .im-jen img {
   aspect-ratio: 2/3;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .im-jen a {
@@ -1374,6 +1418,7 @@ div.menu-additional-info-footer-container {
 }
 .vacation-card img {
   aspect-ratio: 16/9;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .vacation-card a {
@@ -1387,10 +1432,12 @@ div.menu-additional-info-footer-container {
 }
 .vacation-card > div:first-of-type {
   margin-bottom: 1rem;
+  -moz-column-gap: 1.25rem;
   column-gap: 1.25rem;
 }
 .vacation-card > div:last-of-type {
   gap: 1rem;
+  -moz-column-gap: 2rem;
   column-gap: 2rem;
 }
 .vacation-card > div:last-of-type div {
@@ -1408,6 +1455,7 @@ div.menu-additional-info-footer-container {
   flex-wrap: wrap;
   justify-content: center;
   row-gap: 3rem;
+  -moz-column-gap: 1.5rem;
   column-gap: 1.5rem;
 }
 .vacation-card-group a {
@@ -1543,6 +1591,7 @@ h4 {
 }
 .disney-page > section > section:first-of-type > div:first-of-type img {
   aspect-ratio: 5/4;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .disney-page > section > section:first-of-type > div:first-of-type div {
@@ -1566,26 +1615,36 @@ h4 {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr auto 1fr;
     row-gap: 1rem;
+    -moz-column-gap: 1.5rem;
     column-gap: 1.5rem;
   }
-  .disney-page section > section:first-of-type > div:first-of-type div:first-of-type {
-    grid-column: 2/span 1;
-    grid-row: 1/span 4;
+  .disney-page
+    section
+    > section:first-of-type
+    > div:first-of-type
+    div:first-of-type {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 4;
   }
-  .disney-page section > section:first-of-type > div:first-of-type div:last-of-type {
-    grid-column: 1/span 1;
-    grid-row: 3/span 1;
+  .disney-page
+    section
+    > section:first-of-type
+    > div:first-of-type
+    div:last-of-type {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
   }
   .disney-page h3 {
-    grid-column: 1/span 1;
-    grid-row: 2/span 1;
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
   }
   .disney-bg {
     background: url("../img/firework-bg.webp") repeat-y center/contain scroll;
   }
 }
 .norwegian-bg {
-  background: url("../img/couple-walking-on-the-cruise.webp") no-repeat center/cover scroll;
+  background: url("../img/couple-walking-on-the-cruise.webp") no-repeat
+    center/cover scroll;
   margin: 4rem auto;
   padding: 2rem 1rem;
   height: 500px;
@@ -1593,7 +1652,8 @@ h4 {
 }
 
 .disney-cruise-bg {
-  background: url("../img/disney-cruise-sailing.webp") no-repeat center/cover scroll;
+  background: url("../img/disney-cruise-sailing.webp") no-repeat center/cover
+    scroll;
   margin: 4rem auto;
   padding: 2rem 1rem;
   height: 500px;
@@ -1605,6 +1665,7 @@ h4 {
 }
 .cruises-page > section > section:first-of-type img {
   aspect-ratio: 5/4;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .cruises-page > section > section:first-of-type h3 {
@@ -1662,19 +1723,20 @@ h4 {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr auto 1fr;
     row-gap: 1rem;
+    -moz-column-gap: 1.5rem;
     column-gap: 1.5rem;
   }
   .cruises-page > section > section:first-of-type > div div:first-of-type {
-    grid-column: 2/span 1;
-    grid-row: 1/span 4;
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 4;
   }
   .cruises-page > section > section:first-of-type > div div:last-of-type {
-    grid-column: 1/span 1;
-    grid-row: 3/span 1;
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
   }
   .cruises-page > section:first-of-type h3 {
-    grid-column: 1/span 1;
-    grid-row: 2/span 1;
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
   }
   .norwegian-bg,
   .disney-cruise-bg {
@@ -1704,6 +1766,7 @@ h4 {
 .hw-page .wedding-intro > div:first-of-type img,
 .hw-page .honeymoon-intro > div:first-of-type img {
   aspect-ratio: 5/4;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .hw-page .wedding-intro .container.text-center,
@@ -1754,22 +1817,23 @@ h4 {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr auto 1fr;
     row-gap: 1rem;
+    -moz-column-gap: 1.5rem;
     column-gap: 1.5rem;
   }
   .hw-page .wedding-intro > div:first-of-type div:first-of-type,
   .hw-page .honeymoon-intro > div:first-of-type div:first-of-type {
-    grid-column: 2/span 1;
-    grid-row: 1/span 4;
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 4;
   }
   .hw-page .wedding-intro > div:first-of-type div:last-of-type,
   .hw-page .honeymoon-intro > div:first-of-type div:last-of-type {
-    grid-column: 1/span 1;
-    grid-row: 3/span 1;
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
   }
   .hw-page .wedding-intro h3,
   .hw-page .honeymoon-intro h3 {
-    grid-column: 1/span 1;
-    grid-row: 2/span 1;
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
   }
   .flower-decor {
     position: relative;
@@ -1815,6 +1879,7 @@ h4 {
 .all-inclusive-page .all-inclusive-intro > div:first-of-type img,
 .all-inclusive-page .unique-intro > div:first-of-type img {
   aspect-ratio: 5/4;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .all-inclusive-page .all-inclusive-intro > div div,
@@ -1844,22 +1909,26 @@ h4 {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr auto 1fr;
     row-gap: 1rem;
+    -moz-column-gap: 1.5rem;
     column-gap: 1.5rem;
   }
-  .all-inclusive-page .all-inclusive-intro > div:first-of-type div:first-of-type,
+  .all-inclusive-page
+    .all-inclusive-intro
+    > div:first-of-type
+    div:first-of-type,
   .all-inclusive-page .unique-intro > div:first-of-type div:first-of-type {
-    grid-column: 2/span 1;
-    grid-row: 1/span 4;
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 4;
   }
   .all-inclusive-page .all-inclusive-intro > div:first-of-type div:last-of-type,
   .all-inclusive-page .unique-intro > div:first-of-type div:last-of-type {
-    grid-column: 1/span 1;
-    grid-row: 3/span 1;
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
   }
   .all-inclusive-page .all-inclusive-intro h3,
   .all-inclusive-page .unique-intro h3 {
-    grid-column: 1/span 1;
-    grid-row: 2/span 1;
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
   }
 }
 .main-section h3 {
@@ -2047,6 +2116,7 @@ h4 {
 .row .blog-card__card-img {
   width: 100%;
   height: 250px;
+  -o-object-fit: cover;
   object-fit: cover;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -2177,7 +2247,8 @@ h4 {
 @media (min-width: 768px) {
   /******home.php*******/
   .banner-blog {
-    background: url("../img/get-a-quote.jpg") no-repeat center bottom/cover scroll;
+    background: url("../img/get-a-quote.jpg") no-repeat center bottom/cover
+      scroll;
   }
   .banner_container {
     display: flex;
@@ -2228,6 +2299,7 @@ h4 {
   .image-banner-section a img {
     width: 100%;
     height: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
     border-radius: 10px;
   }
@@ -2324,6 +2396,7 @@ h4 {
 .about-jen-container .about-jen__img-container img {
   width: 250px;
   height: auto;
+  -o-object-fit: cover;
   object-fit: cover;
   box-shadow: 10px -10px #ce5927;
   border-radius: 10px;
@@ -2370,6 +2443,7 @@ h4 {
 }
 .values-container__img-container img {
   aspect-ratio: 1/1;
+  -o-object-fit: cover;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0px 6px 4px 0px rgba(50, 5, 7, 0.25);
@@ -2398,6 +2472,7 @@ h4 {
 .img-background img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -2410,7 +2485,12 @@ h4 {
   width: 100%;
   height: 100%;
   background: rgb(11, 11, 11);
-  background: linear-gradient(0deg, rgba(11, 11, 11, 0.5327380952) 0%, rgba(74, 74, 74, 0.5215336134) 7%, rgba(56, 56, 56, 0) 46%);
+  background: linear-gradient(
+    0deg,
+    rgba(11, 11, 11, 0.5327380952) 0%,
+    rgba(74, 74, 74, 0.5215336134) 7%,
+    rgba(56, 56, 56, 0) 46%
+  );
 }
 
 .single-banner-content {
@@ -2465,6 +2545,7 @@ h4 {
 .profile-img-blogger img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
   border-radius: 50px;
 }
@@ -2614,7 +2695,8 @@ h4 {
     border-left: 3px dotted black;
     height: 200px;
   }
-  .vacation-option, .travel-advice {
+  .vacation-option,
+  .travel-advice {
     width: 100%;
     height: 120px;
     text-align: center;
@@ -2658,6 +2740,7 @@ h4 {
 .meet-jen-blog-section > div > figure > img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
   border-radius: 15px;
 }
@@ -2683,7 +2766,8 @@ h4 {
 }
 
 .quote-page {
-  background: url("../img/tropical-abstract-bg6.webp") center center/cover no-repeat;
+  background: url("../img/tropical-abstract-bg6.webp") center center/cover
+    no-repeat;
   padding-bottom: 7rem;
 }
 @media screen and (min-width: 950px) {
@@ -2816,7 +2900,12 @@ h4 {
 .quote-form .form-container form .uacf7-step {
   position: relative;
 }
-.quote-form .form-container form .uacf7-step .uacf7-row:last-of-type .uacf7-col-6 {
+.quote-form
+  .form-container
+  form
+  .uacf7-step
+  .uacf7-row:last-of-type
+  .uacf7-col-6 {
   justify-content: space-between;
 }
 .quote-form .form-container form .uacf7-step .uacf7-col-4,
@@ -2848,6 +2937,7 @@ h4 {
   border: 0;
   vertical-align: middle;
   -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   padding: 10px 20px;
   border: 1px solid rgba(50, 5, 7, 0.25);
@@ -2867,7 +2957,12 @@ h4 {
     margin-bottom: -1.5rem;
   }
 }
-.quote-form .form-container form .uacf7-step.step-start p:not(.form-intro) .uacf7-next {
+.quote-form
+  .form-container
+  form
+  .uacf7-step.step-start
+  p:not(.form-intro)
+  .uacf7-next {
   width: 150px !important;
   height: 50px;
   color: #320507;
@@ -2884,21 +2979,36 @@ h4 {
   transition: all 0.3s ease-in-out;
   width: 100%;
   grid-row: row2;
-  grid-column: 5/span 1;
+  grid-column: 5 / span 1;
 }
-.quote-form .form-container form .uacf7-step.step-start p:not(.form-intro) .uacf7-next:hover {
+.quote-form
+  .form-container
+  form
+  .uacf7-step.step-start
+  p:not(.form-intro)
+  .uacf7-next:hover {
   background-color: #30453b;
   color: #fff;
   border: 2px solid #30453b;
 }
-.quote-form .form-container form .uacf7-step.step-start p:not(.form-intro) .uacf7-next:hover {
+.quote-form
+  .form-container
+  form
+  .uacf7-step.step-start
+  p:not(.form-intro)
+  .uacf7-next:hover {
   background-color: #fff;
   color: #30453b;
   border: 2px solid #30453b;
 }
-.quote-form .form-container form .uacf7-step.step-start p:not(.form-intro) span.wpcf7-spinner {
+.quote-form
+  .form-container
+  form
+  .uacf7-step.step-start
+  p:not(.form-intro)
+  span.wpcf7-spinner {
   background-color: #320507;
-  grid-column: 5/span 1;
+  grid-column: 5 / span 1;
   place-self: center;
 }
 .quote-form .form-container form .uacf7-step.step-end .submit-btn {
@@ -2926,6 +3036,7 @@ h4 {
   transition: all 0.3s ease-in-out;
   width: 100%;
   max-width: 220px;
+  min-width: -moz-fit-content;
   min-width: fit-content;
   padding: 0 10px;
   order: 1;
@@ -2935,7 +3046,13 @@ h4 {
   color: #fff;
   border: 2px solid #30453b;
 }
-.quote-form .form-container form .uacf7-step.step-end .submit-btn p .uacf7-prev {
+.quote-form
+  .form-container
+  form
+  .uacf7-step.step-end
+  .submit-btn
+  p
+  .uacf7-prev {
   width: 150px !important;
   min-width: 210px;
   height: 50px;
@@ -2953,17 +3070,34 @@ h4 {
   transition: all 0.3s ease-in-out;
   width: 100%;
 }
-.quote-form .form-container form .uacf7-step.step-end .submit-btn p .uacf7-prev:hover {
+.quote-form
+  .form-container
+  form
+  .uacf7-step.step-end
+  .submit-btn
+  p
+  .uacf7-prev:hover {
   background-color: #30453b;
   color: #fff;
   border: 2px solid #30453b;
 }
-.quote-form .form-container form .uacf7-step.step-end .submit-btn p .uacf7-prev:hover {
+.quote-form
+  .form-container
+  form
+  .uacf7-step.step-end
+  .submit-btn
+  p
+  .uacf7-prev:hover {
   background-color: #fff;
   color: #30453b;
   border: 1px solid #30453b;
 }
-.quote-form .form-container form .uacf7-step.step-end .submit-btn span.wpcf7-spinner {
+.quote-form
+  .form-container
+  form
+  .uacf7-step.step-end
+  .submit-btn
+  span.wpcf7-spinner {
   background-color: #320507;
   order: -1;
 }
@@ -2973,18 +3107,23 @@ h4 {
     grid-template-columns: repeat(9, 1fr);
   }
   .quote-form .form-container form .uacf7-step.step-end .submit-btn input {
-    grid-column: 6/span 1;
+    grid-column: 6 / span 1;
     grid-row-start: row2;
     margin-top: 5px;
   }
-  .quote-form .form-container form .uacf7-step.step-end .submit-btn span.wpcf7-spinner {
+  .quote-form
+    .form-container
+    form
+    .uacf7-step.step-end
+    .submit-btn
+    span.wpcf7-spinner {
     order: 0;
     grid-column-start: 5;
     justify-self: center;
     margin: 0;
   }
   .quote-form .form-container form .uacf7-step.step-end .submit-btn p {
-    grid-column: 4/span 1;
+    grid-column: 4 / span 1;
     grid-row-start: row2;
     margin: 0;
   }
@@ -3032,7 +3171,8 @@ h4 {
 
 /** Quote Form Confirmation **/
 .confirmation-container {
-  background: url("../img/tropical-abstract-bg6.webp") center center/cover no-repeat;
+  background: url("../img/tropical-abstract-bg6.webp") center center/cover
+    no-repeat;
 }
 @media screen and (min-width: 950px) {
   .confirmation-container {
@@ -3075,7 +3215,11 @@ h4 {
 .confirmation-container .confirmation .steps-container .steps-step p {
   margin: 0 !important;
 }
-.confirmation-container .confirmation .steps-container .steps-step .step-number {
+.confirmation-container
+  .confirmation
+  .steps-container
+  .steps-step
+  .step-number {
   width: 30px;
   height: 30px;
   line-height: 30px;
@@ -3089,7 +3233,10 @@ h4 {
 .confirmation-container .confirmation .steps-container .steps-step .step-info {
   display: none;
 }
-.confirmation-container .confirmation .steps-container .steps-step:not(:last-child)::after {
+.confirmation-container
+  .confirmation
+  .steps-container
+  .steps-step:not(:last-child)::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -3100,29 +3247,45 @@ h4 {
   transform: translateY(-50%);
 }
 @media screen and (min-width: 450px) {
-  .confirmation-container .confirmation .steps-container .steps-step:not(:last-child)::after {
+  .confirmation-container
+    .confirmation
+    .steps-container
+    .steps-step:not(:last-child)::after {
     width: calc(100% + 10vw);
   }
 }
 @media screen and (min-width: 550px) {
-  .confirmation-container .confirmation .steps-container .steps-step:not(:last-child)::after {
+  .confirmation-container
+    .confirmation
+    .steps-container
+    .steps-step:not(:last-child)::after {
     width: calc(100% + 13vw);
   }
 }
 @media screen and (min-width: 650px) {
-  .confirmation-container .confirmation .steps-container .steps-step:not(:last-child)::after {
+  .confirmation-container
+    .confirmation
+    .steps-container
+    .steps-step:not(:last-child)::after {
     width: calc(100% + 17vw);
   }
 }
 @media screen and (min-width: 800px) {
-  .confirmation-container .confirmation .steps-container .steps-step:not(:last-child)::after {
+  .confirmation-container
+    .confirmation
+    .steps-container
+    .steps-step:not(:last-child)::after {
     width: calc(100% + 20vw);
   }
 }
 .confirmation-container .confirmation .steps-container .steps-step.confirmed {
   background-color: #fbcb08;
 }
-.confirmation-container .confirmation .steps-container .steps-step.confirmed .step-number {
+.confirmation-container
+  .confirmation
+  .steps-container
+  .steps-step.confirmed
+  .step-number {
   background-color: #fff;
 }
 .confirmation-container .confirmation .confirmation-content {
@@ -3140,6 +3303,7 @@ h4 {
 }
 .confirmation-container .confirmation .confirmation-content h3 {
   color: #30453b;
+  -webkit-text-decoration: uppercase;
   text-decoration: uppercase;
 }
 .confirmation-container .confirmation .confirmation-content p {
@@ -3155,7 +3319,11 @@ h4 {
   gap: 1rem;
   margin-bottom: -1.5rem;
 }
-.confirmation-container .confirmation .confirmation-content .btns a:first-child {
+.confirmation-container
+  .confirmation
+  .confirmation-content
+  .btns
+  a:first-child {
   height: 50px;
   color: #320507;
   font-weight: 700;
@@ -3171,7 +3339,11 @@ h4 {
   transition: all 0.3s ease-in-out;
   width: 100%;
 }
-.confirmation-container .confirmation .confirmation-content .btns a:first-child:hover {
+.confirmation-container
+  .confirmation
+  .confirmation-content
+  .btns
+  a:first-child:hover {
   background-color: #30453b;
   color: #fff;
   border: 2px solid #30453b;
@@ -3192,7 +3364,11 @@ h4 {
   transition: all 0.3s ease-in-out;
   width: 100%;
 }
-.confirmation-container .confirmation .confirmation-content .btns a:last-child:hover {
+.confirmation-container
+  .confirmation
+  .confirmation-content
+  .btns
+  a:last-child:hover {
   background-color: #30453b;
   color: #fff;
   border: 2px solid #30453b;
@@ -3205,10 +3381,17 @@ h4 {
     gap: 10px;
     min-width: 200px;
   }
-  .confirmation-container .confirmation .steps-container .steps-step .step-info {
+  .confirmation-container
+    .confirmation
+    .steps-container
+    .steps-step
+    .step-info {
     display: inline-block;
   }
-  .confirmation-container .confirmation .steps-container .steps-step:not(:last-child)::after {
+  .confirmation-container
+    .confirmation
+    .steps-container
+    .steps-step:not(:last-child)::after {
     width: 100%;
   }
   .confirmation-container .confirmation .confirmation-content {
@@ -3300,6 +3483,7 @@ h4 {
   width: 10%;
 }
 .contact-jen .contact-info .social-contact div figure img {
+  -o-object-fit: scale-down !important;
   object-fit: scale-down !important;
   height: 50px;
   cursor: pointer;
@@ -3387,6 +3571,7 @@ h4 {
 }
 .special-deals .cruise .intro img {
   aspect-ratio: 1/1;
+  -o-object-fit: cover;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0px 6px 4px 0px rgba(50, 5, 7, 0.25);
@@ -3401,7 +3586,8 @@ h4 {
   flex-direction: column;
   gap: 1rem;
 }
-.special-deals .cruise .swiper .swiper-wrapper .swiper-slide.swiper-slide-next, .special-deals .cruise .swiper .swiper-wrapper .swiper-slide.swiper-slide-next {
+.special-deals .cruise .swiper .swiper-wrapper .swiper-slide.swiper-slide-next,
+.special-deals .cruise .swiper .swiper-wrapper .swiper-slide.swiper-slide-next {
   transform: none;
 }
 .special-deals .cruise .swiper .swiper-arrows {
@@ -3439,6 +3625,7 @@ h4 {
 }
 .special-deals .other-deals .deals-promo img {
   aspect-ratio: 1/1;
+  -o-object-fit: cover;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0px 6px 4px 0px rgba(50, 5, 7, 0.25);
@@ -3472,6 +3659,7 @@ h4 {
 .special-deals .jen-contact img.portrait {
   order: -2;
   aspect-ratio: 1/1;
+  -o-object-fit: cover;
   object-fit: cover;
   width: 100px;
   border-radius: 50%;
@@ -3598,6 +3786,7 @@ h4 {
 }
 .home-specials .deals-content .special-deal-card img {
   aspect-ratio: 1/1;
+  -o-object-fit: cover;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0px 6px 4px 0px rgba(50, 5, 7, 0.25);
@@ -3673,7 +3862,8 @@ h4 {
   padding: 4rem 0 1.5rem 0;
   margin: 4rem 0;
 }
-.testimonials:before, .testimonials:after {
+.testimonials:before,
+.testimonials:after {
   content: "";
   position: absolute;
   display: block;
@@ -3769,7 +3959,12 @@ h4 {
 .slider .testimonial-slider-item .testimonial .author-info .author-details p {
   margin-bottom: 0;
 }
-.slider .testimonial-slider-item .testimonial .author-info .author-details p:first-of-type {
+.slider
+  .testimonial-slider-item
+  .testimonial
+  .author-info
+  .author-details
+  p:first-of-type {
   font-weight: bold;
 }
 .slider .certificate-slider-inner {
@@ -3828,15 +4023,30 @@ h4 {
     top: -10%;
     right: 5%;
   }
-  .testimonials .slider .testimonial-slider-inner .testimonial-slider-item .testimonial .full-message {
+  .testimonials
+    .slider
+    .testimonial-slider-inner
+    .testimonial-slider-item
+    .testimonial
+    .full-message {
     padding-bottom: 2.25rem;
     margin-bottom: 0;
     display: inline;
   }
-  .testimonials .slider .testimonial-slider-inner .testimonial-slider-item .testimonial .short-message {
+  .testimonials
+    .slider
+    .testimonial-slider-inner
+    .testimonial-slider-item
+    .testimonial
+    .short-message {
     display: none;
   }
-  .testimonials .slider .testimonial-slider-inner .testimonial-slider-item .testimonial .toggle-message {
+  .testimonials
+    .slider
+    .testimonial-slider-inner
+    .testimonial-slider-item
+    .testimonial
+    .toggle-message {
     display: none;
   }
   .slider .certificate-slider-inner {
@@ -3924,7 +4134,8 @@ h4 {
   }
 }
 @media screen and (min-width: 1024px) {
-  .swiper .swiper-slide.swiper-slide-prev, .swiper .swiper-slide.swiper-slide-next {
+  .swiper .swiper-slide.swiper-slide-prev,
+  .swiper .swiper-slide.swiper-slide-next {
     transition: transform 0.3s ease-in-out;
     transform: scale(0.9);
   }
@@ -4114,7 +4325,8 @@ section.instagram h3.dotted-line a:hover {
   section.instagram h3.dotted-line {
     width: 100%;
   }
-  section.instagram h3.dotted-line::before, section.instagram h3.dotted-line::after {
+  section.instagram h3.dotted-line::before,
+  section.instagram h3.dotted-line::after {
     content: "";
     flex: 1;
     height: 0;
@@ -4143,6 +4355,7 @@ section.instagram h3.dotted-line a:hover {
   transition: all 0.3s ease-in-out;
   width: 100%;
   font-size: 1rem;
+  width: -moz-fit-content;
   width: fit-content;
   box-shadow: unset !important;
 }
@@ -4300,4 +4513,4 @@ a {
 .actual-content .wp-block-cover {
   width: 100%;
   margin-left: 0;
-}
+} /*# sourceMappingURL=main.css.map */
