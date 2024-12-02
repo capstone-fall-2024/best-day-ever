@@ -14,7 +14,7 @@
 <head>
 	<title><?php bloginfo('name');
 	wp_title(); ?> | <?php echo the_title(); ?> </title>
-	<meta name="description" content="<?php bloginfo('description'); ?>">
+	<meta name="description" content="Travel Agent Jennifer Lehr, working with Best Day Ever Vacations, to bring you and your family the Ultimate Vacation Packages and Special Offers.">
 
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,6 +28,10 @@
 
 	<!-- Bootstrap -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+	<!-- Banner preload -->
+	<link rel="preload" fetchpriority="high" as="image" href="../img/beach-banner-800.webp" type="image/webp">
+	<link rel="preload" fetchpriority="high" as="image" href="../img/beach-banner.webp" type="image/webp">
 
 	<?php wp_head(); ?>
 </head>
@@ -124,7 +128,7 @@
 
 				<div class="search-form-mobile">
 					<?php get_search_form(); ?>
-					<i class="bi bi-search" aria-label="Search"></i>
+					<i class="bi bi-search"></i>
 				</div>
 				<!-- Navigation Menu -->
 				<nav class="nav-mobile">

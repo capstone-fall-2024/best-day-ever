@@ -142,7 +142,7 @@ function bdev_by_jen_widgets_init()
 
 	register_sidebar(
 		array(
-			'name' => esc_html__('Banner Sidebar', 'bdev_by_jen'),
+			'name' => esc_html__('Blog Marketing Banner Sidebar', 'bdev_by_jen'),
 			'id' => 'banner-sidebar',
 			'description' => esc_html__('Add widgets here.', 'bdev_by_jen'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -154,7 +154,7 @@ function bdev_by_jen_widgets_init()
 
 	register_sidebar(
 		array(
-			'name' => esc_html__('Marketing Banner Main', 'bdev_by_jen'),
+			'name' => esc_html__('Blog Main Marketing Banner', 'bdev_by_jen'),
 			'id' => 'marketing-banner-main',
 			'description' => esc_html__('Add widgets here.', 'bdev_by_jen'),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
