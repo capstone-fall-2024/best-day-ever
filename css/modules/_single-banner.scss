@@ -1,15 +1,11 @@
 .single-blog-banner{
-  width: 100%;
-  height: auto;
   margin-bottom: 2rem;
 }
 
 .img-background{
   background:url("../img/get-a-quote.jpg") no-repeat center center / cover;
-
   height: 400px;
   position: relative;
-  // background-color: lightblue;
 }
 
 .img-background img{
@@ -50,9 +46,6 @@
 
 @media (min-width:1024px) {
   .img-background{
-    max-width: 1024px;
-    // width: 1400px;
-    height: 600px;
-    margin: 0 auto;
+    height: 500px;
   }
 }

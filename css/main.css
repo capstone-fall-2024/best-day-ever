@@ -2675,7 +2675,7 @@ h4 {
 }
 
 .banner-blog {
-  background: url("../img/get-a-quote.jpg") no-repeat center center/cover scroll;
+  background: url("../img/blog-banner-800.webp") no-repeat center center/cover scroll;
 }
 
 .banner_container {
@@ -2974,7 +2974,7 @@ h4 {
 @media (min-width: 768px) {
   /******home.php*******/
   .banner-blog {
-    background: url("../img/get-a-quote.jpg") no-repeat center bottom/cover scroll;
+    background: url("../img/blog-banner.webp") no-repeat center bottom/cover scroll;
   }
   .banner_container {
     display: flex;
@@ -3189,8 +3189,6 @@ h4 {
 }
 
 .single-blog-banner {
-  width: 100%;
-  height: auto;
   margin-bottom: 2rem;
 }
 
@@ -3237,9 +3235,7 @@ h4 {
 
 @media (min-width: 1024px) {
   .img-background {
-    max-width: 1024px;
-    height: 600px;
-    margin: 0 auto;
+    height: 500px;
   }
 }
 .main-content {
