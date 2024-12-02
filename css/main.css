@@ -2408,6 +2408,7 @@ h4 {
   flex: 0 1 350px;
 }
 .cruises-page > section > section:first-of-type a {
+  margin-top: 1rem;
   width: 170px;
 }
 .cruises-page .vacation-card-group .vacation-card .card-buttons {
@@ -3241,11 +3242,6 @@ h4 {
     margin: 0 auto;
   }
 }
-.single-blog {
-  max-width: 1024px;
-  margin: 0 auto;
-}
-
 .main-content {
   margin-bottom: 48px;
 }
@@ -3295,6 +3291,9 @@ h4 {
   flex-direction: column;
   gap: 2rem;
   padding: 0 5%;
+}
+.blog-content .blog-article-content p {
+  margin-bottom: 1rem;
 }
 
 .social-icon-share-block {
