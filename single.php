@@ -36,7 +36,7 @@ get_header();
 					</div>
 				</div>
 
-				<article class="single-blog">
+				<article class="single-blog container">
 					<div class="main-content">
 						<h3 class="hide-heading">Blog Content</h3>
 						<?php
@@ -79,8 +79,8 @@ get_header();
 							</div>
 						</div>
 						<div class="blog-content">
-							<div class="d-flex flex-wrap">
-								<div class="col-12 col-md-10">
+							<div class="d-flex flex-wrap g-3">
+								<div class="col-12 col-md-10 blog-article-content">
 									<?php the_content(); ?></div>
 								<div class="col-12 col-md-2">
 									<!-- Ad -->
@@ -192,19 +192,19 @@ get_header();
 					</div>
 				</section>
 
-				<?php if (is_active_sidebar('instagram')) {
-					dynamic_sidebar('instagram');
-				}
-				?>
-
-				<?php if (is_active_sidebar('subscription-main')): ?>
-					<?php dynamic_sidebar('subscription-main'); ?>
-				<?php endif; ?>
-
 			<?php endwhile; // End of the have_posts() loop 
 			?>
 		<?php endif; ?>
 	</section>
+
+	<?php if (is_active_sidebar('instagram')) {
+		dynamic_sidebar('instagram');
+	}
+	?>
+
+	<?php if (is_active_sidebar('subscription-main')): ?>
+		<?php dynamic_sidebar('subscription-main'); ?>
+	<?php endif; ?>
 
 </main><!-- #main -->
 
