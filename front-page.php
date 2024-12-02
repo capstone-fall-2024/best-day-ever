@@ -30,7 +30,7 @@ get_header();
 			<h3>Hi, I'm Jen!</h3>
 			<p>I'm a professionally trained Travel Agent with Best Day Ever Vacations, specializing in Disney Vacations.</p>
 			<p>My goal is to book the complete dream vacation for you, your friends, and your family!</p>
-			<a class="btn-primary" href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/about-jen/">More About Me</a>
+			<a class="btn-primary" href="<?php echo esc_url(home_url('/about-jen')); ?>">More About Me</a>
 		</div>
 	</section>
 	
@@ -55,7 +55,7 @@ get_header();
 				<?php get_template_part('parts/special-deals-home'); ?>
 			</div>
 
-		<a href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/special-deals/">Check out more<span><i class="bi bi-arrow-right"></i></span></a>
+		<a href="<?php echo esc_url(home_url('/special-deals')); ?>" class="check-more">Check out more<span><i class="bi bi-arrow-right"></i></span></a>
 	</section>
 
 	<!-- Ad -->

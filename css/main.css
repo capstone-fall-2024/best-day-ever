@@ -1275,42 +1275,8 @@ div.menu-additional-info-footer-container {
   object-fit: cover;
 }
 .im-jen a {
+  margin-top: 1rem;
   width: 60vw;
-}
-
-.home-specials {
-  margin: 4rem auto;
-}
-.home-specials img {
-  aspect-ratio: 5/4;
-  object-fit: cover;
-}
-.home-specials h3 {
-  color: #320507;
-  margin-bottom: 1.5rem;
-}
-.home-specials h4 {
-  color: #30453b;
-}
-.home-specials > div {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 3rem;
-}
-.home-specials > a {
-  color: #320507;
-  text-decoration: underline;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-.home-specials a:hover {
-  color: #ce5927;
-  text-decoration: underline;
 }
 
 .layout-reversed,
@@ -1411,6 +1377,7 @@ div.menu-additional-info-footer-container {
   object-fit: cover;
 }
 .vacation-card a {
+  margin-top: 1rem;
   width: 170px;
 }
 .vacation-card > div {
@@ -1655,14 +1622,12 @@ h4 {
   flex: 0 1 350px;
 }
 .cruises-page > section > section:first-of-type a {
-  margin-top: 1rem;
   width: 170px;
 }
-.cruises-page > section > section:first-of-type .card-buttons {
-  margin-top: 0;
+.cruises-page .vacation-card-group .vacation-card .card-buttons {
   justify-content: center;
 }
-.cruises-page > section > section:first-of-type .card-buttons a {
+.cruises-page .vacation-card-group .vacation-card .card-buttons a {
   margin-top: 0;
 }
 .cruises-page .backdrop {
@@ -1819,7 +1784,7 @@ h4 {
 }
 .all-inclusive-page .all-inclusive-intro,
 .all-inclusive-page .unique-intro {
-  margin: 5rem auto 0 auto;
+  margin: 5rem auto 4rem auto;
 }
 .all-inclusive-page .all-inclusive-intro h3,
 .all-inclusive-page .unique-intro h3 {
@@ -1858,12 +1823,10 @@ h4 {
 }
 .all-inclusive-page .all-inclusive-intro a,
 .all-inclusive-page .unique-intro a {
-  margin-top: 1rem;
   width: 170px;
 }
 .all-inclusive-page .all-inclusive-intro .card-buttons,
 .all-inclusive-page .unique-intro .card-buttons {
-  margin-top: 0;
   justify-content: center;
 }
 .all-inclusive-page .all-inclusive-intro .card-buttons a,
@@ -2280,7 +2243,7 @@ h4 {
   .about-jen-container {
     width: 100%;
     background-color: #30453b;
-    margin-bottom: 100px;
+    margin-bottom: 5rem;
   }
 }
 .about-jen-container .about-jen {
@@ -2346,7 +2309,7 @@ h4 {
   width: 100%;
   height: auto;
   background-color: #30453b;
-  padding: 30px 0;
+  padding: 1.125rem 0 0 0;
   order: -1;
   display: flex;
   justify-content: center;
@@ -3339,6 +3302,7 @@ h4 {
 .contact-jen .contact-info .social-contact div figure img {
   object-fit: scale-down !important;
   height: 50px;
+  cursor: pointer;
 }
 .contact-jen .contact-info .social-contact div p {
   width: 85%;
@@ -3444,6 +3408,14 @@ h4 {
   bottom: 1.5rem;
   width: 28%;
 }
+.special-deals .cruise .swiper .swiper-arrows .swiper-button-prev,
+.special-deals .cruise .swiper .swiper-arrows .swiper-button-next {
+  transition: color 0.3s ease-in-out;
+}
+.special-deals .cruise .swiper .swiper-arrows .swiper-button-prev:hover,
+.special-deals .cruise .swiper .swiper-arrows .swiper-button-next:hover {
+  color: #ce5927;
+}
 @media screen and (min-width: 420px) {
   .special-deals .cruise .swiper .swiper-arrows {
     width: 22%;
@@ -3475,7 +3447,9 @@ h4 {
   margin-top: 2rem;
 }
 .special-deals .other-deals .deals-promo .deals-item .promo-info {
-  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .special-deals .other-deals .deals-promo .deals-item .cta-btns {
   display: flex;
@@ -3606,8 +3580,16 @@ h4 {
   flex-direction: column;
   gap: 1rem;
 }
-.home-specials a {
-  margin: 0;
+.home-specials .check-more {
+  color: #ce5927;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 7px;
+}
+.home-specials .check-more:hover {
+  color: #ce5927;
+  text-decoration: underline;
 }
 .home-specials .deals-content .special-deal-card {
   display: flex;
@@ -3642,8 +3624,15 @@ h4 {
     justify-content: center;
   }
   .home-specials .deals-content .special-deal-card .info a {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  .home-specials .deals-content .special-deal-card .info a {
     width: 30%;
   }
+}
+@media screen and (min-width: 768px) {
   .home-specials .deals-content .special-deal-card:nth-child(even) {
     flex-direction: row-reverse;
     justify-content: flex-end;
@@ -3818,6 +3807,10 @@ h4 {
 .slider-control button i {
   font-size: 1.5rem;
   color: #ce5927;
+  transition: color 0.3s ease-in-out;
+}
+.slider-control button i:hover {
+  color: #320507;
 }
 
 @media screen and (min-width: 800px) {
@@ -3918,6 +3911,12 @@ h4 {
   background-color: #fff;
   margin-bottom: 1rem;
 }
+.swiper .swiper-slide.swiper-slide-active {
+  z-index: 3;
+}
+.swiper .swiper-slide a {
+  cursor: pointer;
+}
 @media screen and (min-width: 750px) {
   .swiper .swiper-slide {
     min-height: 320px;
@@ -3945,6 +3944,10 @@ h4 {
   gap: 5px;
   color: #ce5927;
 }
+.swiper .specialty a:hover {
+  text-decoration: underline;
+  color: #320507;
+}
 .swiper .swiper-arrows {
   display: flex;
   justify-content: center;
@@ -3953,7 +3956,7 @@ h4 {
   bottom: 1rem;
   left: calc(50% - 50px);
   width: 25%;
-  z-index: 10;
+  z-index: 1;
 }
 @media screen and (min-width: 750px) {
   .swiper .swiper-arrows {
@@ -3964,17 +3967,21 @@ h4 {
 .swiper .swiper-arrows .swiper-button-prev {
   font-size: 1.5rem;
   color: #320507;
+  z-index: 10;
+  pointer-events: auto;
+  transition: color 0.3s ease-in-out;
 }
 .swiper .swiper-arrows .swiper-button-next::after,
 .swiper .swiper-arrows .swiper-button-prev::after {
   content: "";
 }
+.swiper .swiper-arrows .swiper-button-next:hover,
+.swiper .swiper-arrows .swiper-button-prev:hover {
+  color: #ce5927;
+}
 @media screen and (min-width: 1024px) {
   .swiper .swiper-arrows {
-    width: 100%;
-    top: 50%;
-    left: initial;
-    transform: translateY(-50%);
+    width: 10%;
   }
 }
 
@@ -4089,6 +4096,8 @@ section.instagram h3.dotted-line {
   display: flex;
   color: #320507;
   align-items: center;
+  justify-content: center;
+  gap: 10px;
   text-align: center;
   position: relative;
   width: 100%;

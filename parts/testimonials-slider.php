@@ -18,7 +18,7 @@
                                 if (function_exists('get_field')) {
                                     $author_name = get_field('authors_name');
                                     $author_vacation = get_field('authors_vacation');
-                                    $title = get_field('title');
+                                    $title = get_the_title();
                                     $message = get_field('message');
                                     $truncated_message = wp_trim_words($message, 20, '...');
                                     $rating = get_field('rating');
@@ -45,6 +45,8 @@
                                     <div class="author-info">
                                         <?php if ($author_photo) : ?>
                                             <img src="<?php echo esc_url($author_photo['url']); ?>" alt="<?php echo esc_attr($author_photo['alt']); ?>">
+                                        <?php else : ?>
+                                            <img src="<?php echo get_theme_file_uri('/img/user-avatar.png') ?>" alt="<?php echo esc_html($author_name); ?>">
                                         <?php endif; ?>
                                         <div class="author-details">
                                             <p><?php echo esc_html($author_name); ?></p>

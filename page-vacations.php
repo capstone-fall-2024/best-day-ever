@@ -61,7 +61,7 @@ get_header();
 				<?php get_template_part('parts/special-deals-home'); ?>
 			</div>
 
-		<a href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/special-deals/">Check out more<span><i class="bi bi-arrow-right"></i></span></a>
+		<a href="https://best-day-ever.web.dmitcapstone.ca/wordpress2/special-deals/" class="check-more">Check out more<span><i class="bi bi-arrow-right"></i></span></a>
 	</section>
 
 		<!-- Testimonials -->
