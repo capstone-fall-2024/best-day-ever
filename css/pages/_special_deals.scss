@@ -93,7 +93,6 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: flex-start;
             gap: 1rem;
             margin-bottom: 4rem;
 
@@ -196,8 +195,9 @@
             .deals-promo {
                 .deals-item {
                     display: flex;
-                    align-items: center;
+                    align-items: flex-start;
                     gap: 1rem;
+                    margin-bottom: 3rem;
 
                     h3 {
                         width: 100%;

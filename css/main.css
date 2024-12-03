@@ -3051,8 +3051,8 @@ h4 {
 }
 @media (min-width: 1024px) {
   .about-jen-container .about-jen__text {
-    margin-right: 50px;
-    padding: 50px 3%;
+    margin-right: 3rem;
+    padding: 4rem 0;
   }
 }
 .about-jen-container .about-jen__text h2 {
@@ -4038,6 +4038,9 @@ h4 {
 .contact-jen .contact-page h4 {
   color: #30453b;
 }
+.contact-jen .contact-page .contact-form .screen-reader-response p {
+  color: #320507;
+}
 .contact-jen .contact-page .contact-form form {
   max-width: 100%;
   width: 100%;
@@ -4112,7 +4115,7 @@ h4 {
     grid-template-columns: repeat(2, 1fr) !important;
   }
   .contact-jen .contact-form form .form-layout span input {
-    min-width: 25vw;
+    min-width: 35vw;
   }
   .contact-jen .contact-form form .form-layout .wpcf7-submit {
     max-width: 180px;
@@ -4238,7 +4241,6 @@ h4 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
   gap: 1rem;
   margin-bottom: 4rem;
 }
@@ -4322,8 +4324,9 @@ h4 {
   }
   .special-deals .other-deals .deals-promo .deals-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 1rem;
+    margin-bottom: 3rem;
   }
   .special-deals .other-deals .deals-promo .deals-item h3 {
     width: 100%;
