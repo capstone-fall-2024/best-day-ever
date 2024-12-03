@@ -20,6 +20,12 @@
         }
 
         .contact-form {
+            .screen-reader-response {
+                p {
+                    color: $dark-red;
+                }
+            }
+
             form {
                 max-width: 100%;
                 width: 100%;
@@ -101,7 +107,7 @@
                 .form-layout {
                     span {
                         input {
-                            min-width: 25vw;
+                            min-width: 35vw;
                         }
                     }
 
