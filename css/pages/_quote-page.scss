@@ -38,9 +38,6 @@
   &.step-1 {
     padding: 3rem 1.5rem 4rem;
     transition: padding 0.3s ease-in-out;
-    @media screen and (min-width: 950px) {
-      padding-bottom: 0;
-    }
   }
 
   &.step-2 {
