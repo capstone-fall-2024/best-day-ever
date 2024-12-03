@@ -26,7 +26,7 @@ get_header();
 		<div>
 			<img class="img-rounded" src="<?php echo get_theme_file_uri('/img/woman-portrait.webp') ?>" alt="A photo of a woman smiling at the camera." width="427px" height="640px">
 		</div>
-		<div>
+		<div class="jen-info">
 			<h3>Hi, I'm Jen!</h3>
 			<p>I'm a professionally trained Travel Agent with Best Day Ever Vacations, specializing in Disney Vacations.</p>
 			<p>My goal is to book the complete dream vacation for you, your friends, and your family!</p>
